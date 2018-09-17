@@ -18,11 +18,24 @@ Ext.define('StunningOctoPancake.view.MainContainer', {
     alias: 'widget.maincontainer',
 
     requires: [
-        'StunningOctoPancake.view.MainContainerViewModel'
+        'StunningOctoPancake.view.MainContainerViewModel',
+        'Ext.toolbar.Toolbar'
     ],
 
     viewModel: {
         type: 'maincontainer'
-    }
+    },
+
+    layout: {
+        type: 'vbox',
+        align: 'center'
+    },
+    items: [
+        {
+            xtype: 'toolbar',
+            height: 72,
+            width: 832
+        }
+    ]
 
 });

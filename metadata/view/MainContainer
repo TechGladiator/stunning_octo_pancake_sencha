@@ -6,17 +6,43 @@
     },
     "codeClass": null,
     "userConfig": {
+        "container|align": "center",
         "designer|initialView": true,
         "designer|userAlias": "maincontainer",
-        "designer|userClassName": "MainContainer"
+        "designer|userClassName": "MainContainer",
+        "layout": "vbox"
     },
     "configAlternates": {
         "designer|initialView": "boolean",
         "designer|userAlias": "string",
-        "designer|userClassName": "string"
+        "designer|userClassName": "string",
+        "container|align": "string",
+        "layout": "string"
     },
     "name": "MyContainer",
     "designerId": "2798e678-25f0-4f46-a321-1022bd6f9431",
     "viewControllerInstanceId": "bf03dfd0-d05a-4665-aec0-5a6459040b32",
-    "viewModelInstanceId": "17b15889-d525-4343-8885-73b579e6aca5"
+    "viewModelInstanceId": "17b15889-d525-4343-8885-73b579e6aca5",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Header",
+                "height": 72,
+                "width": 832
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "height": "auto",
+                "width": "auto"
+            },
+            "name": "MyToolbar",
+            "designerId": "4bc2631c-2a88-4d5b-ab2f-ea98cde1567a"
+        }
+    ]
 }
