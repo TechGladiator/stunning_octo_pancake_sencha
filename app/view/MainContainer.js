@@ -19,7 +19,8 @@ Ext.define('StunningOctoPancake.view.MainContainer', {
 
     requires: [
         'StunningOctoPancake.view.MainContainerViewModel',
-        'Ext.toolbar.Toolbar'
+        'Ext.toolbar.Toolbar',
+        'Ext.toolbar.TextItem'
     ],
 
     viewModel: {
@@ -35,7 +36,13 @@ Ext.define('StunningOctoPancake.view.MainContainer', {
             xtype: 'toolbar',
             height: 72,
             style: 'background-color:#343a40',
-            width: 832
+            width: 832,
+            items: [
+                {
+                    xtype: 'tbtext',
+                    html: '<p>Stunning Octo Pancake</p>'
+                }
+            ]
         }
     ]
 

@@ -46,7 +46,29 @@
                 "style": "object"
             },
             "name": "MyToolbar",
-            "designerId": "4bc2631c-2a88-4d5b-ab2f-ea98cde1567a"
+            "designerId": "4bc2631c-2a88-4d5b-ab2f-ea98cde1567a",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.TextItem",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Stunning Octo Pancake",
+                        "html": "<p>Stunning Octo Pancake</p>",
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "html": "string",
+                        "layout|flex": "number"
+                    },
+                    "name": "MyTextItem",
+                    "designerId": "a7ef08db-d294-4070-b340-9c7be4b598ad"
+                }
+            ]
         }
     ]
 }
