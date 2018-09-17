@@ -40,7 +40,7 @@ Ext.define('StunningOctoPancake.view.MainContainer', {
             items: [
                 {
                     xtype: 'tbtext',
-                    html: '<p>Stunning Octo Pancake</p>'
+                    html: '<p style="font-size: 1.25rem; color: white">Stunning Octo Pancake</p>'
                 }
             ]
         }

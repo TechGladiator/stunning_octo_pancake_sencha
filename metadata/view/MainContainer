@@ -57,11 +57,14 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|displayName": "Stunning Octo Pancake",
-                        "html": "<p>Stunning Octo Pancake</p>",
+                        "dock": null,
+                        "html": "<p style=\"font-size: 1.25rem; color: white\">Stunning Octo Pancake</p>",
                         "layout|flex": null
                     },
                     "configAlternates": {
+                        "style": "object",
                         "designer|displayName": "string",
+                        "dock": "string",
                         "html": "string",
                         "layout|flex": "number"
                     },
