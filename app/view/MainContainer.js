@@ -34,6 +34,7 @@ Ext.define('StunningOctoPancake.view.MainContainer', {
         {
             xtype: 'toolbar',
             height: 72,
+            style: 'background-color:#343a40',
             width: 832
         }
     ]
