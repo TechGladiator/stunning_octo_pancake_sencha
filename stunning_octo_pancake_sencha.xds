@@ -1,0 +1,46 @@
+{
+    "name": "stunning_octo_pancake_sencha",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "6.5.0.180",
+            "frameworkVersion": "6.5.0.775"
+        },
+        "urlPrefixTemplate": "http://localhost:{port}/{path}",
+        "urlPrefix": "http://localhost:43061/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true
+    },
+    "xdsVersion": "4.2.1",
+    "xdsBuild": 224,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext65",
+    "viewOrderMap": {
+        "view": [],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "9c2187b4-2c96-4c06-8f3c-1e6d9d3ff5b4",
+            "eb8486c2-00a7-4a45-9ffc-4725481dcad8"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
