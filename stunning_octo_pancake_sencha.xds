@@ -7,7 +7,7 @@
             "frameworkVersion": "6.5.0.775"
         },
         "urlPrefixTemplate": "http://localhost:{port}/{path}",
-        "urlPrefix": "http://localhost:43061/",
+        "urlPrefix": "http://localhost:46165/",
         "canvasControls": {
             "viewportSize": {
                 "name": "Auto Expand",
@@ -23,7 +23,8 @@
         "genTimestamps": false,
         "cacheBust": false,
         "buildShouldOverwriteIndex": true,
-        "generateArchitectVersion": true
+        "generateArchitectVersion": true,
+        "installStatus": "Not Installed"
     },
     "xdsVersion": "4.2.1",
     "xdsBuild": 224,
@@ -31,7 +32,11 @@
     "upgradeVersion": 310000000001,
     "framework": "ext65",
     "viewOrderMap": {
-        "view": [],
+        "view": [
+            "26070311-99ce-4c40-bf7b-d751da9f9bf1",
+            "d0b32597-462e-4bb0-bd91-6fbb2213926d",
+            "d3037051-9908-4de4-850d-a984895c2d73"
+        ],
         "store": [],
         "controller": [],
         "model": [],
