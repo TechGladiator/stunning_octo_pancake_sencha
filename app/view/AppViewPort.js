@@ -20,7 +20,8 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
     requires: [
         'StunningOctoPancake.view.AppViewPortViewModel',
         'Ext.tab.Panel',
-        'Ext.tab.Tab'
+        'Ext.tab.Tab',
+        'Ext.form.field.File'
     ],
 
     viewModel: {
@@ -48,15 +49,29 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
         {
             xtype: 'tabpanel',
             flex: 1,
+            frame: true,
             margin: '48 0 32',
+            maxHeight: 310,
             maxWidth: 832.5,
             minWidth: 382.5,
             width: '75%',
+            bodyBorder: false,
+            bodyPadding: '64 32',
             activeTab: 0,
             items: [
                 {
                     xtype: 'panel',
-                    title: 'Upload File'
+                    title: 'Upload File',
+                    layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
+                    items: [
+                        {
+                            xtype: 'filefield',
+                            fieldLabel: 'Choose CSV File:'
+                        }
+                    ]
                 },
                 {
                     xtype: 'panel',

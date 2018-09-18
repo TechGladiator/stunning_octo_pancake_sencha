@@ -67,9 +67,14 @@
             "codeClass": null,
             "userConfig": {
                 "activeTab": 0,
+                "bodyBorder": false,
+                "bodyPadding": "64 32",
                 "designer|displayName": "TabPanel",
+                "designer|uiInterfaceName": "default-framed",
+                "frame": true,
                 "layout|flex": 1,
                 "margin": "48 0 32",
+                "maxHeight": 310,
                 "maxWidth": 832.5,
                 "minWidth": 382.5,
                 "width": "75%"
@@ -81,7 +86,12 @@
                 "margin": "auto",
                 "maxWidth": "number",
                 "minWidth": "number",
-                "width": "auto"
+                "width": "auto",
+                "bodyBorder": "boolean",
+                "bodyPadding": "auto",
+                "designer|uiInterfaceName": "string",
+                "frame": "boolean",
+                "maxHeight": "number"
             },
             "name": "MyTabPanel",
             "designerId": "ed54406a-32f1-4b59-97e3-a702ec7b7a79",
@@ -94,10 +104,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "container|align": "stretch",
+                        "layout": "vbox",
                         "title": "Upload File"
                     },
                     "configAlternates": {
-                        "title": "string"
+                        "title": "string",
+                        "container|align": "string",
+                        "layout": "string"
                     },
                     "name": "MyPanel1",
                     "designerId": "d8772609-cc68-4ade-8730-983cb720b764",
@@ -111,6 +125,24 @@
                             "codeClass": null,
                             "name": "TabConfig",
                             "designerId": "ad7f267a-073a-4472-b110-d3e924ab3720"
+                        },
+                        {
+                            "type": "Ext.form.field.File",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Choose CSV File:",
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyFileUpload",
+                            "designerId": "67e213b9-85bb-4115-bb9f-b99bff224d74"
                         }
                     ]
                 },
