@@ -18,16 +18,32 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
     alias: 'widget.appviewport',
 
     requires: [
-        'StunningOctoPancake.view.AppViewPortViewModel'
+        'StunningOctoPancake.view.AppViewPortViewModel',
+        'Ext.panel.Panel'
     ],
 
     viewModel: {
         type: 'appviewport'
     },
+    style: 'background: #fff',
 
     layout: {
         type: 'vbox',
         align: 'center'
-    }
+    },
+    items: [
+        {
+            xtype: 'panel',
+            flex: 1,
+            margins: 'auto',
+            border: false,
+            margin: 'auto',
+            maxHeight: 44,
+            maxWidth: 832.5,
+            minWidth: 382.5,
+            width: '75%',
+            title: 'Stunning Octo Pancake'
+        }
+    ]
 
 });

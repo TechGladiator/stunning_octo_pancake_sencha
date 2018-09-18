@@ -10,17 +10,53 @@
         "designer|initialView": true,
         "designer|userAlias": "appviewport",
         "designer|userClassName": "AppViewPort",
-        "layout": "vbox"
+        "layout": "vbox",
+        "style": "background: #fff"
     },
     "configAlternates": {
         "container|align": "string",
         "designer|initialView": "boolean",
         "designer|userAlias": "string",
         "designer|userClassName": "string",
-        "layout": "string"
+        "layout": "string",
+        "style": "string"
     },
     "name": "MyViewport",
     "designerId": "26070311-99ce-4c40-bf7b-d751da9f9bf1",
     "viewControllerInstanceId": "d3037051-9908-4de4-850d-a984895c2d73",
-    "viewModelInstanceId": "d0b32597-462e-4bb0-bd91-6fbb2213926d"
+    "viewModelInstanceId": "d0b32597-462e-4bb0-bd91-6fbb2213926d",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": false,
+                "layout|flex": 1,
+                "layout|margins": "auto",
+                "margin": "auto",
+                "maxHeight": 44,
+                "maxWidth": 832.5,
+                "minWidth": 382.5,
+                "title": "Stunning Octo Pancake",
+                "width": "75%"
+            },
+            "configAlternates": {
+                "border": "boolean",
+                "layout|flex": "number",
+                "layout|margins": "string",
+                "margin": "auto",
+                "maxHeight": "number",
+                "maxWidth": "number",
+                "minWidth": "number",
+                "title": "string",
+                "width": "auto"
+            },
+            "name": "MyPanel",
+            "designerId": "395a1072-b5df-45bb-9638-da5f4e6144c0"
+        }
+    ]
 }
