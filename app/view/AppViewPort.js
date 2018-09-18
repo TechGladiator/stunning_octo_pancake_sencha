@@ -19,7 +19,8 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
 
     requires: [
         'StunningOctoPancake.view.AppViewPortViewModel',
-        'Ext.panel.Panel'
+        'Ext.tab.Panel',
+        'Ext.tab.Tab'
     ],
 
     viewModel: {
@@ -43,6 +44,25 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
             minWidth: 382.5,
             width: '75%',
             title: 'Stunning Octo Pancake'
+        },
+        {
+            xtype: 'tabpanel',
+            flex: 1,
+            margin: '48 0 32',
+            maxWidth: 832.5,
+            minWidth: 382.5,
+            width: '75%',
+            activeTab: 0,
+            items: [
+                {
+                    xtype: 'panel',
+                    title: 'Upload File'
+                },
+                {
+                    xtype: 'panel',
+                    title: 'Search'
+                }
+            ]
         }
     ]
 
