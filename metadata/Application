@@ -6,14 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "name": "StunningOctoPancake",
-        "views": [
-            "MainContainer"
-        ]
+        "name": "StunningOctoPancake"
     },
     "configAlternates": {
-        "name": "string",
-        "views": "typedarray"
+        "name": "string"
     },
     "name": "Application",
     "designerId": "application"

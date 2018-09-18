@@ -20,13 +20,5 @@ Ext.Loader.setConfig({
 
 
 Ext.application({
-    views: [
-        'MainContainer'
-    ],
-    name: 'StunningOctoPancake',
-
-    launch: function() {
-        Ext.create('StunningOctoPancake.view.MainContainer', {renderTo: Ext.getBody()});
-    }
-
+    name: 'StunningOctoPancake'
 });
