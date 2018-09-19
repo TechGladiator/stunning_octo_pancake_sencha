@@ -20,7 +20,11 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
     requires: [
         'StunningOctoPancake.view.RecordViewportViewModel',
         'StunningOctoPancake.view.HeaderPanel',
-        'Ext.panel.Panel'
+        'Ext.grid.Panel',
+        'Ext.grid.column.Number',
+        'Ext.grid.column.Date',
+        'Ext.grid.column.Boolean',
+        'Ext.view.Table'
     ],
 
     viewModel: {
@@ -36,6 +40,37 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
             xtype: 'headerpanel',
             flex: 1,
             margins: 'auto'
+        },
+        {
+            xtype: 'gridpanel',
+            flex: 1,
+            frame: true,
+            margin: '48 0 32',
+            width: '85%',
+            title: 'Importname/Filename',
+            titleAlign: 'center',
+            columns: [
+                {
+                    xtype: 'gridcolumn',
+                    dataIndex: 'string',
+                    text: 'String'
+                },
+                {
+                    xtype: 'numbercolumn',
+                    dataIndex: 'number',
+                    text: 'Number'
+                },
+                {
+                    xtype: 'datecolumn',
+                    dataIndex: 'date',
+                    text: 'Date'
+                },
+                {
+                    xtype: 'booleancolumn',
+                    dataIndex: 'bool',
+                    text: 'Boolean'
+                }
+            ]
         }
     ]
 
