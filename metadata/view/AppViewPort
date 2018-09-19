@@ -145,6 +145,30 @@
                             },
                             "name": "MyFileUpload",
                             "designerId": "67e213b9-85bb-4115-bb9f-b99bff224d74"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "Submit Button",
+                                "layout|flex": 1,
+                                "margin": "",
+                                "maxWidth": 100,
+                                "text": "Submit"
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "layout|flex": "number",
+                                "margin": "auto",
+                                "maxWidth": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton",
+                            "designerId": "52e72a6a-7b14-4180-8528-a65de00f8d72"
                         }
                     ]
                 },

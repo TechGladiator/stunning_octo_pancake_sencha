@@ -71,6 +71,13 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
                         {
                             xtype: 'filefield',
                             fieldLabel: 'Choose CSV File:'
+                        },
+                        {
+                            xtype: 'button',
+                            flex: 1,
+                            margin: '',
+                            maxWidth: 100,
+                            text: 'Submit'
                         }
                     ]
                 },
