@@ -61,6 +61,7 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
             items: [
                 {
                     xtype: 'panel',
+                    bodyPadding: '50 50 0 50',
                     title: 'Upload File',
                     layout: {
                         type: 'vbox',
@@ -75,7 +76,15 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
                 },
                 {
                     xtype: 'panel',
-                    title: 'Search Imports'
+                    layout: 'center',
+                    bodyPadding: 50,
+                    title: 'Search Imports',
+                    items: [
+                        {
+                            xtype: 'textfield',
+                            width: '100%'
+                        }
+                    ]
                 }
             ]
         }

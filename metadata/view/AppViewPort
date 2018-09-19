@@ -104,6 +104,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "bodyPadding": "50 50 0 50",
                         "container|align": "stretch",
                         "layout": "vbox",
                         "title": "Upload File"
@@ -111,7 +112,8 @@
                     "configAlternates": {
                         "title": "string",
                         "container|align": "string",
-                        "layout": "string"
+                        "layout": "string",
+                        "bodyPadding": "auto"
                     },
                     "name": "MyPanel1",
                     "designerId": "d8772609-cc68-4ade-8730-983cb720b764",
@@ -154,10 +156,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "bodyPadding": 50,
+                        "layout": "center",
                         "title": "Search Imports"
                     },
                     "configAlternates": {
-                        "title": "string"
+                        "title": "string",
+                        "bodyPadding": "auto",
+                        "layout": "string"
                     },
                     "name": "MyPanel2",
                     "designerId": "45735f29-f5c2-46cc-8ae5-2dfd43891ddb",
@@ -171,6 +177,24 @@
                             "codeClass": null,
                             "name": "TabConfig1",
                             "designerId": "6e347a6f-f3bf-48a5-b273-b300afceabef"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "Search Field",
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyTextField",
+                            "designerId": "e67725ce-fa45-40d2-880c-439527702386"
                         }
                     ]
                 }
