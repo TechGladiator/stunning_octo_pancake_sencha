@@ -75,7 +75,7 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
                 },
                 {
                     xtype: 'panel',
-                    title: 'Search'
+                    title: 'Search Imports'
                 }
             ]
         }
