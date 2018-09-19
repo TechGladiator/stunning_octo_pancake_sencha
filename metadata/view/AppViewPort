@@ -27,36 +27,23 @@
     "viewModelInstanceId": "d0b32597-462e-4bb0-bd91-6fbb2213926d",
     "cn": [
         {
-            "type": "Ext.panel.Panel",
+            "type": "linkedinstance",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "border": false,
                 "layout|flex": 1,
-                "layout|margins": "auto",
-                "margin": "auto",
-                "maxHeight": 44,
-                "maxWidth": 832.5,
-                "minWidth": 382.5,
-                "title": "Stunning Octo Pancake",
-                "width": "75%"
+                "layout|margins": "auto"
             },
             "configAlternates": {
-                "border": "boolean",
                 "layout|flex": "number",
-                "layout|margins": "string",
-                "margin": "auto",
-                "maxHeight": "number",
-                "maxWidth": "number",
-                "minWidth": "number",
-                "title": "string",
-                "width": "auto"
+                "layout|margins": "string"
             },
-            "name": "MyPanel",
-            "designerId": "395a1072-b5df-45bb-9638-da5f4e6144c0"
+            "name": "HeaderPanel",
+            "designerId": "87fbcec6-055a-454e-b8de-a4e7093856d2",
+            "masterInstanceId": "2b909136-1448-4985-858f-87ea0ebbbfae"
         },
         {
             "type": "Ext.tab.Panel",

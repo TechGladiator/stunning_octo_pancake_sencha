@@ -19,6 +19,7 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
 
     requires: [
         'StunningOctoPancake.view.AppViewPortViewModel',
+        'StunningOctoPancake.view.HeaderPanel',
         'Ext.tab.Panel',
         'Ext.tab.Tab',
         'Ext.form.field.File'
@@ -35,16 +36,9 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
     },
     items: [
         {
-            xtype: 'panel',
+            xtype: 'headerpanel',
             flex: 1,
-            margins: 'auto',
-            border: false,
-            margin: 'auto',
-            maxHeight: 44,
-            maxWidth: 832.5,
-            minWidth: 382.5,
-            width: '75%',
-            title: 'Stunning Octo Pancake'
+            margins: 'auto'
         },
         {
             xtype: 'tabpanel',
