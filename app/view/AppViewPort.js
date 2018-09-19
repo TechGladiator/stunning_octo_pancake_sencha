@@ -61,31 +61,36 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
             items: [
                 {
                     xtype: 'panel',
-                    bodyPadding: '50 50 0 50',
                     title: 'Upload File',
                     layout: {
-                        type: 'vbox',
-                        align: 'stretch'
+                        type: 'hbox',
+                        align: 'middle'
                     },
                     items: [
                         {
                             xtype: 'filefield',
-                            fieldLabel: 'Choose CSV File:'
+                            maxWidth: 680,
+                            width: '100%',
+                            fieldLabel: 'Choose CSV File:',
+                            labelPad: 1,
+                            labelWidth: 150
                         },
                         {
                             xtype: 'button',
                             flex: 1,
-                            margin: '',
-                            maxWidth: 100,
+                            margin: '0 0 0 10',
                             text: 'Submit'
                         }
                     ]
                 },
                 {
                     xtype: 'panel',
-                    layout: 'center',
                     bodyPadding: 50,
                     title: 'Search Imports',
+                    layout: {
+                        type: 'hbox',
+                        align: 'middle'
+                    },
                     items: [
                         {
                             xtype: 'textfield',

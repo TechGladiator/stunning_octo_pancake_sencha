@@ -104,9 +104,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "bodyPadding": "50 50 0 50",
-                        "container|align": "stretch",
-                        "layout": "vbox",
+                        "container|align": "middle",
+                        "layout": "hbox",
                         "title": "Upload File"
                     },
                     "configAlternates": {
@@ -137,11 +136,19 @@
                             "codeClass": null,
                             "userConfig": {
                                 "fieldLabel": "Choose CSV File:",
-                                "layout|flex": null
+                                "labelPad": 1,
+                                "labelWidth": 150,
+                                "layout|flex": null,
+                                "maxWidth": 680,
+                                "width": "100%"
                             },
                             "configAlternates": {
                                 "fieldLabel": "string",
-                                "layout|flex": "number"
+                                "layout|flex": "number",
+                                "labelPad": "number",
+                                "labelWidth": "number",
+                                "maxWidth": "number",
+                                "width": "auto"
                             },
                             "name": "MyFileUpload",
                             "designerId": "67e213b9-85bb-4115-bb9f-b99bff224d74"
@@ -156,8 +163,7 @@
                             "userConfig": {
                                 "designer|displayName": "Submit Button",
                                 "layout|flex": 1,
-                                "margin": "",
-                                "maxWidth": 100,
+                                "margin": "0 0 0 10",
                                 "text": "Submit"
                             },
                             "configAlternates": {
@@ -181,13 +187,15 @@
                     "codeClass": null,
                     "userConfig": {
                         "bodyPadding": 50,
-                        "layout": "center",
+                        "container|align": "middle",
+                        "layout": "hbox",
                         "title": "Search Imports"
                     },
                     "configAlternates": {
                         "title": "string",
                         "bodyPadding": "auto",
-                        "layout": "string"
+                        "layout": "string",
+                        "container|align": "string"
                     },
                     "name": "MyPanel2",
                     "designerId": "45735f29-f5c2-46cc-8ae5-2dfd43891ddb",
