@@ -219,11 +219,15 @@
                             "codeClass": null,
                             "userConfig": {
                                 "designer|displayName": "Search Field",
+                                "fieldLabel": "Search By Import Name",
+                                "labelWidth": 150,
                                 "width": "100%"
                             },
                             "configAlternates": {
                                 "designer|displayName": "string",
-                                "width": "auto"
+                                "width": "auto",
+                                "fieldLabel": "string",
+                                "labelWidth": "number"
                             },
                             "name": "MyTextField",
                             "designerId": "e67725ce-fa45-40d2-880c-439527702386"

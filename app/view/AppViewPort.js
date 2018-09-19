@@ -94,7 +94,9 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
                     items: [
                         {
                             xtype: 'textfield',
-                            width: '100%'
+                            width: '100%',
+                            fieldLabel: 'Search By Import Name',
+                            labelWidth: 150
                         }
                     ]
                 }
