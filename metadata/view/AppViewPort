@@ -136,8 +136,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "fieldLabel": "Choose CSV File:",
-                                "labelPad": 1,
-                                "labelWidth": 150,
+                                "labelWidth": 110,
                                 "layout|flex": null,
                                 "maxWidth": 680,
                                 "width": "100%"
@@ -145,7 +144,6 @@
                             "configAlternates": {
                                 "fieldLabel": "string",
                                 "layout|flex": "number",
-                                "labelPad": "number",
                                 "labelWidth": "number",
                                 "maxWidth": "number",
                                 "width": "auto"
@@ -186,7 +184,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "bodyPadding": 50,
                         "container|align": "middle",
                         "layout": "hbox",
                         "title": "Search Imports"
@@ -221,13 +218,15 @@
                                 "designer|displayName": "Search Field",
                                 "fieldLabel": "Search By Import Name",
                                 "labelWidth": 150,
+                                "maxWidth": 680,
                                 "width": "100%"
                             },
                             "configAlternates": {
                                 "designer|displayName": "string",
                                 "width": "auto",
                                 "fieldLabel": "string",
-                                "labelWidth": "number"
+                                "labelWidth": "number",
+                                "maxWidth": "number"
                             },
                             "name": "MyTextField",
                             "designerId": "e67725ce-fa45-40d2-880c-439527702386"

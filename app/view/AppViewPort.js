@@ -72,8 +72,7 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
                             maxWidth: 680,
                             width: '100%',
                             fieldLabel: 'Choose CSV File:',
-                            labelPad: 1,
-                            labelWidth: 150
+                            labelWidth: 110
                         },
                         {
                             xtype: 'button',
@@ -85,7 +84,6 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
                 },
                 {
                     xtype: 'panel',
-                    bodyPadding: 50,
                     title: 'Search Imports',
                     layout: {
                         type: 'hbox',
@@ -94,6 +92,7 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
                     items: [
                         {
                             xtype: 'textfield',
+                            maxWidth: 680,
                             width: '100%',
                             fieldLabel: 'Search By Import Name',
                             labelWidth: 150
