@@ -1,0 +1,20 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "recordviewport",
+        "designer|userClassName": "RecordViewport"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyViewport",
+    "designerId": "1ac2d61b-5c7d-4e50-8c50-cb894917b7c3",
+    "viewControllerInstanceId": "f91b4d8d-536c-4759-86f5-f27a6ea2f1ae",
+    "viewModelInstanceId": "97bb86b6-175e-4223-ad99-a9f604e50fc9"
+}
