@@ -18,11 +18,25 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
     alias: 'widget.recordviewport',
 
     requires: [
-        'StunningOctoPancake.view.RecordViewportViewModel'
+        'StunningOctoPancake.view.RecordViewportViewModel',
+        'StunningOctoPancake.view.HeaderPanel',
+        'Ext.panel.Panel'
     ],
 
     viewModel: {
         type: 'recordviewport'
-    }
+    },
+
+    layout: {
+        type: 'vbox',
+        align: 'center'
+    },
+    items: [
+        {
+            xtype: 'headerpanel',
+            flex: 1,
+            margins: 'auto'
+        }
+    ]
 
 });
