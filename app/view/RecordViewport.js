@@ -21,10 +21,8 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
         'StunningOctoPancake.view.RecordViewportViewModel',
         'StunningOctoPancake.view.HeaderPanel',
         'Ext.grid.Panel',
-        'Ext.grid.column.Number',
-        'Ext.grid.column.Date',
-        'Ext.grid.column.Boolean',
-        'Ext.view.Table'
+        'Ext.view.Table',
+        'Ext.grid.column.Column'
     ],
 
     viewModel: {
@@ -49,26 +47,62 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
             width: '85%',
             title: 'Importname/Filename',
             titleAlign: 'center',
+            store: 'RecordDataStore',
             columns: [
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'string',
-                    text: 'String'
+                    dataIndex: 'name',
+                    text: 'Name'
                 },
                 {
-                    xtype: 'numbercolumn',
-                    dataIndex: 'number',
-                    text: 'Number'
+                    xtype: 'gridcolumn',
+                    dataIndex: 'address',
+                    text: 'Address'
                 },
                 {
-                    xtype: 'datecolumn',
-                    dataIndex: 'date',
-                    text: 'Date'
+                    xtype: 'gridcolumn',
+                    dataIndex: 'address_2',
+                    text: 'Address 2'
                 },
                 {
-                    xtype: 'booleancolumn',
-                    dataIndex: 'bool',
-                    text: 'Boolean'
+                    xtype: 'gridcolumn',
+                    dataIndex: 'city',
+                    text: 'City'
+                },
+                {
+                    xtype: 'gridcolumn',
+                    dataIndex: 'state',
+                    text: 'State'
+                },
+                {
+                    xtype: 'gridcolumn',
+                    dataIndex: 'zip',
+                    text: 'Zip'
+                },
+                {
+                    xtype: 'gridcolumn',
+                    dataIndex: 'purpose',
+                    text: 'Purpose'
+                },
+                {
+                    xtype: 'gridcolumn',
+                    dataIndex: 'property_owner',
+                    text: 'Property Owner'
+                },
+                {
+                    xtype: 'gridcolumn',
+                    dataIndex: 'creation_date',
+                    text: 'Creation Date'
+                },
+                {
+                    xtype: 'gridcolumn',
+                    dataIndex: 'lat',
+                    text: 'Lat'
+                },
+                {
+                    xtype: 'gridcolumn',
+                    dataIndex: 'long',
+                    text: 'Long'
                 }
             ]
         }
