@@ -56,7 +56,7 @@
                 "store": "RecordDataStore",
                 "title": "Importname/Filename",
                 "titleAlign": "center",
-                "width": "85%"
+                "width": 1300
             },
             "configAlternates": {
                 "layout|flex": "number",
@@ -90,11 +90,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "Name",
-                        "text": "Name"
+                        "text": "Name",
+                        "width": 170
                     },
                     "configAlternates": {
                         "dataIndex": "datafield",
-                        "text": "string"
+                        "text": "string",
+                        "width": "auto"
                     },
                     "name": "MyColumn1",
                     "designerId": "7332decc-d3e9-4287-85a9-28910b887313"
@@ -108,11 +110,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "Address",
-                        "text": "Address"
+                        "text": "Address",
+                        "width": 190
                     },
                     "configAlternates": {
                         "dataIndex": "datafield",
-                        "text": "string"
+                        "text": "string",
+                        "width": "auto"
                     },
                     "name": "MyColumn2",
                     "designerId": "e98d0aa2-7965-43ea-bc82-ec93f7e42ac5"
@@ -162,11 +166,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "State",
-                        "text": "State"
+                        "text": "State",
+                        "width": 70
                     },
                     "configAlternates": {
                         "dataIndex": "datafield",
-                        "text": "string"
+                        "text": "string",
+                        "width": "auto"
                     },
                     "name": "MyColumn5",
                     "designerId": "2bbaf7d6-d9e4-4934-8fa3-fe00d531ab61"
@@ -180,11 +186,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "Zip",
-                        "text": "Zip"
+                        "text": "Zip",
+                        "width": 65
                     },
                     "configAlternates": {
                         "dataIndex": "datafield",
-                        "text": "string"
+                        "text": "string",
+                        "width": "auto"
                     },
                     "name": "MyColumn6",
                     "designerId": "45258610-c58c-4260-be2c-c4d262d3c250"
@@ -216,11 +224,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "Property Owner",
-                        "text": "Property Owner"
+                        "text": "Property Owner",
+                        "width": 128
                     },
                     "configAlternates": {
                         "dataIndex": "datafield",
-                        "text": "string"
+                        "text": "string",
+                        "width": "auto"
                     },
                     "name": "MyColumn8",
                     "designerId": "1945453c-8827-4949-8552-c307140269f0"
@@ -234,11 +244,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "Creation Date",
-                        "text": "Creation Date"
+                        "text": "Creation Date",
+                        "width": 118
                     },
                     "configAlternates": {
                         "dataIndex": "datafield",
-                        "text": "string"
+                        "text": "string",
+                        "width": "auto"
                     },
                     "name": "MyColumn9",
                     "designerId": "0bd65289-ceee-4a43-87e1-083f6582aeb4"
@@ -270,11 +282,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "Long",
-                        "text": "Long"
+                        "text": "Long",
+                        "width": 155
                     },
                     "configAlternates": {
                         "dataIndex": "datafield",
-                        "text": "string"
+                        "text": "string",
+                        "width": "auto"
                     },
                     "name": "MyColumn11",
                     "designerId": "79c943dd-651b-4348-ae32-1ee9c55e4474"

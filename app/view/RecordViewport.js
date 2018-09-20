@@ -44,18 +44,20 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
             flex: 1,
             frame: true,
             margin: '48 0 32',
-            width: '85%',
+            width: 1300,
             title: 'Importname/Filename',
             titleAlign: 'center',
             store: 'RecordDataStore',
             columns: [
                 {
                     xtype: 'gridcolumn',
+                    width: 170,
                     dataIndex: 'Name',
                     text: 'Name'
                 },
                 {
                     xtype: 'gridcolumn',
+                    width: 190,
                     dataIndex: 'Address',
                     text: 'Address'
                 },
@@ -71,11 +73,13 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
                 },
                 {
                     xtype: 'gridcolumn',
+                    width: 70,
                     dataIndex: 'State',
                     text: 'State'
                 },
                 {
                     xtype: 'gridcolumn',
+                    width: 65,
                     dataIndex: 'Zip',
                     text: 'Zip'
                 },
@@ -86,11 +90,13 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
                 },
                 {
                     xtype: 'gridcolumn',
+                    width: 128,
                     dataIndex: 'Property Owner',
                     text: 'Property Owner'
                 },
                 {
                     xtype: 'gridcolumn',
+                    width: 118,
                     dataIndex: 'Creation Date',
                     text: 'Creation Date'
                 },
@@ -101,6 +107,7 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
                 },
                 {
                     xtype: 'gridcolumn',
+                    width: 155,
                     dataIndex: 'Long',
                     text: 'Long'
                 }
