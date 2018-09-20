@@ -14,5 +14,45 @@
  */
 
 Ext.define('StunningOctoPancake.model.ImportRecords', {
-    extend: 'Ext.data.Model'
+    extend: 'Ext.data.Model',
+
+    requires: [
+        'Ext.data.field.Field'
+    ],
+
+    fields: [
+        {
+            name: 'name'
+        },
+        {
+            name: 'address'
+        },
+        {
+            name: 'address_2'
+        },
+        {
+            name: 'city'
+        },
+        {
+            name: 'state'
+        },
+        {
+            name: 'zip'
+        },
+        {
+            name: 'purpose'
+        },
+        {
+            name: 'property_owner'
+        },
+        {
+            name: 'creation_date'
+        },
+        {
+            name: 'lat'
+        },
+        {
+            name: 'long'
+        }
+    ]
 });

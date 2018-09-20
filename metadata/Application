@@ -10,6 +10,9 @@
             "ImportRecords"
         ],
         "name": "StunningOctoPancake",
+        "stores": [
+            "RecordDataStore"
+        ],
         "views": [
             "AppViewPort",
             "RecordViewport",
@@ -19,7 +22,8 @@
     "configAlternates": {
         "name": "string",
         "views": "typedarray",
-        "models": "typedarray"
+        "models": "typedarray",
+        "stores": "typedarray"
     },
     "name": "Application",
     "designerId": "application"

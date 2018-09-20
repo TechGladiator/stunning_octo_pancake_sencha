@@ -23,6 +23,9 @@ Ext.application({
     models: [
         'ImportRecords'
     ],
+    stores: [
+        'RecordDataStore'
+    ],
     views: [
         'AppViewPort',
         'RecordViewport',
