@@ -22,37 +22,37 @@ Ext.define('StunningOctoPancake.model.ImportRecords', {
 
     fields: [
         {
-            name: 'name'
+            name: 'Name'
         },
         {
-            name: 'address'
+            name: 'Address'
         },
         {
-            name: 'address_2'
+            name: 'Address 2'
         },
         {
-            name: 'city'
+            name: 'City'
         },
         {
-            name: 'state'
+            name: 'State'
         },
         {
-            name: 'zip'
+            name: 'Zip'
         },
         {
-            name: 'purpose'
+            name: 'Purpose'
         },
         {
-            name: 'property_owner'
+            name: 'Property Owner'
         },
         {
-            name: 'creation_date'
+            name: 'Creation Date'
         },
         {
-            name: 'lat'
+            name: 'Lat'
         },
         {
-            name: 'long'
+            name: 'Long'
         }
     ]
 });

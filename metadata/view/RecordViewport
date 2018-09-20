@@ -89,7 +89,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "name",
+                        "dataIndex": "Name",
                         "text": "Name"
                     },
                     "configAlternates": {
@@ -107,7 +107,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "address",
+                        "dataIndex": "Address",
                         "text": "Address"
                     },
                     "configAlternates": {
@@ -125,7 +125,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "address_2",
+                        "dataIndex": "Address 2",
                         "text": "Address 2"
                     },
                     "configAlternates": {
@@ -143,7 +143,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "city",
+                        "dataIndex": "City",
                         "text": "City"
                     },
                     "configAlternates": {
@@ -161,7 +161,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "state",
+                        "dataIndex": "State",
                         "text": "State"
                     },
                     "configAlternates": {
@@ -179,7 +179,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "zip",
+                        "dataIndex": "Zip",
                         "text": "Zip"
                     },
                     "configAlternates": {
@@ -197,7 +197,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "purpose",
+                        "dataIndex": "Purpose",
                         "text": "Purpose"
                     },
                     "configAlternates": {
@@ -215,7 +215,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "property_owner",
+                        "dataIndex": "Property Owner",
                         "text": "Property Owner"
                     },
                     "configAlternates": {
@@ -233,7 +233,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "creation_date",
+                        "dataIndex": "Creation Date",
                         "text": "Creation Date"
                     },
                     "configAlternates": {
@@ -251,7 +251,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "lat",
+                        "dataIndex": "Lat",
                         "text": "Lat"
                     },
                     "configAlternates": {
@@ -269,7 +269,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "long",
+                        "dataIndex": "Long",
                         "text": "Long"
                     },
                     "configAlternates": {

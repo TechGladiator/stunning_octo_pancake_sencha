@@ -22,7 +22,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "name"
+                "name": "Name"
             },
             "configAlternates": {
                 "name": "string"
@@ -38,7 +38,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "address"
+                "name": "Address"
             },
             "configAlternates": {
                 "name": "string"
@@ -54,7 +54,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "address_2"
+                "name": "Address 2"
             },
             "configAlternates": {
                 "name": "string"
@@ -70,7 +70,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "city"
+                "name": "City"
             },
             "configAlternates": {
                 "name": "string"
@@ -86,7 +86,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "state"
+                "name": "State"
             },
             "configAlternates": {
                 "name": "string"
@@ -102,7 +102,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "zip"
+                "name": "Zip"
             },
             "configAlternates": {
                 "name": "string"
@@ -118,7 +118,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "purpose"
+                "name": "Purpose"
             },
             "configAlternates": {
                 "name": "string"
@@ -134,7 +134,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "property_owner"
+                "name": "Property Owner"
             },
             "configAlternates": {
                 "name": "string"
@@ -150,7 +150,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "creation_date"
+                "name": "Creation Date"
             },
             "configAlternates": {
                 "name": "string"
@@ -166,7 +166,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "lat"
+                "name": "Lat"
             },
             "configAlternates": {
                 "name": "string"
@@ -182,7 +182,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "long"
+                "name": "Long"
             },
             "configAlternates": {
                 "name": "string"

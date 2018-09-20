@@ -51,57 +51,57 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
             columns: [
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'name',
+                    dataIndex: 'Name',
                     text: 'Name'
                 },
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'address',
+                    dataIndex: 'Address',
                     text: 'Address'
                 },
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'address_2',
+                    dataIndex: 'Address 2',
                     text: 'Address 2'
                 },
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'city',
+                    dataIndex: 'City',
                     text: 'City'
                 },
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'state',
+                    dataIndex: 'State',
                     text: 'State'
                 },
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'zip',
+                    dataIndex: 'Zip',
                     text: 'Zip'
                 },
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'purpose',
+                    dataIndex: 'Purpose',
                     text: 'Purpose'
                 },
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'property_owner',
+                    dataIndex: 'Property Owner',
                     text: 'Property Owner'
                 },
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'creation_date',
+                    dataIndex: 'Creation Date',
                     text: 'Creation Date'
                 },
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'lat',
+                    dataIndex: 'Lat',
                     text: 'Lat'
                 },
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'long',
+                    dataIndex: 'Long',
                     text: 'Long'
                 }
             ]
