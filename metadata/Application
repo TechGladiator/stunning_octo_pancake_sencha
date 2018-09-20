@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "models": [
+            "ImportRecords"
+        ],
         "name": "StunningOctoPancake",
         "views": [
             "AppViewPort",
@@ -15,7 +18,8 @@
     },
     "configAlternates": {
         "name": "string",
-        "views": "typedarray"
+        "views": "typedarray",
+        "models": "typedarray"
     },
     "name": "Application",
     "designerId": "application"
