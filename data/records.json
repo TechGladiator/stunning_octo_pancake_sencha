@@ -1,0 +1,41 @@
+{
+    data: [{
+        "Name": "National Zoological Park",
+        "Address": "3001 Connecticut Ave NW",
+        "Address 2": "Suite 1001",
+        "City": "Washington",
+        "State": "DC",
+        "Zip": "20008",
+        "Purpose": "Data Center",
+        "Property Owner": "Smithsonian",
+        "Creation Date": "2018-04-10",
+        "Lat": "38.9296156",
+        "Long": "-77.04978440000002"
+    },
+    {
+        "Name": "3Com Corp",
+        "Address": "350 Campus Dr",
+        "Address 2": "",
+        "City": "Marlborough",
+        "State": "MA",
+        "Zip": "01752",
+        "Purpose": "Technology",
+        "Property Owner": "3Com Corp",
+        "Creation Date": "2017-05-04",
+        "Lat": "42.3256103",
+        "Long": "-71.58414069999998"
+    },
+    {
+        "Name": "AG Edwards Inc",
+        "Address": "1 N Jefferson Ave",
+        "Address 2": "",
+        "City": "St. Louis",
+        "State": "MO",
+        "Zip": "63103",
+        "Purpose": "Financials",
+        "Property Owner": "AG Edwards Inc",
+        "Creation Date": "1887-01-01",
+        "Lat": "38.6312741",
+        "Long": "-90.21581830000002"
+    }]
+}
