@@ -51,18 +51,24 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
         {
             xtype: 'toolbar',
             flex: 1,
+            maxHeight: 60,
             items: [
                 {
                     xtype: 'buttongroup',
+                    frame: false,
+                    bodyStyle: 'background: #5fa2dd',
+                    header: false,
                     title: 'Buttons',
                     columns: 2,
                     items: [
                         {
                             xtype: 'button',
+                            style: 'background: #a3c7e8',
                             text: 'Button 1'
                         },
                         {
                             xtype: 'button',
+                            style: 'background: #a3c7e8',
                             text: 'Button 2'
                         }
                     ]

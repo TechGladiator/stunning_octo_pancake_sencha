@@ -66,10 +66,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1
+                "layout|flex": 1,
+                "maxHeight": 60
             },
             "configAlternates": {
-                "layout|flex": "number"
+                "layout|flex": "number",
+                "maxHeight": "number"
             },
             "name": "MyToolbar",
             "designerId": "dfcb40d1-924b-4993-ab34-81239f62ac9f",
@@ -82,14 +84,21 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "bodyStyle": "background: #5fa2dd",
                         "columns": 2,
+                        "frame": false,
+                        "header": false,
                         "layout|flex": null,
                         "title": "Buttons"
                     },
                     "configAlternates": {
                         "columns": "number",
+                        "frame": "boolean",
                         "layout|flex": "number",
-                        "title": "string"
+                        "manageHeight": "boolean",
+                        "title": "string",
+                        "bodyStyle": "string",
+                        "header": "boolean"
                     },
                     "name": "MyButtonGroup",
                     "designerId": "b085e68f-4f92-4c48-a4ed-1cddf6b67703",
@@ -102,10 +111,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "style": "background: #a3c7e8",
                                 "text": "Button 1"
                             },
                             "configAlternates": {
-                                "text": "string"
+                                "text": "string",
+                                "style": "string"
                             },
                             "name": "MyButton2",
                             "designerId": "cc2a6688-e0f8-48d3-a4a9-146f850af558"
@@ -118,10 +129,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "style": "background: #a3c7e8",
                                 "text": "Button 2"
                             },
                             "configAlternates": {
-                                "text": "string"
+                                "text": "string",
+                                "style": "string"
                             },
                             "name": "MyButton3",
                             "designerId": "d31aac37-8859-4955-a674-281dfab25e97"
