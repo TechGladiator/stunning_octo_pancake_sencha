@@ -1,0 +1,201 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeTab": 0,
+        "bodyBorder": false,
+        "bodyPadding": "64 32",
+        "designer|uiInterfaceName": "default-framed",
+        "designer|userAlias": "mytabpanel",
+        "designer|userClassName": "MyTabPanel",
+        "frame": true,
+        "margin": "48 0 32",
+        "maxHeight": 310,
+        "maxWidth": 832.5,
+        "minWidth": 382.5,
+        "width": "75%"
+    },
+    "configAlternates": {
+        "activeTab": "auto",
+        "designer|displayName": "string",
+        "layout|flex": "number",
+        "margin": "auto",
+        "maxWidth": "number",
+        "minWidth": "number",
+        "width": "auto",
+        "bodyBorder": "boolean",
+        "bodyPadding": "auto",
+        "designer|uiInterfaceName": "string",
+        "frame": "boolean",
+        "maxHeight": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyTabPanel",
+    "designerId": "1bbd56e4-5c94-4f89-ae60-8b45f8da75b9",
+    "viewControllerInstanceId": "ee51bcc2-bf01-4eea-a8b0-1542cfc9b939",
+    "viewModelInstanceId": "68780b41-9f1e-4c8e-a262-61bd92992f4d",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "middle",
+                "layout": "hbox",
+                "title": "Upload File"
+            },
+            "configAlternates": {
+                "title": "string",
+                "container|align": "string",
+                "layout": "string",
+                "bodyPadding": "auto"
+            },
+            "name": "MyPanel1",
+            "designerId": "d8772609-cc68-4ade-8730-983cb720b764",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig",
+                    "designerId": "ad7f267a-073a-4472-b110-d3e924ab3720"
+                },
+                {
+                    "type": "Ext.form.field.File",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Choose CSV File:",
+                        "labelWidth": 110,
+                        "layout|flex": null,
+                        "maxWidth": 680,
+                        "width": "100%"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|flex": "number",
+                        "labelWidth": "number",
+                        "maxWidth": "number",
+                        "width": "auto"
+                    },
+                    "name": "MyFileUpload",
+                    "designerId": "67e213b9-85bb-4115-bb9f-b99bff224d74"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "margin": "0 0 0 10",
+                        "text": "Submit"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "maxWidth": "number",
+                        "text": "string"
+                    },
+                    "name": "MyButton",
+                    "designerId": "52e72a6a-7b14-4180-8528-a65de00f8d72"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "middle",
+                "layout": "hbox",
+                "title": "Search Imports"
+            },
+            "configAlternates": {
+                "title": "string",
+                "bodyPadding": "auto",
+                "layout": "string",
+                "container|align": "string",
+                "designer|displayName": "string"
+            },
+            "name": "MyPanel2",
+            "designerId": "45735f29-f5c2-46cc-8ae5-2dfd43891ddb",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig1",
+                    "designerId": "6e347a6f-f3bf-48a5-b273-b300afceabef"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Search Field",
+                        "fieldLabel": "Search By Import Name",
+                        "labelWidth": 150,
+                        "maxWidth": 680,
+                        "width": "100%"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "width": "auto",
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "maxWidth": "number"
+                    },
+                    "name": "MyTextField",
+                    "designerId": "e67725ce-fa45-40d2-880c-439527702386"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "margin": "0 0 0 10",
+                        "text": "Search"
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "text": "string"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "c5caebb3-f71d-4217-8b76-fd19aff9bd96"
+                }
+            ]
+        }
+    ]
+}
