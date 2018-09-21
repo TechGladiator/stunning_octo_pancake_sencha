@@ -7,7 +7,6 @@
     "codeClass": null,
     "userConfig": {
         "container|align": "center",
-        "designer|initialView": true,
         "designer|userAlias": "appviewport",
         "designer|userClassName": "AppViewPort",
         "layout": "vbox",

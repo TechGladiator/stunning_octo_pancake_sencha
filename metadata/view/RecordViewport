@@ -7,6 +7,7 @@
     "codeClass": null,
     "userConfig": {
         "container|align": "center",
+        "designer|initialView": true,
         "designer|userAlias": "recordviewport",
         "designer|userClassName": "RecordViewport",
         "layout": "vbox"
@@ -15,7 +16,8 @@
         "container|align": "string",
         "designer|userAlias": "string",
         "designer|userClassName": "string",
-        "layout": "string"
+        "layout": "string",
+        "designer|initialView": "boolean"
     },
     "name": "MyViewport",
     "designerId": "1ac2d61b-5c7d-4e50-8c50-cb894917b7c3",
@@ -66,15 +68,17 @@
             },
             "codeClass": null,
             "userConfig": {
+                "alt": "Google Maps",
                 "layout|flex": 1,
                 "margin": "0 0 30",
                 "maxHeight": 300,
                 "minHeight": 300,
-                "src": "https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318 &markers=color:red%7Clabel:C%7C40.718217,-73.998284",
+                "src": "https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318 &markers=color:red%7Clabel:C%7C40.718217,-73.998284 &key=AIzaSyCEXe5dDNptlIIvkxHQTc6ZeYms5mJDIHQ",
                 "title": "Map",
                 "width": 600
             },
             "configAlternates": {
+                "alt": "string",
                 "layout|flex": "number",
                 "margin": "auto",
                 "maxHeight": "number",

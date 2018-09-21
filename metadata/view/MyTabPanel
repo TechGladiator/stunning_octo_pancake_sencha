@@ -14,8 +14,9 @@
         "designer|userClassName": "MyTabPanel",
         "frame": true,
         "margin": "48 0 32",
-        "maxHeight": 310,
+        "maxHeight": 210,
         "maxWidth": 832.5,
+        "minHeight": 210,
         "minWidth": 382.5,
         "width": "75%"
     },
@@ -33,7 +34,8 @@
         "frame": "boolean",
         "maxHeight": "number",
         "designer|userAlias": "string",
-        "designer|userClassName": "string"
+        "designer|userClassName": "string",
+        "minHeight": "number"
     },
     "name": "MyTabPanel",
     "designerId": "1bbd56e4-5c94-4f89-ae60-8b45f8da75b9",
