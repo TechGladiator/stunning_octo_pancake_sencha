@@ -55,15 +55,15 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
             items: [
                 {
                     style: 'background: ##5fa2dd',
-                    text: 'Button 1'
+                    text: 'Edit Data'
                 },
                 {
                     style: 'background: ##5fa2dd',
-                    text: 'Button 2'
+                    text: 'Save Records'
                 },
                 {
                     style: 'background: ##5fa2dd',
-                    text: 'Button 3'
+                    text: 'Map Imported Data'
                 }
             ]
         },
