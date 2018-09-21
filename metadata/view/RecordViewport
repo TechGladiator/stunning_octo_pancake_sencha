@@ -138,6 +138,24 @@
                             },
                             "name": "MyButton3",
                             "designerId": "d31aac37-8859-4955-a674-281dfab25e97"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "style": "background: #a3c7e8",
+                                "text": "Button 3"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "style": "string"
+                            },
+                            "name": "MyButton4",
+                            "designerId": "c26fc092-228a-4a82-85c1-e849ad538c79"
                         }
                     ]
                 }

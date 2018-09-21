@@ -70,6 +70,11 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
                             xtype: 'button',
                             style: 'background: #a3c7e8',
                             text: 'Button 2'
+                        },
+                        {
+                            xtype: 'button',
+                            style: 'background: #a3c7e8',
+                            text: 'Button 3'
                         }
                     ]
                 }
