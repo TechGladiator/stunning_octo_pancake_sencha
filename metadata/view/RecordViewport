@@ -42,6 +42,23 @@
             "masterInstanceId": "2b909136-1448-4985-858f-87ea0ebbbfae"
         },
         {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "layout|flex": "number"
+            },
+            "name": "mytabpanel2",
+            "designerId": "d8573087-db70-4d23-abd4-e0e23c45a0ea",
+            "masterInstanceId": "1bbd56e4-5c94-4f89-ae60-8b45f8da75b9"
+        },
+        {
             "type": "Ext.grid.Panel",
             "reference": {
                 "name": "items",
