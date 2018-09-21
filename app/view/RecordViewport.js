@@ -22,6 +22,9 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
         'StunningOctoPancake.view.HeaderPanel',
         'StunningOctoPancake.view.MyTabPanel',
         'Ext.tab.Panel',
+        'Ext.toolbar.Toolbar',
+        'Ext.container.ButtonGroup',
+        'Ext.button.Button',
         'Ext.grid.Panel',
         'Ext.view.Table',
         'Ext.grid.column.Column'
@@ -44,6 +47,27 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
         {
             xtype: 'mytabpanel',
             flex: 1
+        },
+        {
+            xtype: 'toolbar',
+            flex: 1,
+            items: [
+                {
+                    xtype: 'buttongroup',
+                    title: 'Buttons',
+                    columns: 2,
+                    items: [
+                        {
+                            xtype: 'button',
+                            text: 'Button 1'
+                        },
+                        {
+                            xtype: 'button',
+                            text: 'Button 2'
+                        }
+                    ]
+                }
+            ]
         },
         {
             xtype: 'gridpanel',
