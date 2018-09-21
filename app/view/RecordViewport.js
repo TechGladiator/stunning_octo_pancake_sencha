@@ -22,6 +22,7 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
         'StunningOctoPancake.view.HeaderPanel',
         'StunningOctoPancake.view.MyTabPanel',
         'Ext.tab.Panel',
+        'Ext.Img',
         'Ext.button.Segmented',
         'Ext.button.Button',
         'Ext.grid.Panel',
@@ -46,6 +47,16 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
         {
             xtype: 'mytabpanel',
             flex: 1
+        },
+        {
+            xtype: 'image',
+            flex: 1,
+            margin: '0 0 30',
+            maxHeight: 300,
+            minHeight: 300,
+            width: 600,
+            src: 'https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318 &markers=color:red%7Clabel:C%7C40.718217,-73.998284',
+            title: 'Map'
         },
         {
             xtype: 'segmentedbutton',
