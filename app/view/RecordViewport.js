@@ -20,8 +20,6 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
     requires: [
         'StunningOctoPancake.view.RecordViewportViewModel',
         'StunningOctoPancake.view.HeaderPanel',
-        'StunningOctoPancake.view.MyTabPanel',
-        'Ext.tab.Panel',
         'Ext.Img',
         'Ext.button.Segmented',
         'Ext.button.Button',
@@ -45,13 +43,9 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
             margins: 'auto'
         },
         {
-            xtype: 'mytabpanel',
-            flex: 1
-        },
-        {
             xtype: 'image',
             flex: 1,
-            margin: '0 0 30',
+            margin: 30,
             maxHeight: 300,
             minHeight: 300,
             width: 600,
