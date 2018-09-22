@@ -7,7 +7,6 @@
     "codeClass": null,
     "userConfig": {
         "container|align": "center",
-        "designer|initialView": true,
         "designer|userAlias": "recordviewport",
         "designer|userClassName": "RecordViewport",
         "layout": "vbox"
@@ -16,8 +15,7 @@
         "container|align": "string",
         "designer|userAlias": "string",
         "designer|userClassName": "string",
-        "layout": "string",
-        "designer|initialView": "boolean"
+        "layout": "string"
     },
     "name": "MyViewport",
     "designerId": "1ac2d61b-5c7d-4e50-8c50-cb894917b7c3",
@@ -83,7 +81,7 @@
             "userConfig": {
                 "layout|flex": 1,
                 "maxHeight": 50,
-                "width": 500
+                "width": 600
             },
             "configAlternates": {
                 "layout|flex": "number",
@@ -146,6 +144,24 @@
                     },
                     "name": "MyButton4",
                     "designerId": "c26fc092-228a-4a82-85c1-e849ad538c79"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "style": "background: ##5fa2dd",
+                        "text": "Home"
+                    },
+                    "configAlternates": {
+                        "text": "string",
+                        "style": "string"
+                    },
+                    "name": "MyButton5",
+                    "designerId": "c0291321-e6cc-45d0-9fb2-08ac2dafea87"
                 }
             ]
         },

@@ -35,7 +35,7 @@ Ext.application({
     name: 'StunningOctoPancake',
 
     launch: function() {
-        Ext.create('StunningOctoPancake.view.RecordViewport');
+        Ext.create('StunningOctoPancake.view.AppViewPort');
     }
 
 });

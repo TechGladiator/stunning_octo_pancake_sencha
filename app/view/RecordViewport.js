@@ -57,7 +57,7 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
             xtype: 'segmentedbutton',
             flex: 1,
             maxHeight: 50,
-            width: 500,
+            width: 600,
             items: [
                 {
                     style: 'background: ##5fa2dd',
@@ -70,6 +70,10 @@ Ext.define('StunningOctoPancake.view.RecordViewport', {
                 {
                     style: 'background: ##5fa2dd',
                     text: 'Map Imported Data'
+                },
+                {
+                    style: 'background: ##5fa2dd',
+                    text: 'Home'
                 }
             ]
         },
