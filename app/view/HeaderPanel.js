@@ -24,11 +24,7 @@ Ext.define('StunningOctoPancake.view.HeaderPanel', {
     viewModel: {
         type: 'headerpanel'
     },
-    border: false,
-    margin: 'auto',
-    maxHeight: 44,
-    maxWidth: 832.5,
-    minWidth: 382.5,
+    maxWidth: 832,
     width: '75%',
     title: 'Stunning Octo Pancake'
 
