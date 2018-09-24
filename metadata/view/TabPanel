@@ -1,0 +1,110 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeTab": 0,
+        "bodyPadding": "64 32",
+        "designer|uiInterfaceName": "default-framed",
+        "designer|userAlias": "tabpanel",
+        "designer|userClassName": "TabPanel",
+        "frame": true,
+        "margin": "48 0 32",
+        "maxHeight": 210,
+        "maxWidth": 832,
+        "minHeight": 210,
+        "minWidth": 382,
+        "width": "75%"
+    },
+    "configAlternates": {
+        "activeTab": "auto",
+        "bodyPadding": "auto",
+        "designer|uiInterfaceName": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "margin": "auto",
+        "maxHeight": "number",
+        "maxWidth": "number",
+        "minHeight": "number",
+        "minWidth": "number",
+        "width": "auto"
+    },
+    "name": "MyTabPanel",
+    "designerId": "eb962a5a-aca5-4e9b-8790-dee488497983",
+    "viewControllerInstanceId": "865274e5-63d5-4fdb-a891-30118d3d70af",
+    "viewModelInstanceId": "d0a5c96a-1294-4308-8807-d98f3d620867",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Upload CSV"
+            },
+            "configAlternates": {
+                "title": "string"
+            },
+            "name": "MyPanel1",
+            "designerId": "3e33ef19-b39b-44cc-a7ca-5849db1d5d15",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "UploadTabConfig"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string"
+                    },
+                    "name": "TabConfig",
+                    "designerId": "a62c03cb-1b2f-4580-8d5f-0338d5d159ed"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Search Records"
+            },
+            "configAlternates": {
+                "title": "string"
+            },
+            "name": "MyPanel2",
+            "designerId": "bf891767-1846-4490-91d4-067a209dad19",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "SearchTabConfig"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string"
+                    },
+                    "name": "TabConfig1",
+                    "designerId": "8ccc1e03-4220-4532-8ffb-ac5458fc76e5"
+                }
+            ]
+        }
+    ]
+}

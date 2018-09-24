@@ -9,7 +9,8 @@
         "name": "StunningOctoPancake",
         "views": [
             "OctoApp",
-            "HeaderPanel"
+            "HeaderPanel",
+            "TabPanel"
         ]
     },
     "configAlternates": {

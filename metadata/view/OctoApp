@@ -37,6 +37,23 @@
             "name": "HeaderPanel",
             "designerId": "fb482b55-f6d9-41e3-bbab-d68e04f8efc5",
             "masterInstanceId": "9859fcbf-655d-42d1-8fc6-cd281217a03a"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "layout|flex": "number"
+            },
+            "name": "TabPanel",
+            "designerId": "dc249328-0be5-4f77-bb71-bc4cbf4df0a3",
+            "masterInstanceId": "eb962a5a-aca5-4e9b-8790-dee488497983"
         }
     ]
 }
