@@ -20,22 +20,5 @@ Ext.Loader.setConfig({
 
 
 Ext.application({
-    models: [
-        'ImportRecords'
-    ],
-    stores: [
-        'RecordDataStore'
-    ],
-    views: [
-        'AppViewPort',
-        'RecordViewport',
-        'HeaderPanel',
-        'MyTabPanel'
-    ],
-    name: 'StunningOctoPancake',
-
-    launch: function() {
-        Ext.create('StunningOctoPancake.view.AppViewPort');
-    }
-
+    name: 'StunningOctoPancake'
 });
