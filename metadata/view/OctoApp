@@ -1,0 +1,25 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "octoapp",
+        "designer|userClassName": "OctoApp"
+    },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyPanel",
+    "designerId": "d90b4c9d-06ff-4e74-b6a2-cd06549655d6",
+    "viewControllerInstanceId": "d9d66bed-881d-49d0-97d5-9aaf54f55036",
+    "viewModelInstanceId": "99371537-0be1-4fb9-896b-22278ea2fea9"
+}
