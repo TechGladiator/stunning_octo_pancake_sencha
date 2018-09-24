@@ -1,0 +1,26 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "headerpanel",
+        "designer|userClassName": "HeaderPanel",
+        "maxWidth": 832,
+        "title": "Stunning Octo Pancake",
+        "width": "75%"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "maxWidth": "number",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyPanel1",
+    "designerId": "9859fcbf-655d-42d1-8fc6-cd281217a03a",
+    "viewControllerInstanceId": "2765d3af-e0c4-467c-a899-d6e098caacfc",
+    "viewModelInstanceId": "13813daa-e6cd-4434-82fc-9ed404ad0516"
+}

@@ -21,7 +21,8 @@ Ext.Loader.setConfig({
 
 Ext.application({
     views: [
-        'OctoApp'
+        'OctoApp',
+        'HeaderPanel'
     ],
     name: 'StunningOctoPancake',
 

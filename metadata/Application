@@ -8,7 +8,8 @@
     "userConfig": {
         "name": "StunningOctoPancake",
         "views": [
-            "OctoApp"
+            "OctoApp",
+            "HeaderPanel"
         ]
     },
     "configAlternates": {
