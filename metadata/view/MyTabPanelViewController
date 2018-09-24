@@ -1,17 +1,17 @@
 {
-    "type": "Ext.app.ViewModel",
+    "type": "Ext.app.ViewController",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "headerpanel",
-        "designer|userClassName": "HeaderPanelViewModel"
+        "designer|userAlias": "mytabpanel",
+        "designer|userClassName": "MyTabPanelViewController"
     },
     "configAlternates": {
         "designer|userAlias": "string",
         "designer|userClassName": "string"
     },
-    "designerId": "60f2fdb3-5ad0-47db-8d23-606935347f93"
+    "designerId": "ee51bcc2-bf01-4eea-a8b0-1542cfc9b939"
 }

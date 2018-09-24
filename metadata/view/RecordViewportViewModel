@@ -6,12 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "octoapp",
-        "designer|userClassName": "OctoAppViewModel"
+        "designer|userAlias": "recordviewport",
+        "designer|userClassName": "RecordViewportViewModel"
     },
     "configAlternates": {
         "designer|userAlias": "string",
         "designer|userClassName": "string"
     },
-    "designerId": "99371537-0be1-4fb9-896b-22278ea2fea9"
+    "designerId": "97bb86b6-175e-4223-ad99-a9f604e50fc9"
 }

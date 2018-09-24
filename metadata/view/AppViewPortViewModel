@@ -6,12 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "tabpanel",
-        "designer|userClassName": "TabPanelViewModel"
+        "designer|userAlias": "appviewport",
+        "designer|userClassName": "AppViewPortViewModel"
     },
     "configAlternates": {
         "designer|userAlias": "string",
         "designer|userClassName": "string"
     },
-    "designerId": "d0a5c96a-1294-4308-8807-d98f3d620867"
+    "designerId": "d0b32597-462e-4bb0-bd91-6fbb2213926d"
 }

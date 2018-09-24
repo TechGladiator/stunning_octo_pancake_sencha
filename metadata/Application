@@ -6,16 +6,25 @@
     },
     "codeClass": null,
     "userConfig": {
+        "models": [
+            "ImportRecords"
+        ],
         "name": "StunningOctoPancake",
+        "stores": [
+            "RecordDataStore"
+        ],
         "views": [
-            "OctoApp",
+            "AppViewPort",
+            "RecordViewport",
             "HeaderPanel",
-            "TabPanel"
+            "MyTabPanel"
         ]
     },
     "configAlternates": {
         "name": "string",
-        "views": "typedarray"
+        "views": "typedarray",
+        "models": "typedarray",
+        "stores": "typedarray"
     },
     "name": "Application",
     "designerId": "application"

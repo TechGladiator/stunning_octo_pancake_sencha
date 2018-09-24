@@ -6,21 +6,31 @@
     },
     "codeClass": null,
     "userConfig": {
+        "border": false,
         "designer|userAlias": "headerpanel",
         "designer|userClassName": "HeaderPanel",
-        "maxWidth": 832,
+        "margin": "auto",
+        "maxHeight": 44,
+        "maxWidth": 832.5,
+        "minWidth": 382.5,
         "title": "Stunning Octo Pancake",
         "width": "75%"
     },
     "configAlternates": {
-        "designer|userAlias": "string",
-        "designer|userClassName": "string",
+        "border": "boolean",
+        "layout|flex": "number",
+        "layout|margins": "string",
+        "margin": "auto",
+        "maxHeight": "number",
         "maxWidth": "number",
+        "minWidth": "number",
         "title": "string",
-        "width": "auto"
+        "width": "auto",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
     },
-    "name": "MyPanel1",
-    "designerId": "9859fcbf-655d-42d1-8fc6-cd281217a03a",
-    "viewControllerInstanceId": "2765d3af-e0c4-467c-a899-d6e098caacfc",
-    "viewModelInstanceId": "13813daa-e6cd-4434-82fc-9ed404ad0516"
+    "name": "MyPanel",
+    "designerId": "2b909136-1448-4985-858f-87ea0ebbbfae",
+    "viewControllerInstanceId": "68916243-dc6f-4e02-a397-d81f60a22050",
+    "viewModelInstanceId": "60f2fdb3-5ad0-47db-8d23-606935347f93"
 }
