@@ -14,7 +14,7 @@
  */
 
 Ext.define('StunningOctoPancake.view.RecordViewport', {
-    extend: 'Ext.container.Viewport',
+    extend: 'Ext.panel.Panel',
     alias: 'widget.recordviewport',
 
     requires: [
