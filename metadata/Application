@@ -17,7 +17,7 @@
             "AppViewPort",
             "RecordViewport",
             "HeaderPanel",
-            "MyTabPanel"
+            "TabPanel"
         ]
     },
     "configAlternates": {

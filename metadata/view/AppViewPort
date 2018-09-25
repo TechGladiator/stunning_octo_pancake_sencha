@@ -58,7 +58,7 @@
             "configAlternates": {
                 "layout|flex": "number"
             },
-            "name": "mytabpanel1",
+            "name": "TabPanel",
             "designerId": "df0de6af-df7e-48c6-8e39-63f70c96a6a3",
             "masterInstanceId": "1bbd56e4-5c94-4f89-ae60-8b45f8da75b9"
         }

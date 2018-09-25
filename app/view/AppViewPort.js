@@ -20,7 +20,7 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
     requires: [
         'StunningOctoPancake.view.AppViewPortViewModel',
         'StunningOctoPancake.view.HeaderPanel',
-        'StunningOctoPancake.view.MyTabPanel',
+        'StunningOctoPancake.view.TabPanel',
         'Ext.tab.Panel'
     ],
 
@@ -40,7 +40,7 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
             margins: 'auto'
         },
         {
-            xtype: 'mytabpanel',
+            xtype: 'tabpanel',
             flex: 1
         }
     ]

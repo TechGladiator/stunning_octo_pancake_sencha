@@ -30,7 +30,7 @@ Ext.application({
         'AppViewPort',
         'RecordViewport',
         'HeaderPanel',
-        'MyTabPanel'
+        'TabPanel'
     ],
     name: 'StunningOctoPancake',
 
