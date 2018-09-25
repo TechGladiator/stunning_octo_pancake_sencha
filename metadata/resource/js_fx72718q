@@ -8,7 +8,7 @@
     "userConfig": {
         "designer|userClassName": "js_fx72718q",
         "includeInBundle": true,
-        "url": "papaparse.js"
+        "url": "metadata/resource/papaparse.js"
     },
     "configAlternates": {
         "designer|userClassName": "string",
