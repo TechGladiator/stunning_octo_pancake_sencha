@@ -29,6 +29,7 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
         type: 'appviewport'
     },
     style: 'background: #fff',
+    defaultListenerScope: true,
 
     layout: {
         type: 'vbox',
@@ -67,7 +68,10 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
                             maxWidth: 680,
                             width: '100%',
                             fieldLabel: 'Choose CSV File:',
-                            labelWidth: 110
+                            labelWidth: 110,
+                            listeners: {
+                                change: 'onFilefieldChange'
+                            }
                         },
                         {
                             xtype: 'button',
@@ -102,6 +106,15 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
                 }
             ]
         }
-    ]
+    ],
+
+    /* remove 'C:\fakepath\' from filename */
+    onFilefieldChange: function(filefield, value, eOpts) {
+        let fileName = $("#filefield-1014-inputEl").val();
+        fileName = fileName.substring(fileName.lastIndexOf("\\") + 1);
+        if (fileName !== "") {
+          $("#filefield-1014-inputEl").val(fileName);
+        }
+    }
 
 });
