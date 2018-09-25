@@ -29,8 +29,7 @@ Ext.application({
     views: [
         'AppViewPort',
         'RecordViewport',
-        'HeaderPanel',
-        'TabPanel'
+        'HeaderPanel'
     ],
     name: 'StunningOctoPancake',
 

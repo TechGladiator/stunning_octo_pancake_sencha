@@ -20,8 +20,9 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
     requires: [
         'StunningOctoPancake.view.AppViewPortViewModel',
         'StunningOctoPancake.view.HeaderPanel',
-        'StunningOctoPancake.view.TabPanel',
-        'Ext.tab.Panel'
+        'Ext.tab.Panel',
+        'Ext.tab.Tab',
+        'Ext.form.field.File'
     ],
 
     viewModel: {
@@ -41,7 +42,65 @@ Ext.define('StunningOctoPancake.view.AppViewPort', {
         },
         {
             xtype: 'tabpanel',
-            flex: 1
+            flex: 1,
+            frame: true,
+            margin: '48 0 32',
+            maxHeight: 210,
+            maxWidth: 832.5,
+            minHeight: 210,
+            minWidth: 382.5,
+            width: '75%',
+            bodyBorder: false,
+            bodyPadding: '64 32',
+            activeTab: 0,
+            items: [
+                {
+                    xtype: 'panel',
+                    title: 'Upload File',
+                    layout: {
+                        type: 'hbox',
+                        align: 'middle'
+                    },
+                    items: [
+                        {
+                            xtype: 'filefield',
+                            maxWidth: 680,
+                            width: '100%',
+                            fieldLabel: 'Choose CSV File:',
+                            labelWidth: 110
+                        },
+                        {
+                            xtype: 'button',
+                            flex: 1,
+                            margin: '0 0 0 10',
+                            text: 'Submit'
+                        }
+                    ]
+                },
+                {
+                    xtype: 'panel',
+                    title: 'Search Imports',
+                    layout: {
+                        type: 'hbox',
+                        align: 'middle'
+                    },
+                    items: [
+                        {
+                            xtype: 'textfield',
+                            maxWidth: 680,
+                            width: '100%',
+                            fieldLabel: 'Search By Import Name',
+                            labelWidth: 150
+                        },
+                        {
+                            xtype: 'button',
+                            flex: 1,
+                            margin: '0 0 0 10',
+                            text: 'Search'
+                        }
+                    ]
+                }
+            ]
         }
     ]
 

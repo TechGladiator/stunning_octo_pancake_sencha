@@ -16,8 +16,7 @@
         "views": [
             "AppViewPort",
             "RecordViewport",
-            "HeaderPanel",
-            "TabPanel"
+            "HeaderPanel"
         ]
     },
     "configAlternates": {
