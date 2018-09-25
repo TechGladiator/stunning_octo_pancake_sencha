@@ -27,14 +27,14 @@ Ext.application({
         'RecordDataStore'
     ],
     views: [
-        'AppViewPort',
+        'OctoApp',
         'RecordViewport',
         'HeaderPanel'
     ],
     name: 'StunningOctoPancake',
 
     launch: function() {
-        Ext.create('StunningOctoPancake.view.AppViewPort', {renderTo: Ext.getBody()});
+        Ext.create('StunningOctoPancake.view.OctoApp', {renderTo: Ext.getBody()});
     }
 
 });

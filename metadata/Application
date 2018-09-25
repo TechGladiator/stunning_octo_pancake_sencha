@@ -14,7 +14,7 @@
             "RecordDataStore"
         ],
         "views": [
-            "AppViewPort",
+            "OctoApp",
             "RecordViewport",
             "HeaderPanel"
         ]
