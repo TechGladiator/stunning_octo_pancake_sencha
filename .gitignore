@@ -1,6 +1,6 @@
 .architect
-app.json
-app.json.meta
+app.*
+app/
 bootstrap.css
 bootstrap.js
 bootstrap.json
@@ -11,6 +11,7 @@ build.xml
 classic.json
 classic.jsonp
 ext/
+index.html
 modern.json
 modern.jsonp
 packages/
