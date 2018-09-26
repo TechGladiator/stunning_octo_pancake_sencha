@@ -1,0 +1,22 @@
+{
+    "type": "Ext.container.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "octoapp",
+        "designer|userClassName": "OctoApp"
+    },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyContainer",
+    "designerId": "08b22d6c-695f-4761-a845-b6e279ee0949",
+    "viewControllerInstanceId": "b1126ce0-6f3c-4475-9eb2-1dcc8571b2a5",
+    "viewModelInstanceId": "2836b7eb-e6f9-4525-a7ac-5fc2816d17ac"
+}

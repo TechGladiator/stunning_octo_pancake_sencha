@@ -6,7 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "name": "StunningOctoPancake"
+        "name": "StunningOctoPancake",
+        "views": [
+            "OctoApp"
+        ]
     },
     "configAlternates": {
         "name": "string",
