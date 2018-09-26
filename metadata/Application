@@ -6,18 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "models": [
-            "ImportRecords"
-        ],
-        "name": "StunningOctoPancake",
-        "stores": [
-            "RecordDataStore"
-        ],
-        "views": [
-            "OctoApp",
-            "RecordViewport",
-            "HeaderPanel"
-        ]
+        "name": "StunningOctoPancake"
     },
     "configAlternates": {
         "name": "string",
