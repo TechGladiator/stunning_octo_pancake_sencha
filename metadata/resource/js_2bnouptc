@@ -6,15 +6,15 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "js_6rfjr1vg",
+        "designer|userClassName": "js_2bnouptc",
         "includeInBundle": true,
-        "url": "metadata/resource/jquery-3.3.1.js"
+        "url": "metadata/resource/bootstrap.bundle.js"
     },
     "configAlternates": {
         "designer|userClassName": "string",
         "includeInBundle": "boolean",
         "url": "uri"
     },
-    "name": "js1",
-    "designerId": "2e33f50c-9e57-4321-b486-435440f3bb61"
+    "name": "js",
+    "designerId": "5ad9509c-438f-4e60-a7e0-dd395595b144"
 }
