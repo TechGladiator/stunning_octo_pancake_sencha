@@ -1,17 +1,17 @@
 {
-    "type": "Ext.app.ViewController",
+    "type": "Ext.app.ViewModel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "octoapp",
-        "designer|userClassName": "OctoAppViewController"
+        "designer|userAlias": "headerpanel",
+        "designer|userClassName": "HeaderPanelViewModel"
     },
     "configAlternates": {
         "designer|userAlias": "string",
         "designer|userClassName": "string"
     },
-    "designerId": "d3037051-9908-4de4-850d-a984895c2d73"
+    "designerId": "60f2fdb3-5ad0-47db-8d23-606935347f93"
 }

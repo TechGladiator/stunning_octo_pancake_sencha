@@ -6,9 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "js_xsrpztm7",
+        "designer|userClassName": "js_fx72718q",
         "includeInBundle": true,
-        "url": "metadata/resource/jquery-3.3.1.js"
+        "url": "metadata/resource/papaparse.js"
     },
     "configAlternates": {
         "designer|userClassName": "string",
@@ -16,5 +16,5 @@
         "url": "uri"
     },
     "name": "js",
-    "designerId": "0cfc9b20-31f7-4bb7-8f47-f80074d637a7"
+    "designerId": "0fdddbbd-7d64-4416-8794-6ac4b6b9478b"
 }

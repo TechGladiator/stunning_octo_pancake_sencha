@@ -6,12 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "octoapp",
-        "designer|userClassName": "OctoAppViewController"
+        "designer|userAlias": "headerpanel",
+        "designer|userClassName": "HeaderPanelViewController"
     },
     "configAlternates": {
         "designer|userAlias": "string",
         "designer|userClassName": "string"
     },
-    "designerId": "d3037051-9908-4de4-850d-a984895c2d73"
+    "designerId": "68916243-dc6f-4e02-a397-d81f60a22050"
 }

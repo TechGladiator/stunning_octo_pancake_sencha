@@ -1,65 +1,361 @@
 {
-    "type": "Ext.container.Container",
+    "type": "Ext.panel.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "container|align": "center",
         "designer|initialView": true,
         "designer|userAlias": "octoapp",
-        "designer|userClassName": "OctoApp"
+        "designer|userClassName": "OctoApp",
+        "layout": "vbox",
+        "style": "background: #fff"
     },
     "configAlternates": {
+        "container|align": "string",
         "designer|initialView": "boolean",
         "designer|userAlias": "string",
-        "designer|userClassName": "string"
+        "designer|userClassName": "string",
+        "layout": "string",
+        "style": "string"
     },
-    "name": "MyContainer",
-    "designerId": "08b22d6c-695f-4761-a845-b6e279ee0949",
-    "viewControllerInstanceId": "b1126ce0-6f3c-4475-9eb2-1dcc8571b2a5",
-    "viewModelInstanceId": "2836b7eb-e6f9-4525-a7ac-5fc2816d17ac",
+    "name": "MyPanel",
+    "designerId": "26070311-99ce-4c40-bf7b-d751da9f9bf1",
+    "viewControllerInstanceId": "d3037051-9908-4de4-850d-a984895c2d73",
+    "viewModelInstanceId": "d0b32597-462e-4bb0-bd91-6fbb2213926d",
     "cn": [
         {
-            "type": "basiceventbinding",
+            "type": "linkedinstance",
             "reference": {
-                "name": "listeners",
+                "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onContainerAfterRender",
-                "implHandler": [
-                    "$(\"body\").html(`<div class=\"container\">",
-                    "",
-                    "                    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark w-75 m-auto\">",
-                    "                        <p class=\"navbar-brand\">Stunning Octo Pancake</p>",
-                    "                    </nav>",
-                    "                    <div class=\"jumbotron w-75 mt-5 ml-auto mr-auto\">",
-                    "                        <h1 class=\"text-center mb-5\" id=\"jumboHeader\"></h1>",
-                    "                        <div class=\"wrapper\"></div>",
-                    "                    </div>",
-                    "                    <div id=\"map\"></div>",
-                    "",
-                    "                </div>",
-                    "                <div class=\"csv\"></div>",
-                    "                <script async=\"\" defer=\"\" src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyCEXe5dDNptlIIvkxHQTc6ZeYms5mJDIHQ\"></script>`);",
-                    "",
-                    "pageSwitch = false;",
-                    "",
-                    "main();"
-                ],
-                "name": "afterrender",
-                "scope": "me"
+                "layout|flex": 1,
+                "layout|margins": "auto"
             },
             "configAlternates": {
-                "fn": "string",
-                "implHandler": "code",
-                "name": "string",
-                "scope": "string"
+                "layout|flex": "number",
+                "layout|margins": "string"
             },
-            "name": "onContainerAfterRender",
-            "designerId": "1e0591f0-d917-4f58-b87e-b1a1264406da"
+            "name": "headerpanel1",
+            "designerId": "87fbcec6-055a-454e-b8de-a4e7093856d2",
+            "masterInstanceId": "2b909136-1448-4985-858f-87ea0ebbbfae"
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 0,
+                "bodyBorder": false,
+                "bodyPadding": "64 32",
+                "designer|uiInterfaceName": "default-framed",
+                "frame": true,
+                "layout|flex": 1,
+                "margin": "48 0 32",
+                "maxHeight": 210,
+                "maxWidth": 832.5,
+                "minHeight": 210,
+                "minWidth": 382.5,
+                "width": "75%"
+            },
+            "configAlternates": {
+                "activeTab": "auto",
+                "designer|displayName": "string",
+                "layout|flex": "number",
+                "margin": "auto",
+                "maxWidth": "number",
+                "minWidth": "number",
+                "width": "auto",
+                "bodyBorder": "boolean",
+                "bodyPadding": "auto",
+                "designer|uiInterfaceName": "string",
+                "frame": "boolean",
+                "maxHeight": "number",
+                "designer|userAlias": "string",
+                "designer|userClassName": "string",
+                "minHeight": "number"
+            },
+            "name": "MyTabPanel",
+            "designerId": "c1295153-7bb2-4ecd-85e7-7f7b040be7a9",
+            "viewControllerInstanceId": "ee51bcc2-bf01-4eea-a8b0-1542cfc9b939",
+            "viewModelInstanceId": "68780b41-9f1e-4c8e-a262-61bd92992f4d",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "layout": "hbox",
+                        "title": "Upload File"
+                    },
+                    "configAlternates": {
+                        "title": "string",
+                        "container|align": "string",
+                        "layout": "string",
+                        "bodyPadding": "auto"
+                    },
+                    "name": "MyPanel1",
+                    "designerId": "2f4551dc-bcf1-4f3f-b747-9a3dd5d0126e",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig",
+                            "designerId": "8fd841fb-19eb-47a4-989b-9e63d90dac3a"
+                        },
+                        {
+                            "type": "Ext.form.field.File",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Choose CSV File:",
+                                "labelWidth": 110,
+                                "layout|flex": null,
+                                "maxWidth": 680,
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout|flex": "number",
+                                "labelWidth": "number",
+                                "maxWidth": "number",
+                                "width": "auto"
+                            },
+                            "name": "MyFileUpload",
+                            "designerId": "9d438244-6843-4bc4-8e59-3f49a23a2239",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|commentHeader": [
+                                            "remove 'C:\\fakepath\\' from filename"
+                                        ],
+                                        "fn": "onFilefieldChange",
+                                        "implHandler": [
+                                            "let fileName = $(\"#filefield-1014-inputEl\").val();",
+                                            "fileName = fileName.substring(fileName.lastIndexOf(\"\\\\\") + 1);",
+                                            "if (fileName !== \"\") {",
+                                            "  $(\"#filefield-1014-inputEl\").val(fileName);",
+                                            "}"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "designer|commentHeader": "comment",
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onFilefieldChange",
+                                    "designerId": "88675592-5a63-4134-9d3d-e3b5e887f98c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "margin": "0 0 0 10",
+                                "text": "Submit"
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "layout|flex": "number",
+                                "margin": "auto",
+                                "maxWidth": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton",
+                            "designerId": "e9ac220c-6100-4a1a-95ff-58ce1638ba95",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "let errorCount = 0;",
+                                            "let fieldData;",
+                                            "let fieldErrors;",
+                                            "let fieldNames;",
+                                            "let firstError;",
+                                            "let fullResults;",
+                                            "let rowCount = 0;",
+                                            "",
+                                            "// if (!$(\"#filefield-1014-inputEl\")[0].files.length) {",
+                                            "//   console.log(\"Please choose at least one file to parse.\");",
+                                            "//   return;",
+                                            "// }",
+                                            "",
+                                            "function completeFn(results) {",
+                                            "    fullResults = results;",
+                                            "    fieldNames = fullResults.meta.fields;",
+                                            "    fieldData = fullResults.data;",
+                                            "    fieldErrors = fullResults.errors;",
+                                            "    if (fullResults && fieldErrors) {",
+                                            "    if (fieldErrors) {",
+                                            "        errorCount = fieldErrors.length;",
+                                            "        firstError = fieldErrors[0];",
+                                            "    }",
+                                            "    if (fieldData && fieldData.length > 0) {",
+                                            "        rowCount = fieldData.length;",
+                                            "    }",
+                                            "    }",
+                                            "    // printStats('Parse complete');",
+                                            "    console.log('    Results:', fullResults);",
+                                            "}",
+                                            "",
+                                            "function errorFn(err, file) {",
+                                            "    console.log('ERROR:', err, file);",
+                                            "}",
+                                            "",
+                                            "const file = document.getElementById(\"filefield-1014-inputEl\").files[0];",
+                                            "",
+                                            "Papa.parse(file, {",
+                                            "    // base config to use for each file",
+                                            "    delimiter: \"\",",
+                                            "    header: true,",
+                                            "    dynamicTyping: false,",
+                                            "    skipEmptyLines: true,",
+                                            "    preview: 0,",
+                                            "    step: undefined,",
+                                            "    encoding: \"\",",
+                                            "    worker: false,",
+                                            "    comments: false,",
+                                            "    complete: completeFn,",
+                                            "    error: errorFn",
+                                            "});"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onButtonClick",
+                                    "designerId": "6fdd7735-335e-4cbb-9a51-bd9292c39618"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "layout": "hbox",
+                        "title": "Search Imports"
+                    },
+                    "configAlternates": {
+                        "title": "string",
+                        "bodyPadding": "auto",
+                        "layout": "string",
+                        "container|align": "string",
+                        "designer|displayName": "string"
+                    },
+                    "name": "MyPanel2",
+                    "designerId": "7b99056a-1267-4dfb-ad80-fe5189246a0d",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig1",
+                            "designerId": "66712b4d-25cc-4fec-8b49-9ee79bd1a1b9"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "Search Field",
+                                "fieldLabel": "Search By Import Name",
+                                "labelWidth": 150,
+                                "maxWidth": 680,
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "width": "auto",
+                                "fieldLabel": "string",
+                                "labelWidth": "number",
+                                "maxWidth": "number"
+                            },
+                            "name": "MyTextField",
+                            "designerId": "9962c1e2-5e3c-4f69-a2f0-a0dd4dd73e9e"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "margin": "0 0 0 10",
+                                "text": "Search"
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number",
+                                "margin": "auto",
+                                "text": "string"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "46ba8600-8feb-420b-8bc4-3ad2a8b1da56"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
