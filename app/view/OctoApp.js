@@ -121,19 +121,47 @@ Ext.define('StunningOctoPancake.view.OctoApp', {
     },
 
     onButtonClick: function(button, e, eOpts) {
-        let rowCount = 0;
         let errorCount = 0;
+        let fieldData;
+        let fieldErrors;
+        let fieldNames;
         let firstError;
-        if (!$("#filefield-1014-inputEl")[0].files.length) {
-          console.log("Please choose at least one file to parse.");
-          return;
+        let fullResults;
+        let rowCount = 0;
+
+        // if (!$("#filefield-1014-inputEl")[0].files.length) {
+        //   console.log("Please choose at least one file to parse.");
+        //   return;
+        // }
+
+        function completeFn(results) {
+            fullResults = results;
+            fieldNames = fullResults.meta.fields;
+            fieldData = fullResults.data;
+            fieldErrors = fullResults.errors;
+            if (fullResults && fieldErrors) {
+            if (fieldErrors) {
+                errorCount = fieldErrors.length;
+                firstError = fieldErrors[0];
+            }
+            if (fieldData && fieldData.length > 0) {
+                rowCount = fieldData.length;
+            }
+            }
+            // printStats('Parse complete');
+            console.log('    Results:', fullResults);
         }
-        // use jquery to select files
-        $("filefield-1014-inputEl").parse({
-          config: {
+
+        function errorFn(err, file) {
+            console.log('ERROR:', err, file);
+        }
+
+        const file = document.getElementById("filefield-1014-inputEl").files[0];
+
+        Papa.parse(file, {
             // base config to use for each file
             delimiter: "",
-            header: headerCheck,
+            header: true,
             dynamicTyping: false,
             skipEmptyLines: true,
             preview: 0,
@@ -142,23 +170,7 @@ Ext.define('StunningOctoPancake.view.OctoApp', {
             worker: false,
             comments: false,
             complete: completeFn,
-            error: errorFn,
-          },
-          before(file) {
-            // executed before parsing each file begins;
-            // what you return here controls the flow
-            console.log('Parsing file...', file);
-          },
-          error(err, file) {
-            // executed if an error occurs while loading the file,
-            // or if before callback aborted for some reason
-            console.log('ERROR:', err, file);
-            firstError = firstError || err;
-            errorCount++;
-          },
-          complete() {
-            // executed after all files are complete
-          }
+            error: errorFn
         });
     }
 
