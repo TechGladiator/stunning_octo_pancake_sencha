@@ -197,7 +197,71 @@
                                 "text": "string"
                             },
                             "name": "MyButton",
-                            "designerId": "e9ac220c-6100-4a1a-95ff-58ce1638ba95"
+                            "designerId": "e9ac220c-6100-4a1a-95ff-58ce1638ba95",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "let rowCount = 0;",
+                                            "let errorCount = 0;",
+                                            "let firstError;",
+                                            "if (!$(\"#filefield-1014-inputEl\")[0].files.length) {",
+                                            "  console.log(\"Please choose at least one file to parse.\");",
+                                            "  return;",
+                                            "}",
+                                            "// use jquery to select files",
+                                            "$(\"filefield-1014-inputEl\").parse({",
+                                            "  config: {",
+                                            "    // base config to use for each file",
+                                            "    delimiter: \"\",",
+                                            "    header: headerCheck,",
+                                            "    dynamicTyping: false,",
+                                            "    skipEmptyLines: true,",
+                                            "    preview: 0,",
+                                            "    step: undefined,",
+                                            "    encoding: \"\",",
+                                            "    worker: false,",
+                                            "    comments: false,",
+                                            "    complete: completeFn,",
+                                            "    error: errorFn,",
+                                            "  },",
+                                            "  before(file) {",
+                                            "    // executed before parsing each file begins;",
+                                            "    // what you return here controls the flow",
+                                            "    console.log('Parsing file...', file);",
+                                            "  },",
+                                            "  error(err, file) {",
+                                            "    // executed if an error occurs while loading the file,",
+                                            "    // or if before callback aborted for some reason",
+                                            "    console.log('ERROR:', err, file);",
+                                            "    firstError = firstError || err;",
+                                            "    errorCount++;",
+                                            "  },",
+                                            "  complete() {",
+                                            "    // executed after all files are complete",
+                                            "  }",
+                                            "});"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onButtonClick",
+                                    "designerId": "6fdd7735-335e-4cbb-9a51-bd9292c39618"
+                                }
+                            ]
                         }
                     ]
                 },
