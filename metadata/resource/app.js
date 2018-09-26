@@ -1298,6 +1298,9 @@ function searchImports(searchString) {
 }
 
 function main() {
+  $("body").removeAttr('style');
+  $("body").removeAttr('class');
+  $("body").removeAttr('id');
   if (!pageSwitch) {
     pageSwitch = true;
     setPage(

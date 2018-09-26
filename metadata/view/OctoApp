@@ -18,5 +18,48 @@
     "name": "MyContainer",
     "designerId": "08b22d6c-695f-4761-a845-b6e279ee0949",
     "viewControllerInstanceId": "b1126ce0-6f3c-4475-9eb2-1dcc8571b2a5",
-    "viewModelInstanceId": "2836b7eb-e6f9-4525-a7ac-5fc2816d17ac"
+    "viewModelInstanceId": "2836b7eb-e6f9-4525-a7ac-5fc2816d17ac",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onContainerAfterRender",
+                "implHandler": [
+                    "$(\"body\").html(`<div class=\"container\">",
+                    "",
+                    "                    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark w-75 m-auto\">",
+                    "                        <p class=\"navbar-brand\">Stunning Octo Pancake</p>",
+                    "                    </nav>",
+                    "                    <div class=\"jumbotron w-75 mt-5 ml-auto mr-auto\">",
+                    "                        <h1 class=\"text-center mb-5\" id=\"jumboHeader\"></h1>",
+                    "                        <div class=\"wrapper\"></div>",
+                    "                    </div>",
+                    "                    <div id=\"map\"></div>",
+                    "",
+                    "                </div>",
+                    "                <div class=\"csv\"></div>",
+                    "                <script async=\"\" defer=\"\" src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyCEXe5dDNptlIIvkxHQTc6ZeYms5mJDIHQ\"></script>`);",
+                    "",
+                    "pageSwitch = false;",
+                    "",
+                    "main();"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onContainerAfterRender",
+            "designerId": "1e0591f0-d917-4f58-b87e-b1a1264406da"
+        }
+    ]
 }
