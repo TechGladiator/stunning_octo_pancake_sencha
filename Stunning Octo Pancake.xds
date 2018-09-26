@@ -38,7 +38,12 @@
         "model": [],
         "resource": [
             "9c2187b4-2c96-4c06-8f3c-1e6d9d3ff5b4",
-            "eb8486c2-00a7-4a45-9ffc-4725481dcad8"
+            "eb8486c2-00a7-4a45-9ffc-4725481dcad8",
+            "0adfe480-c77e-44c5-ac03-5312b229cc5c",
+            "0cfc9b20-31f7-4bb7-8f47-f80074d637a7",
+            "5ad9509c-438f-4e60-a7e0-dd395595b144",
+            "f8fed71f-0aed-4892-b1ad-819ecf0361d4",
+            "04db3bcb-8290-4341-b266-a558efdef016"
         ],
         "app": [
             "application"

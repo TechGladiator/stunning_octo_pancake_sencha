@@ -1,0 +1,20 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js_xsrpztm7",
+        "includeInBundle": true,
+        "url": "metadata/resource/jquery-3.3.1.js"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "includeInBundle": "boolean",
+        "url": "uri"
+    },
+    "name": "js",
+    "designerId": "0cfc9b20-31f7-4bb7-8f47-f80074d637a7"
+}
