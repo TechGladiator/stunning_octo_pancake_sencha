@@ -42,34 +42,21 @@
             "masterInstanceId": "2b909136-1448-4985-858f-87ea0ebbbfae"
         },
         {
-            "type": "Ext.Img",
+            "type": "linkedinstance",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "alt": "Google Maps",
-                "layout|flex": 1,
-                "margin": 30,
-                "maxHeight": 300,
-                "minHeight": 300,
-                "src": "https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318 &markers=color:red%7Clabel:C%7C40.718217,-73.998284 &key=AIzaSyCEXe5dDNptlIIvkxHQTc6ZeYms5mJDIHQ",
-                "title": "Map",
-                "width": 600
+                "layout|flex": 1
             },
             "configAlternates": {
-                "alt": "string",
-                "layout|flex": "number",
-                "margin": "auto",
-                "maxHeight": "number",
-                "minHeight": "number",
-                "src": "uri",
-                "title": "string",
-                "width": "auto"
+                "layout|flex": "number"
             },
-            "name": "MyImg",
-            "designerId": "4d7b07f8-f665-4ded-b96d-b2a7041c6348"
+            "name": "Map",
+            "designerId": "7a076a7f-f850-4a62-b61f-2435944e04a5",
+            "masterInstanceId": "dbf8b87e-d51d-48b1-8f1e-b8148e3d7f97"
         },
         {
             "type": "Ext.button.Segmented",

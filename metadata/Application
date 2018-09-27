@@ -19,7 +19,8 @@
             "HeaderPanel",
             "Tabs",
             "ChooseCSVFile",
-            "Submit"
+            "Submit",
+            "Map"
         ]
     },
     "configAlternates": {
