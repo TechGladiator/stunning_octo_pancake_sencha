@@ -16,7 +16,8 @@
         "views": [
             "OctoApp",
             "RecordViewport",
-            "HeaderPanel"
+            "HeaderPanel",
+            "Tabs"
         ]
     },
     "configAlternates": {
