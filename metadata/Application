@@ -25,7 +25,8 @@
             "EditData",
             "SaveRecords",
             "MapImportedData",
-            "Home"
+            "Home",
+            "Importname-Filename"
         ]
     },
     "configAlternates": {
