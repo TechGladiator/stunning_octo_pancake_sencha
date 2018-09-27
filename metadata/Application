@@ -17,7 +17,8 @@
             "OctoApp",
             "RecordViewport",
             "HeaderPanel",
-            "Tabs"
+            "Tabs",
+            "ChooseCSVFile"
         ]
     },
     "configAlternates": {

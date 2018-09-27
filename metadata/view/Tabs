@@ -74,62 +74,21 @@
                     "designerId": "8fd841fb-19eb-47a4-989b-9e63d90dac3a"
                 },
                 {
-                    "type": "Ext.form.field.File",
+                    "type": "linkedinstance",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fieldLabel": "Choose CSV File:",
-                        "labelWidth": 110,
-                        "layout|flex": null,
-                        "maxWidth": 680,
-                        "width": "100%"
+                        "layout|flex": null
                     },
                     "configAlternates": {
-                        "fieldLabel": "string",
-                        "layout|flex": "number",
-                        "labelWidth": "number",
-                        "maxWidth": "number",
-                        "width": "auto"
+                        "layout|flex": "number"
                     },
-                    "name": "MyFileUpload",
-                    "designerId": "9d438244-6843-4bc4-8e59-3f49a23a2239",
-                    "cn": [
-                        {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|commentHeader": [
-                                    "remove 'C:\\fakepath\\' from filename"
-                                ],
-                                "fn": "onFilefieldChange",
-                                "implHandler": [
-                                    "let fileName = $(\"#filefield-1014-inputEl\").val();",
-                                    "fileName = fileName.substring(fileName.lastIndexOf(\"\\\\\") + 1);",
-                                    "if (fileName !== \"\") {",
-                                    "  $(\"#filefield-1014-inputEl\").val(fileName);",
-                                    "}"
-                                ],
-                                "name": "change",
-                                "scope": "me"
-                            },
-                            "configAlternates": {
-                                "designer|commentHeader": "comment",
-                                "fn": "string",
-                                "implHandler": "code",
-                                "name": "string",
-                                "scope": "string"
-                            },
-                            "name": "onFilefieldChange",
-                            "designerId": "88675592-5a63-4134-9d3d-e3b5e887f98c"
-                        }
-                    ]
+                    "name": "ChooseCSVFile",
+                    "designerId": "57762f77-5746-4f83-9661-5c7088afb73b",
+                    "masterInstanceId": "5c0ace34-67c8-4902-acc7-52587aa46684"
                 },
                 {
                     "type": "Ext.button.Button",
