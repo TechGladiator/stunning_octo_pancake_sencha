@@ -1,0 +1,99 @@
+{
+    "type": "Ext.button.Segmented",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "recordbuttons",
+        "designer|userClassName": "RecordButtons",
+        "maxHeight": 50,
+        "width": 600
+    },
+    "configAlternates": {
+        "layout|flex": "number",
+        "maxHeight": "number",
+        "width": "auto",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MySegmentedButton",
+    "designerId": "11b88ed7-5771-48e5-979a-dceb4e0256ea",
+    "viewControllerInstanceId": "e9edbb2e-3e0c-40c0-8e2f-093a651601d3",
+    "viewModelInstanceId": "db21f3d0-ff2b-48c3-923b-aeed1e1a72ee",
+    "cn": [
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "style": "background: ##5fa2dd",
+                "text": "Edit Data"
+            },
+            "configAlternates": {
+                "text": "string",
+                "style": "string"
+            },
+            "name": "MyButton2",
+            "designerId": "5f85817e-669a-4fea-b823-0b3b2114705d"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "style": "background: ##5fa2dd",
+                "text": "Save Records"
+            },
+            "configAlternates": {
+                "text": "string",
+                "style": "string"
+            },
+            "name": "MyButton3",
+            "designerId": "f8d2cc79-37c7-47cd-93d7-34583f6fb707"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "style": "background: ##5fa2dd",
+                "text": "Map Imported Data"
+            },
+            "configAlternates": {
+                "text": "string",
+                "style": "string"
+            },
+            "name": "MyButton4",
+            "designerId": "98e08192-bc08-40c3-b96d-61588e09ba75"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "style": "background: ##5fa2dd",
+                "text": "Home"
+            },
+            "configAlternates": {
+                "text": "string",
+                "style": "string"
+            },
+            "name": "MyButton5",
+            "designerId": "45206008-2950-4023-9af7-af2ca013d34d"
+        }
+    ]
+}

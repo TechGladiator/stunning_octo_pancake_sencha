@@ -54,103 +54,26 @@
             "configAlternates": {
                 "layout|flex": "number"
             },
-            "name": "Map",
+            "name": "map9",
             "designerId": "7a076a7f-f850-4a62-b61f-2435944e04a5",
             "masterInstanceId": "dbf8b87e-d51d-48b1-8f1e-b8148e3d7f97"
         },
         {
-            "type": "Ext.button.Segmented",
+            "type": "linkedinstance",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1,
-                "maxHeight": 50,
-                "width": 600
+                "layout|flex": 1
             },
             "configAlternates": {
-                "layout|flex": "number",
-                "maxHeight": "number",
-                "width": "auto"
+                "layout|flex": "number"
             },
-            "name": "MySegmentedButton",
-            "designerId": "8e2605c2-f121-4302-b006-b6e9144aa8e7",
-            "cn": [
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "style": "background: ##5fa2dd",
-                        "text": "Edit Data"
-                    },
-                    "configAlternates": {
-                        "text": "string",
-                        "style": "string"
-                    },
-                    "name": "MyButton2",
-                    "designerId": "cc2a6688-e0f8-48d3-a4a9-146f850af558"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "style": "background: ##5fa2dd",
-                        "text": "Save Records"
-                    },
-                    "configAlternates": {
-                        "text": "string",
-                        "style": "string"
-                    },
-                    "name": "MyButton3",
-                    "designerId": "d31aac37-8859-4955-a674-281dfab25e97"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "style": "background: ##5fa2dd",
-                        "text": "Map Imported Data"
-                    },
-                    "configAlternates": {
-                        "text": "string",
-                        "style": "string"
-                    },
-                    "name": "MyButton4",
-                    "designerId": "c26fc092-228a-4a82-85c1-e849ad538c79"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "style": "background: ##5fa2dd",
-                        "text": "Home"
-                    },
-                    "configAlternates": {
-                        "text": "string",
-                        "style": "string"
-                    },
-                    "name": "MyButton5",
-                    "designerId": "c0291321-e6cc-45d0-9fb2-08ac2dafea87"
-                }
-            ]
+            "name": "RecordButtons",
+            "designerId": "e2a45171-64dc-4483-b634-7beeaebaa010",
+            "masterInstanceId": "11b88ed7-5771-48e5-979a-dceb4e0256ea"
         },
         {
             "type": "Ext.grid.Panel",

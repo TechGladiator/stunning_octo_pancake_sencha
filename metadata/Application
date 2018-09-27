@@ -20,7 +20,8 @@
             "Tabs",
             "ChooseCSVFile",
             "Submit",
-            "Map"
+            "Map",
+            "RecordButtons"
         ]
     },
     "configAlternates": {
