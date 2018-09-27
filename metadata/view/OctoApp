@@ -58,9 +58,43 @@
             "configAlternates": {
                 "designer|displayName": "string"
             },
-            "name": "Tabs",
+            "name": "tabs",
             "designerId": "71e89405-43f8-46fd-9958-085a71796b59",
             "masterInstanceId": "6150a696-b8ba-42ce-a414-05f9d29fea2e"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "layout|flex": "number"
+            },
+            "name": "recordbuttons",
+            "designerId": "7999879a-1e7c-4d3d-b1a8-c7a43272e1ec",
+            "masterInstanceId": "11b88ed7-5771-48e5-979a-dceb4e0256ea"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "layout|flex": "number"
+            },
+            "name": "importname-filename",
+            "designerId": "6287ad48-2f95-4f62-971e-1026b7f539d2",
+            "masterInstanceId": "730ec439-27ba-4e4d-a83a-f773cfdb8550"
         }
     ]
 }
