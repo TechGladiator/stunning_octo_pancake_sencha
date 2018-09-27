@@ -15,7 +15,6 @@
         ],
         "views": [
             "OctoApp",
-            "RecordViewport",
             "HeaderPanel",
             "Tabs",
             "ChooseCSVFile",
