@@ -40,10 +40,10 @@
                 ],
                 "fn": "onFilefieldChange",
                 "implHandler": [
-                    "let fileName = $(\"#filefield-1014-inputEl\").val();",
+                    "let fileName = $(\"#choosecsvfile-1014-inputEl\").val();",
                     "fileName = fileName.substring(fileName.lastIndexOf(\"\\\\\") + 1);",
                     "if (fileName !== \"\") {",
-                    "  $(\"#filefield-1014-inputEl\").val(fileName);",
+                    "  $(\"#choosecsvfile-1014-inputEl\").val(fileName);",
                     "}"
                 ],
                 "name": "change",
