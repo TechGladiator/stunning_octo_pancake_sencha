@@ -18,7 +18,8 @@
             "RecordViewport",
             "HeaderPanel",
             "Tabs",
-            "ChooseCSVFile"
+            "ChooseCSVFile",
+            "Submit"
         ]
     },
     "configAlternates": {
