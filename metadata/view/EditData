@@ -1,0 +1,24 @@
+{
+    "type": "Ext.button.Button",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "editdata",
+        "designer|userClassName": "EditData",
+        "style": "background: ##5fa2dd",
+        "text": "Edit Data"
+    },
+    "configAlternates": {
+        "text": "string",
+        "style": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyButton2",
+    "designerId": "2bd4a1ff-5ba7-4b99-9910-6a769dda0194",
+    "viewControllerInstanceId": "cd5b1d03-64ac-47fe-abe9-b3642690b2a5",
+    "viewModelInstanceId": "6c6e5a0f-ee91-4a2f-83fe-face38fcb619"
+}

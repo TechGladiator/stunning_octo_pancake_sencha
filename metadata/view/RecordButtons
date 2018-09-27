@@ -24,76 +24,48 @@
     "viewModelInstanceId": "db21f3d0-ff2b-48c3-923b-aeed1e1a72ee",
     "cn": [
         {
-            "type": "Ext.button.Button",
+            "type": "linkedinstance",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
-            "userConfig": {
-                "style": "background: ##5fa2dd",
-                "text": "Edit Data"
-            },
-            "configAlternates": {
-                "text": "string",
-                "style": "string"
-            },
-            "name": "MyButton2",
-            "designerId": "5f85817e-669a-4fea-b823-0b3b2114705d"
+            "name": "EditData",
+            "designerId": "51bbee27-baaf-46d1-95e4-6cc2ba10d7f3",
+            "masterInstanceId": "2bd4a1ff-5ba7-4b99-9910-6a769dda0194"
         },
         {
-            "type": "Ext.button.Button",
+            "type": "linkedinstance",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
-            "userConfig": {
-                "style": "background: ##5fa2dd",
-                "text": "Save Records"
-            },
-            "configAlternates": {
-                "text": "string",
-                "style": "string"
-            },
-            "name": "MyButton3",
-            "designerId": "f8d2cc79-37c7-47cd-93d7-34583f6fb707"
+            "name": "SaveRecords",
+            "designerId": "b5c04a46-5beb-45b8-a7a2-6a14af8b61cc",
+            "masterInstanceId": "96475c1e-ebec-4c50-9f88-b72b0c0b5986"
         },
         {
-            "type": "Ext.button.Button",
+            "type": "linkedinstance",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
-            "userConfig": {
-                "style": "background: ##5fa2dd",
-                "text": "Map Imported Data"
-            },
-            "configAlternates": {
-                "text": "string",
-                "style": "string"
-            },
-            "name": "MyButton4",
-            "designerId": "98e08192-bc08-40c3-b96d-61588e09ba75"
+            "name": "MapImportedData",
+            "designerId": "2e8e1a0a-5faa-4a34-b4ca-4555c5533062",
+            "masterInstanceId": "849e8eee-482c-4dfa-a62f-f783de625490"
         },
         {
-            "type": "Ext.button.Button",
+            "type": "linkedinstance",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
-            "userConfig": {
-                "style": "background: ##5fa2dd",
-                "text": "Home"
-            },
-            "configAlternates": {
-                "text": "string",
-                "style": "string"
-            },
-            "name": "MyButton5",
-            "designerId": "45206008-2950-4023-9af7-af2ca013d34d"
+            "name": "Home",
+            "designerId": "596396f3-6161-4465-8c74-453cb17f3479",
+            "masterInstanceId": "113ba0ea-c906-4a53-833d-677782021a07"
         }
     ]
 }

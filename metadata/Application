@@ -21,7 +21,11 @@
             "ChooseCSVFile",
             "Submit",
             "Map",
-            "RecordButtons"
+            "RecordButtons",
+            "EditData",
+            "SaveRecords",
+            "MapImportedData",
+            "Home"
         ]
     },
     "configAlternates": {
