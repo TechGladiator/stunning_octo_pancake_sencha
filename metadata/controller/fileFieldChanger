@@ -1,0 +1,60 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "fileFieldChanger"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
+    "name": "MyController",
+    "designerId": "f4bbf7a1-7b9c-49c1-95dd-ee325916a170",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "remove 'C:\\fakepath\\' from filename"
+                ],
+                "designer|controlQuery": "#chooseCSVFile",
+                "designer|params": [
+                    "filefield",
+                    "value",
+                    "eOpts"
+                ],
+                "designer|targetType": "ChooseCSVFile",
+                "fn": "onFilefieldChange",
+                "implHandler": [
+                    "let fileName = $(\"#chooseCSVFile-inputEl\").val();",
+                    "fileName = fileName.substring(fileName.lastIndexOf(\"\\\\\") + 1);",
+                    "if (fileName !== \"\") {",
+                    "    $(\"#chooseCSVFile-inputEl\").val(fileName);",
+                    "}"
+                ],
+                "name": "change",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "designer|commentHeader": "comment",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string",
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view"
+            },
+            "name": "onFilefieldChange",
+            "designerId": "5029213f-9521-46e2-a5af-73d735f9ef2e"
+        }
+    ]
+}
