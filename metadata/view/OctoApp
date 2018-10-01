@@ -73,6 +73,27 @@
             "codeClass": null,
             "userConfig": {
                 "hidden": true,
+                "id": "map",
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "hidden": "boolean",
+                "id": "string",
+                "layout|flex": "number"
+            },
+            "name": "map",
+            "designerId": "c566519e-1378-4418-ab73-b9c1f04820ae",
+            "masterInstanceId": "dbf8b87e-d51d-48b1-8f1e-b8148e3d7f97"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
                 "id": "recordButtons",
                 "layout|flex": 1
             },
