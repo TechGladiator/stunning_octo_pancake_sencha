@@ -53,10 +53,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|displayName": "Tabs"
+                "designer|displayName": "Tabs",
+                "id": "tabs"
             },
             "configAlternates": {
-                "designer|displayName": "string"
+                "designer|displayName": "string",
+                "id": "string"
             },
             "name": "tabs",
             "designerId": "71e89405-43f8-46fd-9958-085a71796b59",

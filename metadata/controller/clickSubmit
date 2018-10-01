@@ -47,6 +47,7 @@
                     "function completeFn(results) {",
                     "    Ext.getCmp('recordButtons').show();",
                     "    Ext.getCmp('importFileName').show();",
+                    "    Ext.getCmp('tabs').hide();",
                     "    fullResults = results;",
                     "    fieldNames = fullResults.meta.fields;",
                     "    fieldData = fullResults.data;",
