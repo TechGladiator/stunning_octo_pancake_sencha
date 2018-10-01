@@ -8,6 +8,7 @@
     "userConfig": {
         "designer|userAlias": "home",
         "designer|userClassName": "Home",
+        "id": "homeButton",
         "style": "background: ##5fa2dd",
         "text": "Home"
     },
@@ -15,7 +16,8 @@
         "text": "string",
         "style": "string",
         "designer|userAlias": "string",
-        "designer|userClassName": "string"
+        "designer|userClassName": "string",
+        "id": "string"
     },
     "name": "MyButton5",
     "designerId": "113ba0ea-c906-4a53-833d-677782021a07",
