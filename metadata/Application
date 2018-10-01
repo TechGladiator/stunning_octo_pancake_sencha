@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "controllers": [
+            "clickSubmit"
+        ],
         "models": [
             "ImportRecords"
         ],
@@ -32,7 +35,8 @@
         "name": "string",
         "views": "typedarray",
         "models": "typedarray",
-        "stores": "typedarray"
+        "stores": "typedarray",
+        "controllers": "typedarray"
     },
     "name": "Application",
     "designerId": "application"

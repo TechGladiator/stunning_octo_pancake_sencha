@@ -8,6 +8,7 @@
     "userConfig": {
         "designer|userAlias": "submit",
         "designer|userClassName": "Submit",
+        "id": "submitButton",
         "margin": "0 0 0 10",
         "text": "Submit"
     },
@@ -18,88 +19,11 @@
         "maxWidth": "number",
         "text": "string",
         "designer|userAlias": "string",
-        "designer|userClassName": "string"
+        "designer|userClassName": "string",
+        "id": "string"
     },
     "name": "MyButton",
     "designerId": "cf4f9013-ae6a-4ce1-96dd-d423164ece0d",
     "viewControllerInstanceId": "df782098-3105-485d-ad35-8515a16d73c3",
-    "viewModelInstanceId": "c91f783e-6325-4ccc-b3a7-e36935c341a9",
-    "cn": [
-        {
-            "type": "viewcontrollereventbinding",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onButtonClick",
-                "implHandler": [
-                    "let errorCount = 0;",
-                    "let fieldData;",
-                    "let fieldErrors;",
-                    "let fieldNames;",
-                    "let firstError;",
-                    "let fullResults;",
-                    "let rowCount = 0;",
-                    "",
-                    "if (!$(\"#choosecsvfile-1014-button-fileInputEl\")[0].files.length) {",
-                    "    alert(\"Please choose at least one file to parse.\");",
-                    "    return;",
-                    "}",
-                    "",
-                    "function completeFn(results) {",
-                    "    Ext.getCmp('recordButtons').show();",
-                    "    Ext.getCmp('importFileName').show();",
-                    "    fullResults = results;",
-                    "    fieldNames = fullResults.meta.fields;",
-                    "    fieldData = fullResults.data;",
-                    "    fieldErrors = fullResults.errors;",
-                    "    if (fullResults && fieldErrors) {",
-                    "        if (fieldErrors) {",
-                    "            errorCount = fieldErrors.length;",
-                    "            firstError = fieldErrors[0];",
-                    "        }",
-                    "        if (fieldData && fieldData.length > 0) {",
-                    "            rowCount = fieldData.length;",
-                    "        }",
-                    "    }",
-                    "    // printStats('Parse complete');",
-                    "    console.log('    Results:', fullResults);",
-                    "}",
-                    "",
-                    "function errorFn(err, file) {",
-                    "    console.log('ERROR:', err, file);",
-                    "}",
-                    "",
-                    "const file = document.getElementById(\"choosecsvfile-1014-button-fileInputEl\").files[0];",
-                    "",
-                    "Papa.parse(file, {",
-                    "    // base config to use for each file",
-                    "    delimiter: \"\",",
-                    "    header: true,",
-                    "    dynamicTyping: false,",
-                    "    skipEmptyLines: true,",
-                    "    preview: 0,",
-                    "    step: undefined,",
-                    "    encoding: \"\",",
-                    "    worker: false,",
-                    "    comments: false,",
-                    "    complete: completeFn,",
-                    "    error: errorFn",
-                    "});"
-                ],
-                "name": "click",
-                "scope": "me"
-            },
-            "configAlternates": {
-                "fn": "string",
-                "implHandler": "code",
-                "name": "string",
-                "scope": "string"
-            },
-            "name": "onButtonClick",
-            "designerId": "6fdd7735-335e-4cbb-9a51-bd9292c39618"
-        }
-    ]
+    "viewModelInstanceId": "c91f783e-6325-4ccc-b3a7-e36935c341a9"
 }
