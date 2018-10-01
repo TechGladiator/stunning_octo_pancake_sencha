@@ -8,6 +8,7 @@
     "userConfig": {
         "designer|userAlias": "mapimporteddata",
         "designer|userClassName": "MapImportedData",
+        "id": "mapData",
         "style": "background: ##5fa2dd",
         "text": "Map Imported Data"
     },
@@ -15,7 +16,8 @@
         "text": "string",
         "style": "string",
         "designer|userAlias": "string",
-        "designer|userClassName": "string"
+        "designer|userClassName": "string",
+        "id": "string"
     },
     "name": "MyButton4",
     "designerId": "849e8eee-482c-4dfa-a62f-f783de625490",

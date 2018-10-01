@@ -9,7 +9,8 @@
         "controllers": [
             "clickSubmit",
             "fileFieldChanger",
-            "clickHomeButton"
+            "clickHomeButton",
+            "mapImportData"
         ],
         "models": [
             "ImportRecords"
