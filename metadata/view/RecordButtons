@@ -30,7 +30,7 @@
                 "type": "array"
             },
             "codeClass": null,
-            "name": "EditData",
+            "name": "editdata",
             "designerId": "51bbee27-baaf-46d1-95e4-6cc2ba10d7f3",
             "masterInstanceId": "2bd4a1ff-5ba7-4b99-9910-6a769dda0194"
         },
@@ -41,7 +41,7 @@
                 "type": "array"
             },
             "codeClass": null,
-            "name": "SaveRecords",
+            "name": "saverecords",
             "designerId": "b5c04a46-5beb-45b8-a7a2-6a14af8b61cc",
             "masterInstanceId": "96475c1e-ebec-4c50-9f88-b72b0c0b5986"
         },
@@ -52,7 +52,7 @@
                 "type": "array"
             },
             "codeClass": null,
-            "name": "MapImportedData",
+            "name": "mapimporteddata",
             "designerId": "2e8e1a0a-5faa-4a34-b4ca-4555c5533062",
             "masterInstanceId": "849e8eee-482c-4dfa-a62f-f783de625490"
         },
@@ -63,7 +63,7 @@
                 "type": "array"
             },
             "codeClass": null,
-            "name": "Home",
+            "name": "home",
             "designerId": "596396f3-6161-4465-8c74-453cb17f3479",
             "masterInstanceId": "113ba0ea-c906-4a53-833d-677782021a07"
         }

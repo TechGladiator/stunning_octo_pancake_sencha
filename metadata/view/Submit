@@ -49,6 +49,8 @@
                     "}",
                     "",
                     "function completeFn(results) {",
+                    "    Ext.getCmp('recordButtons').show();",
+                    "    Ext.getCmp('importFileName').show();",
                     "    fullResults = results;",
                     "    fieldNames = fullResults.meta.fields;",
                     "    fieldData = fullResults.data;",
