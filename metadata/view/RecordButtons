@@ -8,6 +8,7 @@
     "userConfig": {
         "designer|userAlias": "recordbuttons",
         "designer|userClassName": "RecordButtons",
+        "margin": "50 0 0",
         "maxHeight": 50,
         "minHeight": 50,
         "width": 600
@@ -18,6 +19,7 @@
         "width": "auto",
         "designer|userAlias": "string",
         "designer|userClassName": "string",
+        "margin": "auto",
         "minHeight": "number"
     },
     "name": "MySegmentedButton",
