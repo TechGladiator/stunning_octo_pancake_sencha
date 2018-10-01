@@ -9,6 +9,7 @@
         "designer|userAlias": "recordbuttons",
         "designer|userClassName": "RecordButtons",
         "maxHeight": 50,
+        "minHeight": 50,
         "width": 600
     },
     "configAlternates": {
@@ -16,7 +17,8 @@
         "maxHeight": "number",
         "width": "auto",
         "designer|userAlias": "string",
-        "designer|userClassName": "string"
+        "designer|userClassName": "string",
+        "minHeight": "number"
     },
     "name": "MySegmentedButton",
     "designerId": "11b88ed7-5771-48e5-979a-dceb4e0256ea",
