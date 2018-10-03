@@ -31,6 +31,8 @@
                 "designer|targetType": "Home",
                 "fn": "onHomeButtonClick",
                 "implHandler": [
+                    "let tStore = Ext.StoreMgr.get('RecordDataStore');",
+                    "tStore.clearData();",
                     "errorCount = 0;",
                     "fieldData = undefined;",
                     "fieldErrors = undefined;",
@@ -38,6 +40,7 @@
                     "firstError = undefined;",
                     "fullResults = undefined;",
                     "rowCount = 0;",
+                    "tStore.setData([]);",
                     "",
                     "Ext.getCmp('tabs').show();",
                     "Ext.getCmp('recordButtons').hide();",

@@ -44,6 +44,24 @@
             "designerId": "75e02156-c0f0-4f55-a7f8-8d999b2ea30f"
         },
         {
+            "type": "Ext.grid.column.RowNumberer",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "RowNumber"
+            },
+            "configAlternates": {
+                "text": "string",
+                "designer|displayName": "string",
+                "width": "number"
+            },
+            "name": "MyRowNumberer",
+            "designerId": "ac86f0d3-e611-4d3a-a118-060f7e0fe8fa"
+        },
+        {
             "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
