@@ -1,5 +1,5 @@
 {
-    "name": "Stunning Octo Pancake",
+    "name": "stunning_octo_pancake_sencha",
     "settings": {
         "cmd": {
             "license": "commercial",
@@ -7,7 +7,7 @@
             "frameworkVersion": "6.5.0.775"
         },
         "urlPrefixTemplate": "http://localhost:{port}/{path}",
-        "urlPrefix": "http://localhost:44883/",
+        "urlPrefix": "http://localhost:43983/",
         "canvasControls": {
             "viewportSize": {
                 "name": "Auto Expand",

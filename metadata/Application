@@ -19,6 +19,7 @@
         "stores": [
             "RecordDataStore"
         ],
+        "title": "Stunning Octo Pancake",
         "views": [
             "OctoApp",
             "HeaderPanel",
@@ -39,7 +40,8 @@
         "views": "typedarray",
         "models": "typedarray",
         "stores": "typedarray",
-        "controllers": "typedarray"
+        "controllers": "typedarray",
+        "title": "string"
     },
     "name": "Application",
     "designerId": "application"
