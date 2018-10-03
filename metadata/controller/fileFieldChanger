@@ -23,7 +23,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|commentHeader": [
-                    "remove 'C:\\fakepath\\' from filename"
+                    "remove 'C:\\fakepath\\' and set filename"
                 ],
                 "designer|controlQuery": "#chooseCSVFile",
                 "designer|params": [
@@ -34,10 +34,10 @@
                 "designer|targetType": "ChooseCSVFile",
                 "fn": "onFilefieldChange",
                 "implHandler": [
-                    "let fileName = $(\"#chooseCSVFile-inputEl\").val();",
-                    "fileName = fileName.substring(fileName.lastIndexOf(\"\\\\\") + 1);",
-                    "if (fileName !== \"\") {",
-                    "    $(\"#chooseCSVFile-inputEl\").val(fileName);",
+                    "filename = $(\"#chooseCSVFile-inputEl\").val();",
+                    "filename = filename.substring(filename.lastIndexOf(\"\\\\\") + 1);",
+                    "if (filename !== \"\") {",
+                    "    $(\"#chooseCSVFile-inputEl\").val(filename);",
                     "}"
                 ],
                 "name": "change",
