@@ -115,10 +115,12 @@
             "codeClass": null,
             "userConfig": {
                 "hidden": true,
+                "id": "importFileName",
                 "layout|flex": 1
             },
             "configAlternates": {
                 "hidden": "boolean",
+                "id": "string",
                 "layout|flex": "number"
             },
             "name": "importnamepanel",
