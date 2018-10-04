@@ -10,10 +10,9 @@
         "designer|userAlias": "importname-filename",
         "designer|userClassName": "Importname-Filename",
         "frame": true,
-        "margin": "48 0 32",
         "store": "RecordDataStore",
         "titleAlign": "center",
-        "width": 1300
+        "width": 1332
     },
     "configAlternates": {
         "layout|flex": "number",
