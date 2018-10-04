@@ -105,6 +105,23 @@
             "name": "recordbuttons",
             "designerId": "7999879a-1e7c-4d3d-b1a8-c7a43272e1ec",
             "masterInstanceId": "11b88ed7-5771-48e5-979a-dceb4e0256ea"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "layout|flex": "number"
+            },
+            "name": "importnamepanel",
+            "designerId": "64f2a0fc-022f-4c4a-ad04-1c28e97de0a9",
+            "masterInstanceId": "8d983885-e699-43f6-849e-a5e52f9088df"
         }
     ]
 }
