@@ -32,6 +32,7 @@
                 "fn": "onHomeButtonClick",
                 "implHandler": [
                     "let importStore = Ext.StoreMgr.get('RecordDataStore');",
+                    "let importGrid = Ext.getCmp('importFileName');",
                     "importStore.clearData();",
                     "errorCount = 0;",
                     "fieldData = undefined;",
@@ -41,6 +42,7 @@
                     "fullResults = undefined;",
                     "rowCount = 0;",
                     "importStore.setData([]);",
+                    "importGrid.setTitle('');",
                     "",
                     "Ext.getCmp('tabs').show();",
                     "Ext.getCmp('recordButtons').hide();",
