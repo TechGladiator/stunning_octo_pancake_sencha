@@ -114,9 +114,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "hidden": true,
                 "layout|flex": 1
             },
             "configAlternates": {
+                "hidden": "boolean",
                 "layout|flex": "number"
             },
             "name": "importnamepanel",
