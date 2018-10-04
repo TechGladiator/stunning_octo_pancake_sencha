@@ -9,6 +9,7 @@
         "designer|userAlias": "importnamepanel",
         "designer|userClassName": "ImportNamePanel",
         "title": "ImportName",
+        "titleAlign": "center",
         "width": 1332
     },
     "configAlternates": {
@@ -16,7 +17,8 @@
         "designer|userClassName": "string",
         "height": "auto",
         "title": "string",
-        "width": "auto"
+        "width": "auto",
+        "titleAlign": "string"
     },
     "name": "MyPanel",
     "designerId": "8d983885-e699-43f6-849e-a5e52f9088df",
