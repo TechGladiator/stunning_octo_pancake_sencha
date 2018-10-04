@@ -50,8 +50,7 @@
             "SaveRecords",
             "MapImportedData",
             "Home",
-            "Importname-Filename",
-            "ImportNamePanel"
+            "Importname-Filename"
         ]
     },
     "configAlternates": {

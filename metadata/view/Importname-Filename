@@ -10,9 +10,12 @@
         "designer|userAlias": "importname-filename",
         "designer|userClassName": "Importname-Filename",
         "frame": true,
+        "id": "importGrid",
+        "margin": "48 0 32",
         "store": "RecordDataStore",
+        "title": "Importname/Filename",
         "titleAlign": "center",
-        "width": 1332
+        "width": 1300
     },
     "configAlternates": {
         "layout|flex": "number",
@@ -24,7 +27,8 @@
         "width": "auto",
         "store": "store",
         "designer|userAlias": "string",
-        "designer|userClassName": "string"
+        "designer|userClassName": "string",
+        "id": "string"
     },
     "name": "MyGridPanel",
     "designerId": "730ec439-27ba-4e4d-a83a-f773cfdb8550",
