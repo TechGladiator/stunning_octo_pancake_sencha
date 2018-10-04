@@ -116,12 +116,14 @@
             "userConfig": {
                 "hidden": true,
                 "id": "importFileName",
-                "layout|flex": 1
+                "layout|flex": 1,
+                "title": "title"
             },
             "configAlternates": {
                 "hidden": "boolean",
                 "id": "string",
-                "layout|flex": "number"
+                "layout|flex": "number",
+                "title": "string"
             },
             "name": "importnamepanel",
             "designerId": "64f2a0fc-022f-4c4a-ad04-1c28e97de0a9",
