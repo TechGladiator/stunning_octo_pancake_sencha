@@ -8,9 +8,8 @@
     "userConfig": {
         "designer|userAlias": "importnamepanel",
         "designer|userClassName": "ImportNamePanel",
-        "height": 250,
         "title": "ImportName",
-        "width": 400
+        "width": 1332
     },
     "configAlternates": {
         "designer|userAlias": "string",
