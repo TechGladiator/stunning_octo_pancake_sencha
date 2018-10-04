@@ -120,12 +120,12 @@
             },
             "configAlternates": {
                 "hidden": "boolean",
-                "layout|flex": "number",
-                "id": "string"
+                "id": "string",
+                "layout|flex": "number"
             },
-            "name": "importname-filename",
-            "designerId": "6287ad48-2f95-4f62-971e-1026b7f539d2",
-            "masterInstanceId": "730ec439-27ba-4e4d-a83a-f773cfdb8550"
+            "name": "importnamepanel",
+            "designerId": "64f2a0fc-022f-4c4a-ad04-1c28e97de0a9",
+            "masterInstanceId": "8d983885-e699-43f6-849e-a5e52f9088df"
         }
     ]
 }

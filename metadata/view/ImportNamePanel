@@ -1,0 +1,42 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "importnamepanel",
+        "designer|userClassName": "ImportNamePanel",
+        "margin": "48 0 32",
+        "title": "ImportName",
+        "titleAlign": "center",
+        "width": 1332
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "title": "string",
+        "width": "auto",
+        "margin": "auto",
+        "titleAlign": "string"
+    },
+    "name": "MyPanel",
+    "designerId": "8d983885-e699-43f6-849e-a5e52f9088df",
+    "viewControllerInstanceId": "15e035a1-33a8-455e-b0bd-f99d3777045b",
+    "viewModelInstanceId": "f71a758c-a68e-4640-92ba-2b2fa6148d9d",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "importname-filename",
+            "designerId": "718f31c6-9135-4439-8006-60e873ed1d80",
+            "masterInstanceId": "730ec439-27ba-4e4d-a83a-f773cfdb8550"
+        }
+    ]
+}
