@@ -8,6 +8,7 @@
     "userConfig": {
         "designer|userAlias": "importnamepanel",
         "designer|userClassName": "ImportNamePanel",
+        "margin": "48 0 32",
         "title": "ImportName",
         "titleAlign": "center",
         "width": 1332
@@ -18,6 +19,7 @@
         "height": "auto",
         "title": "string",
         "width": "auto",
+        "margin": "auto",
         "titleAlign": "string"
     },
     "name": "MyPanel",
