@@ -105,27 +105,6 @@
             "name": "recordbuttons",
             "designerId": "7999879a-1e7c-4d3d-b1a8-c7a43272e1ec",
             "masterInstanceId": "11b88ed7-5771-48e5-979a-dceb4e0256ea"
-        },
-        {
-            "type": "linkedinstance",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "hidden": true,
-                "id": "importFileName",
-                "layout|flex": 1
-            },
-            "configAlternates": {
-                "hidden": "boolean",
-                "layout|flex": "number",
-                "id": "string"
-            },
-            "name": "importname-filename",
-            "designerId": "6287ad48-2f95-4f62-971e-1026b7f539d2",
-            "masterInstanceId": "730ec439-27ba-4e4d-a83a-f773cfdb8550"
         }
     ]
 }
