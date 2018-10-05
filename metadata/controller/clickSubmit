@@ -59,6 +59,7 @@
                     "        if (fieldErrors) {",
                     "            errorCount = fieldErrors.length;",
                     "            firstError = fieldErrors[0];",
+                    "            console.log(firstError);",
                     "        }",
                     "        if (fieldData && fieldData.length > 0) {",
                     "            rowCount = fieldData.length;",
