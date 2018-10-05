@@ -150,10 +150,12 @@
             },
             "codeClass": null,
             "userConfig": {
+                "dateFormat": "Y-m-d",
                 "name": "Creation Date"
             },
             "configAlternates": {
-                "name": "string"
+                "name": "string",
+                "dateFormat": "string"
             },
             "name": "MyDate",
             "designerId": "a03a72d8-3796-46e2-badd-b87cbddcfa0b"

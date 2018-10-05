@@ -222,13 +222,15 @@
             "codeClass": null,
             "userConfig": {
                 "dataIndex": "Creation Date",
+                "formatter": "date(\"Y-m-d\")",
                 "text": "Creation Date",
                 "width": 118
             },
             "configAlternates": {
                 "dataIndex": "datafield",
                 "text": "string",
-                "width": "auto"
+                "width": "auto",
+                "formatter": "string"
             },
             "name": "MyColumn9",
             "designerId": "0bd65289-ceee-4a43-87e1-083f6582aeb4"
