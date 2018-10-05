@@ -6,26 +6,112 @@
     },
     "codeClass": null,
     "userConfig": {
+        "controllers": [
+            "clickSubmit",
+            "fileFieldChanger",
+            "clickHomeButton",
+            "mapImportData"
+        ],
+        "errorCount": 0,
+        "fieldData": [
+            "`undefined`"
+        ],
+        "fieldErrors": [
+            "`undefined`"
+        ],
+        "fieldNames": [
+            "`undefined`"
+        ],
+        "filename": "`undefined`",
+        "firstError": [
+            "`undefined`"
+        ],
+        "fullResults": [
+            "`undefined`"
+        ],
         "models": [
             "ImportRecords"
         ],
         "name": "StunningOctoPancake",
+        "rowCount": 0,
         "stores": [
             "RecordDataStore"
         ],
+        "title": "Stunning Octo Pancake",
         "views": [
-            "AppViewPort",
-            "RecordViewport",
+            "OctoApp",
             "HeaderPanel",
-            "MyTabPanel"
+            "Tabs",
+            "ChooseCSVFile",
+            "Submit",
+            "Map",
+            "RecordButtons",
+            "EditData",
+            "SaveRecords",
+            "MapImportedData",
+            "Home",
+            "Importname-Filename",
+            "ImportNamePanel"
         ]
     },
     "configAlternates": {
         "name": "string",
         "views": "typedarray",
         "models": "typedarray",
-        "stores": "typedarray"
+        "stores": "typedarray",
+        "controllers": "typedarray",
+        "errorCount": "number",
+        "fieldData": "array",
+        "fieldErrors": "array",
+        "fieldNames": "array",
+        "firstError": "object",
+        "fullResults": "object",
+        "title": "string",
+        "rowCount": "number",
+        "filename": "string"
     },
     "name": "Application",
-    "designerId": "application"
+    "designerId": "application",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "errorCount",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "fieldData",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "fieldErrors",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "fieldNames",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "firstError",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "fullResults",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "rowCount",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "filename",
+            "type": "string"
+        }
+    ]
 }

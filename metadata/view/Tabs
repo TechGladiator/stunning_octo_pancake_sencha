@@ -1,0 +1,191 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeTab": 0,
+        "bodyBorder": false,
+        "bodyPadding": "64 32",
+        "designer|uiInterfaceName": "default-framed",
+        "designer|userAlias": "tabs",
+        "designer|userClassName": "Tabs",
+        "frame": true,
+        "margin": "48 0 32",
+        "maxHeight": 210,
+        "maxWidth": 832.5,
+        "minHeight": 210,
+        "minWidth": 382.5,
+        "width": "75%"
+    },
+    "configAlternates": {
+        "activeTab": "auto",
+        "designer|displayName": "string",
+        "layout|flex": "number",
+        "margin": "auto",
+        "maxWidth": "number",
+        "minWidth": "number",
+        "width": "auto",
+        "bodyBorder": "boolean",
+        "bodyPadding": "auto",
+        "designer|uiInterfaceName": "string",
+        "frame": "boolean",
+        "maxHeight": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "minHeight": "number"
+    },
+    "name": "MyTabPanel",
+    "designerId": "6150a696-b8ba-42ce-a414-05f9d29fea2e",
+    "viewControllerInstanceId": "ee51bcc2-bf01-4eea-a8b0-1542cfc9b939",
+    "viewModelInstanceId": "68780b41-9f1e-4c8e-a262-61bd92992f4d",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "middle",
+                "layout": "hbox",
+                "title": "Upload File"
+            },
+            "configAlternates": {
+                "title": "string",
+                "container|align": "string",
+                "layout": "string",
+                "bodyPadding": "auto"
+            },
+            "name": "MyPanel1",
+            "designerId": "2f4551dc-bcf1-4f3f-b747-9a3dd5d0126e",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig",
+                    "designerId": "8fd841fb-19eb-47a4-989b-9e63d90dac3a"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "choosecsvfile",
+                    "designerId": "57762f77-5746-4f83-9661-5c7088afb73b",
+                    "masterInstanceId": "5c0ace34-67c8-4902-acc7-52587aa46684"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "submit",
+                    "designerId": "2f8c7057-f33f-4f66-920e-73245257efd7",
+                    "masterInstanceId": "cf4f9013-ae6a-4ce1-96dd-d423164ece0d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "middle",
+                "layout": "hbox",
+                "title": "Search Imports"
+            },
+            "configAlternates": {
+                "title": "string",
+                "bodyPadding": "auto",
+                "layout": "string",
+                "container|align": "string",
+                "designer|displayName": "string"
+            },
+            "name": "MyPanel2",
+            "designerId": "7b99056a-1267-4dfb-ad80-fe5189246a0d",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig1",
+                    "designerId": "66712b4d-25cc-4fec-8b49-9ee79bd1a1b9"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Search Field",
+                        "fieldLabel": "Search By Import Name",
+                        "labelWidth": 150,
+                        "maxWidth": 680,
+                        "width": "100%"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "width": "auto",
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "maxWidth": "number"
+                    },
+                    "name": "MyTextField",
+                    "designerId": "9962c1e2-5e3c-4f69-a2f0-a0dd4dd73e9e"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "margin": "0 0 0 10",
+                        "text": "Search"
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "text": "string"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "46ba8600-8feb-420b-8bc4-3ad2a8b1da56"
+                }
+            ]
+        }
+    ]
+}

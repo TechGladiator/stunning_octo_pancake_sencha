@@ -1,0 +1,29 @@
+{
+    "type": "Ext.button.Button",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "submit",
+        "designer|userClassName": "Submit",
+        "id": "submitButton",
+        "margin": "0 0 0 10",
+        "text": "Submit"
+    },
+    "configAlternates": {
+        "designer|displayName": "string",
+        "layout|flex": "number",
+        "margin": "auto",
+        "maxWidth": "number",
+        "text": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "id": "string"
+    },
+    "name": "MyButton",
+    "designerId": "cf4f9013-ae6a-4ce1-96dd-d423164ece0d",
+    "viewControllerInstanceId": "df782098-3105-485d-ad35-8515a16d73c3",
+    "viewModelInstanceId": "c91f783e-6325-4ccc-b3a7-e36935c341a9"
+}

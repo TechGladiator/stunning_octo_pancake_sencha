@@ -1,0 +1,133 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "center",
+        "designer|initialView": true,
+        "designer|userAlias": "octoapp",
+        "designer|userClassName": "OctoApp",
+        "layout": "vbox",
+        "style": "background: #fff"
+    },
+    "configAlternates": {
+        "container|align": "string",
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "style": "string"
+    },
+    "name": "MyPanel",
+    "designerId": "26070311-99ce-4c40-bf7b-d751da9f9bf1",
+    "viewControllerInstanceId": "d3037051-9908-4de4-850d-a984895c2d73",
+    "viewModelInstanceId": "d0b32597-462e-4bb0-bd91-6fbb2213926d",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "layout|margins": "auto"
+            },
+            "configAlternates": {
+                "layout|flex": "number",
+                "layout|margins": "string"
+            },
+            "name": "headerpanel1",
+            "designerId": "87fbcec6-055a-454e-b8de-a4e7093856d2",
+            "masterInstanceId": "2b909136-1448-4985-858f-87ea0ebbbfae"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Tabs",
+                "id": "tabs"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "id": "string"
+            },
+            "name": "tabs",
+            "designerId": "71e89405-43f8-46fd-9958-085a71796b59",
+            "masterInstanceId": "6150a696-b8ba-42ce-a414-05f9d29fea2e"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "id": "map",
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "hidden": "boolean",
+                "id": "string",
+                "layout|flex": "number"
+            },
+            "name": "map",
+            "designerId": "c566519e-1378-4418-ab73-b9c1f04820ae",
+            "masterInstanceId": "dbf8b87e-d51d-48b1-8f1e-b8148e3d7f97"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "id": "recordButtons",
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "hidden": "boolean",
+                "layout|flex": "number",
+                "id": "string"
+            },
+            "name": "recordbuttons",
+            "designerId": "7999879a-1e7c-4d3d-b1a8-c7a43272e1ec",
+            "masterInstanceId": "11b88ed7-5771-48e5-979a-dceb4e0256ea"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "id": "importFileName",
+                "layout|flex": 1,
+                "title": "title"
+            },
+            "configAlternates": {
+                "hidden": "boolean",
+                "id": "string",
+                "layout|flex": "number",
+                "title": "string"
+            },
+            "name": "importnamepanel",
+            "designerId": "64f2a0fc-022f-4c4a-ad04-1c28e97de0a9",
+            "masterInstanceId": "8d983885-e699-43f6-849e-a5e52f9088df"
+        }
+    ]
+}

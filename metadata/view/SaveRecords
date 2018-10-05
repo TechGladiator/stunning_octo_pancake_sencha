@@ -1,0 +1,24 @@
+{
+    "type": "Ext.button.Button",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "saverecords",
+        "designer|userClassName": "SaveRecords",
+        "style": "background: ##5fa2dd",
+        "text": "Save Records"
+    },
+    "configAlternates": {
+        "text": "string",
+        "style": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyButton3",
+    "designerId": "96475c1e-ebec-4c50-9f88-b72b0c0b5986",
+    "viewControllerInstanceId": "3c665bc5-54ec-41f6-8dd0-cbe45a0d690d",
+    "viewModelInstanceId": "ba0549fe-59d8-46f0-91e8-be76e22a7886"
+}

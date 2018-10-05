@@ -1,0 +1,26 @@
+{
+    "type": "Ext.button.Button",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "mapimporteddata",
+        "designer|userClassName": "MapImportedData",
+        "id": "mapData",
+        "style": "background: ##5fa2dd",
+        "text": "Map Imported Data"
+    },
+    "configAlternates": {
+        "text": "string",
+        "style": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "id": "string"
+    },
+    "name": "MyButton4",
+    "designerId": "849e8eee-482c-4dfa-a62f-f783de625490",
+    "viewControllerInstanceId": "036db16f-04e4-4810-b7dd-fbd2cb360f1b",
+    "viewModelInstanceId": "969983b7-ec78-4946-a364-1144297bdaaf"
+}

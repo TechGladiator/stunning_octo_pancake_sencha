@@ -1,0 +1,31 @@
+{
+    "type": "Ext.form.field.File",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "choosecsvfile",
+        "designer|userClassName": "ChooseCSVFile",
+        "fieldLabel": "Choose CSV File:",
+        "id": "chooseCSVFile",
+        "labelWidth": 110,
+        "maxWidth": 680,
+        "width": "100%"
+    },
+    "configAlternates": {
+        "fieldLabel": "string",
+        "layout|flex": "number",
+        "labelWidth": "number",
+        "maxWidth": "number",
+        "width": "auto",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "id": "string"
+    },
+    "name": "MyFileUpload",
+    "designerId": "5c0ace34-67c8-4902-acc7-52587aa46684",
+    "viewControllerInstanceId": "1999b923-d265-4fbe-929f-da027c46e5e9",
+    "viewModelInstanceId": "175da306-7477-44a7-a8e2-187cf5ca359c"
+}
