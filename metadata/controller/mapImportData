@@ -24,11 +24,9 @@
             "userConfig": {
                 "designer|controlQuery": "#mapData",
                 "designer|params": [
-                    "button",
-                    "e",
-                    "eOpts"
+                    "target"
                 ],
-                "designer|targetType": "MapImportedData",
+                "designer|targetType": null,
                 "fn": "onMapDataClick",
                 "implHandler": [
                     "Ext.getCmp('map').show();"

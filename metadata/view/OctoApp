@@ -417,7 +417,7 @@
             "masterInstanceId": "dbf8b87e-d51d-48b1-8f1e-b8148e3d7f97"
         },
         {
-            "type": "linkedinstance",
+            "type": "Ext.button.Segmented",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -426,16 +426,121 @@
             "userConfig": {
                 "hidden": true,
                 "id": "recordButtons",
-                "layout|flex": 1
+                "layout|flex": 1,
+                "margin": "50 0 0",
+                "maxHeight": 50,
+                "minHeight": 50,
+                "width": 600
             },
             "configAlternates": {
-                "hidden": "boolean",
                 "layout|flex": "number",
+                "maxHeight": "number",
+                "width": "auto",
+                "designer|userAlias": "string",
+                "designer|userClassName": "string",
+                "margin": "auto",
+                "minHeight": "number",
+                "hidden": "boolean",
                 "id": "string"
             },
-            "name": "recordbuttons",
-            "designerId": "7999879a-1e7c-4d3d-b1a8-c7a43272e1ec",
-            "masterInstanceId": "11b88ed7-5771-48e5-979a-dceb4e0256ea"
+            "name": "MySegmentedButton",
+            "designerId": "dc35481a-6d86-4b36-87c5-8f5585c2034c",
+            "viewControllerInstanceId": "e9edbb2e-3e0c-40c0-8e2f-093a651601d3",
+            "viewModelInstanceId": "db21f3d0-ff2b-48c3-923b-aeed1e1a72ee",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "style": "background: ##5fa2dd",
+                        "text": "Edit Data"
+                    },
+                    "configAlternates": {
+                        "text": "string",
+                        "style": "string",
+                        "designer|userAlias": "string",
+                        "designer|userClassName": "string"
+                    },
+                    "name": "MyButton2",
+                    "designerId": "9d050023-85e3-42bf-bb2a-1dd0ae3609a6",
+                    "viewControllerInstanceId": "cd5b1d03-64ac-47fe-abe9-b3642690b2a5",
+                    "viewModelInstanceId": "6c6e5a0f-ee91-4a2f-83fe-face38fcb619"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "style": "background: ##5fa2dd",
+                        "text": "Save Records"
+                    },
+                    "configAlternates": {
+                        "text": "string",
+                        "style": "string",
+                        "designer|userAlias": "string",
+                        "designer|userClassName": "string"
+                    },
+                    "name": "MyButton3",
+                    "designerId": "077b12a8-f6b6-4e29-bc28-f640e8ccd8ad",
+                    "viewControllerInstanceId": "3c665bc5-54ec-41f6-8dd0-cbe45a0d690d",
+                    "viewModelInstanceId": "ba0549fe-59d8-46f0-91e8-be76e22a7886"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "mapData",
+                        "style": "background: ##5fa2dd",
+                        "text": "Map Imported Data"
+                    },
+                    "configAlternates": {
+                        "text": "string",
+                        "style": "string",
+                        "designer|userAlias": "string",
+                        "designer|userClassName": "string",
+                        "id": "string"
+                    },
+                    "name": "MyButton4",
+                    "designerId": "6a8da033-9a6e-4db6-ade7-1f99d2f82285",
+                    "viewControllerInstanceId": "036db16f-04e4-4810-b7dd-fbd2cb360f1b",
+                    "viewModelInstanceId": "969983b7-ec78-4946-a364-1144297bdaaf"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "homeButton",
+                        "style": "background: ##5fa2dd",
+                        "text": "Home"
+                    },
+                    "configAlternates": {
+                        "text": "string",
+                        "style": "string",
+                        "designer|userAlias": "string",
+                        "designer|userClassName": "string",
+                        "id": "string"
+                    },
+                    "name": "MyButton5",
+                    "designerId": "77ab6fd5-7cbd-41c3-86be-52c959cb9682",
+                    "viewControllerInstanceId": "6a0a6cf7-bd54-44c8-8de7-07ac24f2334a",
+                    "viewModelInstanceId": "6a8df97b-2d84-4ff7-a376-07a1da99ff65"
+                }
+            ]
         },
         {
             "type": "linkedinstance",

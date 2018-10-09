@@ -24,11 +24,9 @@
             "userConfig": {
                 "designer|controlQuery": "#homeButton",
                 "designer|params": [
-                    "button",
-                    "e",
-                    "eOpts"
+                    "target"
                 ],
-                "designer|targetType": "Home",
+                "designer|targetType": null,
                 "fn": "onHomeButtonClick",
                 "implHandler": [
                     "let importStore = Ext.StoreMgr.get('RecordDataStore');",

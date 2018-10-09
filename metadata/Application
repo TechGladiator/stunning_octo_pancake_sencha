@@ -39,10 +39,6 @@
             "OctoApp",
             "Tabs",
             "Map",
-            "RecordButtons",
-            "EditData",
-            "SaveRecords",
-            "MapImportedData",
             "Home",
             "Importname-Filename",
             "ImportNamePanel"
