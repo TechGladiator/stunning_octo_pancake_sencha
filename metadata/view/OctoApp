@@ -531,7 +531,33 @@
                     "name": "MyButton4",
                     "designerId": "6a8da033-9a6e-4db6-ade7-1f99d2f82285",
                     "viewControllerInstanceId": "036db16f-04e4-4810-b7dd-fbd2cb360f1b",
-                    "viewModelInstanceId": "969983b7-ec78-4946-a364-1144297bdaaf"
+                    "viewModelInstanceId": "969983b7-ec78-4946-a364-1144297bdaaf",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMapDataClick",
+                                "implHandler": [
+                                    "Ext.getCmp('map').show();"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onMapDataClick",
+                            "designerId": "2a80aca6-40df-45fb-92e3-c4dd24f3a7e4"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.button.Button",
