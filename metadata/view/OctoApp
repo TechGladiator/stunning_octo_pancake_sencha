@@ -169,7 +169,7 @@
                             "viewModelInstanceId": "175da306-7477-44a7-a8e2-187cf5ca359c",
                             "cn": [
                                 {
-                                    "type": "basiceventbinding",
+                                    "type": "viewcontrollereventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -231,7 +231,7 @@
                             "viewModelInstanceId": "c91f783e-6325-4ccc-b3a7-e36935c341a9",
                             "cn": [
                                 {
-                                    "type": "basiceventbinding",
+                                    "type": "viewcontrollereventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -534,7 +534,7 @@
                     "viewModelInstanceId": "969983b7-ec78-4946-a364-1144297bdaaf",
                     "cn": [
                         {
-                            "type": "basiceventbinding",
+                            "type": "viewcontrollereventbinding",
                             "reference": {
                                 "name": "listeners",
                                 "type": "array"
@@ -584,7 +584,7 @@
                     "viewModelInstanceId": "6a8df97b-2d84-4ff7-a376-07a1da99ff65",
                     "cn": [
                         {
-                            "type": "basiceventbinding",
+                            "type": "viewcontrollereventbinding",
                             "reference": {
                                 "name": "listeners",
                                 "type": "array"
