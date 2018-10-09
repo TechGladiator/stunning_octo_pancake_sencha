@@ -91,21 +91,115 @@
                     "masterInstanceId": "5c0ace34-67c8-4902-acc7-52587aa46684"
                 },
                 {
-                    "type": "linkedinstance",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": 1
+                        "id": "submitButton",
+                        "layout|flex": 1,
+                        "margin": "0 0 0 10",
+                        "text": "Submit"
                     },
                     "configAlternates": {
-                        "layout|flex": "number"
+                        "designer|displayName": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "maxWidth": "number",
+                        "text": "string",
+                        "designer|userAlias": "string",
+                        "designer|userClassName": "string",
+                        "id": "string"
                     },
-                    "name": "submit",
-                    "designerId": "2f8c7057-f33f-4f66-920e-73245257efd7",
-                    "masterInstanceId": "cf4f9013-ae6a-4ce1-96dd-d423164ece0d"
+                    "name": "MyButton",
+                    "designerId": "0f230fc5-b8c2-4589-a5e3-2f01055d3d05",
+                    "viewControllerInstanceId": "df782098-3105-485d-ad35-8515a16d73c3",
+                    "viewModelInstanceId": "c91f783e-6325-4ccc-b3a7-e36935c341a9",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSubmitButtonClick",
+                                "implHandler": [
+                                    "if (!$(\"#chooseCSVFile-button-fileInputEl\")[0].files.length) {",
+                                    "    alert(\"Please choose at least one file to parse.\");",
+                                    "    return;",
+                                    "}",
+                                    "",
+                                    "function printRecords(msg) {",
+                                    "    console.log(msg);",
+                                    "    console.log(\"  Row count:\", rowCount);",
+                                    "    console.log(\"     Errors:\", errorCount);",
+                                    "    console.log(\"    Results:\", fullResults);",
+                                    "}",
+                                    "",
+                                    "function completeFn(results) {",
+                                    "    let importStore = Ext.StoreMgr.get('RecordDataStore');",
+                                    "    let importGrid = Ext.getCmp('importFileName');",
+                                    "    importStore.clearData();",
+                                    "    importGrid.setTitle(filename);",
+                                    "    Ext.getCmp('recordButtons').show();",
+                                    "    importGrid.show();",
+                                    "    Ext.getCmp('tabs').hide();",
+                                    "    fullResults = results;",
+                                    "    fieldNames = fullResults.meta.fields;",
+                                    "    fieldData = fullResults.data;",
+                                    "    fieldErrors = fullResults.errors;",
+                                    "    if (fullResults && fieldErrors) {",
+                                    "        if (fieldErrors) {",
+                                    "            errorCount = fieldErrors.length;",
+                                    "            firstError = fieldErrors[0];",
+                                    "            console.log(firstError);",
+                                    "        }",
+                                    "        if (fieldData && fieldData.length > 0) {",
+                                    "            rowCount = fieldData.length;",
+                                    "        }",
+                                    "    }",
+                                    "    printRecords('Parse complete');",
+                                    "    importStore.setData(fieldData);",
+                                    "}",
+                                    "",
+                                    "function errorFn(err, file) {",
+                                    "    console.log('ERROR:', err, file);",
+                                    "}",
+                                    "",
+                                    "const file = document.getElementById(\"chooseCSVFile-button-fileInputEl\").files[0];",
+                                    "",
+                                    "Papa.parse(file, {",
+                                    "    // base config to use for each file",
+                                    "    delimiter: \"\",",
+                                    "    header: true,",
+                                    "    dynamicTyping: false,",
+                                    "    skipEmptyLines: true,",
+                                    "    preview: 0,",
+                                    "    step: undefined,",
+                                    "    encoding: \"\",",
+                                    "    worker: false,",
+                                    "    comments: false,",
+                                    "    complete: completeFn,",
+                                    "    error: errorFn",
+                                    "});"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onSubmitButtonClick",
+                            "designerId": "1aabfca3-b85a-4c80-85e4-47dc3757a460"
+                        }
+                    ]
                 }
             ]
         },

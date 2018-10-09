@@ -7,7 +7,6 @@
     "codeClass": null,
     "userConfig": {
         "controllers": [
-            "clickSubmit",
             "fileFieldChanger",
             "clickHomeButton",
             "mapImportData"
@@ -43,7 +42,6 @@
             "HeaderPanel",
             "Tabs",
             "ChooseCSVFile",
-            "Submit",
             "Map",
             "RecordButtons",
             "EditData",
