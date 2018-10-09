@@ -27,6 +27,9 @@
             "ImportRecords"
         ],
         "name": "StunningOctoPancake",
+        "names": [
+            "[\"Name\",\"Address\",\"Address 2\",\"City\",\"State\",\"Zip\",\"Purpose\",\"Property Owner\",\"Creation Date\"]"
+        ],
         "rowCount": 0,
         "stores": [
             "RecordDataStore"
@@ -50,7 +53,8 @@
         "fullResults": "object",
         "title": "string",
         "rowCount": "number",
-        "filename": "string"
+        "filename": "string",
+        "names": "array"
     },
     "name": "Application",
     "designerId": "application",
@@ -93,6 +97,11 @@
         {
             "group": "(Custom Properties)",
             "name": "filename",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "names",
             "type": "string"
         }
     ]
