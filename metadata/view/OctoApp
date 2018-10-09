@@ -555,7 +555,51 @@
                     "name": "MyButton5",
                     "designerId": "77ab6fd5-7cbd-41c3-86be-52c959cb9682",
                     "viewControllerInstanceId": "6a0a6cf7-bd54-44c8-8de7-07ac24f2334a",
-                    "viewModelInstanceId": "6a8df97b-2d84-4ff7-a376-07a1da99ff65"
+                    "viewModelInstanceId": "6a8df97b-2d84-4ff7-a376-07a1da99ff65",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onHomeButtonClick",
+                                "implHandler": [
+                                    "let importStore = Ext.StoreMgr.get('RecordDataStore');",
+                                    "let importGrid = Ext.getCmp('importFileName');",
+                                    "importStore.clearData();",
+                                    "errorCount = 0;",
+                                    "fieldData = undefined;",
+                                    "fieldErrors = undefined;",
+                                    "fieldNames = undefined;",
+                                    "firstError = undefined;",
+                                    "fullResults = undefined;",
+                                    "rowCount = 0;",
+                                    "importStore.setData([]);",
+                                    "importGrid.setTitle('');",
+                                    "",
+                                    "Ext.getCmp('tabs').show();",
+                                    "Ext.getCmp('recordButtons').hide();",
+                                    "Ext.getCmp('importFileName').hide();",
+                                    "Ext.getCmp('map').hide();",
+                                    "$(\"#chooseCSVFile-inputEl\").val(null);",
+                                    "$(\"#chooseCSVFile-button-fileInputEl\").val(null);"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onHomeButtonClick",
+                            "designerId": "3ec6f754-b05f-440c-8e1c-e152a9b1cab8"
+                        }
+                    ]
                 }
             ]
         },
