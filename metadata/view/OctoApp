@@ -63,23 +63,337 @@
             "viewModelInstanceId": "60f2fdb3-5ad0-47db-8d23-606935347f93"
         },
         {
-            "type": "linkedinstance",
+            "type": "Ext.tab.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
+                "activeTab": 0,
+                "bodyBorder": false,
+                "bodyPadding": "64 32",
                 "designer|displayName": "Tabs",
-                "id": "tabs"
+                "designer|uiInterfaceName": "default-framed",
+                "frame": true,
+                "id": "tabs",
+                "margin": "48 0 32",
+                "maxHeight": 210,
+                "maxWidth": 832.5,
+                "minHeight": 210,
+                "minWidth": 382.5,
+                "width": "75%"
             },
             "configAlternates": {
+                "activeTab": "auto",
                 "designer|displayName": "string",
+                "layout|flex": "number",
+                "margin": "auto",
+                "maxWidth": "number",
+                "minWidth": "number",
+                "width": "auto",
+                "bodyBorder": "boolean",
+                "bodyPadding": "auto",
+                "designer|uiInterfaceName": "string",
+                "frame": "boolean",
+                "maxHeight": "number",
+                "designer|userAlias": "string",
+                "designer|userClassName": "string",
+                "minHeight": "number",
                 "id": "string"
             },
-            "name": "tabs",
-            "designerId": "71e89405-43f8-46fd-9958-085a71796b59",
-            "masterInstanceId": "6150a696-b8ba-42ce-a414-05f9d29fea2e"
+            "name": "MyTabPanel",
+            "designerId": "e4e3f102-10da-4025-8f97-c82b4fbce4e6",
+            "viewControllerInstanceId": "ee51bcc2-bf01-4eea-a8b0-1542cfc9b939",
+            "viewModelInstanceId": "68780b41-9f1e-4c8e-a262-61bd92992f4d",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "layout": "hbox",
+                        "title": "Upload File"
+                    },
+                    "configAlternates": {
+                        "title": "string",
+                        "container|align": "string",
+                        "layout": "string",
+                        "bodyPadding": "auto"
+                    },
+                    "name": "MyPanel1",
+                    "designerId": "5a56b740-a7b5-49ce-a5a1-1ebcaa1ba4d1",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig",
+                            "designerId": "9f3d8e40-bf1a-48db-b029-9213c99514c2"
+                        },
+                        {
+                            "type": "Ext.form.field.File",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Choose CSV File:",
+                                "id": "chooseCSVFile",
+                                "labelWidth": 110,
+                                "layout|flex": null,
+                                "maxWidth": 680,
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout|flex": "number",
+                                "labelWidth": "number",
+                                "maxWidth": "number",
+                                "width": "auto",
+                                "designer|userAlias": "string",
+                                "designer|userClassName": "string",
+                                "id": "string"
+                            },
+                            "name": "MyFileUpload",
+                            "designerId": "5235c364-e1bd-44f8-8c6d-d2111bd05970",
+                            "viewControllerInstanceId": "1999b923-d265-4fbe-929f-da027c46e5e9",
+                            "viewModelInstanceId": "175da306-7477-44a7-a8e2-187cf5ca359c",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|commentHeader": [
+                                            "remove 'C:\\fakepath\\' and set filename"
+                                        ],
+                                        "fn": "onChooseCSVFileChange",
+                                        "implHandler": [
+                                            "filename = $(\"#chooseCSVFile-inputEl\").val();",
+                                            "filename = filename.substring(filename.lastIndexOf(\"\\\\\") + 1);",
+                                            "if (filename !== \"\") {",
+                                            "    $(\"#chooseCSVFile-inputEl\").val(filename);",
+                                            "}"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "designer|commentHeader": "comment",
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onChooseCSVFileChange",
+                                    "designerId": "894572d4-840c-4e8b-ae51-9179ecb37c68"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "submitButton",
+                                "layout|flex": 1,
+                                "margin": "0 0 0 10",
+                                "text": "Submit"
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "layout|flex": "number",
+                                "margin": "auto",
+                                "maxWidth": "number",
+                                "text": "string",
+                                "designer|userAlias": "string",
+                                "designer|userClassName": "string",
+                                "id": "string"
+                            },
+                            "name": "MyButton",
+                            "designerId": "f1afc6df-5145-4287-b619-8898265559bb",
+                            "viewControllerInstanceId": "df782098-3105-485d-ad35-8515a16d73c3",
+                            "viewModelInstanceId": "c91f783e-6325-4ccc-b3a7-e36935c341a9",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSubmitButtonClick",
+                                        "implHandler": [
+                                            "if (!$(\"#chooseCSVFile-button-fileInputEl\")[0].files.length) {",
+                                            "    alert(\"Please choose at least one file to parse.\");",
+                                            "    return;",
+                                            "}",
+                                            "",
+                                            "function printRecords(msg) {",
+                                            "    console.log(msg);",
+                                            "    console.log(\"  Row count:\", rowCount);",
+                                            "    console.log(\"     Errors:\", errorCount);",
+                                            "    console.log(\"    Results:\", fullResults);",
+                                            "}",
+                                            "",
+                                            "function completeFn(results) {",
+                                            "    let importStore = Ext.StoreMgr.get('RecordDataStore');",
+                                            "    let importGrid = Ext.getCmp('importFileName');",
+                                            "    importStore.clearData();",
+                                            "    importGrid.setTitle(filename);",
+                                            "    Ext.getCmp('recordButtons').show();",
+                                            "    importGrid.show();",
+                                            "    Ext.getCmp('tabs').hide();",
+                                            "    fullResults = results;",
+                                            "    fieldNames = fullResults.meta.fields;",
+                                            "    fieldData = fullResults.data;",
+                                            "    fieldErrors = fullResults.errors;",
+                                            "    if (fullResults && fieldErrors) {",
+                                            "        if (fieldErrors) {",
+                                            "            errorCount = fieldErrors.length;",
+                                            "            firstError = fieldErrors[0];",
+                                            "            console.log(firstError);",
+                                            "        }",
+                                            "        if (fieldData && fieldData.length > 0) {",
+                                            "            rowCount = fieldData.length;",
+                                            "        }",
+                                            "    }",
+                                            "    printRecords('Parse complete');",
+                                            "    importStore.setData(fieldData);",
+                                            "}",
+                                            "",
+                                            "function errorFn(err, file) {",
+                                            "    console.log('ERROR:', err, file);",
+                                            "}",
+                                            "",
+                                            "const file = document.getElementById(\"chooseCSVFile-button-fileInputEl\").files[0];",
+                                            "",
+                                            "Papa.parse(file, {",
+                                            "    // base config to use for each file",
+                                            "    delimiter: \"\",",
+                                            "    header: true,",
+                                            "    dynamicTyping: false,",
+                                            "    skipEmptyLines: true,",
+                                            "    preview: 0,",
+                                            "    step: undefined,",
+                                            "    encoding: \"\",",
+                                            "    worker: false,",
+                                            "    comments: false,",
+                                            "    complete: completeFn,",
+                                            "    error: errorFn",
+                                            "});"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onSubmitButtonClick",
+                                    "designerId": "e0deb1ca-e873-473f-b4e6-c3c35dce1cad"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "layout": "hbox",
+                        "title": "Search Imports"
+                    },
+                    "configAlternates": {
+                        "title": "string",
+                        "bodyPadding": "auto",
+                        "layout": "string",
+                        "container|align": "string",
+                        "designer|displayName": "string"
+                    },
+                    "name": "MyPanel2",
+                    "designerId": "218054b4-27ab-4f2b-9b4e-f6feb25644a1",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig1",
+                            "designerId": "a159d083-136e-4939-91d5-766f58013a00"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "Search Field",
+                                "fieldLabel": "Search By Import Name",
+                                "labelWidth": 150,
+                                "maxWidth": 680,
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "width": "auto",
+                                "fieldLabel": "string",
+                                "labelWidth": "number",
+                                "maxWidth": "number"
+                            },
+                            "name": "MyTextField",
+                            "designerId": "c3a78e9b-bff9-49f0-8fa6-7231c0955a60"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "margin": "0 0 0 10",
+                                "text": "Search"
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number",
+                                "margin": "auto",
+                                "text": "string"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "a0372666-68e8-40dd-b8d1-e59dab4f0fd6"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "linkedinstance",
