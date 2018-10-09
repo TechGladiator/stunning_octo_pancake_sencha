@@ -7,8 +7,6 @@
     "codeClass": null,
     "userConfig": {
         "controllers": [
-            "fileFieldChanger",
-            "clickHomeButton",
             "mapImportData"
         ],
         "errorCount": 0,
@@ -41,7 +39,6 @@
             "OctoApp",
             "HeaderPanel",
             "Tabs",
-            "ChooseCSVFile",
             "Map",
             "RecordButtons",
             "EditData",

@@ -74,21 +74,68 @@
                     "designerId": "8fd841fb-19eb-47a4-989b-9e63d90dac3a"
                 },
                 {
-                    "type": "linkedinstance",
+                    "type": "Ext.form.field.File",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": null
+                        "fieldLabel": "Choose CSV File:",
+                        "id": "chooseCSVFile",
+                        "labelWidth": 110,
+                        "layout|flex": null,
+                        "maxWidth": 680,
+                        "width": "100%"
                     },
                     "configAlternates": {
-                        "layout|flex": "number"
+                        "fieldLabel": "string",
+                        "layout|flex": "number",
+                        "labelWidth": "number",
+                        "maxWidth": "number",
+                        "width": "auto",
+                        "designer|userAlias": "string",
+                        "designer|userClassName": "string",
+                        "id": "string"
                     },
-                    "name": "choosecsvfile",
-                    "designerId": "57762f77-5746-4f83-9661-5c7088afb73b",
-                    "masterInstanceId": "5c0ace34-67c8-4902-acc7-52587aa46684"
+                    "name": "MyFileUpload",
+                    "designerId": "d6f5e17b-6e18-42d9-a24a-67625e47c2ff",
+                    "viewControllerInstanceId": "1999b923-d265-4fbe-929f-da027c46e5e9",
+                    "viewModelInstanceId": "175da306-7477-44a7-a8e2-187cf5ca359c",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|commentHeader": [
+                                    "remove 'C:\\fakepath\\' and set filename"
+                                ],
+                                "fn": "onChooseCSVFileChange",
+                                "implHandler": [
+                                    "filename = $(\"#chooseCSVFile-inputEl\").val();",
+                                    "filename = filename.substring(filename.lastIndexOf(\"\\\\\") + 1);",
+                                    "if (filename !== \"\") {",
+                                    "    $(\"#chooseCSVFile-inputEl\").val(filename);",
+                                    "}"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "designer|commentHeader": "comment",
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onChooseCSVFileChange",
+                            "designerId": "0322182f-c4b1-498c-bb98-cffe6bfcdfe5"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.button.Button",
