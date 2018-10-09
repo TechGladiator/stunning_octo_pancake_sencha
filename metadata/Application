@@ -33,9 +33,7 @@
         ],
         "title": "Stunning Octo Pancake",
         "views": [
-            "OctoApp",
-            "Tabs",
-            "Home"
+            "OctoApp"
         ]
     },
     "configAlternates": {
