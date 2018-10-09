@@ -38,9 +38,7 @@
         "views": [
             "OctoApp",
             "Tabs",
-            "Home",
-            "Importname-Filename",
-            "ImportNamePanel"
+            "Home"
         ]
     },
     "configAlternates": {
