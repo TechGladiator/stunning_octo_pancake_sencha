@@ -6,31 +6,31 @@
     },
     "codeClass": null,
     "userConfig": {
-        "errorCount": 0,
-        "fieldData": [
+        "ErrorCount": 0,
+        "FieldData": [
             "`undefined`"
         ],
-        "fieldErrors": [
+        "FieldErrors": [
             "`undefined`"
         ],
-        "fieldNames": [
+        "FieldNames": [
             "`undefined`"
         ],
-        "filename": "`undefined`",
-        "firstError": [
+        "Filename": "`undefined`",
+        "FirstError": [
             "`undefined`"
         ],
-        "fullResults": [
+        "FullResults": [
             "`undefined`"
         ],
+        "Names": [
+            "[\"Name\",\"Address\",\"Address 2\",\"City\",\"State\",\"Zip\",\"Purpose\",\"Property Owner\",\"Creation Date\"]"
+        ],
+        "RowCount": 0,
         "models": [
             "ImportRecords"
         ],
         "name": "StunningOctoPancake",
-        "names": [
-            "[\"Name\",\"Address\",\"Address 2\",\"City\",\"State\",\"Zip\",\"Purpose\",\"Property Owner\",\"Creation Date\"]"
-        ],
-        "rowCount": 0,
         "stores": [
             "RecordDataStore"
         ],
@@ -45,63 +45,63 @@
         "models": "typedarray",
         "stores": "typedarray",
         "controllers": "typedarray",
-        "errorCount": "number",
-        "fieldData": "array",
-        "fieldErrors": "array",
-        "fieldNames": "array",
-        "firstError": "object",
-        "fullResults": "object",
+        "ErrorCount": "number",
+        "FieldData": "array",
+        "FieldErrors": "array",
+        "FieldNames": "array",
+        "FirstError": "object",
+        "FullResults": "object",
         "title": "string",
-        "rowCount": "number",
-        "filename": "string",
-        "names": "array"
+        "RowCount": "number",
+        "Filename": "string",
+        "Names": "array"
     },
     "name": "Application",
     "designerId": "application",
     "customConfigs": [
         {
             "group": "(Custom Properties)",
-            "name": "errorCount",
+            "name": "ErrorCount",
             "type": "string"
         },
         {
             "group": "(Custom Properties)",
-            "name": "fieldData",
+            "name": "FieldData",
             "type": "string"
         },
         {
             "group": "(Custom Properties)",
-            "name": "fieldErrors",
+            "name": "FieldErrors",
             "type": "string"
         },
         {
             "group": "(Custom Properties)",
-            "name": "fieldNames",
+            "name": "FieldNames",
             "type": "string"
         },
         {
             "group": "(Custom Properties)",
-            "name": "firstError",
+            "name": "FirstError",
             "type": "string"
         },
         {
             "group": "(Custom Properties)",
-            "name": "fullResults",
+            "name": "FullResults",
             "type": "string"
         },
         {
             "group": "(Custom Properties)",
-            "name": "rowCount",
+            "name": "RowCount",
             "type": "string"
         },
         {
             "group": "(Custom Properties)",
-            "name": "filename",
+            "name": "Filename",
             "type": "string"
         },
         {
             "group": "(Custom Properties)",
-            "name": "names",
+            "name": "Names",
             "type": "string"
         }
     ]
