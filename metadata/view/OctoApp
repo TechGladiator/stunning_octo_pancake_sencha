@@ -302,6 +302,7 @@
                                             "}",
                                             "",
                                             "function completeFn(results) {",
+                                            "    setResults(results);",
                                             "    printStats('Parse complete');",
                                             "    validateFieldLength(app.FieldNames);",
                                             "}",
