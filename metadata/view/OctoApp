@@ -252,7 +252,7 @@
                                             "}",
                                             "",
                                             "function setResults(r) {",
-                                            "    app.FullResults = results;",
+                                            "    app.FullResults = r;",
                                             "    app.FieldNames = app.FullResults.meta.fields;",
                                             "    app.FieldData = app.FullResults.data;",
                                             "    app.FieldErrors = app.FullResults.errors;",
