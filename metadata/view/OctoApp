@@ -733,6 +733,7 @@
                     "userConfig": {
                         "designer|uiInterfaceName": "default-framed",
                         "frame": true,
+                        "id": "recordGrid",
                         "store": "RecordDataStore",
                         "titleAlign": "center",
                         "width": 1332
@@ -747,7 +748,8 @@
                         "width": "auto",
                         "store": "store",
                         "designer|userAlias": "string",
-                        "designer|userClassName": "string"
+                        "designer|userClassName": "string",
+                        "id": "string"
                     },
                     "name": "MyGridPanel",
                     "designerId": "7e46a7b9-066b-4847-99df-c49bf6887d22",
