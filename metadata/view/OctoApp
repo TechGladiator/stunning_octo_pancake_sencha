@@ -298,6 +298,7 @@
                                             "        const message = app.FirstError.message;",
                                             "        const row = app.FirstError.row;",
                                             "        alert(`First error: ${message} in Row: ${row + 1}`);",
+                                            "        setView([fd[row]]);",
                                             "    }",
                                             "}",
                                             "",
