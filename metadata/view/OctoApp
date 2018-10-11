@@ -529,7 +529,8 @@
                             "userConfig": {
                                 "fn": "onEditButtonClick",
                                 "implHandler": [
-                                    "Ext.getCmp('importFileName').hide();"
+                                    "Ext.getCmp('importFileName').hide();",
+                                    "Ext.getCmp('editRecords').show();"
                                 ],
                                 "name": "click",
                                 "scope": "me"
@@ -1036,12 +1037,20 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|uiInterfaceName": "default-framed",
+                        "frame": true,
+                        "id": "editGrid",
                         "source": [
                             "{\"Property 1\":\"String\",\"Property 2\":true,\"Property 3\":\"2018-10-11T16:56:50\",\"Property 4\":123}"
-                        ]
+                        ],
+                        "width": 1332
                     },
                     "configAlternates": {
-                        "source": "object"
+                        "designer|uiInterfaceName": "string",
+                        "frame": "boolean",
+                        "id": "string",
+                        "source": "object",
+                        "width": "auto"
                     },
                     "name": "MyPropertyGrid",
                     "designerId": "05ab63ea-7e67-4b04-ae3f-7225be64f8d0"
