@@ -269,7 +269,7 @@
                                             "    console.log(\"    Results:\", app.FullResults);",
                                             "}",
                                             "",
-                                            "function setView() {",
+                                            "function setView(r) {",
                                             "    importStore.clearData();",
                                             "    importGrid.setTitle(app.Filename);",
                                             "    Ext.getCmp('recordButtons').show();",
