@@ -517,7 +517,33 @@
                     "name": "MyButton2",
                     "designerId": "9d050023-85e3-42bf-bb2a-1dd0ae3609a6",
                     "viewControllerInstanceId": "cd5b1d03-64ac-47fe-abe9-b3642690b2a5",
-                    "viewModelInstanceId": "6c6e5a0f-ee91-4a2f-83fe-face38fcb619"
+                    "viewModelInstanceId": "6c6e5a0f-ee91-4a2f-83fe-face38fcb619",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEditButtonClick",
+                                "implHandler": [
+                                    ""
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "name": "string",
+                                "scope": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "onEditButtonClick",
+                            "designerId": "cb11ecb7-f09b-4f0e-b307-83ac91ae5f74"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.button.Button",
