@@ -529,8 +529,7 @@
                             "userConfig": {
                                 "fn": "onEditButtonClick",
                                 "implHandler": [
-                                    "Ext.getCmp('importFileName').hide();",
-                                    "Ext.getCmp('editRecords').show();"
+                                    "Ext.getCmp('importFileName').hide();"
                                 ],
                                 "name": "click",
                                 "scope": "me"
@@ -998,62 +997,6 @@
                             "designerId": "7d867bfd-0990-4924-8d63-d42976458dce"
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "type": "Ext.panel.Panel",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "hidden": true,
-                "id": "editRecords",
-                "layout|flex": 1,
-                "margin": "48 0 32",
-                "title": "title",
-                "titleAlign": "center",
-                "width": 1332
-            },
-            "configAlternates": {
-                "hidden": "boolean",
-                "id": "string",
-                "layout|flex": "number",
-                "margin": "auto",
-                "title": "string",
-                "titleAlign": "string",
-                "width": "auto"
-            },
-            "name": "MyPanel3",
-            "designerId": "4ed9c4ac-6888-436e-abb9-8ff7d6a0c463",
-            "cn": [
-                {
-                    "type": "Ext.grid.property.Grid",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|uiInterfaceName": "default-framed",
-                        "frame": true,
-                        "id": "editGrid",
-                        "source": [
-                            "{\"Property 1\":\"String\",\"Property 2\":true,\"Property 3\":\"2018-10-11T16:56:50\",\"Property 4\":123}"
-                        ],
-                        "width": 1332
-                    },
-                    "configAlternates": {
-                        "designer|uiInterfaceName": "string",
-                        "frame": "boolean",
-                        "id": "string",
-                        "source": "object",
-                        "width": "auto"
-                    },
-                    "name": "MyPropertyGrid",
-                    "designerId": "05ab63ea-7e67-4b04-ae3f-7225be64f8d0"
                 }
             ]
         }
