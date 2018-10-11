@@ -258,7 +258,7 @@
                                             "    console.log(\"    Results:\", app.FullResults);",
                                             "}",
                                             "",
-                                            "function getResults(r) {",
+                                            "function setResults(r) {",
                                             "    app.FullResults = results;",
                                             "    app.FieldNames = app.FullResults.meta.fields;",
                                             "    app.FieldData = app.FullResults.data;",
