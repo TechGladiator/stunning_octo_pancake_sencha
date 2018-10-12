@@ -191,6 +191,22 @@
             },
             "name": "MyInteger2",
             "designerId": "c124d4ef-123b-4bda-b28c-f7a320daf75d"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "__parsed_extra"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField",
+            "designerId": "0b8ff9c3-8345-46eb-8cb9-d8ff119d05a4"
         }
     ]
 }

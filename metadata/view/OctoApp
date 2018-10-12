@@ -997,6 +997,28 @@
                             },
                             "name": "MyColumn11",
                             "designerId": "7d867bfd-0990-4924-8d63-d42976458dce"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "__parsed_extra",
+                                "hidden": true,
+                                "id": "extra",
+                                "text": "__parsed_extra"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "dataIndex": "datafield",
+                                "hidden": "boolean",
+                                "id": "string"
+                            },
+                            "name": "MyColumn",
+                            "designerId": "631ac7f2-76d7-41ba-9ffa-bf05adf24fcc"
                         }
                     ]
                 }
