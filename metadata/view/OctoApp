@@ -971,11 +971,15 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Lat",
+                                "hidden": true,
+                                "id": "Lat",
                                 "text": "Lat"
                             },
                             "configAlternates": {
                                 "dataIndex": "datafield",
-                                "text": "string"
+                                "text": "string",
+                                "hidden": "boolean",
+                                "id": "string"
                             },
                             "name": "MyColumn10",
                             "designerId": "ef8a0b4b-9a87-4bbe-a909-bf0da306afc1"
@@ -989,13 +993,17 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Long",
+                                "hidden": true,
+                                "id": "Long",
                                 "text": "Long",
                                 "width": 155
                             },
                             "configAlternates": {
                                 "dataIndex": "datafield",
                                 "text": "string",
-                                "width": "auto"
+                                "width": "auto",
+                                "hidden": "boolean",
+                                "id": "string"
                             },
                             "name": "MyColumn11",
                             "designerId": "7d867bfd-0990-4924-8d63-d42976458dce"
