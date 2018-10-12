@@ -732,6 +732,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|uiInterfaceName": "default-framed",
+                        "enableColumnHide": false,
                         "frame": true,
                         "id": "recordGrid",
                         "store": "RecordDataStore",
@@ -749,6 +750,7 @@
                         "store": "store",
                         "designer|userAlias": "string",
                         "designer|userClassName": "string",
+                        "enableColumnHide": "boolean",
                         "id": "string"
                     },
                     "name": "MyGridPanel",
@@ -1008,7 +1010,6 @@
                             "userConfig": {
                                 "dataIndex": "__parsed_extra",
                                 "hidden": true,
-                                "hideable": false,
                                 "id": "extra",
                                 "text": "__parsed_extra"
                             },
@@ -1016,7 +1017,6 @@
                                 "text": "string",
                                 "dataIndex": "datafield",
                                 "hidden": "boolean",
-                                "hideable": "boolean",
                                 "id": "string"
                             },
                             "name": "MyColumn",
