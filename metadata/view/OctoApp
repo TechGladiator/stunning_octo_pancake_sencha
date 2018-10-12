@@ -952,7 +952,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Creation Date",
-                                "formatter": "date(\"Y-m-d\")",
                                 "text": "Creation Date",
                                 "width": 118
                             },

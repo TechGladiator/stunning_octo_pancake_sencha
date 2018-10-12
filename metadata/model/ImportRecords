@@ -15,7 +15,7 @@
     "designerId": "5e79265a-765a-4896-9a82-ef240dba9fb7",
     "cn": [
         {
-            "type": "Ext.data.field.String",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -27,11 +27,11 @@
             "configAlternates": {
                 "name": "string"
             },
-            "name": "MyString1",
+            "name": "MyField1",
             "designerId": "29cff1d9-a266-4f90-bd6e-32f4de16c9c3"
         },
         {
-            "type": "Ext.data.field.String",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -43,11 +43,11 @@
             "configAlternates": {
                 "name": "string"
             },
-            "name": "MyString2",
+            "name": "MyField2",
             "designerId": "fd01fc2d-1477-4ba7-9b42-86895b5d4e15"
         },
         {
-            "type": "Ext.data.field.String",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -59,11 +59,11 @@
             "configAlternates": {
                 "name": "string"
             },
-            "name": "MyString3",
+            "name": "MyField3",
             "designerId": "45b57c5a-98cf-4f39-b067-c3d235bd0877"
         },
         {
-            "type": "Ext.data.field.String",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -75,11 +75,11 @@
             "configAlternates": {
                 "name": "string"
             },
-            "name": "MyString4",
+            "name": "MyField4",
             "designerId": "2da320c7-5e76-4699-97c5-4d2a25f0711a"
         },
         {
-            "type": "Ext.data.field.String",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -91,11 +91,11 @@
             "configAlternates": {
                 "name": "string"
             },
-            "name": "MyString5",
+            "name": "MyField5",
             "designerId": "01748765-00a0-4d1f-9fee-11353f348aeb"
         },
         {
-            "type": "Ext.data.field.String",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -107,11 +107,11 @@
             "configAlternates": {
                 "name": "string"
             },
-            "name": "MyString8",
+            "name": "MyField6",
             "designerId": "65d46162-086d-4c49-bd41-4fac6a00a355"
         },
         {
-            "type": "Ext.data.field.String",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -123,11 +123,11 @@
             "configAlternates": {
                 "name": "string"
             },
-            "name": "MyString6",
+            "name": "MyField7",
             "designerId": "72921398-96ec-4803-8ed2-d162d278d9f2"
         },
         {
-            "type": "Ext.data.field.String",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -139,29 +139,28 @@
             "configAlternates": {
                 "name": "string"
             },
-            "name": "MyString7",
+            "name": "MyField8",
             "designerId": "351709c0-5dd9-4fff-ab55-ed1d32fb3ab6"
         },
         {
-            "type": "Ext.data.field.Date",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "dateFormat": "Y-m-d",
                 "name": "Creation Date"
             },
             "configAlternates": {
                 "name": "string",
                 "dateFormat": "string"
             },
-            "name": "MyDate",
+            "name": "MyField9",
             "designerId": "a03a72d8-3796-46e2-badd-b87cbddcfa0b"
         },
         {
-            "type": "Ext.data.field.Integer",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -173,11 +172,11 @@
             "configAlternates": {
                 "name": "string"
             },
-            "name": "MyInteger",
+            "name": "MyField10",
             "designerId": "2515405e-ce0d-4bba-a432-f1517271c817"
         },
         {
-            "type": "Ext.data.field.Integer",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -189,7 +188,7 @@
             "configAlternates": {
                 "name": "string"
             },
-            "name": "MyInteger2",
+            "name": "MyField11",
             "designerId": "c124d4ef-123b-4bda-b28c-f7a320daf75d"
         },
         {
