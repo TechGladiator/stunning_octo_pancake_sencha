@@ -1008,6 +1008,7 @@
                             "userConfig": {
                                 "dataIndex": "__parsed_extra",
                                 "hidden": true,
+                                "hideable": false,
                                 "id": "extra",
                                 "text": "__parsed_extra"
                             },
@@ -1015,6 +1016,7 @@
                                 "text": "string",
                                 "dataIndex": "datafield",
                                 "hidden": "boolean",
+                                "hideable": "boolean",
                                 "id": "string"
                             },
                             "name": "MyColumn",
