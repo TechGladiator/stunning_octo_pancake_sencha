@@ -1031,6 +1031,16 @@
                             },
                             "name": "MyColumn",
                             "designerId": "631ac7f2-76d7-41ba-9ffa-bf05adf24fcc"
+                        },
+                        {
+                            "type": "Ext.grid.plugin.CellEditing",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyCellEditingPlugin",
+                            "designerId": "ed432f87-3a7a-4803-94c3-68e2483938b5"
                         }
                     ]
                 }
