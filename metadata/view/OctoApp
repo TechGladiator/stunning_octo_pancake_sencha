@@ -1220,10 +1220,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "clicksToEdit": 1
+                                "clicksToEdit": 1,
+                                "pluginId": "recordCellEditor"
                             },
                             "configAlternates": {
-                                "clicksToEdit": "number"
+                                "clicksToEdit": "number",
+                                "pluginId": "string"
                             },
                             "name": "MyCellEditingPlugin",
                             "designerId": "ed432f87-3a7a-4803-94c3-68e2483938b5"
