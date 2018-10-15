@@ -807,7 +807,19 @@
                                 "width": "auto"
                             },
                             "name": "MyColumn1",
-                            "designerId": "ec0fcd93-eefb-47f0-ab8b-4872e401e3f5"
+                            "designerId": "ec0fcd93-eefb-47f0-ab8b-4872e401e3f5",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField1",
+                                    "designerId": "3a0c9be2-ad17-4f07-a642-0f94c5880506"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -827,7 +839,19 @@
                                 "width": "auto"
                             },
                             "name": "MyColumn2",
-                            "designerId": "8ffdb90f-004e-4aeb-9d91-78359e5bf7b3"
+                            "designerId": "8ffdb90f-004e-4aeb-9d91-78359e5bf7b3",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField2",
+                                    "designerId": "bde77d07-92cc-4202-afe1-9a6b4a17af11"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -845,7 +869,19 @@
                                 "text": "string"
                             },
                             "name": "MyColumn3",
-                            "designerId": "53019e9d-6d06-41e8-aea6-273a7f654c31"
+                            "designerId": "53019e9d-6d06-41e8-aea6-273a7f654c31",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField3",
+                                    "designerId": "7aeee2d2-f876-47c6-a786-d7aebb399701"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -863,7 +899,19 @@
                                 "text": "string"
                             },
                             "name": "MyColumn4",
-                            "designerId": "cbf7fa0b-4018-48e7-beac-9ad93fa10fc1"
+                            "designerId": "cbf7fa0b-4018-48e7-beac-9ad93fa10fc1",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField4",
+                                    "designerId": "841c7985-c456-48b9-a601-44af0ff6ae57"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -883,7 +931,19 @@
                                 "width": "auto"
                             },
                             "name": "MyColumn5",
-                            "designerId": "3ac56c29-d69e-4e1b-9c0a-589b6139dc29"
+                            "designerId": "3ac56c29-d69e-4e1b-9c0a-589b6139dc29",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField5",
+                                    "designerId": "6bf77124-72c7-4418-b251-46964952796f"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -903,7 +963,19 @@
                                 "width": "auto"
                             },
                             "name": "MyColumn6",
-                            "designerId": "e05d6ebd-9645-44a8-878c-ec5cb69714e1"
+                            "designerId": "e05d6ebd-9645-44a8-878c-ec5cb69714e1",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField6",
+                                    "designerId": "86b97eee-0e54-4e66-a091-d0db808c325c"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -921,7 +993,19 @@
                                 "text": "string"
                             },
                             "name": "MyColumn7",
-                            "designerId": "44721c9e-f2a8-4240-9a0e-636c89422cb2"
+                            "designerId": "44721c9e-f2a8-4240-9a0e-636c89422cb2",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField7",
+                                    "designerId": "2b7f19b8-6211-43fa-bbf3-7d16358e5a2a"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -941,7 +1025,19 @@
                                 "width": "auto"
                             },
                             "name": "MyColumn8",
-                            "designerId": "e06094de-296c-41fc-b9dc-e9b66b8148c6"
+                            "designerId": "e06094de-296c-41fc-b9dc-e9b66b8148c6",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField8",
+                                    "designerId": "d70dc818-2997-496d-94d6-8b9395d38ce7"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -962,7 +1058,19 @@
                                 "formatter": "string"
                             },
                             "name": "MyColumn9",
-                            "designerId": "b65095ad-2bdb-481e-94e8-d03f213ab82b"
+                            "designerId": "b65095ad-2bdb-481e-94e8-d03f213ab82b",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField9",
+                                    "designerId": "21319a59-9ba4-4cc1-8787-235d91802836"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -1030,7 +1138,19 @@
                                 "id": "string"
                             },
                             "name": "MyColumn",
-                            "designerId": "631ac7f2-76d7-41ba-9ffa-bf05adf24fcc"
+                            "designerId": "631ac7f2-76d7-41ba-9ffa-bf05adf24fcc",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField10",
+                                    "designerId": "a36a74d3-98b1-4dc6-9420-5c8516df7fc8"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.plugin.CellEditing",
