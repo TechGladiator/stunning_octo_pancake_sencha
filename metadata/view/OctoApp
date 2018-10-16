@@ -561,6 +561,26 @@
                     "codeClass": null,
                     "userConfig": {
                         "hidden": true,
+                        "id": "saveEdits",
+                        "text": "Save Edits"
+                    },
+                    "configAlternates": {
+                        "hidden": "boolean",
+                        "id": "string",
+                        "text": "string"
+                    },
+                    "name": "MyButton6",
+                    "designerId": "d32b3e38-78f7-4b3f-9ee6-edb11c4afefa"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
                         "style": "background: ##5fa2dd",
                         "text": "Save Records"
                     },
