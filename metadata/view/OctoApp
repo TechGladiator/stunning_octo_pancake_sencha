@@ -575,7 +575,29 @@
                         "text": "string"
                     },
                     "name": "MyButton6",
-                    "designerId": "d32b3e38-78f7-4b3f-9ee6-edb11c4afefa"
+                    "designerId": "d32b3e38-78f7-4b3f-9ee6-edb11c4afefa",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSaveEditsClick",
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onSaveEditsClick",
+                            "designerId": "a6674705-3faf-4415-9788-8e850112bf3f"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.button.Button",
