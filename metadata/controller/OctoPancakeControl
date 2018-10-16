@@ -97,7 +97,7 @@
                     "    }",
                     "    alert(`Too ${codeWord} fields: expected ${this.getApplication().Names.length} fields but parsed ${fn.length} in \"${this.getApplication().Filename}\", Row: 0. Header length errors must be corrected within file before further processing to prevent data loss.`);",
                     "} else {",
-                    "    validateRowLengths(fd, ec);",
+                    "    this.validateRowLengths(fd, ec);",
                     "}"
                 ]
             },
