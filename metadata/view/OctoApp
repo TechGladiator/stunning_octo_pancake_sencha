@@ -532,7 +532,8 @@
                             "userConfig": {
                                 "fn": "onEditButtonClick",
                                 "implHandler": [
-                                    ""
+                                    "Ext.getCmp('importFileName').hide();",
+                                    "Ext.getCmp('editImportFileName').show();"
                                 ],
                                 "name": "click",
                                 "scope": "me"
