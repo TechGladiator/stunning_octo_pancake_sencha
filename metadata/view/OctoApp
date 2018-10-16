@@ -278,6 +278,7 @@
                                             "    importStore.setData(fd);",
                                             "    if (fd[0].__parsed_extra) {",
                                             "        Ext.getCmp('extra').show();",
+                                            "        Ext.getCmp('extra1').show();",
                                             "    }",
                                             "}",
                                             "",
