@@ -304,9 +304,12 @@
                                             "        const message = app.FirstError.message;",
                                             "        const row = app.FirstError.row;",
                                             "        alert(`First error: ${message} in Row: ${row + 1}`);",
+                                            "        Ext.getCmp('mapData').hide();",
                                             "        Ext.getCmp('repairNext').show();",
                                             "        setView([fd[row]]);",
                                             "    } else {",
+                                            "        Ext.getCmp('mapData').show();",
+                                            "        Ext.getCmp('repairNext').hide();",
                                             "        setView(fd);",
                                             "    }",
                                             "}",
@@ -539,7 +542,6 @@
                                 "implHandler": [
                                     "Ext.getCmp('importFileName').hide();",
                                     "Ext.getCmp('editData').hide();",
-                                    "Ext.getCmp('mapData').hide();",
                                     "Ext.getCmp('editImportFileName').show();",
                                     "Ext.getCmp('saveEdits').show();"
                                 ],
@@ -590,8 +592,7 @@
                                     "Ext.getCmp('editImportFileName').hide();",
                                     "Ext.getCmp('saveEdits').hide();",
                                     "Ext.getCmp('importFileName').show();",
-                                    "Ext.getCmp('editData').show();",
-                                    "Ext.getCmp('mapData').show();"
+                                    "Ext.getCmp('editData').show();"
                                 ],
                                 "name": "click",
                                 "scope": "me"
