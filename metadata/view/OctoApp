@@ -626,7 +626,29 @@
                         "text": "string"
                     },
                     "name": "MyButton7",
-                    "designerId": "f53a8126-64e1-4726-a04a-12e191d7d4ad"
+                    "designerId": "f53a8126-64e1-4726-a04a-12e191d7d4ad",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRepairNextClick",
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onRepairNextClick",
+                            "designerId": "a5d31ab4-a462-4df0-b64c-61db996559ac"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.button.Button",
