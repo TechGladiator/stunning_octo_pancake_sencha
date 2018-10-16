@@ -241,12 +241,7 @@
                                     "userConfig": {
                                         "fn": "onSubmitButtonClick",
                                         "implHandler": [
-                                            "const app = StunningOctoPancake.app;",
-                                            "const controller = app.getOctoPancakeControlController();",
-                                            "const importGrid = Ext.getCmp('importFileName');",
-                                            "const editImportGrid = Ext.getCmp('editImportFileName');",
-                                            "const importStore = Ext.StoreMgr.get('RecordDataStore');",
-                                            "const names = app.Names;",
+                                            "const controller = StunningOctoPancake.app.getOctoPancakeControlController();",
                                             "",
                                             "if (!$(\"#chooseCSVFile-button-fileInputEl\")[0].files.length) {",
                                             "    alert(\"Please choose at least one file to parse.\");",
