@@ -27,6 +27,9 @@
             "[\"Name\",\"Address\",\"Address 2\",\"City\",\"State\",\"Zip\",\"Purpose\",\"Property Owner\",\"Creation Date\"]"
         ],
         "RowCount": 0,
+        "controllers": [
+            "OctoPancakeControl"
+        ],
         "models": [
             "ImportRecords"
         ],
