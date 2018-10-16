@@ -142,6 +142,42 @@
             },
             "name": "setView",
             "designerId": "fcd8d2f5-a590-4de8-85ad-ecd7995e21b0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "fd",
+                    "ec"
+                ],
+                "fn": "validateRowLengths",
+                "implHandler": [
+                    "if (ec > 0) {",
+                    "    const message = this.getApplication.FirstError.message;",
+                    "    const row = this.getApplication.FirstError.row;",
+                    "    alert(`First error: ${message} in Row: ${row + 1}`);",
+                    "    Ext.getCmp('mapData').hide();",
+                    "    Ext.getCmp('repairNext').show();",
+                    "    setView([fd[row]]);",
+                    "} else {",
+                    "    Ext.getCmp('mapData').show();",
+                    "    Ext.getCmp('repairNext').hide();",
+                    "    setView(fd);",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "validateRowLengths",
+            "designerId": "509c9326-b56b-452a-aab3-cfc90c9d513e"
         }
     ]
 }
