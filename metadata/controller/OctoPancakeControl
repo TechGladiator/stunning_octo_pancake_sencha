@@ -163,11 +163,11 @@
                     "    alert(`First error: ${message} in Row: ${row + 1}`);",
                     "    Ext.getCmp('mapData').hide();",
                     "    Ext.getCmp('repairNext').show();",
-                    "    setView([fd[row]]);",
+                    "    this.setView([fd[row]]);",
                     "} else {",
                     "    Ext.getCmp('mapData').show();",
                     "    Ext.getCmp('repairNext').hide();",
-                    "    setView(fd);",
+                    "    this.setView(fd);",
                     "}"
                 ]
             },
