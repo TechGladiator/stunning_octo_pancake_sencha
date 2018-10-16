@@ -511,6 +511,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "id": "editData",
                         "style": "background: ##5fa2dd",
                         "text": "Edit Data"
                     },
@@ -518,7 +519,8 @@
                         "text": "string",
                         "style": "string",
                         "designer|userAlias": "string",
-                        "designer|userClassName": "string"
+                        "designer|userClassName": "string",
+                        "id": "string"
                     },
                     "name": "MyButton2",
                     "designerId": "9d050023-85e3-42bf-bb2a-1dd0ae3609a6",
