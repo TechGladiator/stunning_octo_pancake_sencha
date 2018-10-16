@@ -178,6 +178,32 @@
             },
             "name": "validateRowLengths",
             "designerId": "509c9326-b56b-452a-aab3-cfc90c9d513e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "results"
+                ],
+                "fn": "completeFn",
+                "implHandler": [
+                    "this.setResults(results);",
+                    "this.printStats('Parse complete');",
+                    "this.validateFieldLength(this.getApplication().FieldNames, this.getApplication().FieldData, this.getApplication().ErrorCount);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "completeFn",
+            "designerId": "e4bdb401-60a1-43e5-9c82-a42cc33165e7"
         }
     ]
 }
