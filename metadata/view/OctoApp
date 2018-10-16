@@ -243,6 +243,7 @@
                                         "implHandler": [
                                             "const app = StunningOctoPancake.app;",
                                             "const importGrid = Ext.getCmp('importFileName');",
+                                            "const editImportGrid = Ext.getCmp('editImportFileName');",
                                             "const importStore = Ext.StoreMgr.get('RecordDataStore');",
                                             "const names = StunningOctoPancake.app.Names;",
                                             "",
@@ -272,6 +273,7 @@
                                             "function setView(fd) {",
                                             "    importStore.clearData();",
                                             "    importGrid.setTitle(app.Filename);",
+                                            "    editImportGrid.setTitle(app.Filename);",
                                             "    Ext.getCmp('recordButtons').show();",
                                             "    importGrid.show();",
                                             "    Ext.getCmp('tabs').hide();",
