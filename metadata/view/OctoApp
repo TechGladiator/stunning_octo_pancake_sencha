@@ -560,6 +560,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "hidden": true,
                         "style": "background: ##5fa2dd",
                         "text": "Save Records"
                     },
@@ -567,7 +568,8 @@
                         "text": "string",
                         "style": "string",
                         "designer|userAlias": "string",
-                        "designer|userClassName": "string"
+                        "designer|userClassName": "string",
+                        "hidden": "boolean"
                     },
                     "name": "MyButton3",
                     "designerId": "077b12a8-f6b6-4e29-bc28-f640e8ccd8ad",
