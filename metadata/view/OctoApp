@@ -721,6 +721,349 @@
                 "id": "string",
                 "layout|flex": "number"
             },
+            "name": "MyPanel3",
+            "designerId": "51e5ff13-b88a-41b9-94d4-2192c9ced384",
+            "viewControllerInstanceId": "15e035a1-33a8-455e-b0bd-f99d3777045b",
+            "viewModelInstanceId": "f71a758c-a68e-4640-92ba-2b2fa6148d9d",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "default-framed",
+                        "enableColumnHide": false,
+                        "frame": true,
+                        "id": "recordGrid",
+                        "store": "RecordDataStore",
+                        "titleAlign": "center",
+                        "width": 1332
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "title": "string",
+                        "designer|uiInterfaceName": "string",
+                        "frame": "boolean",
+                        "margin": "auto",
+                        "titleAlign": "string",
+                        "width": "auto",
+                        "store": "store",
+                        "designer|userAlias": "string",
+                        "designer|userClassName": "string",
+                        "enableColumnHide": "boolean",
+                        "id": "string"
+                    },
+                    "name": "MyGridPanel",
+                    "designerId": "bb9434af-d1cf-483a-bd6b-72efaafc4e3d",
+                    "viewControllerInstanceId": "c0c1dd17-d795-46c2-9eb4-0736df13fd9a",
+                    "viewModelInstanceId": "a73ddd39-5556-488d-aab9-92fe3071e149",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable",
+                            "designerId": "5096d1c1-e57c-4dfe-9e89-a084fe0f9368"
+                        },
+                        {
+                            "type": "Ext.grid.column.RowNumberer",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "RowNumber"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "designer|displayName": "string",
+                                "width": "number"
+                            },
+                            "name": "MyRowNumberer",
+                            "designerId": "64e64ac9-5264-43bd-bb8c-23e7680e5195"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Name",
+                                "text": "Name",
+                                "width": 170
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyColumn1",
+                            "designerId": "7e96ff3a-4187-4144-93ae-c7a3649be7ba"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Address",
+                                "text": "Address",
+                                "width": 190
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyColumn2",
+                            "designerId": "30df300c-f823-4f26-a07b-f1dabf3d3edd"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Address 2",
+                                "text": "Address 2"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn3",
+                            "designerId": "940ebe27-86b5-4b8d-9a1d-6e41aeaccda1"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "City",
+                                "text": "City"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn4",
+                            "designerId": "af936e4f-1cbd-4eb0-a54b-87fe86896451"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "State",
+                                "text": "State",
+                                "width": 70
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyColumn5",
+                            "designerId": "fad7cafd-68a9-46c9-9731-1362fd3491b4"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Zip",
+                                "text": "Zip",
+                                "width": 65
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyColumn6",
+                            "designerId": "744dc46b-33c1-490b-9466-3ee989bb5f6e"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Purpose",
+                                "text": "Purpose"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn7",
+                            "designerId": "3bf0759e-265d-4b88-a008-7b680e6259b4"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Property Owner",
+                                "text": "Property Owner",
+                                "width": 128
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyColumn8",
+                            "designerId": "860803c8-5c76-4a9c-8d01-55d6f6fb0081"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Creation Date",
+                                "text": "Creation Date",
+                                "width": 118
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto",
+                                "formatter": "string"
+                            },
+                            "name": "MyColumn9",
+                            "designerId": "77fdfeb7-f698-438b-b643-52de8b96ac2e"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Lat",
+                                "hidden": true,
+                                "id": "Lat",
+                                "text": "Lat"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "hidden": "boolean",
+                                "id": "string"
+                            },
+                            "name": "MyColumn10",
+                            "designerId": "cd33d38e-51bf-448d-b7cd-697ba89c8a72"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Long",
+                                "hidden": true,
+                                "id": "Long",
+                                "text": "Long",
+                                "width": 155
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto",
+                                "hidden": "boolean",
+                                "id": "string"
+                            },
+                            "name": "MyColumn11",
+                            "designerId": "9f86dff1-8697-49b8-a1df-717c9e4f4b3f"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "__parsed_extra",
+                                "hidden": true,
+                                "id": "extra",
+                                "text": "__parsed_extra"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "dataIndex": "datafield",
+                                "hidden": "boolean",
+                                "id": "string"
+                            },
+                            "name": "MyColumn",
+                            "designerId": "607dd7fc-1864-44b6-985d-01d529365c48"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "id": "editImportFileName",
+                "layout|flex": 1,
+                "margin": "48 0 32",
+                "title": "title",
+                "titleAlign": "center",
+                "width": 1332
+            },
+            "configAlternates": {
+                "designer|userAlias": "string",
+                "designer|userClassName": "string",
+                "height": "auto",
+                "title": "string",
+                "width": "auto",
+                "margin": "auto",
+                "titleAlign": "string",
+                "hidden": "boolean",
+                "id": "string",
+                "layout|flex": "number"
+            },
             "name": "MyPanel",
             "designerId": "803bd4f1-e6c4-42c7-828b-7b56a204c4a0",
             "viewControllerInstanceId": "15e035a1-33a8-455e-b0bd-f99d3777045b",
@@ -737,7 +1080,7 @@
                         "designer|uiInterfaceName": "default-framed",
                         "enableColumnHide": false,
                         "frame": true,
-                        "id": "recordGrid",
+                        "id": "editRecordGrid",
                         "store": "RecordDataStore",
                         "titleAlign": "center",
                         "width": 1332
@@ -1136,7 +1479,7 @@
                             "userConfig": {
                                 "dataIndex": "Lat",
                                 "hidden": true,
-                                "id": "Lat",
+                                "id": "editLat",
                                 "text": "Lat"
                             },
                             "configAlternates": {
@@ -1158,7 +1501,7 @@
                             "userConfig": {
                                 "dataIndex": "Long",
                                 "hidden": true,
-                                "id": "Long",
+                                "id": "editLong",
                                 "text": "Long",
                                 "width": 155
                             },
@@ -1182,7 +1525,7 @@
                             "userConfig": {
                                 "dataIndex": "__parsed_extra",
                                 "hidden": true,
-                                "id": "extra",
+                                "id": "extra1",
                                 "text": "__parsed_extra"
                             },
                             "configAlternates": {
