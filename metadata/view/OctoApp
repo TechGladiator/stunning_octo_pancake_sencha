@@ -538,7 +538,10 @@
                                 "fn": "onEditButtonClick",
                                 "implHandler": [
                                     "Ext.getCmp('importFileName').hide();",
-                                    "Ext.getCmp('editImportFileName').show();"
+                                    "Ext.getCmp('editData').hide();",
+                                    "Ext.getCmp('mapData').hide();",
+                                    "Ext.getCmp('editImportFileName').show();",
+                                    "Ext.getCmp('saveEdits').show();"
                                 ],
                                 "name": "click",
                                 "scope": "me"
