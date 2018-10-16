@@ -12,5 +12,39 @@
         "designer|userClassName": "string"
     },
     "name": "MyController",
-    "designerId": "d4d1c18f-2991-4b5a-87be-fb289b2ba215"
+    "designerId": "d4d1c18f-2991-4b5a-87be-fb289b2ba215",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "r"
+                ],
+                "fn": "setResults",
+                "implHandler": [
+                    "const app = StunningOctoPancake.app;",
+                    "",
+                    "app.FullResults = r;",
+                    "app.FieldNames = app.FullResults.meta.fields;",
+                    "app.FieldData = app.FullResults.data;",
+                    "app.FieldErrors = app.FullResults.errors;",
+                    "app.ErrorCount = app.FieldErrors.length;",
+                    "app.FirstError = app.FieldErrors[0];",
+                    "app.RowCount = app.FieldData.length;"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "setResults",
+            "designerId": "0cbf402f-9afd-4250-9145-a225464c2528"
+        }
+    ]
 }
