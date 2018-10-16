@@ -1229,6 +1229,33 @@
                             },
                             "name": "MyCellEditingPlugin",
                             "designerId": "ed432f87-3a7a-4803-94c3-68e2483938b5"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRecordGridBeforeRender",
+                                "implHandler": [
+                                    "const grid = Ext.getCmp('recordGrid');",
+                                    "grid.on('beforeedit', function(editor, e) {",
+                                    "    return false;",
+                                    "});"
+                                ],
+                                "name": "beforerender",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onRecordGridBeforeRender",
+                            "designerId": "bcee3ea4-f7ff-4e2b-a32e-10ce53b69d87"
                         }
                     ]
                 }
