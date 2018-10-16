@@ -27,13 +27,13 @@
                 ],
                 "fn": "setResults",
                 "implHandler": [
-                    "this.FullResults = r;",
-                    "this.FieldNames = this.FullResults.meta.fields;",
-                    "this.FieldData = this.FullResults.data;",
-                    "this.FieldErrors = this.FullResults.errors;",
-                    "this.ErrorCount = this.FieldErrors.length;",
-                    "this.FirstError = this.FieldErrors[0];",
-                    "this.RowCount = this.FieldData.length;"
+                    "this.getApplication().FullResults = r;",
+                    "this.getApplication().FieldNames = this.getApplication().FullResults.meta.fields;",
+                    "this.getApplication().FieldData = this.getApplication().FullResults.data;",
+                    "this.getApplication().FieldErrors = this.getApplication().FullResults.errors;",
+                    "this.getApplication().ErrorCount = this.getApplication().FieldErrors.length;",
+                    "this.getApplication().FirstError = this.getApplication().FieldErrors[0];",
+                    "this.getApplication().RowCount = this.getApplication().FieldData.length;"
                 ]
             },
             "configAlternates": {
@@ -58,10 +58,10 @@
                 "fn": "printStats",
                 "implHandler": [
                     "console.log(msg);",
-                    "console.log(this.FirstError || 'No column length errors');",
-                    "console.log(\"  Row count:\", this.RowCount);",
-                    "console.log(\"     Errors:\", this.ErrorCount);",
-                    "console.log(\"    Results:\", this.FullResults);"
+                    "console.log(this.getApplication().FirstError || 'No column length errors');",
+                    "console.log(\"  Row count:\", this.getApplication().RowCount);",
+                    "console.log(\"     Errors:\", this.getApplication().ErrorCount);",
+                    "console.log(\"    Results:\", this.getApplication().FullResults);"
                 ]
             },
             "configAlternates": {
