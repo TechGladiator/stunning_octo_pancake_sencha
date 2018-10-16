@@ -586,11 +586,19 @@
                             "codeClass": null,
                             "userConfig": {
                                 "fn": "onSaveEditsClick",
+                                "implHandler": [
+                                    "Ext.getCmp('editImportFileName').hide();",
+                                    "Ext.getCmp('saveEdits').hide();",
+                                    "Ext.getCmp('importFileName').show();",
+                                    "Ext.getCmp('editData').show();",
+                                    "Ext.getCmp('mapData').show();"
+                                ],
                                 "name": "click",
                                 "scope": "me"
                             },
                             "configAlternates": {
                                 "fn": "string",
+                                "implHandler": "code",
                                 "name": "string",
                                 "scope": "string"
                             },
