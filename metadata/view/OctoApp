@@ -675,7 +675,10 @@
                                     "Ext.getCmp('tabs').show();",
                                     "Ext.getCmp('recordButtons').hide();",
                                     "Ext.getCmp('importFileName').hide();",
+                                    "Ext.getCmp('editImportFileName').hide();",
                                     "Ext.getCmp('map').hide();",
+                                    "Ext.getCmp('extra').hide();",
+                                    "Ext.getCmp('extra1').hide();",
                                     "$(\"#chooseCSVFile-inputEl\").val(null);",
                                     "$(\"#chooseCSVFile-button-fileInputEl\").val(null);"
                                 ],
