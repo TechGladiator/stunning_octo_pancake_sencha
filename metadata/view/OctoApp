@@ -616,6 +616,26 @@
                     "codeClass": null,
                     "userConfig": {
                         "hidden": true,
+                        "id": "repairNext",
+                        "text": "Repair Next Error"
+                    },
+                    "configAlternates": {
+                        "hidden": "boolean",
+                        "id": "string",
+                        "text": "string"
+                    },
+                    "name": "MyButton7",
+                    "designerId": "f53a8126-64e1-4726-a04a-12e191d7d4ad"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
                         "style": "background: ##5fa2dd",
                         "text": "Save Records"
                     },
