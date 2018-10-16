@@ -71,6 +71,43 @@
             },
             "name": "printStats",
             "designerId": "fe0b5bd9-5c5c-42b8-8fe6-16d77912eabf"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "fn",
+                    "fd",
+                    "ec"
+                ],
+                "fn": "validateFieldLength",
+                "implHandler": [
+                    "if (fn.length != this.getApplication().Names.length) {",
+                    "    console.log(\"header length is wrong\");",
+                    "    let codeWord;",
+                    "    if (fn.length < this.getApplication().Names.length) {",
+                    "      codeWord = \"few\";",
+                    "    } else {",
+                    "      codeWord = \"many\";",
+                    "    }",
+                    "    alert(`Too ${codeWord} fields: expected ${this.getApplication().Names.length} fields but parsed ${fn.length} in \"${this.getApplication().Filename}\", Row: 0. Header length errors must be corrected within file before further processing to prevent data loss.`);",
+                    "} else {",
+                    "    validateRowLengths(fd, ec);",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "validateFieldLength",
+            "designerId": "63c6526c-e934-4816-a5de-530e0a78a8a0"
         }
     ]
 }
