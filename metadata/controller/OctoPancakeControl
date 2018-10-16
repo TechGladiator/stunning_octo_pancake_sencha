@@ -108,6 +108,40 @@
             },
             "name": "validateFieldLength",
             "designerId": "63c6526c-e934-4816-a5de-530e0a78a8a0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "fd"
+                ],
+                "fn": "setView",
+                "implHandler": [
+                    "Ext.StoreMgr.get('RecordDataStore').clearData();",
+                    "Ext.getCmp('importFileName').setTitle(this.getApplication.Filename);",
+                    "Ext.getCmp('editImportFileName').setTitle(this.getApplication.Filename);",
+                    "Ext.getCmp('recordButtons').show();",
+                    "Ext.getCmp('importFileName').show();",
+                    "Ext.getCmp('tabs').hide();",
+                    "Ext.StoreMgr.get('RecordDataStore').setData(fd);",
+                    "if (fd[0].__parsed_extra) {",
+                    "    Ext.getCmp('extra').show();",
+                    "    Ext.getCmp('extra1').show();",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "setView",
+            "designerId": "fcd8d2f5-a590-4de8-85ad-ecd7995e21b0"
         }
     ]
 }
