@@ -86,6 +86,48 @@
                     "fd",
                     "ec"
                 ],
+                "fn": "validateFieldNames",
+                "implHandler": [
+                    "for (let i = 0; i < fn.length; i ++) {",
+                    "    const oldKey = fn[i];",
+                    "    fn[i] = n[i];",
+                    "    const newKey = fn[i];",
+                    "    if (oldKey != newKey) {",
+                    "        let j = 0;",
+                    "        const e = fd[j];",
+                    "        while (j < fd.length) {",
+                    "            e[newKey] = e[oldKey];",
+                    "            delete e[oldKey];",
+                    "            j++;",
+                    "        }",
+                    "        alert(`Corrected invalid column ${oldKey} to ${newKey}`);",
+                    "    }",
+                    "}",
+                    "app.getOctoPancakeControlController().validateRowLengths(fd, ec);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "validateFieldNames",
+            "designerId": "eb4c3562-3576-44b7-9dbf-ad23cc79f0cf"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "fn",
+                    "n",
+                    "fd",
+                    "ec"
+                ],
                 "fn": "validateFieldLength",
                 "implHandler": [
                     "if (fn.length != n.length) {",
@@ -233,48 +275,6 @@
             },
             "name": "errorFn",
             "designerId": "c08e145f-667e-499c-9ec2-ee93e3e985e1"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|params": [
-                    "fn",
-                    "n",
-                    "fd",
-                    "ec"
-                ],
-                "fn": "validateFieldNames",
-                "implHandler": [
-                    "for (let i = 0; i < fn.length; i ++) {",
-                    "    const oldKey = fn[i];",
-                    "    fn[i] = n[i];",
-                    "    const newKey = fn[i];",
-                    "    if (oldKey != newKey) {",
-                    "        let j = 0;",
-                    "        const e = fd[j];",
-                    "        while (j < fd.length) {",
-                    "            e[newKey] = e[oldKey];",
-                    "            delete e[oldKey];",
-                    "            j++;",
-                    "        }",
-                    "        alert(`Corrected invalid column ${oldKey} to ${newKey}`);",
-                    "    }",
-                    "}",
-                    "app.getOctoPancakeControlController().validateRowLengths(fd, ec);"
-                ]
-            },
-            "configAlternates": {
-                "designer|params": "typedarray",
-                "fn": "string",
-                "implHandler": "code"
-            },
-            "name": "validateFieldNames",
-            "designerId": "eb4c3562-3576-44b7-9dbf-ad23cc79f0cf"
         }
     ]
 }
