@@ -561,13 +561,39 @@
                             "codeClass": null,
                             "userConfig": {
                                 "fn": "onRepairNextClick",
+                                "implHandler": [
+                                    "const app = StunningOctoPancake.app;",
+                                    "const controller = app.getOctoPancakeControlController();",
+                                    "const message = app.FieldErrors[0].message;",
+                                    "const row = app.FieldErrors[0].row;",
+                                    "const recordRow = app.FieldData[row];",
+                                    "",
+                                    "if (recordRow.__parsed_extra === \"\" || recordRow.__parsed_extra === undefined && Object.keys(recordRow).length - 1 === app.Names.length) {",
+                                    "    if (recordRow.__parsed_extra === \"\") {",
+                                    "        delete recordRow.__parsed_extra;",
+                                    "    }",
+                                    "    app.FieldErrors.splice(0, 1);",
+                                    "    Ext.getCmp('recordButtons').hide();",
+                                    "    Ext.getCmp('repairNext').hide();",
+                                    "    Ext.getCmp('importFileName').hide();",
+                                    "    Ext.getCmp('editImportFileName').hide();",
+                                    "    Ext.getCmp('extra').hide();",
+                                    "    Ext.getCmp('extra1').hide();",
+                                    "    Ext.getCmp('saveEdits').hide();",
+                                    "    Ext.getCmp('editData').show();",
+                                    "    controller.completeFn(app.FullResults);",
+                                    "} else {",
+                                    "    alert(`First error: ${message} in Row: ${row + 1}`);",
+                                    "}"
+                                ],
                                 "name": "click",
                                 "scope": "me"
                             },
                             "configAlternates": {
                                 "fn": "string",
                                 "name": "string",
-                                "scope": "string"
+                                "scope": "string",
+                                "implHandler": "code"
                             },
                             "name": "onRepairNextClick",
                             "designerId": "a5d31ab4-a462-4df0-b64c-61db996559ac"
