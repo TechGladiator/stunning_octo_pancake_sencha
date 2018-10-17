@@ -466,6 +466,7 @@
                                 "implHandler": [
                                     "Ext.getCmp('importFileName').hide();",
                                     "Ext.getCmp('editData').hide();",
+                                    "Ext.getCmp('repairNext').hide();",
                                     "Ext.getCmp('editImportFileName').show();",
                                     "Ext.getCmp('saveEdits').show();"
                                 ],
@@ -516,7 +517,10 @@
                                     "Ext.getCmp('editImportFileName').hide();",
                                     "Ext.getCmp('saveEdits').hide();",
                                     "Ext.getCmp('importFileName').show();",
-                                    "Ext.getCmp('editData').show();"
+                                    "Ext.getCmp('editData').show();",
+                                    "if (StunningOctoPancake.app.ErrorCount > 0) {",
+                                    "    Ext.getCmp('repairNext').show();",
+                                    "}"
                                 ],
                                 "name": "click",
                                 "scope": "me"
