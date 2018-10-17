@@ -249,7 +249,22 @@
                 ],
                 "fn": "validateFieldNames",
                 "implHandler": [
-                    ""
+                    "for (let i = 0; i < app.FieldNames.length; i ++) {",
+                    "    const oldKey = app.FieldNames[i];",
+                    "    app.FieldNames[i] = app.Names[i];",
+                    "    const newKey = app.FieldNames[i];",
+                    "    if (oldKey != newKey) {",
+                    "        let j = 0;",
+                    "        const e = app.FieldData[j];",
+                    "        while (j < app.FieldData.length) {",
+                    "            e[newKey] = e[oldKey];",
+                    "            delete e[oldKey];",
+                    "            j++;",
+                    "        }",
+                    "        alert(`Corrected invalid column ${oldKey} to ${newKey}`);",
+                    "    }",
+                    "}",
+                    "app.getOctoPancakeControlController().completeFn(app.FullResults);"
                 ]
             },
             "configAlternates": {
