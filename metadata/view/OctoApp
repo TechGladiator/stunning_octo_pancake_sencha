@@ -587,7 +587,7 @@
                                     "    Ext.getCmp('editData').show();",
                                     "    controller.completeFn(app.FullResults);",
                                     "} else {",
-                                    "    alert(`First error: ${message} in Row: ${row + 1}`);",
+                                    "    alert(`Error: ${message} in Row: ${row + 1}`);",
                                     "}"
                                 ],
                                 "name": "click",
