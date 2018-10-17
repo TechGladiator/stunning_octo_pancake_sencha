@@ -123,8 +123,8 @@
                 "fn": "setView",
                 "implHandler": [
                     "Ext.StoreMgr.get('RecordDataStore').clearData();",
-                    "Ext.getCmp('importFileName').setTitle(this.getApplication.Filename);",
-                    "Ext.getCmp('editImportFileName').setTitle(this.getApplication.Filename);",
+                    "Ext.getCmp('importFileName').setTitle(this.getApplication().Filename);",
+                    "Ext.getCmp('editImportFileName').setTitle(this.getApplication().Filename);",
                     "Ext.getCmp('recordButtons').show();",
                     "Ext.getCmp('importFileName').show();",
                     "Ext.getCmp('tabs').hide();",
@@ -158,8 +158,8 @@
                 "fn": "validateRowLengths",
                 "implHandler": [
                     "if (ec > 0) {",
-                    "    const message = this.getApplication.FirstError.message;",
-                    "    const row = this.getApplication.FirstError.row;",
+                    "    const message = this.getApplication().FirstError.message;",
+                    "    const row = this.getApplication().FirstError.row;",
                     "    alert(`First error: ${message} in Row: ${row + 1}`);",
                     "    Ext.getCmp('mapData').hide();",
                     "    Ext.getCmp('repairNext').show();",
@@ -192,9 +192,12 @@
                 ],
                 "fn": "completeFn",
                 "implHandler": [
-                    "this.setResults(results);",
-                    "this.printStats('Parse complete');",
-                    "this.validateFieldLength(this.getApplication().FieldNames, this.getApplication().FieldData, this.getApplication().ErrorCount);"
+                    "const app = StunningOctoPancake.app;",
+                    "const controller = app.getOctoPancakeControlController();",
+                    "",
+                    "controller.setResults(results);",
+                    "controller.printStats('Parse complete');",
+                    "controller.validateFieldLength(app.FieldNames, app.FieldData, app.ErrorCount);"
                 ]
             },
             "configAlternates": {
