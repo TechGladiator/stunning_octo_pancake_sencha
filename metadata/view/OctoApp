@@ -728,6 +728,8 @@
                                     "Ext.getCmp('map').hide();",
                                     "Ext.getCmp('extra').hide();",
                                     "Ext.getCmp('extra1').hide();",
+                                    "Ext.getCmp('saveEdits').hide();",
+                                    "Ext.getCmp('editData').show();",
                                     "$(\"#chooseCSVFile-inputEl\").val(null);",
                                     "$(\"#chooseCSVFile-button-fileInputEl\").val(null);"
                                 ],
