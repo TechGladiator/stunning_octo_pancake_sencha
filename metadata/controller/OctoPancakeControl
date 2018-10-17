@@ -160,7 +160,7 @@
                     "if (ec > 0) {",
                     "    const message = this.getApplication().FirstError.message;",
                     "    const row = this.getApplication().FirstError.row;",
-                    "    alert(`First error: ${message} in Row: ${row + 1}`);",
+                    "    alert(`Error: ${message} in Row: ${row + 1}`);",
                     "    Ext.getCmp('mapData').hide();",
                     "    Ext.getCmp('repairNext').show();",
                     "    this.setView([fd[row]]);",
