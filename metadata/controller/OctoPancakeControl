@@ -103,7 +103,7 @@
                     "        alert(`Corrected invalid column ${oldKey} to ${newKey}`);",
                     "    }",
                     "}",
-                    "app.getOctoPancakeControlController().validateRowLengths(fd, ec);"
+                    "StunningOctoPancake.app.getOctoPancakeControlController().validateRowLengths(fd, ec);"
                 ]
             },
             "configAlternates": {
