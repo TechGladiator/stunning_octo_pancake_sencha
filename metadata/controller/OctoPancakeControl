@@ -232,6 +232,33 @@
             },
             "name": "errorFn",
             "designerId": "c08e145f-667e-499c-9ec2-ee93e3e985e1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "fn",
+                    "n",
+                    "fd",
+                    "func"
+                ],
+                "fn": "validateFieldNames",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "validateFieldNames",
+            "designerId": "eb4c3562-3576-44b7-9dbf-ad23cc79f0cf"
         }
     ]
 }
