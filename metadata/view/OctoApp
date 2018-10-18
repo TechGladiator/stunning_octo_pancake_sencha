@@ -936,13 +936,15 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "State",
+                                "id": "state",
                                 "text": "State",
                                 "width": 70
                             },
                             "configAlternates": {
                                 "dataIndex": "datafield",
                                 "text": "string",
-                                "width": "auto"
+                                "width": "auto",
+                                "id": "string"
                             },
                             "name": "MyColumn5",
                             "designerId": "fad7cafd-68a9-46c9-9731-1362fd3491b4"
@@ -1351,13 +1353,15 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "State",
+                                "id": "stateEditField",
                                 "text": "State",
                                 "width": 70
                             },
                             "configAlternates": {
                                 "dataIndex": "datafield",
                                 "text": "string",
-                                "width": "auto"
+                                "width": "auto",
+                                "id": "string"
                             },
                             "name": "MyColumn5",
                             "designerId": "3ac56c29-d69e-4e1b-9c0a-589b6139dc29",
