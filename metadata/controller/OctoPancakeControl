@@ -23,13 +23,14 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
-                    "fd"
+                    "fd",
+                    "file"
                 ],
                 "fn": "setView",
                 "implHandler": [
                     "Ext.StoreMgr.get('RecordDataStore').clearData();",
-                    "Ext.getCmp('importFileName').setTitle(this.getApplication().Filename);",
-                    "Ext.getCmp('editImportFileName').setTitle(this.getApplication().Filename);",
+                    "Ext.getCmp('importFileName').setTitle(file);",
+                    "Ext.getCmp('editImportFileName').setTitle(file);",
                     "Ext.getCmp('recordButtons').show();",
                     "Ext.getCmp('importFileName').show();",
                     "Ext.getCmp('tabs').hide();",
@@ -58,21 +59,23 @@
             "userConfig": {
                 "designer|params": [
                     "fd",
-                    "ec"
+                    "ec",
+                    "fe",
+                    "file"
                 ],
                 "fn": "validateRowLengths",
                 "implHandler": [
                     "if (ec > 0) {",
-                    "    const message = this.getApplication().FirstError.message;",
-                    "    const row = this.getApplication().FirstError.row;",
+                    "    const message = fe.message;",
+                    "    const row = fe.row;",
                     "    alert(`Error: ${message} in Row: ${row + 1}`);",
                     "    Ext.getCmp('mapData').hide();",
                     "    Ext.getCmp('repairNext').show();",
-                    "    this.setView([fd[row]]);",
+                    "    this.setView([fd[row]], file);",
                     "} else {",
                     "    Ext.getCmp('mapData').show();",
                     "    Ext.getCmp('repairNext').hide();",
-                    "    this.setView(fd);",
+                    "    this.setView(fd, file);",
                     "}"
                 ]
             },
@@ -96,7 +99,9 @@
                     "fn",
                     "n",
                     "fd",
-                    "ec"
+                    "ec",
+                    "fe",
+                    "file"
                 ],
                 "fn": "validateFieldNames",
                 "implHandler": [
@@ -115,7 +120,7 @@
                     "        alert(`Corrected invalid column ${oldKey} to ${newKey}`);",
                     "    }",
                     "}",
-                    "StunningOctoPancake.app.getOctoPancakeControlController().validateRowLengths(fd, ec);"
+                    "this.validateRowLengths(fd, ec, fe, file);"
                 ]
             },
             "configAlternates": {
@@ -138,7 +143,9 @@
                     "fn",
                     "n",
                     "fd",
-                    "ec"
+                    "ec",
+                    "fe",
+                    "file"
                 ],
                 "fn": "validateFieldLength",
                 "implHandler": [
@@ -146,13 +153,13 @@
                     "    console.log(\"header length is wrong\");",
                     "    let codeWord;",
                     "    if (fn.length < n.length) {",
-                    "      codeWord = \"few\";",
+                    "        codeWord = \"few\";",
                     "    } else {",
-                    "      codeWord = \"many\";",
+                    "        codeWord = \"many\";",
                     "    }",
-                    "    alert(`Too ${codeWord} fields: expected ${n.length} fields but parsed ${fn.length} in \"${this.getApplication().Filename}\", Row: 0. Header length errors must be corrected within file before further processing to prevent data loss.`);",
+                    "    alert(`Too ${codeWord} fields: expected ${n.length} fields but parsed ${fn.length} in \"${file}\", Row: 0. Header length errors must be corrected within file before further processing to prevent data loss.`);",
                     "} else {",
-                    "    this.validateFieldNames(fn, n, fd, ec);",
+                    "    this.validateFieldNames(fn, n, fd, ec, fe, file);",
                     "}"
                 ]
             },
@@ -173,15 +180,16 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
-                    "msg"
+                    "msg",
+                    "app"
                 ],
                 "fn": "printStats",
                 "implHandler": [
                     "console.log(msg);",
                     "console.log(this.getApplication().FirstError || 'No column length errors');",
-                    "console.log(\"  Row count:\", this.getApplication().RowCount);",
-                    "console.log(\"     Errors:\", this.getApplication().ErrorCount);",
-                    "console.log(\"    Results:\", this.getApplication().FullResults);"
+                    "console.log(\"  Row count:\", app.RowCount);",
+                    "console.log(\"     Errors:\", app.ErrorCount);",
+                    "console.log(\"    Results:\", app.FullResults);"
                 ]
             },
             "configAlternates": {
@@ -201,17 +209,18 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "app",
                     "r"
                 ],
                 "fn": "setResults",
                 "implHandler": [
-                    "this.getApplication().FullResults = r;",
-                    "this.getApplication().FieldNames = this.getApplication().FullResults.meta.fields;",
-                    "this.getApplication().FieldData = this.getApplication().FullResults.data;",
-                    "this.getApplication().FieldErrors = this.getApplication().FullResults.errors;",
-                    "this.getApplication().ErrorCount = this.getApplication().FieldErrors.length;",
-                    "this.getApplication().FirstError = this.getApplication().FieldErrors[0];",
-                    "this.getApplication().RowCount = this.getApplication().FieldData.length;"
+                    "app.FullResults = r;",
+                    "app.FieldNames = app.FullResults.meta.fields;",
+                    "app.FieldData = app.FullResults.data;",
+                    "app.FieldErrors = app.FullResults.errors;",
+                    "app.ErrorCount = app.FieldErrors.length;",
+                    "app.FirstError = app.FieldErrors[0];",
+                    "app.RowCount = app.FieldData.length;"
                 ]
             },
             "configAlternates": {
@@ -238,9 +247,9 @@
                     "const app = StunningOctoPancake.app;",
                     "const controller = app.getOctoPancakeControlController();",
                     "",
-                    "controller.setResults(results);",
-                    "controller.printStats('Parse complete');",
-                    "controller.validateFieldLength(app.FieldNames, app.Names, app.FieldData, app.ErrorCount);"
+                    "controller.setResults(app, results);",
+                    "controller.printStats('Parse complete', app);",
+                    "controller.validateFieldLength(app.FieldNames, app.Names, app.FieldData, app.ErrorCount, app.FirstError, app.FileName);"
                 ]
             },
             "configAlternates": {
