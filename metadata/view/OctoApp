@@ -947,7 +947,55 @@
                                 "id": "string"
                             },
                             "name": "MyColumn5",
-                            "designerId": "fad7cafd-68a9-46c9-9731-1362fd3491b4"
+                            "designerId": "fad7cafd-68a9-46c9-9731-1362fd3491b4",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "designer|viewControllerFn": "validateState",
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "const states = [\"AL\", \"AK\", \"AS\", \"AZ\", \"AR\", \"CA\", \"CO\", \"CT\", \"DE\", \"DC\", \"FM\", \"FL\", \"GA\", \"GU\", \"HI\", \"ID\", \"IL\", \"IN\", \"IA\", \"KS\", \"KY\", \"LA\", \"ME\", \"MH\", \"MD\", \"MA\", \"MI\", \"MN\", \"MS\", \"MO\", \"MP\", \"MT\", \"NE\", \"NV\", \"NH\", \"NJ\", \"NM\", \"NY\", \"NC\", \"ND\", \"MP\", \"OH\", \"OK\", \"OR\", \"PW\", \"PA\", \"PR\", \"RI\", \"SC\", \"SD\", \"TN\", \"TX\", \"UT\", \"VT\", \"VI\", \"VA\", \"WA\", \"WV\", \"WI\", \"WY\"];",
+                                            "",
+                                            "let validState = false;",
+                                            "",
+                                            "for (let i = 0; i < states.length; i++) {",
+                                            "    if (value === states[i]) {",
+                                            "        console.log(value);",
+                                            "        validState = true;",
+                                            "    }",
+                                            "}",
+                                            "if (!validState) {",
+                                            "    console.log(\"invalid\");",
+                                            "    metaData.innerCls = 'invalidCell';",
+                                            "}",
+                                            "return value;"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "designer|viewControllerFn": "string",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "e88ffc76-999a-4198-ae01-30de1f421560"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
