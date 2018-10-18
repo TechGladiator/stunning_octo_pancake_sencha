@@ -23,17 +23,21 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
-                    "r"
+                    "fd"
                 ],
-                "fn": "setResults",
+                "fn": "setView",
                 "implHandler": [
-                    "this.getApplication().FullResults = r;",
-                    "this.getApplication().FieldNames = this.getApplication().FullResults.meta.fields;",
-                    "this.getApplication().FieldData = this.getApplication().FullResults.data;",
-                    "this.getApplication().FieldErrors = this.getApplication().FullResults.errors;",
-                    "this.getApplication().ErrorCount = this.getApplication().FieldErrors.length;",
-                    "this.getApplication().FirstError = this.getApplication().FieldErrors[0];",
-                    "this.getApplication().RowCount = this.getApplication().FieldData.length;"
+                    "Ext.StoreMgr.get('RecordDataStore').clearData();",
+                    "Ext.getCmp('importFileName').setTitle(this.getApplication().Filename);",
+                    "Ext.getCmp('editImportFileName').setTitle(this.getApplication().Filename);",
+                    "Ext.getCmp('recordButtons').show();",
+                    "Ext.getCmp('importFileName').show();",
+                    "Ext.getCmp('tabs').hide();",
+                    "Ext.StoreMgr.get('RecordDataStore').setData(fd);",
+                    "if (fd[0].__parsed_extra) {",
+                    "    Ext.getCmp('extra').show();",
+                    "    Ext.getCmp('extra1').show();",
+                    "}"
                 ]
             },
             "configAlternates": {
@@ -41,8 +45,8 @@
                 "fn": "string",
                 "implHandler": "code"
             },
-            "name": "setResults",
-            "designerId": "0cbf402f-9afd-4250-9145-a225464c2528"
+            "name": "setView",
+            "designerId": "fcd8d2f5-a590-4de8-85ad-ecd7995e21b0"
         },
         {
             "type": "basicfunction",
@@ -53,15 +57,23 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
-                    "msg"
+                    "fd",
+                    "ec"
                 ],
-                "fn": "printStats",
+                "fn": "validateRowLengths",
                 "implHandler": [
-                    "console.log(msg);",
-                    "console.log(this.getApplication().FirstError || 'No column length errors');",
-                    "console.log(\"  Row count:\", this.getApplication().RowCount);",
-                    "console.log(\"     Errors:\", this.getApplication().ErrorCount);",
-                    "console.log(\"    Results:\", this.getApplication().FullResults);"
+                    "if (ec > 0) {",
+                    "    const message = this.getApplication().FirstError.message;",
+                    "    const row = this.getApplication().FirstError.row;",
+                    "    alert(`Error: ${message} in Row: ${row + 1}`);",
+                    "    Ext.getCmp('mapData').hide();",
+                    "    Ext.getCmp('repairNext').show();",
+                    "    this.setView([fd[row]]);",
+                    "} else {",
+                    "    Ext.getCmp('mapData').show();",
+                    "    Ext.getCmp('repairNext').hide();",
+                    "    this.setView(fd);",
+                    "}"
                 ]
             },
             "configAlternates": {
@@ -69,8 +81,8 @@
                 "fn": "string",
                 "implHandler": "code"
             },
-            "name": "printStats",
-            "designerId": "fe0b5bd9-5c5c-42b8-8fe6-16d77912eabf"
+            "name": "validateRowLengths",
+            "designerId": "509c9326-b56b-452a-aab3-cfc90c9d513e"
         },
         {
             "type": "basicfunction",
@@ -161,21 +173,15 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
-                    "fd"
+                    "msg"
                 ],
-                "fn": "setView",
+                "fn": "printStats",
                 "implHandler": [
-                    "Ext.StoreMgr.get('RecordDataStore').clearData();",
-                    "Ext.getCmp('importFileName').setTitle(this.getApplication().Filename);",
-                    "Ext.getCmp('editImportFileName').setTitle(this.getApplication().Filename);",
-                    "Ext.getCmp('recordButtons').show();",
-                    "Ext.getCmp('importFileName').show();",
-                    "Ext.getCmp('tabs').hide();",
-                    "Ext.StoreMgr.get('RecordDataStore').setData(fd);",
-                    "if (fd[0].__parsed_extra) {",
-                    "    Ext.getCmp('extra').show();",
-                    "    Ext.getCmp('extra1').show();",
-                    "}"
+                    "console.log(msg);",
+                    "console.log(this.getApplication().FirstError || 'No column length errors');",
+                    "console.log(\"  Row count:\", this.getApplication().RowCount);",
+                    "console.log(\"     Errors:\", this.getApplication().ErrorCount);",
+                    "console.log(\"    Results:\", this.getApplication().FullResults);"
                 ]
             },
             "configAlternates": {
@@ -183,8 +189,8 @@
                 "fn": "string",
                 "implHandler": "code"
             },
-            "name": "setView",
-            "designerId": "fcd8d2f5-a590-4de8-85ad-ecd7995e21b0"
+            "name": "printStats",
+            "designerId": "fe0b5bd9-5c5c-42b8-8fe6-16d77912eabf"
         },
         {
             "type": "basicfunction",
@@ -195,23 +201,17 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
-                    "fd",
-                    "ec"
+                    "r"
                 ],
-                "fn": "validateRowLengths",
+                "fn": "setResults",
                 "implHandler": [
-                    "if (ec > 0) {",
-                    "    const message = this.getApplication().FirstError.message;",
-                    "    const row = this.getApplication().FirstError.row;",
-                    "    alert(`Error: ${message} in Row: ${row + 1}`);",
-                    "    Ext.getCmp('mapData').hide();",
-                    "    Ext.getCmp('repairNext').show();",
-                    "    this.setView([fd[row]]);",
-                    "} else {",
-                    "    Ext.getCmp('mapData').show();",
-                    "    Ext.getCmp('repairNext').hide();",
-                    "    this.setView(fd);",
-                    "}"
+                    "this.getApplication().FullResults = r;",
+                    "this.getApplication().FieldNames = this.getApplication().FullResults.meta.fields;",
+                    "this.getApplication().FieldData = this.getApplication().FullResults.data;",
+                    "this.getApplication().FieldErrors = this.getApplication().FullResults.errors;",
+                    "this.getApplication().ErrorCount = this.getApplication().FieldErrors.length;",
+                    "this.getApplication().FirstError = this.getApplication().FieldErrors[0];",
+                    "this.getApplication().RowCount = this.getApplication().FieldData.length;"
                 ]
             },
             "configAlternates": {
@@ -219,8 +219,8 @@
                 "fn": "string",
                 "implHandler": "code"
             },
-            "name": "validateRowLengths",
-            "designerId": "509c9326-b56b-452a-aab3-cfc90c9d513e"
+            "name": "setResults",
+            "designerId": "0cbf402f-9afd-4250-9145-a225464c2528"
         },
         {
             "type": "basicfunction",
