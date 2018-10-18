@@ -284,6 +284,45 @@
             },
             "name": "errorFn",
             "designerId": "c08e145f-667e-499c-9ec2-ee93e3e985e1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "value",
+                    "metaData"
+                ],
+                "fn": "validateState",
+                "implHandler": [
+                    "const states = [\"AL\", \"AK\", \"AS\", \"AZ\", \"AR\", \"CA\", \"CO\", \"CT\", \"DE\", \"DC\", \"FM\", \"FL\", \"GA\", \"GU\", \"HI\", \"ID\", \"IL\", \"IN\", \"IA\", \"KS\", \"KY\", \"LA\", \"ME\", \"MH\", \"MD\", \"MA\", \"MI\", \"MN\", \"MS\", \"MO\", \"MP\", \"MT\", \"NE\", \"NV\", \"NH\", \"NJ\", \"NM\", \"NY\", \"NC\", \"ND\", \"MP\", \"OH\", \"OK\", \"OR\", \"PW\", \"PA\", \"PR\", \"RI\", \"SC\", \"SD\", \"TN\", \"TX\", \"UT\", \"VT\", \"VI\", \"VA\", \"WA\", \"WV\", \"WI\", \"WY\"];",
+                    "",
+                    "let validState = false;",
+                    "",
+                    "for (let i = 0; i < states.length; i++) {",
+                    "    if (value === states[i]) {",
+                    "        console.log(value);",
+                    "        validState = true;",
+                    "    }",
+                    "}",
+                    "if (!validState) {",
+                    "    console.log(\"invalid\");",
+                    "    metaData.innerCls = 'invalidCell';",
+                    "}",
+                    "return value;"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "validateState",
+            "designerId": "59a0a398-cb67-4c8f-98ce-f9192c6f9f69"
         }
     ]
 }

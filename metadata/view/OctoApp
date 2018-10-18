@@ -966,23 +966,12 @@
                                             "store",
                                             "view"
                                         ],
-                                        "designer|viewControllerFn": "validateState",
+                                        "designer|viewControllerFn": "stateRenderer",
                                         "fn": "renderer",
                                         "implHandler": [
-                                            "const states = [\"AL\", \"AK\", \"AS\", \"AZ\", \"AR\", \"CA\", \"CO\", \"CT\", \"DE\", \"DC\", \"FM\", \"FL\", \"GA\", \"GU\", \"HI\", \"ID\", \"IL\", \"IN\", \"IA\", \"KS\", \"KY\", \"LA\", \"ME\", \"MH\", \"MD\", \"MA\", \"MI\", \"MN\", \"MS\", \"MO\", \"MP\", \"MT\", \"NE\", \"NV\", \"NH\", \"NJ\", \"NM\", \"NY\", \"NC\", \"ND\", \"MP\", \"OH\", \"OK\", \"OR\", \"PW\", \"PA\", \"PR\", \"RI\", \"SC\", \"SD\", \"TN\", \"TX\", \"UT\", \"VT\", \"VI\", \"VA\", \"WA\", \"WV\", \"WI\", \"WY\"];",
-                                            "",
-                                            "let validState = false;",
-                                            "",
-                                            "for (let i = 0; i < states.length; i++) {",
-                                            "    if (value === states[i]) {",
-                                            "        console.log(value);",
-                                            "        validState = true;",
-                                            "    }",
-                                            "}",
-                                            "if (!validState) {",
-                                            "    console.log(\"invalid\");",
-                                            "    metaData.innerCls = 'invalidCell';",
-                                            "}",
+                                            "const app = StunningOctoPancake.app;",
+                                            "const controller = app.getOctoPancakeControlController();",
+                                            "controller.validateState(value, metaData);",
                                             "return value;"
                                         ]
                                     },
@@ -1429,6 +1418,41 @@
                                     },
                                     "name": "MyTextField5",
                                     "designerId": "6bf77124-72c7-4418-b251-46964952796f"
+                                },
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "designer|viewControllerFn": "editStateRenderer",
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "const app = StunningOctoPancake.app;",
+                                            "const controller = app.getOctoPancakeControlController();",
+                                            "controller.validateState(value, metaData);",
+                                            "return value;"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "designer|viewControllerFn": "string",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "044ce16f-3cca-45b5-8dab-71b81d0857f1"
                                 }
                             ]
                         },

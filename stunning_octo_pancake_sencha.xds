@@ -7,7 +7,7 @@
             "frameworkVersion": "6.5.0.775"
         },
         "urlPrefixTemplate": "http://localhost:{port}/{path}",
-        "urlPrefix": "http://localhost:34223/",
+        "urlPrefix": "http://localhost:46593/",
         "canvasControls": {
             "viewportSize": {
                 "name": "Auto Expand",
@@ -50,7 +50,8 @@
             "9c2187b4-2c96-4c06-8f3c-1e6d9d3ff5b4",
             "eb8486c2-00a7-4a45-9ffc-4725481dcad8",
             "0fdddbbd-7d64-4416-8794-6ac4b6b9478b",
-            "2e33f50c-9e57-4321-b486-435440f3bb61"
+            "2e33f50c-9e57-4321-b486-435440f3bb61",
+            "6c2842b0-6527-427b-80db-90177dd792d8"
         ],
         "app": [
             "application"
