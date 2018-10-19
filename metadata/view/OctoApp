@@ -1002,7 +1002,39 @@
                                 "width": "auto"
                             },
                             "name": "MyColumn6",
-                            "designerId": "744dc46b-33c1-490b-9466-3ee989bb5f6e"
+                            "designerId": "744dc46b-33c1-490b-9466-3ee989bb5f6e",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "designer|viewControllerFn": "zipRenderer",
+                                        "fn": "renderer",
+                                        "implHandler": null
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "designer|viewControllerFn": "string",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "81244c32-5eed-43f1-9ac0-08f09422334e"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -1487,6 +1519,36 @@
                                     },
                                     "name": "MyTextField6",
                                     "designerId": "86b97eee-0e54-4e66-a091-d0db808c325c"
+                                },
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "designer|viewControllerFn": "editZipRenderer",
+                                        "fn": "renderer",
+                                        "implHandler": null
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "designer|viewControllerFn": "string",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "cd8f7035-b20a-45ad-b922-b7a87367386e"
                                 }
                             ]
                         },
