@@ -31,7 +31,7 @@
                     "let validDate = false;",
                     "const regexp = /^\\d{4}-\\d{2}-\\d{2}$/;",
                     "",
-                    "if (value.match(regexp)) {",
+                    "if (value && value.match(regexp)) {",
                     "    validDate = true;",
                     "}",
                     "",
