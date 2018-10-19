@@ -184,7 +184,7 @@
                     "if (ec > 0) {",
                     "    const message = fe.message;",
                     "    const row = fe.row;",
-                    "    alert(`Error: ${message} in Row: ${row + 1}`);",
+                    "    Ext.MessageBox.alert(`Error: ${message} in Row: ${row + 1}`);",
                     "    Ext.getCmp('mapData').hide();",
                     "    Ext.getCmp('repairNext').show();",
                     "    this.setView([fd[row]], file);",
@@ -233,7 +233,7 @@
                     "            delete e[oldKey];",
                     "            j++;",
                     "        }",
-                    "        alert(`Corrected invalid column ${oldKey} to ${newKey}`);",
+                    "        Ext.MessageBox.alert(`Corrected invalid column ${oldKey} to ${newKey}`);",
                     "    }",
                     "}",
                     "this.validateRowLengths(fd, ec, fe, file);"
@@ -273,7 +273,7 @@
                     "    } else {",
                     "        codeWord = \"many\";",
                     "    }",
-                    "    alert(`Too ${codeWord} fields: expected ${n.length} fields but parsed ${fn.length} in \"${file}\", Row: 0. Header length errors must be corrected within file before further processing to prevent data loss.`);",
+                    "    Ext.MessageBox.alert(`Too ${codeWord} fields`, `Expected ${n.length} fields but parsed ${fn.length} in \"${file}\", Row: 0. Header length errors must be corrected within file before further processing to prevent data loss.`);",
                     "} else {",
                     "    this.validateFieldNames(fn, n, fd, ec, fe, file);",
                     "}"
