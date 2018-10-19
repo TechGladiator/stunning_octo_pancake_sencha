@@ -1096,7 +1096,42 @@
                                 "formatter": "string"
                             },
                             "name": "MyColumn9",
-                            "designerId": "77fdfeb7-f698-438b-b643-52de8b96ac2e"
+                            "designerId": "77fdfeb7-f698-438b-b643-52de8b96ac2e",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "designer|viewControllerFn": "dateRenderer",
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().validateDate(value, metaData);",
+                                            "return value;"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "designer|viewControllerFn": "string",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "12564182-501f-4fa4-bb3a-e38c0a184116"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -1668,6 +1703,39 @@
                                     },
                                     "name": "MyTextField9",
                                     "designerId": "21319a59-9ba4-4cc1-8787-235d91802836"
+                                },
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "designer|viewControllerFn": "editDateRenderer",
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().validateDate(value, metaData);",
+                                            "return value;"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "designer|viewControllerFn": "string",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "af11a23f-ef47-42a3-9e83-2a68f90cb5ef"
                                 }
                             ]
                         },
