@@ -26,6 +26,45 @@
                     "value",
                     "metaData"
                 ],
+                "fn": "validateZip",
+                "implHandler": [
+                    "let validZip = true;",
+                    "const digits = \"0123456789\";",
+                    "if (value.length != 5) {",
+                    "    validZip = false;",
+                    "}",
+                    "for (let i = 0; i < value.length; i ++) {",
+                    "    const zipDigit = `${value.substring(i, i + 1)}`;",
+                    "    if (digits.indexOf(zipDigit) === \"-1\") {",
+                    "        validZip = false;",
+                    "    }",
+                    "}",
+                    "if (!validZip) {",
+                    "    metaData.innerCls = 'invalidCell';",
+                    "}",
+                    "return value;"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "validateZip",
+            "designerId": "142051a7-e1a1-4a93-bc45-0860aff503d1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "value",
+                    "metaData"
+                ],
                 "fn": "validateState",
                 "implHandler": [
                     "const states = [\"AL\", \"AK\", \"AS\", \"AZ\", \"AR\", \"CA\", \"CO\", \"CT\", \"DE\", \"DC\", \"FM\", \"FL\", \"GA\", \"GU\", \"HI\", \"ID\", \"IL\", \"IN\", \"IA\", \"KS\", \"KY\", \"LA\", \"ME\", \"MH\", \"MD\", \"MA\", \"MI\", \"MN\", \"MS\", \"MO\", \"MP\", \"MT\", \"NE\", \"NV\", \"NH\", \"NJ\", \"NM\", \"NY\", \"NC\", \"ND\", \"MP\", \"OH\", \"OK\", \"OR\", \"PW\", \"PA\", \"PR\", \"RI\", \"SC\", \"SD\", \"TN\", \"TX\", \"UT\", \"VT\", \"VI\", \"VA\", \"WA\", \"WV\", \"WI\", \"WY\"];",
