@@ -969,9 +969,7 @@
                                         "designer|viewControllerFn": "stateRenderer",
                                         "fn": "renderer",
                                         "implHandler": [
-                                            "const app = StunningOctoPancake.app;",
-                                            "const controller = app.getOctoPancakeControlController();",
-                                            "controller.validateState(value, metaData);",
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().validateState(value, metaData);",
                                             "return value;"
                                         ]
                                     },
@@ -1439,9 +1437,7 @@
                                         "designer|viewControllerFn": "editStateRenderer",
                                         "fn": "renderer",
                                         "implHandler": [
-                                            "const app = StunningOctoPancake.app;",
-                                            "const controller = app.getOctoPancakeControlController();",
-                                            "controller.validateState(value, metaData);",
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().validateState(value, metaData);",
                                             "return value;"
                                         ]
                                     },
