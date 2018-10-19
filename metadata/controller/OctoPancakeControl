@@ -26,6 +26,47 @@
                     "value",
                     "metaData"
                 ],
+                "fn": "validateDate",
+                "implHandler": [
+                    "let validDate = false;",
+                    "const regexp = /^\\d{4}-\\d{2}-\\d{2}$/;",
+                    "",
+                    "if (value.match(regexp)) {",
+                    "    validDate = true;",
+                    "}",
+                    "",
+                    "const d = new Date(value);",
+                    "",
+                    "if (!d.getTime() && d.getTime() !== 0 && validDate) {",
+                    "    validDate = false;",
+                    "    console.log(`${value} is an invalid date`);",
+                    "}",
+                    "",
+                    "if (!validDate) {",
+                    "    metaData.innerCls = 'invalidCell';",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "validateDate",
+            "designerId": "621ffd9f-a030-46d5-ad5b-27a87d2bb3ff"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "value",
+                    "metaData"
+                ],
                 "fn": "validateZip",
                 "implHandler": [
                     "let validZip = false;",
