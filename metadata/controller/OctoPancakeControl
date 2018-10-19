@@ -184,7 +184,7 @@
                     "if (ec > 0) {",
                     "    const message = fe.message;",
                     "    const row = fe.row;",
-                    "    Ext.MessageBox.alert(`Error: ${message} in Row: ${row + 1}`);",
+                    "    Ext.MessageBox.alert(`Error`, `${message} in Row: ${row + 1}`);",
                     "    Ext.getCmp('mapData').hide();",
                     "    Ext.getCmp('repairNext').show();",
                     "    this.setView([fd[row]], file);",
@@ -221,6 +221,8 @@
                 ],
                 "fn": "validateFieldNames",
                 "implHandler": [
+                    "let updated = false;",
+                    "",
                     "for (let i = 0; i < fn.length; i ++) {",
                     "    const oldKey = fn[i];",
                     "    fn[i] = n[i];",
@@ -233,8 +235,11 @@
                     "            delete e[oldKey];",
                     "            j++;",
                     "        }",
-                    "        Ext.MessageBox.alert(`Corrected invalid column ${oldKey} to ${newKey}`);",
+                    "        updated = true;",
                     "    }",
+                    "}",
+                    "if (updated) {",
+                    "    Ext.MessageBox.alert(`Update`, `Corrected invalid column names`);",
                     "}",
                     "this.validateRowLengths(fd, ec, fe, file);"
                 ]

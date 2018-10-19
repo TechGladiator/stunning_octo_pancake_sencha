@@ -589,7 +589,7 @@
                                     "    Ext.getCmp('editData').show();",
                                     "    controller.completeFn(app.FullResults);",
                                     "} else {",
-                                    "    Ext.MessageBox.alert(`Error: ${message} in Row: ${row + 1}`);",
+                                    "    Ext.MessageBox.alert(`Error`, `${message} in Row: ${row + 1}`);",
                                     "}"
                                 ],
                                 "name": "click",
