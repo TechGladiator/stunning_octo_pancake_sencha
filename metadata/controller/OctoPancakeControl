@@ -365,7 +365,7 @@
                     "",
                     "controller.setResults(app, results);",
                     "controller.printStats('Parse complete', app);",
-                    "controller.validateFieldLength(app.FieldNames, app.Names, app.FieldData, app.ErrorCount, app.FirstError, app.FileName);"
+                    "controller.validateFieldLength(app.FieldNames, app.Names, app.FieldData, app.ErrorCount, app.FirstError, app.Filename);"
                 ]
             },
             "configAlternates": {
