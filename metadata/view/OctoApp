@@ -1023,7 +1023,10 @@
                                         ],
                                         "designer|viewControllerFn": "zipRenderer",
                                         "fn": "renderer",
-                                        "implHandler": null
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().validateZip(value, metaData);",
+                                            "return value;"
+                                        ]
                                     },
                                     "configAlternates": {
                                         "designer|params": "typedarray",
@@ -1539,7 +1542,10 @@
                                         ],
                                         "designer|viewControllerFn": "editZipRenderer",
                                         "fn": "renderer",
-                                        "implHandler": null
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().validateZip(value, metaData);",
+                                            "return value;"
+                                        ]
                                     },
                                     "configAlternates": {
                                         "designer|params": "typedarray",
