@@ -1292,10 +1292,12 @@
                             "codeClass": null,
                             "userConfig": {
                                 "designer|displayName": "deleteRow",
+                                "tdCls": "invalidCell",
                                 "width": 40
                             },
                             "configAlternates": {
                                 "designer|displayName": "string",
+                                "tdCls": "string",
                                 "width": "auto"
                             },
                             "name": "MyActionColumn",
