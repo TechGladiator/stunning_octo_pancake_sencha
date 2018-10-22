@@ -1284,6 +1284,42 @@
                             "designerId": "6b0e341a-4f52-4fc2-a8ad-9c84c03e521b"
                         },
                         {
+                            "type": "Ext.grid.column.Action",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "deleteRow",
+                                "width": 40
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyActionColumn",
+                            "designerId": "4f1349db-79a9-494d-9179-43f4958370e8",
+                            "cn": [
+                                {
+                                    "type": "actioncolumnitem",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "deleteRowButton"
+                                    },
+                                    "configAlternates": {
+                                        "designer|displayName": "string"
+                                    },
+                                    "name": "MyActionColumnItem",
+                                    "designerId": "85c88190-b21f-4bf7-8804-a5a0aa0d534e"
+                                }
+                            ]
+                        },
+                        {
                             "type": "Ext.grid.column.RowNumberer",
                             "reference": {
                                 "name": "columns",
