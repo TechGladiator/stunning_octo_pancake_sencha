@@ -1343,7 +1343,9 @@
                                                 "designer|viewControllerFn": "deleteRecordHandler",
                                                 "fn": "handler",
                                                 "implHandler": [
-                                                    ""
+                                                    "const app = StunningOctoPancake.app;",
+                                                    "",
+                                                    "app.getOctoPancakeControlController().deleteRecord(rowIndex, app.FieldData, app.ErrorCount);"
                                                 ]
                                             },
                                             "configAlternates": {

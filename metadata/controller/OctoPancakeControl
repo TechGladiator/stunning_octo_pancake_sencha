@@ -27,11 +27,18 @@
                     "fd",
                     "ec"
                 ],
-                "fn": "deleteRecord"
+                "fn": "deleteRecord",
+                "implHandler": [
+                    "fd.splice(row, 1);",
+                    "if (ec > 0) {",
+                    "    ec -= 1;",
+                    "}"
+                ]
             },
             "configAlternates": {
                 "designer|params": "typedarray",
-                "fn": "string"
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "deleteRecord",
             "designerId": "76a61075-93ee-437d-8cda-4cb69c4cb3b6"
