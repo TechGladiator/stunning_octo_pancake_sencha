@@ -32,6 +32,12 @@
                     "fd.splice(row, 1);",
                     "if (ec > 0) {",
                     "    ec -= 1;",
+                    "}",
+                    "Ext.StoreMgr.get('RecordDataStore').clearData();",
+                    "Ext.StoreMgr.get('RecordDataStore').setData(fd);",
+                    "if (fd[0] !== undefined && fd[0].__parsed_extra) {",
+                    "    Ext.getCmp('extra').show();",
+                    "    Ext.getCmp('extra1').show();",
                     "}"
                 ]
             },
