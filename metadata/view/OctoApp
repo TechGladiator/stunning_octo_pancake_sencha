@@ -1340,9 +1340,11 @@
                                                     "record",
                                                     "row"
                                                 ],
-                                                "designer|viewControllerFn": "deleteRecord",
+                                                "designer|viewControllerFn": "deleteRecordHandler",
                                                 "fn": "handler",
-                                                "implHandler": null
+                                                "implHandler": [
+                                                    ""
+                                                ]
                                             },
                                             "configAlternates": {
                                                 "designer|params": "typedarray",
