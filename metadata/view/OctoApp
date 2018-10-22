@@ -1321,7 +1321,39 @@
                                         "icon": "string"
                                     },
                                     "name": "MyActionColumnItem",
-                                    "designerId": "85c88190-b21f-4bf7-8804-a5a0aa0d534e"
+                                    "designerId": "85c88190-b21f-4bf7-8804-a5a0aa0d534e",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "view",
+                                                    "rowIndex",
+                                                    "colIndex",
+                                                    "item",
+                                                    "e",
+                                                    "record",
+                                                    "row"
+                                                ],
+                                                "designer|viewControllerFn": "deleteRecord",
+                                                "fn": "handler",
+                                                "implHandler": null
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "designer|viewControllerFn": "string",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "handler",
+                                            "designerId": "0e899d2f-ffc2-4907-b7fd-67d7674415e9"
+                                        }
+                                    ]
                                 }
                             ]
                         },
