@@ -29,16 +29,19 @@
                 ],
                 "fn": "deleteRecord",
                 "implHandler": [
+                    "const app = StunningOctoPancake.app;",
+                    "const controller = app.getOctoPancakeControlController();",
+                    "",
                     "fd.splice(row, 1);",
                     "if (ec > 0) {",
+                    "    this.setView([fd[row]], app.Filename);",
                     "    ec -= 1;",
+                    "} else {",
+                    "    this.setView(fd, app.Filename);",
                     "}",
-                    "Ext.StoreMgr.get('RecordDataStore').clearData();",
-                    "Ext.StoreMgr.get('RecordDataStore').setData(fd);",
-                    "if (fd[0] !== undefined && fd[0].__parsed_extra) {",
-                    "    Ext.getCmp('extra').show();",
-                    "    Ext.getCmp('extra1').show();",
-                    "}"
+                    "",
+                    "Ext.getCmp('importFileName').hide();",
+                    "Ext.getCmp('editImportFileName').show();"
                 ]
             },
             "configAlternates": {
@@ -186,7 +189,7 @@
                     "Ext.getCmp('importFileName').show();",
                     "Ext.getCmp('tabs').hide();",
                     "Ext.StoreMgr.get('RecordDataStore').setData(fd);",
-                    "if (fd[0].__parsed_extra) {",
+                    "if (fd[0] !== undefined && fd[0].__parsed_extra) {",
                     "    Ext.getCmp('extra').show();",
                     "    Ext.getCmp('extra1').show();",
                     "}"

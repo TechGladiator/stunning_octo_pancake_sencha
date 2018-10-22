@@ -572,7 +572,7 @@
                                     "const row = app.FieldErrors[0].row;",
                                     "const recordRow = app.FieldData[row];",
                                     "",
-                                    "if (recordRow.__parsed_extra !== undefined) {",
+                                    "if (recordRow !== undefined && recordRow.__parsed_extra !== undefined) {",
                                     "    if (recordRow.__parsed_extra === \"\" || recordRow.__parsed_extra[0] === \"\") {",
                                     "        delete recordRow.__parsed_extra;",
                                     "    }",
