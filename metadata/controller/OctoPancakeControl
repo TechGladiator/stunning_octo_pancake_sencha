@@ -23,7 +23,9 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
-                    "row"
+                    "row",
+                    "fd",
+                    "ec"
                 ],
                 "fn": "deleteRecord"
             },
