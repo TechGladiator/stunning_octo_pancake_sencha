@@ -1292,11 +1292,13 @@
                             "codeClass": null,
                             "userConfig": {
                                 "designer|displayName": "deleteRow",
+                                "resizable": false,
                                 "tdCls": "invalidCell",
                                 "width": 40
                             },
                             "configAlternates": {
                                 "designer|displayName": "string",
+                                "resizable": "boolean",
                                 "tdCls": "string",
                                 "width": "auto"
                             },
