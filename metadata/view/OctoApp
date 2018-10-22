@@ -1313,10 +1313,12 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|displayName": "deleteRowButton"
+                                        "designer|displayName": "deleteRowButton",
+                                        "icon": "images/X.png"
                                     },
                                     "configAlternates": {
-                                        "designer|displayName": "string"
+                                        "designer|displayName": "string",
+                                        "icon": "string"
                                     },
                                     "name": "MyActionColumnItem",
                                     "designerId": "85c88190-b21f-4bf7-8804-a5a0aa0d534e"
