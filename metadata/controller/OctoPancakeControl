@@ -23,6 +23,26 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "row"
+                ],
+                "fn": "deleteRecord"
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string"
+            },
+            "name": "deleteRecord",
+            "designerId": "76a61075-93ee-437d-8cda-4cb69c4cb3b6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
                     "value",
                     "metaData"
                 ],
