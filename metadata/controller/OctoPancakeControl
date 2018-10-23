@@ -249,6 +249,28 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "messageBoxOkButton",
+                "implHandler": [
+                    "const app = StunningOctoPancake.app;",
+                    "",
+                    "this.validateRowLengths(app.FieldData, app.ErrorCount, app.FirstError, app.Filename);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "messageBoxOkButton",
+            "designerId": "647e235e-8ee8-4d5e-a203-3f88ec47c0d3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "designer|params": [
                     "fn",
                     "n",
@@ -277,9 +299,10 @@
                     "    }",
                     "}",
                     "if (updated) {",
-                    "    Ext.MessageBox.alert(`Update`, `Corrected invalid column names`);",
-                    "}",
-                    "this.validateRowLengths(fd, ec, fe, file);"
+                    "    Ext.MessageBox.alert(`Update`, `Corrected invalid column names`, this.messageBoxOkButton, this);",
+                    "} else {",
+                    "    this.validateRowLengths(fd, ec, fe, file);",
+                    "}"
                 ]
             },
             "configAlternates": {
