@@ -22,6 +22,22 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "initialize"
+            },
+            "configAlternates": {
+                "fn": "string"
+            },
+            "name": "initialize",
+            "designerId": "de5abf43-76ff-4697-a445-a378ea472988"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "designer|params": [
                     "row",
                     "fd",
