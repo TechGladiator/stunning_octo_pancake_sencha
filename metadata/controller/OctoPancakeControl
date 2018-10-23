@@ -22,10 +22,38 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "initialize"
+                "designer|commentHeader": [
+                    "Initialize Map"
+                ],
+                "fn": "initialize",
+                "implHandler": [
+                    "$(\"#map\").html('');",
+                    "$(\"#map\").css({",
+                    "    margin: \"30px 0 0\"",
+                    "});",
+                    "const geocoder = new google.maps.Geocoder();",
+                    "const infowindow = new google.maps.InfoWindow({",
+                    "    maxWidth: 400",
+                    "});",
+                    "const latlng = new google.maps.LatLng(38.92861, -98.579458);",
+                    "const mapOptions = {",
+                    "    zoom: 4,",
+                    "    center: latlng",
+                    "};",
+                    "const map = new google.maps.Map(document.getElementById(\"map\"), mapOptions);",
+                    "const showAllControlDiv = document.createElement(\"div\");",
+                    "// const showAllMarkers = new ShowAllMarkers(showAllControlDiv, map);",
+                    "",
+                    "showAllControlDiv.index = 1;",
+                    "map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(",
+                    "    showAllControlDiv",
+                    ");"
+                ]
             },
             "configAlternates": {
-                "fn": "string"
+                "designer|commentHeader": "comment",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "initialize",
             "designerId": "de5abf43-76ff-4697-a445-a378ea472988"
