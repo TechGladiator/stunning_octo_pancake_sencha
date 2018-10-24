@@ -22,6 +22,26 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "setMarkerBounds",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "setMarkerBounds",
+            "designerId": "462eaf14-56cf-4e80-9920-7d51f4977df7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "designer|params": [
                     "showAllControlDiv",
                     "map"
@@ -29,6 +49,7 @@
                 "fn": "ShowAllMarkers",
                 "implHandler": [
                     "const controlUI = document.createElement(\"div\");",
+                    "controlUI.setAttribute(\"id\", \"showAllMarkers\");",
                     "controlUI.style.backgroundColor = \"#fff\";",
                     "controlUI.style.border = \"2px solid #fff\";",
                     "controlUI.style.borderRadius = \"3px\";",
@@ -49,7 +70,7 @@
                     "controlText.innerHTML = \"Show All Markers\";",
                     "controlUI.appendChild(controlText);",
                     "",
-                    "// controlUI.addEventListener(\"click\", setMarkerBounds);"
+                    "$(\"showAllMarkers\").click(this.setMarkerBounds);"
                 ]
             },
             "configAlternates": {
