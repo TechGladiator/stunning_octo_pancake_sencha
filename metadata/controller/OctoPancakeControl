@@ -27,6 +27,9 @@
                 ],
                 "fn": "initialize",
                 "implHandler": [
+                    "$(\"#map\").css({",
+                    "    margin: \"30px 0 0\"",
+                    "});",
                     "const geocoder = new google.maps.Geocoder();",
                     "const infowindow = new google.maps.InfoWindow({",
                     "    maxWidth: 400",

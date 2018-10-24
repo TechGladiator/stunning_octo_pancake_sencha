@@ -376,7 +376,6 @@
                 "hidden": true,
                 "id": "map",
                 "layout|flex": 1,
-                "margin": "30 0 0",
                 "width": 832.5
             },
             "configAlternates": {
@@ -385,7 +384,6 @@
                 "hidden": "boolean",
                 "id": "string",
                 "layout|flex": "number",
-                "margin": "auto",
                 "width": "auto"
             },
             "name": "MyGMapPanel",
