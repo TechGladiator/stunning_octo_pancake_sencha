@@ -661,8 +661,11 @@
                             "userConfig": {
                                 "fn": "onMapDataClick",
                                 "implHandler": [
+                                    "const controller = StunningOctoPancake.app.getOctoPancakeControlController();",
+                                    "",
                                     "Ext.getCmp('map').show();",
-                                    "StunningOctoPancake.app.getOctoPancakeControlController().initialize();"
+                                    "controller.initialize();",
+                                    "controller.getAddressList();"
                                 ],
                                 "name": "click",
                                 "scope": "me"

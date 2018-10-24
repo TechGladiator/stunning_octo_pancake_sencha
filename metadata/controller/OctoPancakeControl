@@ -129,6 +129,22 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "getAddressList"
+            },
+            "configAlternates": {
+                "fn": "string"
+            },
+            "name": "getAddressList",
+            "designerId": "185161b1-2543-4f62-8d22-35702c39c319"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "designer|params": [
                     "a"
                 ],
