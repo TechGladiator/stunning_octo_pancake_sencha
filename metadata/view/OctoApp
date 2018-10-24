@@ -369,6 +369,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "center": [
+                    "{\"lat\":37.511517,\"lng\":-122.200778}"
+                ],
                 "height": 400,
                 "hidden": true,
                 "id": "map",
@@ -377,6 +380,7 @@
                 "width": 832.5
             },
             "configAlternates": {
+                "center": "object",
                 "height": "auto",
                 "hidden": "boolean",
                 "id": "string",
