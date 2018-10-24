@@ -22,6 +22,27 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|params": [
+                    "showAllControlDiv",
+                    "map"
+                ],
+                "fn": "ShowAllMarkers"
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string"
+            },
+            "name": "ShowAllMarkers",
+            "designerId": "8bf9b5e6-0eb5-4c25-b7d3-4101d7b8521f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "designer|commentHeader": [
                     "Initialize Map"
                 ],
@@ -38,7 +59,7 @@
                     "};",
                     "const map = new google.maps.Map(document.getElementById(\"map\"), mapOptions);",
                     "const showAllControlDiv = document.createElement(\"div\");",
-                    "// const showAllMarkers = new ShowAllMarkers(showAllControlDiv, map);",
+                    "const showAllMarkers = new this.ShowAllMarkers(showAllControlDiv, map);",
                     "",
                     "showAllControlDiv.index = 1;",
                     "map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(",
