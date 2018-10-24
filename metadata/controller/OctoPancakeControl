@@ -26,11 +26,36 @@
                     "showAllControlDiv",
                     "map"
                 ],
-                "fn": "ShowAllMarkers"
+                "fn": "ShowAllMarkers",
+                "implHandler": [
+                    "const controlUI = document.createElement(\"div\");",
+                    "controlUI.style.backgroundColor = \"#fff\";",
+                    "controlUI.style.border = \"2px solid #fff\";",
+                    "controlUI.style.borderRadius = \"3px\";",
+                    "controlUI.style.boxShadow = \"0 2px 6px rgba(0,0,0,.3)\";",
+                    "controlUI.style.cursor = \"pointer\";",
+                    "controlUI.style.marginBottom = \"22px\";",
+                    "controlUI.style.textAlign = \"center\";",
+                    "controlUI.title = \"Click to show all markers\";",
+                    "showAllControlDiv.appendChild(controlUI);",
+                    "",
+                    "const controlText = document.createElement(\"div\");",
+                    "controlText.style.color = \"rgb(25,25,25)\";",
+                    "controlText.style.fontFamily = \"Roboto,Arial,sans-serif\";",
+                    "controlText.style.fontSize = \"16px\";",
+                    "controlText.style.lineHeight = \"38px\";",
+                    "controlText.style.paddingLeft = \"5px\";",
+                    "controlText.style.paddingRight = \"5px\";",
+                    "controlText.innerHTML = \"Show All Markers\";",
+                    "controlUI.appendChild(controlText);",
+                    "",
+                    "// controlUI.addEventListener(\"click\", setMarkerBounds);"
+                ]
             },
             "configAlternates": {
                 "designer|params": "typedarray",
-                "fn": "string"
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "ShowAllMarkers",
             "designerId": "8bf9b5e6-0eb5-4c25-b7d3-4101d7b8521f"
