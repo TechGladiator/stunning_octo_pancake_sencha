@@ -379,15 +379,22 @@
                 "width": 832.5
             },
             "configAlternates": {
-                "center": "object",
                 "height": "auto",
                 "hidden": "boolean",
                 "id": "string",
                 "layout|flex": "number",
-                "width": "auto"
+                "width": "auto",
+                "center": "object"
             },
             "name": "MyGMapPanel",
-            "designerId": "69ed5ac6-35f1-46eb-9cbf-38a9707134c8"
+            "designerId": "69ed5ac6-35f1-46eb-9cbf-38a9707134c8",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "center",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "Ext.button.Segmented",
