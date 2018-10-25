@@ -225,7 +225,7 @@
                 ],
                 "fn": "initialize",
                 "implHandler": [
-                    "const infowindow = new google.maps.InfoWindow({",
+                    "app.InfoWindow = new google.maps.InfoWindow({",
                     "    maxWidth: 400",
                     "});",
                     "const latlng = new google.maps.LatLng(38.92861, -98.579458);",
