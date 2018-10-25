@@ -35,7 +35,7 @@
                     "app.InfoWindow.setContent(`",
                     "    <div id=\"content\">",
                     "        <div id=\"siteNotice\"></div>",
-                    "        <h5 id=\"firstHeading\" class=\"firstHeading\">${record.Name}</h5>",
+                    "        <h1 id=\"firstHeading\" class=\"firstHeading\">${record.Name}</h1>",
                     "        <div id=\"bodyContent\">",
                     "            ${record.Address} ${record[\"Address 2\"]} ${record.City} ${record.State}",
                     "            ${record.Zip}",
