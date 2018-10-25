@@ -23,6 +23,48 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "r",
+                    "map",
+                    "m"
+                ],
+                "fn": "showInfoWin",
+                "implHandler": [
+                    "const app = StunningOctoPancake.app;",
+                    "const record = app.FieldData[r];",
+                    "",
+                    "app.InfoWindow.setContent(`",
+                    "    <div id=\"content\">",
+                    "        <div id=\"siteNotice\"></div>",
+                    "        <h5 id=\"firstHeading\" class=\"firstHeading\">${record.Name}</h5>",
+                    "        <div id=\"bodyContent\">",
+                    "            ${record.Address} ${record[\"Address 2\"]} ${record.City} ${record.State}",
+                    "            ${record.Zip}",
+                    "            <br>",
+                    "            <b style=\"font-weight: 900\">Purpose:</b> ${record.Purpose} <b style=\"font-weight: 900\">Property Owner:</b>",
+                    "            ${record[\"Property Owner\"]} <b style=\"font-weight: 900\">Creation Date:</b> ${record[\"Creation Date\"]}",
+                    "        </div>",
+                    "    </div>",
+                    "`);",
+                    "app.InfoWindow.open(map, m);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "showInfoWin",
+            "designerId": "85dac7a6-3177-43a5-9c3a-56db8bf23338"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
                     "app"
                 ],
                 "fn": "showLatLong",
