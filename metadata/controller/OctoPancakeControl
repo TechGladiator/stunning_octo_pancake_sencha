@@ -69,7 +69,7 @@
                 ],
                 "fn": "showLatLong",
                 "implHandler": [
-                    "if (app.FieldNames && app.Names.length < app.Names + 2 && app.FieldNames.length < app.Names + 2) {",
+                    "if (app.FieldNames && app.Names.length < app.Names.length + 2 && app.FieldNames.length < app.Names.length + 2) {",
                     "    app.Names.push(\"Lat\", \"Long\");",
                     "    app.FieldNames.push(\"Lat\", \"Long\");",
                     "    Ext.getCmp(\"Lat\").show();",
@@ -322,6 +322,7 @@
                     "    } else if (markers.length < app.FieldData.length) {",
                     "        controller.codeAddress(a[i], app.FieldData[i], intervalId, app.Map, markers, i);",
                     "    }",
+                    "    Ext.StoreMgr.get('RecordDataStore').setData(StunningOctoPancake.app.FieldData);",
                     "    counter--;",
                     "    i++;",
                     "}",
