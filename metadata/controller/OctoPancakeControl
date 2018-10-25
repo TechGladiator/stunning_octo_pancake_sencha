@@ -129,10 +129,28 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "getAddressList"
+                "designer|params": [
+                    "app"
+                ],
+                "fn": "getAddressList",
+                "implHandler": [
+                    "const addressList = [];",
+                    "let recordAddress;",
+                    "",
+                    "for (let i = 0; i < app.FieldData.length; i++) {",
+                    "    const r = app.FieldData[i];",
+                    "    recordAddress = `${r.Address} ${r[\"Address 2\"]} ${r.City} ${r.State} ${r.Zip}`;",
+                    "    addressList.push(recordAddress);",
+                    "    recordAddress = \"\";",
+                    "}",
+                    "",
+                    "console.log(\"Address List: \", addressList);"
+                ]
             },
             "configAlternates": {
-                "fn": "string"
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "getAddressList",
             "designerId": "185161b1-2543-4f62-8d22-35702c39c319"
