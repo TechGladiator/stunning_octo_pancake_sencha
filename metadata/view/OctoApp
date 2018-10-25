@@ -734,7 +734,11 @@
                                     "$(\"#chooseCSVFile-inputEl\").val(null);",
                                     "$(\"#chooseCSVFile-button-fileInputEl\").val(null);",
                                     "$(\"#map\").html(\"\");",
-                                    "$(\"#map\").removeAttr(\"style\");"
+                                    "$(\"#map\").removeAttr(\"style\");",
+                                    "let namesLength = app.Names.length - 2;",
+                                    "while (app.Names.length > namesLength) {",
+                                    "    app.Names.pop();",
+                                    "}"
                                 ],
                                 "name": "click",
                                 "scope": "me"
