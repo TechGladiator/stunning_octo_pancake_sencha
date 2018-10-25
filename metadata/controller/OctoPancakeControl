@@ -130,6 +130,47 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "app",
+                    "a"
+                ],
+                "fn": "geoIterate",
+                "implHandler": [
+                    "let counter = a.length;",
+                    "let i = 0;",
+                    "let intervalId;",
+                    "const markers = [];",
+                    "",
+                    "function start() {",
+                    "    if (counter === 0) {",
+                    "        clearInterval(intervalId);",
+                    "        this.setMarkerBounds();",
+                    "    } else if (markers.length < app.FieldData.length) {",
+                    "        this.codeAddress(a[i], app.FieldData[i], intervalId, i);",
+                    "    }",
+                    "    counter--;",
+                    "    i++;",
+                    "}",
+                    "intervalId = setInterval(start, 500);",
+                    "this.showLatLong();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "geoIterate",
+            "designerId": "4bfefe50-4b07-4d92-aefd-f025d6fda93a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
                     "app"
                 ],
                 "fn": "getAddressList",
@@ -154,45 +195,6 @@
             },
             "name": "getAddressList",
             "designerId": "185161b1-2543-4f62-8d22-35702c39c319"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|params": [
-                    "app",
-                    "a"
-                ],
-                "fn": "geoIterate",
-                "implHandler": [
-                    "let counter = a.length;",
-                    "let i = 0;",
-                    "let intervalId;",
-                    "function start() {",
-                    "    if (counter === 0) {",
-                    "        clearInterval(intervalId);",
-                    "        this.setMarkerBounds();",
-                    "    } else if (markers.length < app.FieldData.length) {",
-                    "        this.codeAddress(a[i], app.FieldData[i], intervalId, i);",
-                    "    }",
-                    "    counter--;",
-                    "    i++;",
-                    "}",
-                    "intervalId = setInterval(start, 500);",
-                    "this.showLatLong();"
-                ]
-            },
-            "configAlternates": {
-                "designer|params": "typedarray",
-                "fn": "string",
-                "implHandler": "code"
-            },
-            "name": "geoIterate",
-            "designerId": "4bfefe50-4b07-4d92-aefd-f025d6fda93a"
         },
         {
             "type": "basicfunction",
