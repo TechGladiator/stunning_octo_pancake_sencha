@@ -144,7 +144,7 @@
                     "    recordAddress = \"\";",
                     "}",
                     "",
-                    "console.log(\"Address List: \", addressList);"
+                    "this.geoIterate(app, addressList);"
                 ]
             },
             "configAlternates": {
@@ -164,11 +164,11 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "app",
                     "a"
                 ],
                 "fn": "geoIterate",
                 "implHandler": [
-                    "const app = StunningOctoPancake.app;",
                     "let counter = a.length;",
                     "let i = 0;",
                     "let intervalId;",
