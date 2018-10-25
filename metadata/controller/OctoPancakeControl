@@ -22,10 +22,25 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "showLatLong"
+                "designer|params": [
+                    "app"
+                ],
+                "fn": "showLatLong",
+                "implHandler": [
+                    "if (app.FieldNames && app.Names.length < app.Names + 2 && app.FieldNames.length < app.Names + 2) {",
+                    "    app.Names.push(\"Lat\", \"Long\");",
+                    "    app.FieldNames.push(\"Lat\", \"Long\");",
+                    "    Ext.getCmp(\"Lat\").show();",
+                    "    Ext.getCmp(\"Long\").show();",
+                    "    Ext.getCmp(\"editLat\").show();",
+                    "    Ext.getCmp(\"editLong\").show();",
+                    "}"
+                ]
             },
             "configAlternates": {
-                "fn": "string"
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "showLatLong",
             "designerId": "5f2682cd-72b2-4a7d-9a2a-708f60434b17"
@@ -190,7 +205,7 @@
                     "    i++;",
                     "}",
                     "intervalId = setInterval(start, 500);",
-                    "this.showLatLong();"
+                    "this.showLatLong(app);"
                 ]
             },
             "configAlternates": {
