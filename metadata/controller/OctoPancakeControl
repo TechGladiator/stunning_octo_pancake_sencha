@@ -266,23 +266,24 @@
                 ],
                 "fn": "geoIterate",
                 "implHandler": [
+                    "const markers = [];",
+                    "const controller = app.getOctoPancakeControlController();",
                     "let counter = a.length;",
                     "let i = 0;",
                     "let intervalId;",
-                    "const markers = [];",
                     "",
                     "function start() {",
                     "    if (counter === 0) {",
                     "        clearInterval(intervalId);",
-                    "        this.setMarkerBounds();",
+                    "        controller.setMarkerBounds();",
                     "    } else if (markers.length < app.FieldData.length) {",
-                    "        this.codeAddress(a[i], app.FieldData[i], intervalId, i);",
+                    "        controller.codeAddress(a[i], app.FieldData[i], intervalId, i);",
                     "    }",
                     "    counter--;",
                     "    i++;",
                     "}",
                     "intervalId = setInterval(start, 500);",
-                    "this.showLatLong(app);"
+                    "controller.showLatLong(app);"
                 ]
             },
             "configAlternates": {
