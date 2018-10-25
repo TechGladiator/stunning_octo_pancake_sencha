@@ -57,7 +57,8 @@
                     "a",
                     "fd",
                     "interval",
-                    "map"
+                    "map",
+                    "markers"
                 ],
                 "fn": "codeAddress",
                 "implHandler": [
@@ -276,7 +277,7 @@
                     "        clearInterval(intervalId);",
                     "        controller.setMarkerBounds();",
                     "    } else if (markers.length < app.FieldData.length) {",
-                    "        controller.codeAddress(a[i], app.FieldData[i], intervalId, app.Map);",
+                    "        controller.codeAddress(a[i], app.FieldData[i], intervalId, app.Map, markers);",
                     "    }",
                     "    counter--;",
                     "    i++;",
