@@ -22,6 +22,84 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|commentHeader": [
+                    "Initialize Map"
+                ],
+                "fn": "initialize",
+                "implHandler": [
+                    "const geocoder = new google.maps.Geocoder();",
+                    "const infowindow = new google.maps.InfoWindow({",
+                    "    maxWidth: 400",
+                    "});",
+                    "const latlng = new google.maps.LatLng(38.92861, -98.579458);",
+                    "const mapOptions = {",
+                    "    zoom: 4,",
+                    "    center: latlng",
+                    "};",
+                    "const map = new google.maps.Map(document.getElementById(\"map\"), mapOptions);",
+                    "const showAllControlDiv = document.createElement(\"div\");",
+                    "// const showAllMarkers = new ShowAllMarkers(showAllControlDiv, map);",
+                    "",
+                    "showAllControlDiv.index = 1;",
+                    "map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(",
+                    "    showAllControlDiv",
+                    ");"
+                ]
+            },
+            "configAlternates": {
+                "designer|commentHeader": "comment",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "initialize",
+            "designerId": "de5abf43-76ff-4697-a445-a378ea472988"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "row",
+                    "fd",
+                    "ec"
+                ],
+                "fn": "deleteRecord",
+                "implHandler": [
+                    "const app = StunningOctoPancake.app;",
+                    "const controller = app.getOctoPancakeControlController();",
+                    "",
+                    "fd.splice(row, 1);",
+                    "if (ec > 0) {",
+                    "    this.setView([fd[row]], app.Filename);",
+                    "    ec -= 1;",
+                    "} else {",
+                    "    this.setView(fd, app.Filename);",
+                    "}",
+                    "",
+                    "Ext.getCmp('importFileName').hide();",
+                    "Ext.getCmp('editImportFileName').show();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "deleteRecord",
+            "designerId": "76a61075-93ee-437d-8cda-4cb69c4cb3b6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "designer|params": [
                     "value",
                     "metaData"
@@ -151,7 +229,7 @@
                     "Ext.getCmp('importFileName').show();",
                     "Ext.getCmp('tabs').hide();",
                     "Ext.StoreMgr.get('RecordDataStore').setData(fd);",
-                    "if (fd[0].__parsed_extra) {",
+                    "if (fd[0] !== undefined && fd[0].__parsed_extra) {",
                     "    Ext.getCmp('extra').show();",
                     "    Ext.getCmp('extra1').show();",
                     "}"
@@ -211,6 +289,28 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "messageBoxOkButton",
+                "implHandler": [
+                    "const app = StunningOctoPancake.app;",
+                    "",
+                    "this.validateRowLengths(app.FieldData, app.ErrorCount, app.FirstError, app.Filename);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "messageBoxOkButton",
+            "designerId": "647e235e-8ee8-4d5e-a203-3f88ec47c0d3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "designer|params": [
                     "fn",
                     "n",
@@ -239,9 +339,10 @@
                     "    }",
                     "}",
                     "if (updated) {",
-                    "    Ext.MessageBox.alert(`Update`, `Corrected invalid column names`);",
-                    "}",
-                    "this.validateRowLengths(fd, ec, fe, file);"
+                    "    Ext.MessageBox.alert(`Update`, `Corrected invalid column names`, this.messageBoxOkButton, this);",
+                    "} else {",
+                    "    this.validateRowLengths(fd, ec, fe, file);",
+                    "}"
                 ]
             },
             "configAlternates": {

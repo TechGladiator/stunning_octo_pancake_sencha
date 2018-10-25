@@ -362,42 +362,30 @@
             ]
         },
         {
-            "type": "Ext.Img",
+            "type": "Ext.ux.GMapPanel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "alt": "Google Maps",
+                "height": 400,
                 "hidden": true,
                 "id": "map",
                 "layout|flex": 1,
-                "margin": 30,
-                "maxHeight": 300,
-                "minHeight": 300,
-                "src": "https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318 &markers=color:red%7Clabel:C%7C40.718217,-73.998284 &key=AIzaSyCEXe5dDNptlIIvkxHQTc6ZeYms5mJDIHQ",
-                "title": "Map",
-                "width": 600
+                "margin": "30 0 0",
+                "width": 832.5
             },
             "configAlternates": {
-                "alt": "string",
+                "height": "auto",
+                "hidden": "boolean",
+                "id": "string",
                 "layout|flex": "number",
                 "margin": "auto",
-                "maxHeight": "number",
-                "minHeight": "number",
-                "src": "uri",
-                "title": "string",
-                "width": "auto",
-                "designer|userAlias": "string",
-                "designer|userClassName": "string",
-                "hidden": "boolean",
-                "id": "string"
+                "width": "auto"
             },
-            "name": "MyImg",
-            "designerId": "facaec86-1e92-4ff4-b036-190cc170eba0",
-            "viewControllerInstanceId": "80fc86b0-b2dc-42fc-8c55-7dbb80ea6949",
-            "viewModelInstanceId": "901a8ce6-ac51-443e-8d78-9febaca9c24e"
+            "name": "MyGMapPanel",
+            "designerId": "69ed5ac6-35f1-46eb-9cbf-38a9707134c8"
         },
         {
             "type": "Ext.button.Segmented",
@@ -572,7 +560,7 @@
                                     "const row = app.FieldErrors[0].row;",
                                     "const recordRow = app.FieldData[row];",
                                     "",
-                                    "if (recordRow.__parsed_extra !== undefined) {",
+                                    "if (recordRow !== undefined && recordRow.__parsed_extra !== undefined) {",
                                     "    if (recordRow.__parsed_extra === \"\" || recordRow.__parsed_extra[0] === \"\") {",
                                     "        delete recordRow.__parsed_extra;",
                                     "    }",
@@ -662,7 +650,8 @@
                             "userConfig": {
                                 "fn": "onMapDataClick",
                                 "implHandler": [
-                                    "Ext.getCmp('map').show();"
+                                    "Ext.getCmp('map').show();",
+                                    "StunningOctoPancake.app.getOctoPancakeControlController().initialize();"
                                 ],
                                 "name": "click",
                                 "scope": "me"
@@ -1282,6 +1271,84 @@
                             "codeClass": null,
                             "name": "MyTable",
                             "designerId": "6b0e341a-4f52-4fc2-a8ad-9c84c03e521b"
+                        },
+                        {
+                            "type": "Ext.grid.column.Action",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "deleteRow",
+                                "resizable": false,
+                                "tdCls": "invalidCell",
+                                "width": 40
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "resizable": "boolean",
+                                "tdCls": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyActionColumn",
+                            "designerId": "4f1349db-79a9-494d-9179-43f4958370e8",
+                            "cn": [
+                                {
+                                    "type": "actioncolumnitem",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "deleteRowButton",
+                                        "icon": "images/X.png"
+                                    },
+                                    "configAlternates": {
+                                        "designer|displayName": "string",
+                                        "icon": "string"
+                                    },
+                                    "name": "MyActionColumnItem",
+                                    "designerId": "85c88190-b21f-4bf7-8804-a5a0aa0d534e",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "view",
+                                                    "rowIndex",
+                                                    "colIndex",
+                                                    "item",
+                                                    "e",
+                                                    "record",
+                                                    "row"
+                                                ],
+                                                "designer|viewControllerFn": "deleteRecordHandler",
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "const app = StunningOctoPancake.app;",
+                                                    "",
+                                                    "app.getOctoPancakeControlController().deleteRecord(rowIndex, app.FieldData, app.ErrorCount);"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "designer|viewControllerFn": "string",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "handler",
+                                            "designerId": "0e899d2f-ffc2-4907-b7fd-67d7674415e9"
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.RowNumberer",
