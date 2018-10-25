@@ -23,6 +23,7 @@
         "FullResults": [
             "`undefined`"
         ],
+        "Map": "`undefined`",
         "Names": [
             "[\"Name\",\"Address\",\"Address 2\",\"City\",\"State\",\"Zip\",\"Purpose\",\"Property Owner\",\"Creation Date\"]"
         ],
@@ -57,7 +58,8 @@
         "title": "string",
         "RowCount": "number",
         "Filename": "string",
-        "Names": "array"
+        "Names": "array",
+        "Map": "string"
     },
     "name": "Application",
     "designerId": "application",
@@ -105,6 +107,11 @@
         {
             "group": "(Custom Properties)",
             "name": "Names",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "Map",
             "type": "string"
         }
     ]
