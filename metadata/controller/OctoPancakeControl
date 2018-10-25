@@ -100,7 +100,8 @@
                     "fd",
                     "interval",
                     "map",
-                    "markers"
+                    "markers",
+                    "r"
                 ],
                 "fn": "codeAddress",
                 "implHandler": [
@@ -168,7 +169,7 @@
                     "            marker.addListener(\"click\", () => {",
                     "                map.setZoom(15);",
                     "                map.setCenter(results[0].geometry.location);",
-                    "                showInfoWin(r, marker);",
+                    "                this.showInfoWin(r, map, marker);",
                     "            });",
                     "        } else {",
                     "            fixGeocodeFail(intervalId, status, fullAddress, r);",
@@ -319,7 +320,7 @@
                     "        clearInterval(intervalId);",
                     "        controller.setMarkerBounds();",
                     "    } else if (markers.length < app.FieldData.length) {",
-                    "        controller.codeAddress(a[i], app.FieldData[i], intervalId, app.Map, markers);",
+                    "        controller.codeAddress(a[i], app.FieldData[i], intervalId, app.Map, markers, i);",
                     "    }",
                     "    counter--;",
                     "    i++;",
