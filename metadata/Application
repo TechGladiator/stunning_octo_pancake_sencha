@@ -23,6 +23,7 @@
         "FullResults": [
             "`undefined`"
         ],
+        "InfoWindow": "`undefined`",
         "Map": "`undefined`",
         "Names": [
             "[\"Name\",\"Address\",\"Address 2\",\"City\",\"State\",\"Zip\",\"Purpose\",\"Property Owner\",\"Creation Date\"]"
@@ -59,6 +60,7 @@
         "RowCount": "number",
         "Filename": "string",
         "Names": "array",
+        "InfoWindow": "string",
         "Map": "string"
     },
     "name": "Application",
@@ -112,6 +114,11 @@
         {
             "group": "(Custom Properties)",
             "name": "Map",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "InfoWindow",
             "type": "string"
         }
     ]
