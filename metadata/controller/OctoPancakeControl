@@ -220,6 +220,9 @@
                 "designer|commentHeader": [
                     "Initialize Map"
                 ],
+                "designer|params": [
+                    "map"
+                ],
                 "fn": "initialize",
                 "implHandler": [
                     "const infowindow = new google.maps.InfoWindow({",
@@ -230,7 +233,7 @@
                     "    zoom: 4,",
                     "    center: latlng",
                     "};",
-                    "const map = new google.maps.Map(document.getElementById(\"map\"), mapOptions);",
+                    "map = new google.maps.Map(document.getElementById(\"map\"), mapOptions);",
                     "const showAllControlDiv = document.createElement(\"div\");",
                     "const showAllMarkers = new this.ShowAllMarkers(showAllControlDiv, map);",
                     "",
@@ -243,7 +246,8 @@
             "configAlternates": {
                 "designer|commentHeader": "comment",
                 "fn": "string",
-                "implHandler": "code"
+                "implHandler": "code",
+                "designer|params": "typedarray"
             },
             "name": "initialize",
             "designerId": "de5abf43-76ff-4697-a445-a378ea472988"
