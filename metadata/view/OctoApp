@@ -362,22 +362,18 @@
             ]
         },
         {
-            "type": "Ext.ux.GMapPanel",
+            "type": "Ext.panel.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "center": [
-                    "{\"lat\":37.511517,\"lng\":-122.200778}"
-                ],
-                "height": 400,
+                "designer|displayName": "map",
                 "hidden": true,
-                "id": "map",
-                "layout|flex": 1,
-                "margin": "30 0 0",
-                "width": 832.5
+                "html": "<div id=\"map\"></div>",
+                "id": "mapPanel",
+                "layout|flex": 1
             },
             "configAlternates": {
                 "height": "auto",
@@ -386,17 +382,12 @@
                 "layout|flex": "number",
                 "width": "auto",
                 "center": "object",
-                "margin": "auto"
+                "margin": "auto",
+                "html": "string",
+                "designer|displayName": "string"
             },
-            "name": "MyGMapPanel",
-            "designerId": "69ed5ac6-35f1-46eb-9cbf-38a9707134c8",
-            "customConfigs": [
-                {
-                    "group": "(Custom Properties)",
-                    "name": "center",
-                    "type": "string"
-                }
-            ]
+            "name": "MyPanel4",
+            "designerId": "69ed5ac6-35f1-46eb-9cbf-38a9707134c8"
         },
         {
             "type": "Ext.button.Segmented",
@@ -664,7 +655,7 @@
                                     "const app = StunningOctoPancake.app;",
                                     "const controller = app.getOctoPancakeControlController();",
                                     "",
-                                    "Ext.getCmp('map').show();",
+                                    "Ext.getCmp('mapPanel').show();",
                                     "controller.initialize(app);",
                                     "controller.getAddressList(app);"
                                 ],
@@ -735,13 +726,15 @@
                                     "Ext.getCmp('recordButtons').hide();",
                                     "Ext.getCmp('importFileName').hide();",
                                     "Ext.getCmp('editImportFileName').hide();",
-                                    "Ext.getCmp('map').hide();",
+                                    "Ext.getCmp('mapPanel').hide();",
                                     "Ext.getCmp('extra').hide();",
                                     "Ext.getCmp('extra1').hide();",
                                     "Ext.getCmp('saveEdits').hide();",
                                     "Ext.getCmp('editData').show();",
                                     "$(\"#chooseCSVFile-inputEl\").val(null);",
-                                    "$(\"#chooseCSVFile-button-fileInputEl\").val(null);"
+                                    "$(\"#chooseCSVFile-button-fileInputEl\").val(null);",
+                                    "$(\"#map\").html(\"\");",
+                                    "$(\"#map\").removeAttr(\"style\");"
                                 ],
                                 "name": "click",
                                 "scope": "me"
