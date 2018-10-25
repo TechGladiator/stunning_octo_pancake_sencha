@@ -171,8 +171,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
-                    "showAllControlDiv",
-                    "map"
+                    "showAllControlDiv"
                 ],
                 "fn": "ShowAllMarkers",
                 "implHandler": [
@@ -221,7 +220,7 @@
                     "Initialize Map"
                 ],
                 "designer|params": [
-                    "map"
+                    "app"
                 ],
                 "fn": "initialize",
                 "implHandler": [
@@ -233,12 +232,12 @@
                     "    zoom: 4,",
                     "    center: latlng",
                     "};",
-                    "map = new google.maps.Map(document.getElementById(\"map\"), mapOptions);",
+                    "app.Map = new google.maps.Map(document.getElementById(\"map\"), mapOptions);",
                     "const showAllControlDiv = document.createElement(\"div\");",
-                    "const showAllMarkers = new this.ShowAllMarkers(showAllControlDiv, map);",
+                    "const showAllMarkers = new this.ShowAllMarkers(showAllControlDiv);",
                     "",
                     "showAllControlDiv.index = 1;",
-                    "map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(",
+                    "app.Map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(",
                     "    showAllControlDiv",
                     ");"
                 ]

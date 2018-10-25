@@ -665,7 +665,7 @@
                                     "const controller = app.getOctoPancakeControlController();",
                                     "",
                                     "Ext.getCmp('map').show();",
-                                    "controller.initialize(app.Map);",
+                                    "controller.initialize(app);",
                                     "controller.getAddressList(app);"
                                 ],
                                 "name": "click",
