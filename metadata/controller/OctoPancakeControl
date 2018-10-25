@@ -22,6 +22,45 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "showLatLong"
+            },
+            "configAlternates": {
+                "fn": "string"
+            },
+            "name": "showLatLong",
+            "designerId": "5f2682cd-72b2-4a7d-9a2a-708f60434b17"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "a",
+                    "fd",
+                    "interval",
+                    "i"
+                ],
+                "fn": "codeAddress"
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string"
+            },
+            "name": "codeAddress",
+            "designerId": "c8f99d5a-2eb1-48ac-8971-445a9af86bfd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "fn": "setMarkerBounds",
                 "implHandler": [
                     ""
