@@ -1201,6 +1201,26 @@
                             },
                             "name": "MyColumn",
                             "designerId": "607dd7fc-1864-44b6-985d-01d529365c48"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRecordGridRowClick",
+                                "name": "rowclick",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onRecordGridRowClick",
+                            "designerId": "272a9acc-34ae-48c1-9f74-23a4086f1e63"
                         }
                     ]
                 }
