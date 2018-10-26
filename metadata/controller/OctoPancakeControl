@@ -98,14 +98,18 @@
                 "designer|params": [
                     "interval",
                     "status",
-                    "a",
-                    "r"
+                    "a"
                 ],
-                "fn": "fixGeocodeFail"
+                "fn": "fixGeocodeFail",
+                "implHandler": [
+                    "clearInterval(interval);",
+                    "Ext.MessageBox.alert(status, `Geocode was not successful for the following reason: ${status}: ${a}`);"
+                ]
             },
             "configAlternates": {
                 "designer|params": "typedarray",
-                "fn": "string"
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "fixGeocodeFail",
             "designerId": "8eabd6b9-10ec-4fdf-a666-fa9b7ed3228e"
@@ -195,7 +199,7 @@
                     "                this.showInfoWin(r, map, marker);",
                     "            });",
                     "        } else {",
-                    "            this.fixGeocodeFail(interval, status, a, r);",
+                    "            this.fixGeocodeFail(interval, status, a);",
                     "        }",
                     "    }",
                     ");"
