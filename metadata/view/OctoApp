@@ -1242,10 +1242,10 @@
                                     "                controller.showInfoWin(rowIndex, map, marker);",
                                     "                map.setCenter(results[0].geometry.location);",
                                     "            } else {",
-                                    "                modal(\"noResults\", \"No results found\");",
+                                    "                Ext.messageBox.alert(\"noResults\", \"No results found\");",
                                     "            }",
                                     "        } else {",
-                                    "            modal(status, `Geocoder failed due to: ${status}`);",
+                                    "            Ext.messageBox.alert(status, `Geocoder failed due to: ${status}`);",
                                     "        }",
                                     "    });",
                                     "}"
