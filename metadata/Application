@@ -25,6 +25,9 @@
         ],
         "InfoWindow": "`undefined`",
         "Map": "`undefined`",
+        "Markers": [
+            "[]"
+        ],
         "Names": [
             "[\"Name\",\"Address\",\"Address 2\",\"City\",\"State\",\"Zip\",\"Purpose\",\"Property Owner\",\"Creation Date\"]"
         ],
@@ -61,7 +64,8 @@
         "Filename": "string",
         "Names": "array",
         "InfoWindow": "string",
-        "Map": "string"
+        "Map": "string",
+        "Markers": "array"
     },
     "name": "Application",
     "designerId": "application",
@@ -119,6 +123,11 @@
         {
             "group": "(Custom Properties)",
             "name": "InfoWindow",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "Markers",
             "type": "string"
         }
     ]
