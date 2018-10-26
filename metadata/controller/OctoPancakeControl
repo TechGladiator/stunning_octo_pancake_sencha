@@ -196,7 +196,7 @@
             "userConfig": {
                 "fn": "setMarkerBounds",
                 "implHandler": [
-                    ""
+                    "console.log(\"testing click handler\");"
                 ]
             },
             "configAlternates": {
@@ -239,9 +239,7 @@
                     "controlText.style.paddingLeft = \"5px\";",
                     "controlText.style.paddingRight = \"5px\";",
                     "controlText.innerHTML = \"Show All Markers\";",
-                    "controlUI.appendChild(controlText);",
-                    "",
-                    "$(\"showAllMarkers\").click(this.setMarkerBounds);"
+                    "controlUI.appendChild(controlText);"
                 ]
             },
             "configAlternates": {
@@ -324,6 +322,7 @@
                     "    if (counter === 0) {",
                     "        clearInterval(intervalId);",
                     "        controller.setMarkerBounds();",
+                    "        $(\"#showAllMarkers\").click(controller.setMarkerBounds);",
                     "    } else if (markers.length < app.FieldData.length) {",
                     "        controller.codeAddress(a[i], app.FieldData[i], intervalId, app.Map, markers, i);",
                     "    }",
