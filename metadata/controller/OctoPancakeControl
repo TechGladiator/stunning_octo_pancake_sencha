@@ -314,7 +314,7 @@
                 ],
                 "fn": "geoIterate",
                 "implHandler": [
-                    "const markers = [];",
+                    "const markers = app.Markers;",
                     "const controller = app.getOctoPancakeControlController();",
                     "let counter = a.length;",
                     "let i = 0;",
