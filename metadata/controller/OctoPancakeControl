@@ -196,7 +196,22 @@
             "userConfig": {
                 "fn": "setMarkerBounds",
                 "implHandler": [
-                    "console.log(\"testing click handler\");"
+                    "const app = StunningOctoPancake.app;",
+                    "const bounds = new google.maps.LatLngBounds();",
+                    "const map = app.Map;",
+                    "const markers = app.Markers;",
+                    "",
+                    "for (let i = 0; i < markers.length; i += 1) {",
+                    "    const e = markers[i];",
+                    "    bounds.extend(e.getPosition());",
+                    "}",
+                    "map.setCenter(bounds.getCenter());",
+                    "google.maps.event.addListenerOnce(map, \"zoom_changed\", () => {",
+                    "    if (map.getZoom() > 15) {",
+                    "        map.setZoom(15);",
+                    "    }",
+                    "});",
+                    "map.fitBounds(bounds);"
                 ]
             },
             "configAlternates": {
