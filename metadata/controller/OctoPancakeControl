@@ -96,6 +96,29 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "interval",
+                    "status",
+                    "a",
+                    "r"
+                ],
+                "fn": "fixGeocodeFail"
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string"
+            },
+            "name": "fixGeocodeFail",
+            "designerId": "8eabd6b9-10ec-4fdf-a666-fa9b7ed3228e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
                     "a",
                     "fd",
                     "interval",
@@ -172,7 +195,7 @@
                     "                this.showInfoWin(r, map, marker);",
                     "            });",
                     "        } else {",
-                    "            fixGeocodeFail(intervalId, status, fullAddress, r);",
+                    "            this.fixGeocodeFail(interval, status, a, r);",
                     "        }",
                     "    }",
                     ");"
