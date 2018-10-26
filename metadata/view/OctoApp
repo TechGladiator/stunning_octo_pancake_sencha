@@ -1211,13 +1211,19 @@
                             "codeClass": null,
                             "userConfig": {
                                 "fn": "onRecordGridRowClick",
+                                "implHandler": [
+                                    "if (record.data.Lat && record.data.Long) {",
+                                    "    console.log(record.data.Lat, record.data.Long);",
+                                    "}"
+                                ],
                                 "name": "rowclick",
                                 "scope": "me"
                             },
                             "configAlternates": {
                                 "fn": "string",
                                 "name": "string",
-                                "scope": "string"
+                                "scope": "string",
+                                "implHandler": "code"
                             },
                             "name": "onRecordGridRowClick",
                             "designerId": "272a9acc-34ae-48c1-9f74-23a4086f1e63"
