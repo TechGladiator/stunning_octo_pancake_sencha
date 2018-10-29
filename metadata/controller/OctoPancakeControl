@@ -402,7 +402,7 @@
                     "",
                     "for (let i = 0; i < app.FieldData.length; i++) {",
                     "    const r = app.FieldData[i];",
-                    "    recordAddress = `${r.Address} ${r[\"Address 2\"]} ${r.City} ${r.State} ${r.Zip}`;",
+                    "    recordAddress = `${r.Name} ${r.Address} ${r[\"Address 2\"]} ${r.City} ${r.State} ${r.Zip}`;",
                     "    addressList.push(recordAddress);",
                     "    recordAddress = \"\";",
                     "}",
