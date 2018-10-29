@@ -328,7 +328,8 @@
                     "showAllControlDiv.index = 1;",
                     "app.Map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(",
                     "    showAllControlDiv",
-                    ");"
+                    ");",
+                    "app.Mapped = true;"
                 ]
             },
             "configAlternates": {
