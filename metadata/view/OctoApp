@@ -1249,6 +1249,8 @@
                                     "            Ext.MessageBox.alert(\"error\", \"Geocoder failed due to: Error\");",
                                     "        }",
                                     "    });",
+                                    "} else {",
+                                    "    Ext.MessageBox.alert(\"noResults\", `No results found for: \"${record.data.Name}\"`);",
                                     "}"
                                 ],
                                 "name": "rowclick",
