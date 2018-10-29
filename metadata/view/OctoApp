@@ -1213,7 +1213,6 @@
                             "userConfig": {
                                 "fn": "onRecordGridRowClick",
                                 "implHandler": [
-                                    "console.log(\"registered click\");",
                                     "const app = StunningOctoPancake.app;",
                                     "const controller = app.getOctoPancakeControlController();",
                                     "const geocoder = new google.maps.Geocoder();",
@@ -1228,8 +1227,10 @@
                                     "        lng: parseFloat(input1)",
                                     "    };",
                                     "    geocoder.geocode({ location: latlng }, (results, status) => {",
-                                    "        console.log(status);",
+                                    "        console.log(results || \"No Results Found\");",
                                     "        if (status === \"OK\") {",
+                                    "            console.log(status);",
+                                    "            console.log(\"registered click\");",
                                     "            if (results[0]) {",
                                     "                map.setZoom(15);",
                                     "                const marker = new google.maps.Marker({",
@@ -1248,7 +1249,8 @@
                                     "                Ext.MessageBox.alert(\"noResults\", \"No results found\");",
                                     "            }",
                                     "        } else {",
-                                    "            Ext.MessageBox.alert(status, `Geocoder failed due to: ${status}`);",
+                                    "            console.log(\"a messagebox should appear\");",
+                                    "            Ext.MessageBox.alert(\"error\", \"Geocoder failed due to: Error\");",
                                     "        }",
                                     "    });",
                                     "}"
