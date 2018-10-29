@@ -723,6 +723,7 @@
                                     "app.InfoWindow = undefined;",
                                     "app.Map = undefined;",
                                     "app.Mapped = false;",
+                                    "app.Markers = [];",
                                     "app.RowCount = 0;",
                                     "importStore.setData([]);",
                                     "importGrid.setTitle('');",
