@@ -22,13 +22,298 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|params": [
+                    "r",
+                    "map",
+                    "m"
+                ],
+                "fn": "showInfoWin",
+                "implHandler": [
+                    "const app = StunningOctoPancake.app;",
+                    "const record = app.FieldData[r];",
+                    "",
+                    "app.InfoWindow.setContent(`",
+                    "    <div id=\"content\">",
+                    "        <div id=\"siteNotice\"></div>",
+                    "        <h1 id=\"firstHeading\" class=\"firstHeading\">${record.Name}</h1>",
+                    "        <div id=\"bodyContent\">",
+                    "            ${record.Address} ${record[\"Address 2\"]} ${record.City} ${record.State}",
+                    "            ${record.Zip}",
+                    "            <br>",
+                    "            <b style=\"font-weight: 900\">Purpose:</b> ${record.Purpose} <b style=\"font-weight: 900\">Property Owner:</b>",
+                    "            ${record[\"Property Owner\"]} <b style=\"font-weight: 900\">Creation Date:</b> ${record[\"Creation Date\"]}",
+                    "        </div>",
+                    "    </div>",
+                    "`);",
+                    "app.InfoWindow.open(map, m);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "showInfoWin",
+            "designerId": "85dac7a6-3177-43a5-9c3a-56db8bf23338"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "app"
+                ],
+                "fn": "showLatLong",
+                "implHandler": [
+                    "if (app.FieldNames && app.Names.length < app.Names.length + 2 && app.FieldNames.length < app.Names.length + 2) {",
+                    "    app.Names.push(\"Lat\", \"Long\");",
+                    "    app.FieldNames.push(\"Lat\", \"Long\");",
+                    "    Ext.getCmp(\"Lat\").show();",
+                    "    Ext.getCmp(\"Long\").show();",
+                    "    Ext.getCmp(\"editLat\").show();",
+                    "    Ext.getCmp(\"editLong\").show();",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "showLatLong",
+            "designerId": "5f2682cd-72b2-4a7d-9a2a-708f60434b17"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "interval",
+                    "status",
+                    "a"
+                ],
+                "fn": "fixGeocodeFail",
+                "implHandler": [
+                    "clearInterval(interval);",
+                    "Ext.MessageBox.alert(status, `Geocode was not successful for the following reason: ${status}: ${a}`);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "fixGeocodeFail",
+            "designerId": "8eabd6b9-10ec-4fdf-a666-fa9b7ed3228e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "a",
+                    "fd",
+                    "interval",
+                    "map",
+                    "markers",
+                    "r"
+                ],
+                "fn": "codeAddress",
+                "implHandler": [
+                    "const geocoder = new google.maps.Geocoder();",
+                    "",
+                    "geocoder.geocode(",
+                    "    {address: a},",
+                    "    (results, status) => {",
+                    "        if (status === \"OK\") {",
+                    "            lat = results[0].geometry.location.lat();",
+                    "            long = results[0].geometry.location.lng();",
+                    "            for (const k in fd) {",
+                    "                if (fd.hasOwnProperty(k)) {",
+                    "                    const f = fd[k];",
+                    "                    const addressComponents = results[0].address_components;",
+                    "                    switch (f) {",
+                    "                        case fd.Address:",
+                    "                            let address = \"\";",
+                    "                            for (let i = 0; i < addressComponents.length; i += 1) {",
+                    "                                const e = addressComponents[i];",
+                    "                                if (e.types[0] === \"street_number\") {",
+                    "                                    address += e.short_name;",
+                    "                                } else if (e.types[0] === \"route\") {",
+                    "                                    address += ` ${e.short_name}`;",
+                    "                                    if (fd.Address != address) {",
+                    "                                        fd.Address = address;",
+                    "                                    }",
+                    "                                    break;",
+                    "                                }",
+                    "                            }",
+                    "                            break;",
+                    "                        case fd.City:",
+                    "                            for (let i = 0; i < addressComponents.length; i++) {",
+                    "                                const e = addressComponents[i];",
+                    "                                if (e.types[0] === \"locality\" && fd.City != e.long_name) {",
+                    "                                    fd.City = e.long_name;",
+                    "                                }",
+                    "                            }",
+                    "                            break;",
+                    "                        case fd.State:",
+                    "                            for (let i = 0; i < addressComponents.length; i += 1) {",
+                    "                                const e = addressComponents[i];",
+                    "                                if (e.types[0] === \"administrative_area_level_1\" && fd.State != e.short_name) {",
+                    "                                    fd.State = e.short_name;",
+                    "                                }",
+                    "                            }",
+                    "                            break;",
+                    "                        case fd.Zip:",
+                    "                            for (let i = 0; i < addressComponents.length; i += 1) {",
+                    "                                const e = addressComponents[i];",
+                    "                                if (e.types[0] === \"postal_code\" && fd.Zip != e.short_name) {",
+                    "                                    fd.Zip = e.short_name;",
+                    "                                }",
+                    "                            }",
+                    "                            break;",
+                    "                        default:",
+                    "                    }",
+                    "                }",
+                    "            }",
+                    "            fd.Lat = lat;",
+                    "            fd.Long = long;",
+                    "            map.setCenter(results[0].geometry.location);",
+                    "            const marker = new google.maps.Marker({map, position: results[0].geometry.location});",
+                    "            markers.push(marker);",
+                    "            marker.addListener(\"click\", () => {",
+                    "                map.setZoom(15);",
+                    "                map.setCenter(results[0].geometry.location);",
+                    "                this.showInfoWin(r, map, marker);",
+                    "            });",
+                    "        } else {",
+                    "            this.fixGeocodeFail(interval, status, a);",
+                    "        }",
+                    "    }",
+                    ");"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "codeAddress",
+            "designerId": "c8f99d5a-2eb1-48ac-8971-445a9af86bfd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setMarkerBounds",
+                "implHandler": [
+                    "const app = StunningOctoPancake.app;",
+                    "const bounds = new google.maps.LatLngBounds();",
+                    "const map = app.Map;",
+                    "const markers = app.Markers;",
+                    "",
+                    "for (let i = 0; i < markers.length; i += 1) {",
+                    "    const e = markers[i];",
+                    "    bounds.extend(e.getPosition());",
+                    "}",
+                    "map.setCenter(bounds.getCenter());",
+                    "google.maps.event.addListenerOnce(map, \"zoom_changed\", () => {",
+                    "    if (map.getZoom() > 15) {",
+                    "        map.setZoom(15);",
+                    "    }",
+                    "});",
+                    "map.fitBounds(bounds);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "setMarkerBounds",
+            "designerId": "462eaf14-56cf-4e80-9920-7d51f4977df7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "showAllControlDiv"
+                ],
+                "fn": "ShowAllMarkers",
+                "implHandler": [
+                    "const controlUI = document.createElement(\"div\");",
+                    "controlUI.setAttribute(\"id\", \"showAllMarkers\");",
+                    "controlUI.style.backgroundColor = \"#fff\";",
+                    "controlUI.style.border = \"2px solid #fff\";",
+                    "controlUI.style.borderRadius = \"3px\";",
+                    "controlUI.style.boxShadow = \"0 2px 6px rgba(0,0,0,.3)\";",
+                    "controlUI.style.cursor = \"pointer\";",
+                    "controlUI.style.marginBottom = \"22px\";",
+                    "controlUI.style.textAlign = \"center\";",
+                    "controlUI.title = \"Click to show all markers\";",
+                    "showAllControlDiv.appendChild(controlUI);",
+                    "",
+                    "const controlText = document.createElement(\"div\");",
+                    "controlText.style.color = \"rgb(25,25,25)\";",
+                    "controlText.style.fontFamily = \"Roboto,Arial,sans-serif\";",
+                    "controlText.style.fontSize = \"16px\";",
+                    "controlText.style.lineHeight = \"38px\";",
+                    "controlText.style.paddingLeft = \"5px\";",
+                    "controlText.style.paddingRight = \"5px\";",
+                    "controlText.innerHTML = \"Show All Markers\";",
+                    "controlUI.appendChild(controlText);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "ShowAllMarkers",
+            "designerId": "8bf9b5e6-0eb5-4c25-b7d3-4101d7b8521f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "designer|commentHeader": [
                     "Initialize Map"
                 ],
+                "designer|params": [
+                    "app"
+                ],
                 "fn": "initialize",
                 "implHandler": [
-                    "const geocoder = new google.maps.Geocoder();",
-                    "const infowindow = new google.maps.InfoWindow({",
+                    "$(\"#map\").css({",
+                    "    width: \"832.5\",",
+                    "    height: \"400px\",",
+                    "    margin: \"30px auto 0\"",
+                    "});",
+                    "app.InfoWindow = new google.maps.InfoWindow({",
                     "    maxWidth: 400",
                     "});",
                     "const latlng = new google.maps.LatLng(38.92861, -98.579458);",
@@ -36,23 +321,102 @@
                     "    zoom: 4,",
                     "    center: latlng",
                     "};",
-                    "const map = new google.maps.Map(document.getElementById(\"map\"), mapOptions);",
+                    "app.Map = new google.maps.Map(document.getElementById(\"map\"), mapOptions);",
                     "const showAllControlDiv = document.createElement(\"div\");",
-                    "// const showAllMarkers = new ShowAllMarkers(showAllControlDiv, map);",
+                    "const showAllMarkers = new this.ShowAllMarkers(showAllControlDiv);",
                     "",
                     "showAllControlDiv.index = 1;",
-                    "map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(",
+                    "app.Map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(",
                     "    showAllControlDiv",
-                    ");"
+                    ");",
+                    "app.Mapped = true;"
                 ]
             },
             "configAlternates": {
                 "designer|commentHeader": "comment",
                 "fn": "string",
-                "implHandler": "code"
+                "implHandler": "code",
+                "designer|params": "typedarray"
             },
             "name": "initialize",
             "designerId": "de5abf43-76ff-4697-a445-a378ea472988"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "app",
+                    "a"
+                ],
+                "fn": "geoIterate",
+                "implHandler": [
+                    "const markers = app.Markers;",
+                    "const controller = app.getOctoPancakeControlController();",
+                    "let counter = a.length;",
+                    "let i = 0;",
+                    "let intervalId;",
+                    "",
+                    "function start() {",
+                    "    if (counter === 0) {",
+                    "        clearInterval(intervalId);",
+                    "        controller.setMarkerBounds();",
+                    "        $(\"#showAllMarkers\").click(controller.setMarkerBounds);",
+                    "    } else if (markers.length < app.FieldData.length) {",
+                    "        controller.codeAddress(a[i], app.FieldData[i], intervalId, app.Map, markers, i);",
+                    "    }",
+                    "    Ext.StoreMgr.get('RecordDataStore').setData(StunningOctoPancake.app.FieldData);",
+                    "    counter--;",
+                    "    i++;",
+                    "}",
+                    "intervalId = setInterval(start, 500);",
+                    "controller.showLatLong(app);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "geoIterate",
+            "designerId": "4bfefe50-4b07-4d92-aefd-f025d6fda93a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "app"
+                ],
+                "fn": "getAddressList",
+                "implHandler": [
+                    "const addressList = [];",
+                    "let recordAddress;",
+                    "",
+                    "for (let i = 0; i < app.FieldData.length; i++) {",
+                    "    const r = app.FieldData[i];",
+                    "    recordAddress = `${r.Name} ${r.Address} ${r[\"Address 2\"]} ${r.City} ${r.State} ${r.Zip}`;",
+                    "    addressList.push(recordAddress);",
+                    "    recordAddress = \"\";",
+                    "}",
+                    "this.geoIterate(app, addressList);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getAddressList",
+            "designerId": "185161b1-2543-4f62-8d22-35702c39c319"
         },
         {
             "type": "basicfunction",
