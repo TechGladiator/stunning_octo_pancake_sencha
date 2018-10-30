@@ -28,7 +28,9 @@
                 ],
                 "fn": "postData",
                 "implHandler": [
-                    "Ext.MessageBox.alert(\"Saved\", Ext.String.format('You clicked the {0} button and entered the text \"{1}\".', btn, text));"
+                    "if (btn === \"ok\") {",
+                    "    Ext.MessageBox.alert(\"Saved\", Ext.String.format('\"{0}\" saved.', text));",
+                    "}"
                 ]
             },
             "configAlternates": {
