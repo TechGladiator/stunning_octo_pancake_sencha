@@ -631,7 +631,9 @@
                             "userConfig": {
                                 "fn": "onSaveRecordsClick",
                                 "implHandler": [
-                                    "Ext.MessageBox.prompt(\"Save\", \"Name this imported data\");"
+                                    "const controller = StunningOctoPancake.app.getOctoPancakeControlController();",
+                                    "",
+                                    "Ext.MessageBox.prompt(\"Save\", \"Name this imported data\", controller.postData, controller);"
                                 ],
                                 "name": "click",
                                 "scope": "me"
