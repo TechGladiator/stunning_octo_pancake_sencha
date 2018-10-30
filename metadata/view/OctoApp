@@ -619,7 +619,29 @@
                     "name": "MyButton3",
                     "designerId": "077b12a8-f6b6-4e29-bc28-f640e8ccd8ad",
                     "viewControllerInstanceId": "3c665bc5-54ec-41f6-8dd0-cbe45a0d690d",
-                    "viewModelInstanceId": "ba0549fe-59d8-46f0-91e8-be76e22a7886"
+                    "viewModelInstanceId": "ba0549fe-59d8-46f0-91e8-be76e22a7886",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSaveRecordsClick",
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onSaveRecordsClick",
+                            "designerId": "0911fdad-b2cd-40f7-afe4-79e9baaa020e"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.button.Button",
