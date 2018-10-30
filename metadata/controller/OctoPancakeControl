@@ -366,6 +366,7 @@
                     "        clearInterval(intervalId);",
                     "        controller.setMarkerBounds();",
                     "        $(\"#showAllMarkers\").click(controller.setMarkerBounds);",
+                    "        Ext.getCmp('saveRecords').show();",
                     "    } else if (markers.length < app.FieldData.length) {",
                     "        controller.codeAddress(a[i], app.FieldData[i], intervalId, app.Map, markers, i);",
                     "    }",
