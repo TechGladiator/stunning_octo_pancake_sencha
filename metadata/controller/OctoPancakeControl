@@ -28,8 +28,13 @@
                 ],
                 "fn": "postData",
                 "implHandler": [
+                    "const app = StunningOctoPancake.app;",
+                    "",
                     "if (btn === \"ok\") {",
+                    "    app.Filename = text;",
                     "    Ext.MessageBox.alert(\"Saved\", Ext.String.format('\"{0}\" saved.', text));",
+                    "    Ext.getCmp('importFileName').setTitle(app.Filename);",
+                    "    Ext.getCmp('editImportFileName').setTitle(app.Filename);",
                     "}"
                 ]
             },
