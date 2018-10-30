@@ -22,6 +22,26 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "postData",
+                "implHandler": [
+                    "alert(\"this will post data eventually\");"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "postData",
+            "designerId": "eb6dc87e-f00d-49d3-89dd-cbab3341af21"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "designer|params": [
                     "r",
                     "map",
