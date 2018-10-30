@@ -631,7 +631,7 @@
                             "userConfig": {
                                 "fn": "onSaveRecordsClick",
                                 "implHandler": [
-                                    "Ext.MessageBox.alert(\"Save\", \"Name this imported data\");"
+                                    "Ext.MessageBox.prompt(\"Save\", \"Name this imported data\");"
                                 ],
                                 "name": "click",
                                 "scope": "me"
