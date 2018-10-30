@@ -22,12 +22,17 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|params": [
+                    "btn",
+                    "text"
+                ],
                 "fn": "postData",
                 "implHandler": [
-                    "alert(\"this will post data eventually\");"
+                    "Ext.MessageBox.alert(\"Saved\", Ext.String.format('You clicked the {0} button and entered the text \"{1}\".', btn, text));"
                 ]
             },
             "configAlternates": {
+                "designer|params": "typedarray",
                 "fn": "string",
                 "implHandler": "code"
             },
