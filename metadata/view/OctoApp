@@ -630,11 +630,15 @@
                             "codeClass": null,
                             "userConfig": {
                                 "fn": "onSaveRecordsClick",
+                                "implHandler": [
+                                    "Ext.MessageBox.alert(\"Save\", \"Name this imported data\");"
+                                ],
                                 "name": "click",
                                 "scope": "me"
                             },
                             "configAlternates": {
                                 "fn": "string",
+                                "implHandler": "code",
                                 "name": "string",
                                 "scope": "string"
                             },
