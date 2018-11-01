@@ -347,6 +347,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "id": "searchButton",
                                 "layout|flex": 1,
                                 "margin": "0 0 0 10",
                                 "text": "Search"
@@ -354,10 +355,33 @@
                             "configAlternates": {
                                 "layout|flex": "number",
                                 "margin": "auto",
-                                "text": "string"
+                                "text": "string",
+                                "id": "string"
                             },
                             "name": "MyButton1",
-                            "designerId": "a0372666-68e8-40dd-b8d1-e59dab4f0fd6"
+                            "designerId": "a0372666-68e8-40dd-b8d1-e59dab4f0fd6",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSearchButtonClick",
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onSearchButtonClick",
+                                    "designerId": "d1e749bd-ce56-478a-9970-059414c7dbc6"
+                                }
+                            ]
                         }
                     ]
                 }
