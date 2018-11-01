@@ -323,6 +323,7 @@
                             "userConfig": {
                                 "designer|displayName": "Search Field",
                                 "fieldLabel": "Search By Import Name",
+                                "id": "search",
                                 "labelWidth": 150,
                                 "maxWidth": 680,
                                 "width": "100%"
@@ -332,7 +333,8 @@
                                 "width": "auto",
                                 "fieldLabel": "string",
                                 "labelWidth": "number",
-                                "maxWidth": "number"
+                                "maxWidth": "number",
+                                "id": "string"
                             },
                             "name": "MyTextField",
                             "designerId": "c3a78e9b-bff9-49f0-8fa6-7231c0955a60"
