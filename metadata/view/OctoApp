@@ -370,11 +370,15 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "fn": "onSearchButtonClick",
+                                        "implHandler": [
+                                            "console.log(document.getElementById(\"search-inputEl\").value);"
+                                        ],
                                         "name": "click",
                                         "scope": "me"
                                     },
                                     "configAlternates": {
                                         "fn": "string",
+                                        "implHandler": "code",
                                         "name": "string",
                                         "scope": "string"
                                     },
