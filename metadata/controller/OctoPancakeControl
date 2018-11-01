@@ -23,6 +23,30 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "err"
+                ],
+                "fn": "ErrorResponse",
+                "implHandler": [
+                    "Ext.MessageBox.alert(`${err.status}`, err.statusText);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "ErrorResponse",
+            "designerId": "6d8122a0-36da-4ede-ba35-098f9f95632b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
                     "btn",
                     "text"
                 ],
@@ -30,9 +54,7 @@
                 "implHandler": [
                     "const app = StunningOctoPancake.app;",
                     "const data = { import_name: text };",
-                    "const errorResponse = err => {",
-                    "    Ext.MessageBox.alert(`${err.status}`, err.statusText);",
-                    "};",
+                    "const errorResponse = this.ErrorResponse;",
                     "",
                     "function saveResponse(i) {",
                     "    app.Filename = text;",
@@ -62,7 +84,9 @@
                     "                });",
                     "            }",
                     "        },",
-                    "        error: errorResponse",
+                    "        error: err => {",
+                    "            errorResponse(err);",
+                    "        }",
                     "    });",
                     "}"
                 ]

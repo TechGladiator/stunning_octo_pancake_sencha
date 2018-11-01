@@ -371,6 +371,8 @@
                                     "userConfig": {
                                         "fn": "onSearchButtonClick",
                                         "implHandler": [
+                                            "const errorResponse = StunningOctoPancake.app.getOctoPancakeControlController().ErrorResponse;",
+                                            "",
                                             "$.ajax({",
                                             "    url: `http://127.0.0.1:3000/imports/search?term=${document.getElementById(\"search-inputEl\").value}`,",
                                             "    type: \"get\",",
@@ -380,7 +382,9 @@
                                             "            console.log(\"res.forEach e: \", e);",
                                             "        });",
                                             "    },",
-                                            "//     error: errorResponse",
+                                            "    error: err => {",
+                                            "        errorResponse(err);",
+                                            "    }",
                                             "});"
                                         ],
                                         "name": "click",
