@@ -371,7 +371,17 @@
                                     "userConfig": {
                                         "fn": "onSearchButtonClick",
                                         "implHandler": [
-                                            "console.log(document.getElementById(\"search-inputEl\").value);"
+                                            "$.ajax({",
+                                            "    url: `http://127.0.0.1:3000/imports/search?term=${document.getElementById(\"search-inputEl\").value}`,",
+                                            "    type: \"get\",",
+                                            "    success: res => {",
+                                            "        console.log(\"res: \", res);",
+                                            "        res.forEach(e => {",
+                                            "            console.log(\"res.forEach e: \", e);",
+                                            "        });",
+                                            "    },",
+                                            "//     error: errorResponse",
+                                            "});"
                                         ],
                                         "name": "click",
                                         "scope": "me"
