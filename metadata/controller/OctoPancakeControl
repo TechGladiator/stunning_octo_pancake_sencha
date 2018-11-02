@@ -73,6 +73,7 @@
                     "        success: res => {",
                     "            for (let i = 0; i < app.FieldData.length; i += 1) {",
                     "                const e = app.FieldData[i];",
+                    "                delete e.id;",
                     "                $.ajax({",
                     "                    url: `http://127.0.0.1:3000/imports/${res.id}/records`,",
                     "                    type: \"post\",",
