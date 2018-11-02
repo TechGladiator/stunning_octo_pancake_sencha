@@ -378,7 +378,8 @@
                                             "function createResultsPanel(title, html) {",
                                             "    Ext.create('Ext.panel.Panel', {",
                                             "        title: title,",
-                                            "        minHeight: '230',",
+                                            "        minHeight: '300',",
+                                            "        layout: 'fit',",
                                             "        renderTo: \"resultsPanelDiv\",",
                                             "        bodyPadding: 10,",
                                             "        html: html",
@@ -459,14 +460,16 @@
                 "hidden": true,
                 "html": "<div id=\"resultsPanelDiv\"></div>",
                 "id": "resultsPanelContainer",
+                "layout": "fit",
                 "layout|flex": 1,
-                "minHeight": 230,
+                "minHeight": 300,
                 "width": 400
             },
             "configAlternates": {
                 "hidden": "boolean",
                 "html": "string",
                 "id": "string",
+                "layout": "string",
                 "layout|flex": "number",
                 "minHeight": "number",
                 "width": "auto"
