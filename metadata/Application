@@ -20,6 +20,7 @@
         "FirstError": [
             "`undefined`"
         ],
+        "FromDB": false,
         "FullResults": [
             "`undefined`"
         ],
@@ -67,7 +68,8 @@
         "InfoWindow": "string",
         "Map": "string",
         "Markers": "array",
-        "Mapped": "boolean"
+        "Mapped": "boolean",
+        "FromDB": "boolean"
     },
     "name": "Application",
     "designerId": "application",
@@ -135,6 +137,11 @@
         {
             "group": "(Custom Properties)",
             "name": "Mapped",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "FromDB",
             "type": "string"
         }
     ]
