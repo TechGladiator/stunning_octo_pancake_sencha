@@ -1526,8 +1526,9 @@
                                                 "fn": "handler",
                                                 "implHandler": [
                                                     "const app = StunningOctoPancake.app;",
+                                                    "const controller = app.getOctoPancakeControlController();",
                                                     "",
-                                                    "app.getOctoPancakeControlController().deleteRecord(rowIndex, app.FieldData, app.ErrorCount);"
+                                                    "controller.deleteRecord(app, controller, rowIndex, app.FieldData, app.ErrorCount);"
                                                 ]
                                             },
                                             "configAlternates": {

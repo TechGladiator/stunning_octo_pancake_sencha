@@ -633,25 +633,25 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "app",
+                    "controller",
                     "row",
                     "fd",
-                    "ec"
+                    "ec",
+                    "fn"
                 ],
                 "fn": "deleteRecord",
                 "implHandler": [
-                    "const app = StunningOctoPancake.app;",
-                    "const controller = app.getOctoPancakeControlController();",
-                    "",
                     "fd.splice(row, 1);",
                     "if (ec > 0) {",
-                    "    this.setView([fd[row]], app.Filename);",
+                    "    controller.setView([fd[row]], fn);",
                     "    ec -= 1;",
                     "} else {",
-                    "    this.setView(fd, app.Filename);",
+                    "    controller.setView(fd, fn);",
                     "}",
                     "",
-                    "Ext.getCmp('importFileName').hide();",
-                    "Ext.getCmp('editImportFileName').show();"
+                    "// keep both grids from appearing after deleting a record",
+                    "Ext.getCmp('importFileName').hide();"
                 ]
             },
             "configAlternates": {
