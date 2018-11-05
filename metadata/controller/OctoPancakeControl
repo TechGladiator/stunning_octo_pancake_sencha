@@ -587,6 +587,52 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "app",
+                    "controller",
+                    "message",
+                    "row",
+                    "recordRow"
+                ],
+                "fn": "repairRecord",
+                "implHandler": [
+                    "if (recordRow !== undefined && recordRow.__parsed_extra !== undefined) {",
+                    "    if (recordRow.__parsed_extra === \"\" || recordRow.__parsed_extra[0] === \"\") {",
+                    "        delete recordRow.__parsed_extra;",
+                    "    }",
+                    "}",
+                    "if (Object.keys(recordRow).length - 1 === app.Names.length) {",
+                    "    app.FieldErrors.splice(0, 1);",
+                    "    Ext.getCmp('recordButtons').hide();",
+                    "    Ext.getCmp('repairNext').hide();",
+                    "    Ext.getCmp('importFileName').hide();",
+                    "    Ext.getCmp('editImportFileName').hide();",
+                    "    Ext.getCmp('extra').hide();",
+                    "    Ext.getCmp('extra1').hide();",
+                    "    Ext.getCmp('saveEdits').hide();",
+                    "    Ext.getCmp('editData').show();",
+                    "    controller.completeFn(app.FullResults);",
+                    "} else {",
+                    "    Ext.MessageBox.alert(`Error`, `${message} in Row: ${row + 1}`);",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "repairRecord",
+            "designerId": "0c21db7a-3385-4bd1-ab1b-0875cf159b8e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
                     "row",
                     "fd",
                     "ec"
