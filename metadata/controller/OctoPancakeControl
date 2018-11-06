@@ -643,7 +643,8 @@
                 ],
                 "fn": "deleteRecord",
                 "implHandler": [
-                    "if (fe && row === fe.row) {",
+                    "if (ec > 0) {",
+                    "    row = fe.row;",
                     "    for (let i = 0; i < ferr.length; i++) {",
                     "        ferr[i].row--;",
                     "    }",
