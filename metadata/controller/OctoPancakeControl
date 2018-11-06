@@ -806,6 +806,9 @@
                     "if (fd[0] !== undefined && fd[0].__parsed_extra) {",
                     "    Ext.getCmp('extra').show();",
                     "    Ext.getCmp('extra1').show();",
+                    "} else {",
+                    "    Ext.getCmp('extra').hide();",
+                    "    Ext.getCmp('extra1').hide();",
                     "}"
                 ]
             },
