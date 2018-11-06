@@ -362,29 +362,31 @@
             ]
         },
         {
-            "type": "Ext.ux.GMapPanel",
+            "type": "Ext.panel.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "height": 400,
+                "designer|displayName": "map",
                 "hidden": true,
-                "id": "map",
-                "layout|flex": 1,
-                "margin": "30 0 0",
-                "width": 832.5
+                "html": "<div id=\"map\"></div>",
+                "id": "mapPanel",
+                "layout|flex": 1
             },
             "configAlternates": {
                 "height": "auto",
                 "hidden": "boolean",
                 "id": "string",
                 "layout|flex": "number",
+                "width": "auto",
+                "center": "object",
                 "margin": "auto",
-                "width": "auto"
+                "html": "string",
+                "designer|displayName": "string"
             },
-            "name": "MyGMapPanel",
+            "name": "MyPanel4",
             "designerId": "69ed5ac6-35f1-46eb-9cbf-38a9707134c8"
         },
         {
@@ -650,8 +652,14 @@
                             "userConfig": {
                                 "fn": "onMapDataClick",
                                 "implHandler": [
-                                    "Ext.getCmp('map').show();",
-                                    "StunningOctoPancake.app.getOctoPancakeControlController().initialize();"
+                                    "const app = StunningOctoPancake.app;",
+                                    "const controller = app.getOctoPancakeControlController();",
+                                    "",
+                                    "Ext.getCmp('mapPanel').show();",
+                                    "if (app.Mapped === false) {",
+                                    "    controller.initialize(app);",
+                                    "}",
+                                    "controller.getAddressList(app);"
                                 ],
                                 "name": "click",
                                 "scope": "me"
@@ -712,6 +720,10 @@
                                     "app.Filename = undefined;",
                                     "app.FirstError = undefined;",
                                     "app.FullResults = undefined;",
+                                    "app.InfoWindow = undefined;",
+                                    "app.Map = undefined;",
+                                    "app.Mapped = false;",
+                                    "app.Markers = [];",
                                     "app.RowCount = 0;",
                                     "importStore.setData([]);",
                                     "importGrid.setTitle('');",
@@ -720,13 +732,22 @@
                                     "Ext.getCmp('recordButtons').hide();",
                                     "Ext.getCmp('importFileName').hide();",
                                     "Ext.getCmp('editImportFileName').hide();",
-                                    "Ext.getCmp('map').hide();",
+                                    "Ext.getCmp('mapPanel').hide();",
                                     "Ext.getCmp('extra').hide();",
                                     "Ext.getCmp('extra1').hide();",
                                     "Ext.getCmp('saveEdits').hide();",
                                     "Ext.getCmp('editData').show();",
+                                    "Ext.getCmp(\"Lat\").hide();",
+                                    "Ext.getCmp(\"Long\").hide();",
+                                    "Ext.getCmp(\"editLat\").hide();",
+                                    "Ext.getCmp(\"editLong\").hide();",
                                     "$(\"#chooseCSVFile-inputEl\").val(null);",
-                                    "$(\"#chooseCSVFile-button-fileInputEl\").val(null);"
+                                    "$(\"#chooseCSVFile-button-fileInputEl\").val(null);",
+                                    "$(\"#map\").html(\"\");",
+                                    "$(\"#map\").removeAttr(\"style\");",
+                                    "while (app.Names.length > 9) {",
+                                    "    app.Names.pop();",
+                                    "}"
                                 ],
                                 "name": "click",
                                 "scope": "me"
@@ -789,6 +810,7 @@
                         "enableColumnHide": false,
                         "frame": true,
                         "id": "recordGrid",
+                        "sortableColumns": false,
                         "store": "RecordDataStore",
                         "titleAlign": "center",
                         "width": 1332
@@ -805,7 +827,8 @@
                         "designer|userAlias": "string",
                         "designer|userClassName": "string",
                         "enableColumnHide": "boolean",
-                        "id": "string"
+                        "id": "string",
+                        "sortableColumns": "boolean"
                     },
                     "name": "MyGridPanel",
                     "designerId": "bb9434af-d1cf-483a-bd6b-72efaafc4e3d",
@@ -1189,6 +1212,68 @@
                             },
                             "name": "MyColumn",
                             "designerId": "607dd7fc-1864-44b6-985d-01d529365c48"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRecordGridRowClick",
+                                "implHandler": [
+                                    "const app = StunningOctoPancake.app;",
+                                    "const controller = app.getOctoPancakeControlController();",
+                                    "const geocoder = new google.maps.Geocoder();",
+                                    "const map = app.Map;",
+                                    "const markers = app.Markers;",
+                                    "",
+                                    "if (record.data.Lat && record.data.Long) {",
+                                    "    const input0 = record.data.Lat;",
+                                    "    const input1 = record.data.Long;",
+                                    "    const latlng = {",
+                                    "        lat: parseFloat(input0),",
+                                    "        lng: parseFloat(input1)",
+                                    "    };",
+                                    "    geocoder.geocode({ location: latlng }, (results, status) => {",
+                                    "        if (status === \"OK\") {",
+                                    "            if (results[0]) {",
+                                    "                map.setZoom(15);",
+                                    "                const marker = new google.maps.Marker({",
+                                    "                    position: latlng,",
+                                    "                    map",
+                                    "                });",
+                                    "                markers.push(marker);",
+                                    "                marker.addListener(\"click\", () => {",
+                                    "                    map.setZoom(15);",
+                                    "                    controller.showInfoWin(rowIndex, map, marker);",
+                                    "                    map.setCenter(results[0].geometry.location);",
+                                    "                });",
+                                    "                controller.showInfoWin(rowIndex, map, marker);",
+                                    "                map.setCenter(results[0].geometry.location);",
+                                    "            } else {",
+                                    "                Ext.MessageBox.alert(\"noResults\", \"No results found\");",
+                                    "            }",
+                                    "        } else {",
+                                    "            Ext.MessageBox.alert(\"error\", \"Geocoder failed due to: Error\");",
+                                    "        }",
+                                    "    });",
+                                    "} else {",
+                                    "    Ext.MessageBox.alert(\"noResults\", `No results found for: \"${record.data.Name}\"`);",
+                                    "}"
+                                ],
+                                "name": "rowclick",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "name": "string",
+                                "scope": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "onRecordGridRowClick",
+                            "designerId": "272a9acc-34ae-48c1-9f74-23a4086f1e63"
                         }
                     ]
                 }
@@ -1239,6 +1324,7 @@
                         "enableColumnHide": false,
                         "frame": true,
                         "id": "editRecordGrid",
+                        "sortableColumns": false,
                         "store": "RecordDataStore",
                         "titleAlign": "center",
                         "width": 1332
@@ -1255,7 +1341,8 @@
                         "designer|userAlias": "string",
                         "designer|userClassName": "string",
                         "enableColumnHide": "boolean",
-                        "id": "string"
+                        "id": "string",
+                        "sortableColumns": "boolean"
                     },
                     "name": "MyGridPanel",
                     "designerId": "7e46a7b9-066b-4847-99df-c49bf6887d22",

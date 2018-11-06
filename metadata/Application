@@ -23,6 +23,12 @@
         "FullResults": [
             "`undefined`"
         ],
+        "InfoWindow": "`undefined`",
+        "Map": "`undefined`",
+        "Mapped": false,
+        "Markers": [
+            "[]"
+        ],
         "Names": [
             "[\"Name\",\"Address\",\"Address 2\",\"City\",\"State\",\"Zip\",\"Purpose\",\"Property Owner\",\"Creation Date\"]"
         ],
@@ -57,7 +63,11 @@
         "title": "string",
         "RowCount": "number",
         "Filename": "string",
-        "Names": "array"
+        "Names": "array",
+        "InfoWindow": "string",
+        "Map": "string",
+        "Markers": "array",
+        "Mapped": "boolean"
     },
     "name": "Application",
     "designerId": "application",
@@ -105,6 +115,26 @@
         {
             "group": "(Custom Properties)",
             "name": "Names",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "Map",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "InfoWindow",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "Markers",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "Mapped",
             "type": "string"
         }
     ]
