@@ -634,7 +634,8 @@
                     "ferr",
                     "controller",
                     "fe",
-                    "fr"
+                    "fr",
+                    "fromDB"
                 ],
                 "fn": "deleteRecord",
                 "implHandler": [
@@ -646,7 +647,9 @@
                     "    ferr.splice(0, 1);",
                     "}",
                     "fd.splice(row, 1);",
-                    "controller.completeFn(fr);",
+                    "if (!fromDB) {",
+                    "    controller.completeFn(fr);",
+                    "}",
                     "",
                     "// keep both grids from appearing after deleting a record",
                     "Ext.getCmp('importFileName').hide();",
