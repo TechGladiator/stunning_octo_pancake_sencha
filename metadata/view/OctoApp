@@ -1528,7 +1528,7 @@
                                                     "const app = StunningOctoPancake.app;",
                                                     "const controller = app.getOctoPancakeControlController();",
                                                     "",
-                                                    "controller.deleteRecord(app, controller, rowIndex, app.FieldData, app.ErrorCount);"
+                                                    "controller.deleteRecord(app.FieldData, rowIndex, app.ErrorCount, app.FieldErrors, controller, app.FirstError, app.FullResults);"
                                                 ]
                                             },
                                             "configAlternates": {

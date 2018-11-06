@@ -633,25 +633,28 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
-                    "app",
-                    "controller",
-                    "row",
                     "fd",
+                    "row",
                     "ec",
-                    "fn"
+                    "ferr",
+                    "controller",
+                    "fe",
+                    "fr"
                 ],
                 "fn": "deleteRecord",
                 "implHandler": [
-                    "fd.splice(row, 1);",
-                    "if (ec > 0) {",
-                    "    controller.setView([fd[row]], fn);",
-                    "    ec -= 1;",
-                    "} else {",
-                    "    controller.setView(fd, fn);",
+                    "if (fe && row === fe.row) {",
+                    "    for (let i = 0; i < ferr.length; i++) {",
+                    "        ferr[i].row--;",
+                    "    }",
+                    "    ferr.splice(0, 1);",
                     "}",
+                    "fd.splice(row, 1);",
+                    "controller.completeFn(fr);",
                     "",
                     "// keep both grids from appearing after deleting a record",
-                    "Ext.getCmp('importFileName').hide();"
+                    "Ext.getCmp('importFileName').hide();",
+                    "Ext.getCmp('repairNext').hide();"
                 ]
             },
             "configAlternates": {
