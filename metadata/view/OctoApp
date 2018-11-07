@@ -401,6 +401,7 @@
                                             "                    renderTo: \"resultsPanel\",",
                                             "                    handler: function() {",
                                             "                        $('#resultsPanelDiv').html('');",
+                                            "                        app.Filename = e.import_name;",
                                             "                        $.ajax({",
                                             "                            url: `http://127.0.0.1:3000/imports/${e.id}/records/`,",
                                             "                            type: \"get\",",
@@ -1528,7 +1529,7 @@
                                                     "const app = StunningOctoPancake.app;",
                                                     "const controller = app.getOctoPancakeControlController();",
                                                     "",
-                                                    "controller.deleteRecord(app.FieldData, rowIndex, app.ErrorCount, app.FieldErrors, controller, app.FirstError, app.FullResults, app.FromDB);"
+                                                    "controller.deleteRecord(app.FieldData, rowIndex, app.ErrorCount, app.FieldErrors, controller, app.FirstError, app.FullResults, app.FromDB, app.Filename);"
                                                 ]
                                             },
                                             "configAlternates": {
