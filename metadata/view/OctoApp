@@ -1018,7 +1018,7 @@
                                     "userConfig": {
                                         "fn": "onRownumbererHeaderClick",
                                         "implHandler": [
-                                            "console.log(column.id);"
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
                                         ],
                                         "name": "headerclick",
                                         "scope": "me"
