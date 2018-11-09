@@ -23,6 +23,38 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "title",
+                    "html"
+                ],
+                "fn": "createResultsPanel",
+                "implHandler": [
+                    "Ext.create('Ext.panel.Panel', {",
+                    "    title: title,",
+                    "    minHeight: '300',",
+                    "    layout: 'fit',",
+                    "    renderTo: \"resultsPanelDiv\",",
+                    "    bodyPadding: 10,",
+                    "    html: html",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "createResultsPanel",
+            "designerId": "450d2ce8-da63-4b44-bb59-4cc2cbf309b8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
                     "err"
                 ],
                 "fn": "ErrorResponse",
@@ -74,9 +106,7 @@
                     "app",
                     "controller",
                     "import_id",
-                    "import_name",
-                    "createResultsPanel",
-                    "errorResponse"
+                    "import_name"
                 ],
                 "fn": "getRecords",
                 "implHandler": [
@@ -94,11 +124,11 @@
                     "            Ext.getCmp('resultsPanelContainer').hide();",
                     "            controller.setView(app.FieldData, app.Filename);",
                     "        } else {",
-                    "            createResultsPanel('No Records', `<h2>No records found for ${app.Filename}</h2>`);",
+                    "            controller.createResultsPanel('No Records', `<h2>No records found for ${app.Filename}</h2>`);",
                     "        }",
                     "    },",
                     "    error: err => {",
-                    "        errorResponse(err);",
+                    "        controller.ErrorResponse(err);",
                     "    }",
                     "});"
                 ]
