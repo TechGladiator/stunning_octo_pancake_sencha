@@ -34,6 +34,7 @@
             "[\"Name\",\"Address\",\"Address 2\",\"City\",\"State\",\"Zip\",\"Purpose\",\"Property Owner\",\"Creation Date\"]"
         ],
         "RowCount": 0,
+        "SortASC": true,
         "controllers": [
             "OctoPancakeControl"
         ],
@@ -69,7 +70,8 @@
         "Map": "string",
         "Markers": "array",
         "Mapped": "boolean",
-        "FromDB": "boolean"
+        "FromDB": "boolean",
+        "SortASC": "boolean"
     },
     "name": "Application",
     "designerId": "application",
@@ -142,6 +144,11 @@
         {
             "group": "(Custom Properties)",
             "name": "FromDB",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "SortASC",
             "type": "string"
         }
     ]
