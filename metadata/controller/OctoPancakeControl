@@ -628,6 +628,42 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "fd"
+                ],
+                "fn": "updateRecord",
+                "implHandler": [
+                    "$.ajax({",
+                    "    url: `http://127.0.0.1:3000/imports/${fd.import_id}/records/${fd.id}`,",
+                    "    type: 'put',",
+                    "    data: JSON.stringify(fd),",
+                    "    dataType: 'json',",
+                    "    contentType: 'application/json',",
+                    "    success: res => {",
+                    "        Ext.MessageBox.alert('Updated', 'Record Updated');",
+                    "    },",
+                    "    error: err => {",
+                    "        controller.ErrorResponse(err);",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "updateRecord",
+            "designerId": "4f914130-bf0e-4e79-9d5c-915b0a77e4af"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
                     "fd",
                     "row",
                     "ec",
