@@ -996,12 +996,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|displayName": "RowNumber"
+                                "designer|displayName": "RowNumber",
+                                "id": "recId"
                             },
                             "configAlternates": {
                                 "text": "string",
                                 "designer|displayName": "string",
-                                "width": "number"
+                                "width": "number",
+                                "id": "string"
                             },
                             "name": "MyRowNumberer",
                             "designerId": "64e64ac9-5264-43bd-bb8c-23e7680e5195",
