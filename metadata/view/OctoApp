@@ -1004,7 +1004,33 @@
                                 "width": "number"
                             },
                             "name": "MyRowNumberer",
-                            "designerId": "64e64ac9-5264-43bd-bb8c-23e7680e5195"
+                            "designerId": "64e64ac9-5264-43bd-bb8c-23e7680e5195",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRownumbererHeaderClick",
+                                        "implHandler": [
+                                            "console.log(column.id);"
+                                        ],
+                                        "name": "headerclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRownumbererHeaderClick",
+                                    "designerId": "0159beda-825e-4774-8954-4767f8d40b52"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
