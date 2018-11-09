@@ -83,7 +83,21 @@
                 ],
                 "fn": "sortRecords",
                 "implHandler": [
-                    "console.log(columnId);"
+                    "console.log(columnId);",
+                    "",
+                    "const app = StunningOctoPancake.app;",
+                    "const controller = app.getOctoPancakeControlController();",
+                    "let sortOrder;",
+                    "",
+                    "if (app.SortASC) {",
+                    "    sortOrder = \"ASC\";",
+                    "    app.SortASC = false;",
+                    "} else {",
+                    "    sortOrder = \"DESC\";",
+                    "    app.SortASC = true;",
+                    "}",
+                    "",
+                    "controller.getRecords(app, controller, app.FieldData[0].import_id, app.Filename, `/sort${sortOrder}`, columnId);"
                 ]
             },
             "configAlternates": {
@@ -119,7 +133,7 @@
                     "    sortOrder = sort;",
                     "}",
                     "if (field) {",
-                    "    term = `?term=${field}`;",
+                    "    term = `?term=%22${field}%22`;",
                     "}",
                     "",
                     "$('#resultsPanelDiv').html('');",
