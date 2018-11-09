@@ -71,6 +71,55 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "app",
+                    "controller",
+                    "import_id",
+                    "import_name",
+                    "createResultsPanel",
+                    "errorResponse"
+                ],
+                "fn": "getRecords",
+                "implHandler": [
+                    "$('#resultsPanelDiv').html('');",
+                    "app.Filename = import_name;",
+                    "$.ajax({",
+                    "    url: `http://127.0.0.1:3000/imports/${import_id}/records/`,",
+                    "    type: \"get\",",
+                    "    success: res => {",
+                    "        if (res.length > 0) {",
+                    "            app.FromDB = true;",
+                    "            app.FieldNames = app.Names;",
+                    "            controller.showLatLong(app);",
+                    "            app.FieldData = res;",
+                    "            Ext.getCmp('resultsPanelContainer').hide();",
+                    "            controller.setView(app.FieldData, import_name);",
+                    "        } else {",
+                    "            createResultsPanel('No Records', `<h2>No records found for ${import_name}</h2>`);",
+                    "        }",
+                    "    },",
+                    "    error: err => {",
+                    "        errorResponse(err);",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getRecords",
+            "designerId": "8555eb4a-63d3-45eb-bf55-ea090e62ada9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
                     "btn",
                     "text"
                 ],
