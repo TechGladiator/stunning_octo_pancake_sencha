@@ -47,6 +47,30 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "columnId"
+                ],
+                "fn": "sortRecords",
+                "implHandler": [
+                    "console.log(columnId);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "sortRecords",
+            "designerId": "b1cfb3ee-36f2-4a16-8351-62ca34083fc1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
                     "btn",
                     "text"
                 ],
