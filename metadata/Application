@@ -20,6 +20,7 @@
         "FirstError": [
             "`undefined`"
         ],
+        "FromDB": false,
         "FullResults": [
             "`undefined`"
         ],
@@ -33,6 +34,7 @@
             "[\"Name\",\"Address\",\"Address 2\",\"City\",\"State\",\"Zip\",\"Purpose\",\"Property Owner\",\"Creation Date\"]"
         ],
         "RowCount": 0,
+        "SortASC": true,
         "controllers": [
             "OctoPancakeControl"
         ],
@@ -67,7 +69,9 @@
         "InfoWindow": "string",
         "Map": "string",
         "Markers": "array",
-        "Mapped": "boolean"
+        "Mapped": "boolean",
+        "FromDB": "boolean",
+        "SortASC": "boolean"
     },
     "name": "Application",
     "designerId": "application",
@@ -135,6 +139,16 @@
         {
             "group": "(Custom Properties)",
             "name": "Mapped",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "FromDB",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "SortASC",
             "type": "string"
         }
     ]

@@ -323,6 +323,7 @@
                             "userConfig": {
                                 "designer|displayName": "Search Field",
                                 "fieldLabel": "Search By Import Name",
+                                "id": "search",
                                 "labelWidth": 150,
                                 "maxWidth": 680,
                                 "width": "100%"
@@ -332,7 +333,8 @@
                                 "width": "auto",
                                 "fieldLabel": "string",
                                 "labelWidth": "number",
-                                "maxWidth": "number"
+                                "maxWidth": "number",
+                                "id": "string"
                             },
                             "name": "MyTextField",
                             "designerId": "c3a78e9b-bff9-49f0-8fa6-7231c0955a60"
@@ -345,6 +347,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "id": "searchButton",
                                 "layout|flex": 1,
                                 "margin": "0 0 0 10",
                                 "text": "Search"
@@ -352,14 +355,98 @@
                             "configAlternates": {
                                 "layout|flex": "number",
                                 "margin": "auto",
-                                "text": "string"
+                                "text": "string",
+                                "id": "string"
                             },
                             "name": "MyButton1",
-                            "designerId": "a0372666-68e8-40dd-b8d1-e59dab4f0fd6"
+                            "designerId": "a0372666-68e8-40dd-b8d1-e59dab4f0fd6",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSearchButtonClick",
+                                        "implHandler": [
+                                            "const app = StunningOctoPancake.app;",
+                                            "const controller = app.getOctoPancakeControlController();",
+                                            "const errorResponse = controller.ErrorResponse;",
+                                            "",
+                                            "Ext.getCmp('resultsPanelContainer').show();",
+                                            "$('#resultsPanelDiv').html('');",
+                                            "",
+                                            "$.ajax({",
+                                            "    url: `http://127.0.0.1:3000/imports/search?term=${document.getElementById(\"search-inputEl\").value}`,",
+                                            "    type: \"get\",",
+                                            "    success: res => {",
+                                            "        if (res.length > 0) {",
+                                            "            controller.createResultsPanel('Search Results', '<div id=\"resultsPanel\"></div>');",
+                                            "            res.forEach(e => {",
+                                            "                Ext.create('Ext.Button', {",
+                                            "                    text: e.import_name,",
+                                            "                    renderTo: \"resultsPanel\",",
+                                            "                    handler: function() {",
+                                            "                        controller.getRecords(app, controller, e.id, e.import_name);",
+                                            "                    }",
+                                            "                });",
+                                            "            });",
+                                            "        } else {",
+                                            "            controller.createResultsPanel('No Results', `<h2>No results matching ${document.getElementById(\"search-inputEl\").value} found.</h2>`);",
+                                            "        }",
+                                            "    },",
+                                            "    error: err => {",
+                                            "        errorResponse(err);",
+                                            "    }",
+                                            "});"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onSearchButtonClick",
+                                    "designerId": "d1e749bd-ce56-478a-9970-059414c7dbc6"
+                                }
+                            ]
                         }
                     ]
                 }
             ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "html": "<div id=\"resultsPanelDiv\"></div>",
+                "id": "resultsPanelContainer",
+                "layout": "fit",
+                "layout|flex": 1,
+                "minHeight": 300,
+                "width": 400
+            },
+            "configAlternates": {
+                "hidden": "boolean",
+                "html": "string",
+                "id": "string",
+                "layout": "string",
+                "layout|flex": "number",
+                "minHeight": "number",
+                "width": "auto"
+            },
+            "name": "MyPanel5",
+            "designerId": "4de63187-8e19-4e47-842f-9800bb053cf1"
         },
         {
             "type": "Ext.panel.Panel",
@@ -504,12 +591,21 @@
                             "userConfig": {
                                 "fn": "onSaveEditsClick",
                                 "implHandler": [
+                                    "const app = StunningOctoPancake.app;",
+                                    "",
                                     "Ext.getCmp('editImportFileName').hide();",
                                     "Ext.getCmp('saveEdits').hide();",
                                     "Ext.getCmp('importFileName').show();",
                                     "Ext.getCmp('editData').show();",
-                                    "if (StunningOctoPancake.app.ErrorCount > 0) {",
+                                    "if (app.ErrorCount > 0) {",
                                     "    Ext.getCmp('repairNext').show();",
+                                    "}",
+                                    "if (app.FromDB) {",
+                                    "    let i = 0;",
+                                    "    while (i < app.FieldData.length) {",
+                                    "        app.getOctoPancakeControlController().updateRecord(app.FieldData[i]);",
+                                    "        i++;",
+                                    "    }",
                                     "}"
                                 ],
                                 "name": "click",
@@ -562,25 +658,7 @@
                                     "const row = app.FieldErrors[0].row;",
                                     "const recordRow = app.FieldData[row];",
                                     "",
-                                    "if (recordRow !== undefined && recordRow.__parsed_extra !== undefined) {",
-                                    "    if (recordRow.__parsed_extra === \"\" || recordRow.__parsed_extra[0] === \"\") {",
-                                    "        delete recordRow.__parsed_extra;",
-                                    "    }",
-                                    "}",
-                                    "if (Object.keys(recordRow).length - 1 === app.Names.length) {",
-                                    "    app.FieldErrors.splice(0, 1);",
-                                    "    Ext.getCmp('recordButtons').hide();",
-                                    "    Ext.getCmp('repairNext').hide();",
-                                    "    Ext.getCmp('importFileName').hide();",
-                                    "    Ext.getCmp('editImportFileName').hide();",
-                                    "    Ext.getCmp('extra').hide();",
-                                    "    Ext.getCmp('extra1').hide();",
-                                    "    Ext.getCmp('saveEdits').hide();",
-                                    "    Ext.getCmp('editData').show();",
-                                    "    controller.completeFn(app.FullResults);",
-                                    "} else {",
-                                    "    Ext.MessageBox.alert(`Error`, `${message} in Row: ${row + 1}`);",
-                                    "}"
+                                    "controller.repairRecord(app, controller, message, row, recordRow);"
                                 ],
                                 "name": "click",
                                 "scope": "me"
@@ -605,6 +683,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "hidden": true,
+                        "id": "saveRecords",
                         "text": "Save Records"
                     },
                     "configAlternates": {
@@ -612,12 +691,43 @@
                         "style": "string",
                         "designer|userAlias": "string",
                         "designer|userClassName": "string",
-                        "hidden": "boolean"
+                        "hidden": "boolean",
+                        "id": "string"
                     },
                     "name": "MyButton3",
                     "designerId": "077b12a8-f6b6-4e29-bc28-f640e8ccd8ad",
                     "viewControllerInstanceId": "3c665bc5-54ec-41f6-8dd0-cbe45a0d690d",
-                    "viewModelInstanceId": "ba0549fe-59d8-46f0-91e8-be76e22a7886"
+                    "viewModelInstanceId": "ba0549fe-59d8-46f0-91e8-be76e22a7886",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSaveRecordsClick",
+                                "implHandler": [
+                                    "const app = StunningOctoPancake.app;",
+                                    "const controller = app.getOctoPancakeControlController();",
+                                    "",
+                                    "Ext.MessageBox.prompt(\"Save\", \"Name this imported data\", controller.postData, controller);",
+                                    "document.getElementById(\"messagebox-1001-textfield-inputEl\").value = app.Filename;"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onSaveRecordsClick",
+                            "designerId": "0911fdad-b2cd-40f7-afe4-79e9baaa020e"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.button.Button",
@@ -719,6 +829,7 @@
                                     "app.FieldNames = undefined;",
                                     "app.Filename = undefined;",
                                     "app.FirstError = undefined;",
+                                    "app.FromDB = false;",
                                     "app.FullResults = undefined;",
                                     "app.InfoWindow = undefined;",
                                     "app.Map = undefined;",
@@ -737,6 +848,7 @@
                                     "Ext.getCmp('extra1').hide();",
                                     "Ext.getCmp('saveEdits').hide();",
                                     "Ext.getCmp('editData').show();",
+                                    "Ext.getCmp('saveRecords').hide();",
                                     "Ext.getCmp(\"Lat\").hide();",
                                     "Ext.getCmp(\"Long\").hide();",
                                     "Ext.getCmp(\"editLat\").hide();",
@@ -853,15 +965,43 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|displayName": "RowNumber"
+                                "designer|displayName": "RowNumber",
+                                "id": "id"
                             },
                             "configAlternates": {
                                 "text": "string",
                                 "designer|displayName": "string",
-                                "width": "number"
+                                "width": "number",
+                                "id": "string"
                             },
                             "name": "MyRowNumberer",
-                            "designerId": "64e64ac9-5264-43bd-bb8c-23e7680e5195"
+                            "designerId": "64e64ac9-5264-43bd-bb8c-23e7680e5195",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRownumbererHeaderClick",
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                        ],
+                                        "name": "headerclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRownumbererHeaderClick",
+                                    "designerId": "0159beda-825e-4774-8954-4767f8d40b52"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -872,16 +1012,44 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Name",
+                                "id": "Name",
                                 "text": "Name",
                                 "width": 170
                             },
                             "configAlternates": {
                                 "dataIndex": "datafield",
                                 "text": "string",
-                                "width": "auto"
+                                "width": "auto",
+                                "id": "string"
                             },
                             "name": "MyColumn1",
-                            "designerId": "7e96ff3a-4187-4144-93ae-c7a3649be7ba"
+                            "designerId": "7e96ff3a-4187-4144-93ae-c7a3649be7ba",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onNameHeaderClick",
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                        ],
+                                        "name": "headerclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onNameHeaderClick",
+                                    "designerId": "b20c2040-ec7d-498a-a800-a6a8d2fe0ca8"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -892,16 +1060,44 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Address",
+                                "id": "Address",
                                 "text": "Address",
                                 "width": 190
                             },
                             "configAlternates": {
                                 "dataIndex": "datafield",
                                 "text": "string",
-                                "width": "auto"
+                                "width": "auto",
+                                "id": "string"
                             },
                             "name": "MyColumn2",
-                            "designerId": "30df300c-f823-4f26-a07b-f1dabf3d3edd"
+                            "designerId": "30df300c-f823-4f26-a07b-f1dabf3d3edd",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onAddressHeaderClick",
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                        ],
+                                        "name": "headerclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onAddressHeaderClick",
+                                    "designerId": "8e62602a-dbec-44d6-b03c-f3e7bd4d1993"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -912,14 +1108,42 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Address 2",
+                                "id": "Address_2",
                                 "text": "Address 2"
                             },
                             "configAlternates": {
                                 "dataIndex": "datafield",
-                                "text": "string"
+                                "text": "string",
+                                "id": "string"
                             },
                             "name": "MyColumn3",
-                            "designerId": "940ebe27-86b5-4b8d-9a1d-6e41aeaccda1"
+                            "designerId": "940ebe27-86b5-4b8d-9a1d-6e41aeaccda1",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onAddress2HeaderClick",
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                        ],
+                                        "name": "headerclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onAddress2HeaderClick",
+                                    "designerId": "6b31897f-af41-4840-9a7e-92a01133c9b1"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -930,14 +1154,42 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "City",
+                                "id": "City",
                                 "text": "City"
                             },
                             "configAlternates": {
                                 "dataIndex": "datafield",
-                                "text": "string"
+                                "text": "string",
+                                "id": "string"
                             },
                             "name": "MyColumn4",
-                            "designerId": "af936e4f-1cbd-4eb0-a54b-87fe86896451"
+                            "designerId": "af936e4f-1cbd-4eb0-a54b-87fe86896451",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onCityHeaderClick",
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                        ],
+                                        "name": "headerclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onCityHeaderClick",
+                                    "designerId": "3763ada0-3e67-44cb-8605-317279b22120"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -948,7 +1200,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "State",
-                                "id": "state",
+                                "id": "State",
                                 "text": "State",
                                 "width": 70
                             },
@@ -993,6 +1245,30 @@
                                     },
                                     "name": "renderer",
                                     "designerId": "e88ffc76-999a-4198-ae01-30de1f421560"
+                                },
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onStateHeaderClick",
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                        ],
+                                        "name": "headerclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onStateHeaderClick",
+                                    "designerId": "d15cd142-4e7a-4493-aa10-f93984240a09"
                                 }
                             ]
                         },
@@ -1005,13 +1281,15 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Zip",
+                                "id": "Zip",
                                 "text": "Zip",
                                 "width": 65
                             },
                             "configAlternates": {
                                 "dataIndex": "datafield",
                                 "text": "string",
-                                "width": "auto"
+                                "width": "auto",
+                                "id": "string"
                             },
                             "name": "MyColumn6",
                             "designerId": "744dc46b-33c1-490b-9466-3ee989bb5f6e",
@@ -1048,6 +1326,30 @@
                                     },
                                     "name": "renderer",
                                     "designerId": "81244c32-5eed-43f1-9ac0-08f09422334e"
+                                },
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onZipHeaderClick",
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                        ],
+                                        "name": "headerclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onZipHeaderClick",
+                                    "designerId": "b8913107-4743-40b9-8f9c-a8abaac4b642"
                                 }
                             ]
                         },
@@ -1060,14 +1362,42 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Purpose",
+                                "id": "Purpose",
                                 "text": "Purpose"
                             },
                             "configAlternates": {
                                 "dataIndex": "datafield",
-                                "text": "string"
+                                "text": "string",
+                                "id": "string"
                             },
                             "name": "MyColumn7",
-                            "designerId": "3bf0759e-265d-4b88-a008-7b680e6259b4"
+                            "designerId": "3bf0759e-265d-4b88-a008-7b680e6259b4",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onPurposeHeaderClick",
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                        ],
+                                        "name": "headerclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onPurposeHeaderClick",
+                                    "designerId": "bc3253c3-d2cb-448f-9cf5-51651323015e"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -1078,16 +1408,44 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Property Owner",
+                                "id": "Property_Owner",
                                 "text": "Property Owner",
                                 "width": 128
                             },
                             "configAlternates": {
                                 "dataIndex": "datafield",
                                 "text": "string",
-                                "width": "auto"
+                                "width": "auto",
+                                "id": "string"
                             },
                             "name": "MyColumn8",
-                            "designerId": "860803c8-5c76-4a9c-8d01-55d6f6fb0081"
+                            "designerId": "860803c8-5c76-4a9c-8d01-55d6f6fb0081",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onPropertyOwnerHeaderClick",
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                        ],
+                                        "name": "headerclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onPropertyOwnerHeaderClick",
+                                    "designerId": "d9526013-d08b-4f46-ac57-64c8b1cd9077"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -1098,6 +1456,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Creation Date",
+                                "id": "Creation_Date",
                                 "text": "Creation Date",
                                 "width": 118
                             },
@@ -1105,7 +1464,8 @@
                                 "dataIndex": "datafield",
                                 "text": "string",
                                 "width": "auto",
-                                "formatter": "string"
+                                "formatter": "string",
+                                "id": "string"
                             },
                             "name": "MyColumn9",
                             "designerId": "77fdfeb7-f698-438b-b643-52de8b96ac2e",
@@ -1142,6 +1502,30 @@
                                     },
                                     "name": "renderer",
                                     "designerId": "12564182-501f-4fa4-bb3a-e38c0a184116"
+                                },
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onCreationDateHeaderClick",
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                        ],
+                                        "name": "headerclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onCreationDateHeaderClick",
+                                    "designerId": "1a4e449d-9f74-4afd-9a53-9ad5179c5abc"
                                 }
                             ]
                         },
@@ -1165,7 +1549,33 @@
                                 "id": "string"
                             },
                             "name": "MyColumn10",
-                            "designerId": "cd33d38e-51bf-448d-b7cd-697ba89c8a72"
+                            "designerId": "cd33d38e-51bf-448d-b7cd-697ba89c8a72",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onLatHeaderClick",
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                        ],
+                                        "name": "headerclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onLatHeaderClick",
+                                    "designerId": "c8b737c1-8643-47d5-b85c-a07b5963356e"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -1189,7 +1599,33 @@
                                 "id": "string"
                             },
                             "name": "MyColumn11",
-                            "designerId": "9f86dff1-8697-49b8-a1df-717c9e4f4b3f"
+                            "designerId": "9f86dff1-8697-49b8-a1df-717c9e4f4b3f",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onLongHeaderClick",
+                                        "implHandler": [
+                                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                        ],
+                                        "name": "headerclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onLongHeaderClick",
+                                    "designerId": "cc38c612-1edd-4794-baa6-36c2a7a93dea"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Column",
@@ -1227,39 +1663,12 @@
                                     "const controller = app.getOctoPancakeControlController();",
                                     "const geocoder = new google.maps.Geocoder();",
                                     "const map = app.Map;",
+                                    "const mapped = app.Mapped;",
                                     "const markers = app.Markers;",
                                     "",
-                                    "if (record.data.Lat && record.data.Long) {",
-                                    "    const input0 = record.data.Lat;",
-                                    "    const input1 = record.data.Long;",
-                                    "    const latlng = {",
-                                    "        lat: parseFloat(input0),",
-                                    "        lng: parseFloat(input1)",
-                                    "    };",
-                                    "    geocoder.geocode({ location: latlng }, (results, status) => {",
-                                    "        if (status === \"OK\") {",
-                                    "            if (results[0]) {",
-                                    "                map.setZoom(15);",
-                                    "                const marker = new google.maps.Marker({",
-                                    "                    position: latlng,",
-                                    "                    map",
-                                    "                });",
-                                    "                markers.push(marker);",
-                                    "                marker.addListener(\"click\", () => {",
-                                    "                    map.setZoom(15);",
-                                    "                    controller.showInfoWin(rowIndex, map, marker);",
-                                    "                    map.setCenter(results[0].geometry.location);",
-                                    "                });",
-                                    "                controller.showInfoWin(rowIndex, map, marker);",
-                                    "                map.setCenter(results[0].geometry.location);",
-                                    "            } else {",
-                                    "                Ext.MessageBox.alert(\"noResults\", \"No results found\");",
-                                    "            }",
-                                    "        } else {",
-                                    "            Ext.MessageBox.alert(\"error\", \"Geocoder failed due to: Error\");",
-                                    "        }",
-                                    "    });",
-                                    "} else {",
+                                    "if (record.data.Lat && record.data.Long && mapped) {",
+                                    "    controller.geocodeLatLng(record.data, geocoder, map, markers, controller, rowIndex);",
+                                    "} else if (mapped) {",
                                     "    Ext.MessageBox.alert(\"noResults\", `No results found for: \"${record.data.Name}\"`);",
                                     "}"
                                 ],
@@ -1420,8 +1829,9 @@
                                                 "fn": "handler",
                                                 "implHandler": [
                                                     "const app = StunningOctoPancake.app;",
+                                                    "const controller = app.getOctoPancakeControlController();",
                                                     "",
-                                                    "app.getOctoPancakeControlController().deleteRecord(rowIndex, app.FieldData, app.ErrorCount);"
+                                                    "controller.deleteRecord(app.FieldData, rowIndex, app.ErrorCount, app.FieldErrors, controller, app.FirstError, app.FullResults, app.FromDB, app.Filename);"
                                                 ]
                                             },
                                             "configAlternates": {

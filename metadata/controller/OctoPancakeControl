@@ -23,6 +23,227 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "title",
+                    "html"
+                ],
+                "fn": "createResultsPanel",
+                "implHandler": [
+                    "Ext.create('Ext.panel.Panel', {",
+                    "    title: title,",
+                    "    minHeight: '300',",
+                    "    layout: 'fit',",
+                    "    renderTo: \"resultsPanelDiv\",",
+                    "    bodyPadding: 10,",
+                    "    html: html",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "createResultsPanel",
+            "designerId": "450d2ce8-da63-4b44-bb59-4cc2cbf309b8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "err"
+                ],
+                "fn": "ErrorResponse",
+                "implHandler": [
+                    "Ext.MessageBox.alert(`${err.status}`, err.statusText);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "ErrorResponse",
+            "designerId": "6d8122a0-36da-4ede-ba35-098f9f95632b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "columnId"
+                ],
+                "fn": "sortRecords",
+                "implHandler": [
+                    "const app = StunningOctoPancake.app;",
+                    "const controller = app.getOctoPancakeControlController();",
+                    "let sortOrder;",
+                    "",
+                    "if (app.FromDB) {",
+                    "    if (app.SortASC) {",
+                    "        sortOrder = \"ASC\";",
+                    "        app.SortASC = false;",
+                    "    } else {",
+                    "        sortOrder = \"DESC\";",
+                    "        app.SortASC = true;",
+                    "    }",
+                    "    controller.getRecords(app, controller, app.FieldData[0].import_id, app.Filename, `/sort${sortOrder}`, columnId);",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "sortRecords",
+            "designerId": "b1cfb3ee-36f2-4a16-8351-62ca34083fc1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "app",
+                    "controller",
+                    "import_id",
+                    "import_name",
+                    "sort",
+                    "field"
+                ],
+                "fn": "getRecords",
+                "implHandler": [
+                    "let sortOrder = \"\";",
+                    "let term = \"\";",
+                    "",
+                    "if (sort) {",
+                    "    sortOrder = sort;",
+                    "}",
+                    "if (field) {",
+                    "    if (field === \"Address_2\") {",
+                    "        field = \"Address%202\";",
+                    "    } else if (field === \"Property_Owner\") {",
+                    "        field = \"Property%20Owner\";",
+                    "    } else if (field === \"Creation_Date\") {",
+                    "        field = \"Creation%20Date\";",
+                    "    }",
+                    "    term = `?term=%22${field}%22`;",
+                    "}",
+                    "",
+                    "$('#resultsPanelDiv').html('');",
+                    "app.Filename = import_name;",
+                    "$.ajax({",
+                    "    url: `http://127.0.0.1:3000/imports/${import_id}${sortOrder}/records/${term}`,",
+                    "    type: \"get\",",
+                    "    success: res => {",
+                    "        if (res.length > 0) {",
+                    "            app.FromDB = true;",
+                    "            app.FieldNames = app.Names;",
+                    "            controller.showLatLong(app);",
+                    "            app.FieldData = res;",
+                    "            Ext.getCmp('resultsPanelContainer').hide();",
+                    "            controller.setView(app.FieldData, app.Filename);",
+                    "        } else {",
+                    "            controller.createResultsPanel('No Records', `<h2>No records found for ${app.Filename}</h2>`);",
+                    "        }",
+                    "    },",
+                    "    error: err => {",
+                    "        controller.ErrorResponse(err);",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getRecords",
+            "designerId": "8555eb4a-63d3-45eb-bf55-ea090e62ada9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "btn",
+                    "text"
+                ],
+                "fn": "postData",
+                "implHandler": [
+                    "const app = StunningOctoPancake.app;",
+                    "const data = { import_name: text };",
+                    "const errorResponse = this.ErrorResponse;",
+                    "",
+                    "function saveResponse(i) {",
+                    "    app.Filename = text;",
+                    "    Ext.MessageBox.alert(\"Saved\", Ext.String.format('\"{0}\" saved.', text));",
+                    "    Ext.getCmp('importFileName').setTitle(app.Filename);",
+                    "    Ext.getCmp('editImportFileName').setTitle(app.Filename);",
+                    "}",
+                    "",
+                    "if (btn === \"ok\") {",
+                    "    $.ajax({",
+                    "        url: \"http://127.0.0.1:3000/imports/\",",
+                    "        type: \"post\",",
+                    "        data: JSON.stringify(data),",
+                    "        dataType: \"json\",",
+                    "        contentType: \"application/json\",",
+                    "        success: res => {",
+                    "            for (let i = 0; i < app.FieldData.length; i += 1) {",
+                    "                const e = app.FieldData[i];",
+                    "                delete e.id;",
+                    "                $.ajax({",
+                    "                    url: `http://127.0.0.1:3000/imports/${res.id}/records`,",
+                    "                    type: \"post\",",
+                    "                    data: JSON.stringify(e),",
+                    "                    dataType: \"json\",",
+                    "                    contentType: \"application/json\",",
+                    "                    success: saveResponse(i),",
+                    "                    error: errorResponse",
+                    "                });",
+                    "            }",
+                    "        },",
+                    "        error: err => {",
+                    "            errorResponse(err);",
+                    "        }",
+                    "    });",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "postData",
+            "designerId": "eb6dc87e-f00d-49d3-89dd-cbab3341af21"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
                     "r",
                     "map",
                     "m"
@@ -113,6 +334,63 @@
             },
             "name": "fixGeocodeFail",
             "designerId": "8eabd6b9-10ec-4fdf-a666-fa9b7ed3228e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record",
+                    "geocoder",
+                    "map",
+                    "markers",
+                    "controller",
+                    "rowIndex"
+                ],
+                "fn": "geocodeLatLng",
+                "implHandler": [
+                    "const input0 = record.Lat;",
+                    "const input1 = record.Long;",
+                    "const latlng = {",
+                    "    lat: parseFloat(input0),",
+                    "    lng: parseFloat(input1)",
+                    "};",
+                    "geocoder.geocode({ location: latlng }, (results, status) => {",
+                    "    if (status === \"OK\") {",
+                    "        if (results[0]) {",
+                    "            map.setZoom(15);",
+                    "            const marker = new google.maps.Marker({",
+                    "                position: latlng,",
+                    "                map",
+                    "            });",
+                    "            markers.push(marker);",
+                    "            marker.addListener(\"click\", () => {",
+                    "                map.setZoom(15);",
+                    "                controller.showInfoWin(rowIndex, map, marker);",
+                    "                map.setCenter(results[0].geometry.location);",
+                    "            });",
+                    "            controller.showInfoWin(rowIndex, map, marker);",
+                    "            map.setCenter(results[0].geometry.location);",
+                    "        } else {",
+                    "            Ext.MessageBox.alert(\"noResults\", \"No results found\");",
+                    "        }",
+                    "    } else {",
+                    "        Ext.MessageBox.alert(\"error\", \"Geocoder failed due to: Error\");",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "geocodeLatLng",
+            "designerId": "96de17e0-03f3-42bf-9d06-4177c99fdafb"
         },
         {
             "type": "basicfunction",
@@ -355,19 +633,31 @@
                 ],
                 "fn": "geoIterate",
                 "implHandler": [
+                    "const geocoder = new google.maps.Geocoder();",
                     "const markers = app.Markers;",
                     "const controller = app.getOctoPancakeControlController();",
                     "let counter = a.length;",
                     "let i = 0;",
                     "let intervalId;",
                     "",
+                    "function stop() {",
+                    "    clearInterval(intervalId);",
+                    "    controller.setMarkerBounds();",
+                    "    $(\"#showAllMarkers\").click(controller.setMarkerBounds);",
+                    "    if (!app.FromDB) {",
+                    "        Ext.getCmp('saveRecords').show();",
+                    "    }",
+                    "}",
+                    "",
                     "function start() {",
                     "    if (counter === 0) {",
-                    "        clearInterval(intervalId);",
-                    "        controller.setMarkerBounds();",
-                    "        $(\"#showAllMarkers\").click(controller.setMarkerBounds);",
+                    "        stop();",
                     "    } else if (markers.length < app.FieldData.length) {",
-                    "        controller.codeAddress(a[i], app.FieldData[i], intervalId, app.Map, markers, i);",
+                    "        if (app.FromDB || !app.FieldData[i].Lat && !app.FieldData[i].Long) {",
+                    "            controller.codeAddress(a[i], app.FieldData[i], intervalId, app.Map, markers, i);",
+                    "        }",
+                    "    } else {",
+                    "        stop();",
                     "    }",
                     "    Ext.StoreMgr.get('RecordDataStore').setData(StunningOctoPancake.app.FieldData);",
                     "    counter--;",
@@ -427,25 +717,134 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "app",
+                    "controller",
+                    "message",
                     "row",
+                    "recordRow"
+                ],
+                "fn": "repairRecord",
+                "implHandler": [
+                    "if (recordRow !== undefined && recordRow.__parsed_extra !== undefined) {",
+                    "    if (recordRow.__parsed_extra === \"\" || recordRow.__parsed_extra[0] === \"\") {",
+                    "        delete recordRow.__parsed_extra;",
+                    "    }",
+                    "}",
+                    "if (Object.keys(recordRow).length - 1 === app.Names.length) {",
+                    "    app.FieldErrors.splice(0, 1);",
+                    "    Ext.getCmp('recordButtons').hide();",
+                    "    Ext.getCmp('repairNext').hide();",
+                    "    Ext.getCmp('importFileName').hide();",
+                    "    Ext.getCmp('editImportFileName').hide();",
+                    "    Ext.getCmp('extra').hide();",
+                    "    Ext.getCmp('extra1').hide();",
+                    "    Ext.getCmp('saveEdits').hide();",
+                    "    Ext.getCmp('editData').show();",
+                    "    controller.completeFn(app.FullResults);",
+                    "} else {",
+                    "    Ext.MessageBox.alert(`Error`, `${message} in Row: ${row + 1}`);",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "repairRecord",
+            "designerId": "0c21db7a-3385-4bd1-ab1b-0875cf159b8e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "fd"
+                ],
+                "fn": "updateRecord",
+                "implHandler": [
+                    "$.ajax({",
+                    "    url: `http://127.0.0.1:3000/imports/${fd.import_id}/records/${fd.id}`,",
+                    "    type: 'put',",
+                    "    data: JSON.stringify(fd),",
+                    "    dataType: 'json',",
+                    "    contentType: 'application/json',",
+                    "    success: res => {",
+                    "        Ext.MessageBox.alert('Updated', 'Record Updated');",
+                    "    },",
+                    "    error: err => {",
+                    "        controller.ErrorResponse(err);",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "updateRecord",
+            "designerId": "4f914130-bf0e-4e79-9d5c-915b0a77e4af"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
                     "fd",
-                    "ec"
+                    "row",
+                    "ec",
+                    "ferr",
+                    "controller",
+                    "fe",
+                    "fr",
+                    "fromDB",
+                    "file"
                 ],
                 "fn": "deleteRecord",
                 "implHandler": [
-                    "const app = StunningOctoPancake.app;",
-                    "const controller = app.getOctoPancakeControlController();",
+                    "const errorResponse = this.ErrorResponse;",
                     "",
-                    "fd.splice(row, 1);",
                     "if (ec > 0) {",
-                    "    this.setView([fd[row]], app.Filename);",
-                    "    ec -= 1;",
+                    "    row = fe.row;",
+                    "    for (let i = 0; i < ferr.length; i++) {",
+                    "        ferr[i].row--;",
+                    "    }",
+                    "    ferr.splice(0, 1);",
+                    "}",
+                    "if (fromDB) {",
+                    "    const recordId = fd[row].id;",
+                    "    const importId = fd[row].import_id;",
+                    "    $.ajax({",
+                    "        url: `http://127.0.0.1:3000/imports/${importId}/records/${recordId}`,",
+                    "        type: \"delete\",",
+                    "        success: res => {",
+                    "            fd.splice(row, 1);",
+                    "            controller.setView(fd, file);",
+                    "            // keep both grids from appearing after deleting a record",
+                    "            Ext.getCmp('importFileName').hide();",
+                    "            Ext.MessageBox.alert(\"Deleted\", \"Deleted Record.\");",
+                    "        },",
+                    "        error: err => {",
+                    "            errorResponse(err);",
+                    "        }",
+                    "    });",
                     "} else {",
-                    "    this.setView(fd, app.Filename);",
+                    "    fd.splice(row, 1);",
+                    "    controller.completeFn(fr);",
+                    "    // keep both grids from appearing after deleting a record",
+                    "    Ext.getCmp('importFileName').hide();",
                     "}",
                     "",
-                    "Ext.getCmp('importFileName').hide();",
-                    "Ext.getCmp('editImportFileName').show();"
+                    "Ext.getCmp('repairNext').hide();"
                 ]
             },
             "configAlternates": {
@@ -596,6 +995,9 @@
                     "if (fd[0] !== undefined && fd[0].__parsed_extra) {",
                     "    Ext.getCmp('extra').show();",
                     "    Ext.getCmp('extra1').show();",
+                    "} else {",
+                    "    Ext.getCmp('extra').hide();",
+                    "    Ext.getCmp('extra1').hide();",
                     "}"
                 ]
             },
