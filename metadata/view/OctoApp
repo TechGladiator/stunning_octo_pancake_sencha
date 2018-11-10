@@ -966,7 +966,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "designer|displayName": "RowNumber",
-                                "id": "recId"
+                                "id": "id"
                             },
                             "configAlternates": {
                                 "text": "string",
@@ -1012,7 +1012,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Name",
-                                "id": "name",
+                                "id": "Name",
                                 "text": "Name",
                                 "width": 170
                             },
@@ -1060,7 +1060,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Address",
-                                "id": "address",
+                                "id": "Address",
                                 "text": "Address",
                                 "width": 190
                             },
@@ -1108,7 +1108,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Address 2",
-                                "id": "address2",
+                                "id": "Address_2",
                                 "text": "Address 2"
                             },
                             "configAlternates": {
@@ -1154,7 +1154,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "City",
-                                "id": "city",
+                                "id": "City",
                                 "text": "City"
                             },
                             "configAlternates": {
@@ -1200,7 +1200,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "State",
-                                "id": "state",
+                                "id": "State",
                                 "text": "State",
                                 "width": 70
                             },
@@ -1281,7 +1281,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Zip",
-                                "id": "zip",
+                                "id": "Zip",
                                 "text": "Zip",
                                 "width": 65
                             },
@@ -1362,7 +1362,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Purpose",
-                                "id": "purpose",
+                                "id": "Purpose",
                                 "text": "Purpose"
                             },
                             "configAlternates": {
@@ -1408,7 +1408,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Property Owner",
-                                "id": "propertyOwner",
+                                "id": "Property_Owner",
                                 "text": "Property Owner",
                                 "width": 128
                             },
@@ -1456,7 +1456,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Creation Date",
-                                "id": "creationDate",
+                                "id": "Creation_Date",
                                 "text": "Creation Date",
                                 "width": 118
                             },
