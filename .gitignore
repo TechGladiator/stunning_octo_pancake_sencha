@@ -22,3 +22,4 @@ workspace.json
 .architect
 .idea
 .sencha
+/node_modules/
