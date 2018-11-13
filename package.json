@@ -18,8 +18,9 @@
   },
   "homepage": "https://github.com/TechGladiator/stunning_octo_pancake_sencha#readme",
   "dependencies": {
-    "dotenv": "^6.1.0",
     "http-server": "^0.11.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "dotenv": "^6.1.0"
+  }
 }
