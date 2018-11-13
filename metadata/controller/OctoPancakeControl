@@ -79,6 +79,57 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
+                    "app",
+                    "controller",
+                    "errorResponse"
+                ],
+                "fn": "searchRecords",
+                "implHandler": [
+                    "Ext.getCmp('resultsPanelContainer').show();",
+                    "$('#resultsPanelDiv').html('');",
+                    "",
+                    "$.ajax({",
+                    "    url: `http://127.0.0.1:3000/imports/search?term=${document.getElementById(\"search-inputEl\").value}`,",
+                    "    type: \"get\",",
+                    "    success: res => {",
+                    "        if (res.length > 0) {",
+                    "            controller.createResultsPanel('Search Results', '<div id=\"resultsPanel\"></div>');",
+                    "            res.forEach(e => {",
+                    "                Ext.create('Ext.Button', {",
+                    "                    text: e.import_name,",
+                    "                    renderTo: \"resultsPanel\",",
+                    "                    handler: function() {",
+                    "                        controller.getRecords(app, controller, e.id, e.import_name);",
+                    "                    }",
+                    "                });",
+                    "            });",
+                    "        } else {",
+                    "            controller.createResultsPanel('No Results', `<h2>No results matching ${document.getElementById(\"search-inputEl\").value} found.</h2>`);",
+                    "        }",
+                    "    },",
+                    "    error: err => {",
+                    "        errorResponse(err);",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "searchRecords",
+            "designerId": "05429007-0f23-43c1-b4e2-373ad098f07e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
                     "columnId"
                 ],
                 "fn": "sortRecords",
