@@ -20,6 +20,7 @@ sass/
 workspace.json
 .arch-internal-preview.css
 .architect
+.env
 .idea
 .sencha
 /node_modules/
