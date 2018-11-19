@@ -8,8 +8,8 @@
     "userConfig": {
         "container|align": "center",
         "designer|initialView": true,
-        "designer|userAlias": "octoapp",
-        "designer|userClassName": "OctoApp",
+        "designer|userAlias": "octo.main",
+        "designer|userClassName": "octo.main",
         "layout": "vbox",
         "style": "background: #fff"
     },
