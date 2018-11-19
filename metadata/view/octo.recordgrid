@@ -732,41 +732,6 @@
             },
             "name": "MyColumn",
             "designerId": "607dd7fc-1864-44b6-985d-01d529365c48"
-        },
-        {
-            "type": "basiceventbinding",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onRecordGridRowClick",
-                "implHandler": [
-                    "const app = StunningOctoPancake.app;",
-                    "const controller = app.getOctoPancakeControlController();",
-                    "const geocoder = new google.maps.Geocoder();",
-                    "const map = app.Map;",
-                    "const mapped = app.Mapped;",
-                    "const markers = app.Markers;",
-                    "",
-                    "if (record.data.Lat && record.data.Long && mapped) {",
-                    "    controller.geocodeLatLng(record.data, geocoder, map, markers, controller, rowIndex);",
-                    "} else if (mapped) {",
-                    "    Ext.MessageBox.alert(\"noResults\", `No results found for: \"${record.data.Name}\"`);",
-                    "}"
-                ],
-                "name": "rowclick",
-                "scope": "me"
-            },
-            "configAlternates": {
-                "fn": "string",
-                "name": "string",
-                "scope": "string",
-                "implHandler": "code"
-            },
-            "name": "onRecordGridRowClick",
-            "designerId": "272a9acc-34ae-48c1-9f74-23a4086f1e63"
         }
     ]
 }

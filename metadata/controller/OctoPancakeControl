@@ -1323,6 +1323,54 @@
             },
             "name": "errorFn",
             "designerId": "c08e145f-667e-499c-9ec2-ee93e3e985e1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#recordGrid",
+                "designer|params": [
+                    "tableview",
+                    "record",
+                    "element",
+                    "rowIndex",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "octo.recordgrid",
+                "fn": "onRecordGridRowClick",
+                "implHandler": [
+                    "const app = StunningOctoPancake.app;",
+                    "const controller = app.getOctoPancakeControlController();",
+                    "const geocoder = new google.maps.Geocoder();",
+                    "const map = app.Map;",
+                    "const mapped = app.Mapped;",
+                    "const markers = app.Markers;",
+                    "",
+                    "if (record.data.Lat && record.data.Long && mapped) {",
+                    "    controller.geocodeLatLng(record.data, geocoder, map, markers, controller, rowIndex);",
+                    "} else if (mapped) {",
+                    "    Ext.MessageBox.alert(\"noResults\", `No results found for: \"${record.data.Name}\"`);",
+                    "}"
+                ],
+                "name": "rowclick",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "name": "string",
+                "scope": "string",
+                "implHandler": "code",
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view"
+            },
+            "name": "onRecordGridRowClick",
+            "designerId": "5c400bc3-7341-4649-a8e0-a9d38d4a50d0"
         }
     ]
 }
