@@ -1371,6 +1371,150 @@
             },
             "name": "onRecordGridRowClick",
             "designerId": "5c400bc3-7341-4649-a8e0-a9d38d4a50d0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#Long",
+                "designer|params": [
+                    "ct",
+                    "column",
+                    "e",
+                    "t",
+                    "eOpts"
+                ],
+                "designer|targetType": "MyColumn11",
+                "fn": "onLongHeaderClick",
+                "implHandler": [
+                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                ],
+                "name": "headerclick",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string",
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view"
+            },
+            "name": "onLongHeaderClick",
+            "designerId": "da640c89-217c-4887-8f56-f6e261c4354e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#Lat",
+                "designer|params": [
+                    "ct",
+                    "column",
+                    "e",
+                    "t",
+                    "eOpts"
+                ],
+                "designer|targetType": "MyColumn10",
+                "fn": "onLatHeaderClick",
+                "implHandler": [
+                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                ],
+                "name": "headerclick",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string",
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view"
+            },
+            "name": "onLatHeaderClick",
+            "designerId": "4ba392b2-3f86-498b-82e5-c7ce95d56cc0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#Creation_Date",
+                "designer|params": [
+                    "ct",
+                    "column",
+                    "e",
+                    "t",
+                    "eOpts"
+                ],
+                "designer|targetType": "MyColumn9",
+                "fn": "onCreationDateHeaderClick",
+                "implHandler": [
+                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                ],
+                "name": "headerclick",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string",
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view"
+            },
+            "name": "onCreationDateHeaderClick",
+            "designerId": "fad960e3-651a-47cc-bfa2-28e94bed2dad"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#Property_Owner",
+                "designer|params": [
+                    "ct",
+                    "column",
+                    "e",
+                    "t",
+                    "eOpts"
+                ],
+                "designer|targetType": "MyColumn8",
+                "fn": "onPropertyOwnerHeaderClick",
+                "implHandler": [
+                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                ],
+                "name": "headerclick",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string",
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view"
+            },
+            "name": "onPropertyOwnerHeaderClick",
+            "designerId": "18da3c70-755f-4584-b0fc-d70a31876259"
         }
     ]
 }

@@ -505,33 +505,7 @@
                 "id": "string"
             },
             "name": "MyColumn8",
-            "designerId": "860803c8-5c76-4a9c-8d01-55d6f6fb0081",
-            "cn": [
-                {
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fn": "onPropertyOwnerHeaderClick",
-                        "implHandler": [
-                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
-                        ],
-                        "name": "headerclick",
-                        "scope": "me"
-                    },
-                    "configAlternates": {
-                        "fn": "string",
-                        "implHandler": "code",
-                        "name": "string",
-                        "scope": "string"
-                    },
-                    "name": "onPropertyOwnerHeaderClick",
-                    "designerId": "d9526013-d08b-4f46-ac57-64c8b1cd9077"
-                }
-            ]
+            "designerId": "860803c8-5c76-4a9c-8d01-55d6f6fb0081"
         },
         {
             "type": "Ext.grid.column.Column",
@@ -556,30 +530,6 @@
             "name": "MyColumn9",
             "designerId": "77fdfeb7-f698-438b-b643-52de8b96ac2e",
             "cn": [
-                {
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fn": "onCreationDateHeaderClick",
-                        "implHandler": [
-                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
-                        ],
-                        "name": "headerclick",
-                        "scope": "me"
-                    },
-                    "configAlternates": {
-                        "fn": "string",
-                        "implHandler": "code",
-                        "name": "string",
-                        "scope": "string"
-                    },
-                    "name": "onCreationDateHeaderClick",
-                    "designerId": "1a4e449d-9f74-4afd-9a53-9ad5179c5abc"
-                },
                 {
                     "type": "fixedfunction",
                     "reference": {
@@ -633,33 +583,7 @@
                 "id": "string"
             },
             "name": "MyColumn10",
-            "designerId": "cd33d38e-51bf-448d-b7cd-697ba89c8a72",
-            "cn": [
-                {
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fn": "onLatHeaderClick",
-                        "implHandler": [
-                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
-                        ],
-                        "name": "headerclick",
-                        "scope": "me"
-                    },
-                    "configAlternates": {
-                        "fn": "string",
-                        "implHandler": "code",
-                        "name": "string",
-                        "scope": "string"
-                    },
-                    "name": "onLatHeaderClick",
-                    "designerId": "c8b737c1-8643-47d5-b85c-a07b5963356e"
-                }
-            ]
+            "designerId": "cd33d38e-51bf-448d-b7cd-697ba89c8a72"
         },
         {
             "type": "Ext.grid.column.Column",
@@ -683,33 +607,7 @@
                 "id": "string"
             },
             "name": "MyColumn11",
-            "designerId": "9f86dff1-8697-49b8-a1df-717c9e4f4b3f",
-            "cn": [
-                {
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fn": "onLongHeaderClick",
-                        "implHandler": [
-                            "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
-                        ],
-                        "name": "headerclick",
-                        "scope": "me"
-                    },
-                    "configAlternates": {
-                        "fn": "string",
-                        "implHandler": "code",
-                        "name": "string",
-                        "scope": "string"
-                    },
-                    "name": "onLongHeaderClick",
-                    "designerId": "cc38c612-1edd-4794-baa6-36c2a7a93dea"
-                }
-            ]
+            "designerId": "9f86dff1-8697-49b8-a1df-717c9e4f4b3f"
         },
         {
             "type": "Ext.grid.column.Column",
