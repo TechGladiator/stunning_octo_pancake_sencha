@@ -6,10 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "ImportRecords"
+        "designer|userAlias": "octo.recordsmodel",
+        "designer|userClassName": "octo.RecordsModel"
     },
     "configAlternates": {
-        "designer|userClassName": "string"
+        "designer|userClassName": "string",
+        "designer|userAlias": "string"
     },
     "name": "MyModel",
     "designerId": "5e79265a-765a-4896-9a82-ef240dba9fb7",

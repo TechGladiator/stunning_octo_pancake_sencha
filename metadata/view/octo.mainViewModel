@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "octoapp",
-        "designer|userClassName": "OctoAppViewModel"
+        "designer|userAlias": "octo.main",
+        "designer|userClassName": "octo.mainViewModel"
     },
     "configAlternates": {
         "designer|userAlias": "string",
