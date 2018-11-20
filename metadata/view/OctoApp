@@ -1,5 +1,5 @@
 {
-    "type": "Ext.panel.Panel",
+    "type": "Ext.container.Viewport",
     "reference": {
         "name": "items",
         "type": "array"
@@ -21,7 +21,6 @@
         "layout": "string",
         "style": "string"
     },
-    "name": "MyPanel",
     "designerId": "26070311-99ce-4c40-bf7b-d751da9f9bf1",
     "viewControllerInstanceId": "d3037051-9908-4de4-850d-a984895c2d73",
     "viewModelInstanceId": "d0b32597-462e-4bb0-bd91-6fbb2213926d",
