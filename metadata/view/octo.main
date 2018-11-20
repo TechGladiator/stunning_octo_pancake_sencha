@@ -860,14 +860,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "hidden": true,
                 "layout|flex": 1
             },
             "configAlternates": {
-                "hidden": "boolean",
                 "layout|flex": "number"
             },
-            "name": "octo.importgridpanel",
+            "name": "octo.importgrid1",
             "designerId": "14fe13fa-519b-4178-9731-62ce35c6887f",
             "masterInstanceId": "7fb1dea4-2e65-4c8f-b9d1-07df9990bff0"
         },

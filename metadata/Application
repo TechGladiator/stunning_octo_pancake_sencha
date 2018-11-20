@@ -48,8 +48,7 @@
         "title": "Stunning Octo Pancake",
         "views": [
             "octo.main",
-            "octo.importgridpanel",
-            "octo.recordgrid"
+            "octo.importgrid"
         ]
     },
     "configAlternates": {
