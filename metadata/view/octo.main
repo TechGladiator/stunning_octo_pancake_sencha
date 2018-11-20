@@ -917,7 +917,7 @@
                         "frame": true,
                         "id": "editRecordGrid",
                         "sortableColumns": false,
-                        "store": "RecordDataStore",
+                        "store": "octo.RecordDS",
                         "titleAlign": "center",
                         "width": 1332
                     },

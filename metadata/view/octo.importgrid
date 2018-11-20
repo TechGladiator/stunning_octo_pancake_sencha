@@ -44,7 +44,7 @@
                 "frame": true,
                 "id": "recordGrid",
                 "sortableColumns": false,
-                "store": "RecordDataStore",
+                "store": "octo.RecordDS",
                 "titleAlign": "center",
                 "width": 1332
             },
