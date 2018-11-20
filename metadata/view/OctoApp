@@ -169,7 +169,7 @@
                             "viewModelInstanceId": "175da306-7477-44a7-a8e2-187cf5ca359c",
                             "cn": [
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -232,7 +232,7 @@
                             "viewModelInstanceId": "c91f783e-6325-4ccc-b3a7-e36935c341a9",
                             "cn": [
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -362,7 +362,7 @@
                             "designerId": "a0372666-68e8-40dd-b8d1-e59dab4f0fd6",
                             "cn": [
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -507,7 +507,7 @@
                     "viewModelInstanceId": "6c6e5a0f-ee91-4a2f-83fe-face38fcb619",
                     "cn": [
                         {
-                            "type": "viewcontrollereventbinding",
+                            "type": "basiceventbinding",
                             "reference": {
                                 "name": "listeners",
                                 "type": "array"
@@ -557,7 +557,7 @@
                     "designerId": "d32b3e38-78f7-4b3f-9ee6-edb11c4afefa",
                     "cn": [
                         {
-                            "type": "viewcontrollereventbinding",
+                            "type": "basiceventbinding",
                             "reference": {
                                 "name": "listeners",
                                 "type": "array"
@@ -618,7 +618,7 @@
                     "designerId": "f53a8126-64e1-4726-a04a-12e191d7d4ad",
                     "cn": [
                         {
-                            "type": "viewcontrollereventbinding",
+                            "type": "basiceventbinding",
                             "reference": {
                                 "name": "listeners",
                                 "type": "array"
@@ -675,7 +675,7 @@
                     "viewModelInstanceId": "ba0549fe-59d8-46f0-91e8-be76e22a7886",
                     "cn": [
                         {
-                            "type": "viewcontrollereventbinding",
+                            "type": "basiceventbinding",
                             "reference": {
                                 "name": "listeners",
                                 "type": "array"
@@ -728,7 +728,7 @@
                     "viewModelInstanceId": "969983b7-ec78-4946-a364-1144297bdaaf",
                     "cn": [
                         {
-                            "type": "viewcontrollereventbinding",
+                            "type": "basiceventbinding",
                             "reference": {
                                 "name": "listeners",
                                 "type": "array"
@@ -784,7 +784,7 @@
                     "viewModelInstanceId": "6a8df97b-2d84-4ff7-a376-07a1da99ff65",
                     "cn": [
                         {
-                            "type": "viewcontrollereventbinding",
+                            "type": "basiceventbinding",
                             "reference": {
                                 "name": "listeners",
                                 "type": "array"
@@ -953,7 +953,7 @@
                             "designerId": "64e64ac9-5264-43bd-bb8c-23e7680e5195",
                             "cn": [
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -1001,7 +1001,7 @@
                             "designerId": "7e96ff3a-4187-4144-93ae-c7a3649be7ba",
                             "cn": [
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -1049,7 +1049,7 @@
                             "designerId": "30df300c-f823-4f26-a07b-f1dabf3d3edd",
                             "cn": [
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -1095,7 +1095,7 @@
                             "designerId": "940ebe27-86b5-4b8d-9a1d-6e41aeaccda1",
                             "cn": [
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -1141,7 +1141,7 @@
                             "designerId": "af936e4f-1cbd-4eb0-a54b-87fe86896451",
                             "cn": [
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -1205,7 +1205,6 @@
                                             "store",
                                             "view"
                                         ],
-                                        "designer|viewControllerFn": "stateRenderer",
                                         "fn": "renderer",
                                         "implHandler": [
                                             "StunningOctoPancake.app.getOctoPancakeControlController().validateState(value, metaData);",
@@ -1222,7 +1221,7 @@
                                     "designerId": "e88ffc76-999a-4198-ae01-30de1f421560"
                                 },
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -1286,7 +1285,6 @@
                                             "store",
                                             "view"
                                         ],
-                                        "designer|viewControllerFn": "zipRenderer",
                                         "fn": "renderer",
                                         "implHandler": [
                                             "StunningOctoPancake.app.getOctoPancakeControlController().validateZip(value, metaData);",
@@ -1303,7 +1301,7 @@
                                     "designerId": "81244c32-5eed-43f1-9ac0-08f09422334e"
                                 },
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -1349,7 +1347,7 @@
                             "designerId": "3bf0759e-265d-4b88-a008-7b680e6259b4",
                             "cn": [
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -1397,7 +1395,7 @@
                             "designerId": "860803c8-5c76-4a9c-8d01-55d6f6fb0081",
                             "cn": [
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -1462,7 +1460,6 @@
                                             "store",
                                             "view"
                                         ],
-                                        "designer|viewControllerFn": "dateRenderer",
                                         "fn": "renderer",
                                         "implHandler": [
                                             "StunningOctoPancake.app.getOctoPancakeControlController().validateDate(value, metaData);",
@@ -1479,7 +1476,7 @@
                                     "designerId": "12564182-501f-4fa4-bb3a-e38c0a184116"
                                 },
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -1527,7 +1524,7 @@
                             "designerId": "cd33d38e-51bf-448d-b7cd-697ba89c8a72",
                             "cn": [
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -1577,7 +1574,7 @@
                             "designerId": "9f86dff1-8697-49b8-a1df-717c9e4f4b3f",
                             "cn": [
                                 {
-                                    "type": "viewcontrollereventbinding",
+                                    "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
                                         "type": "array"
@@ -1625,7 +1622,7 @@
                             "designerId": "607dd7fc-1864-44b6-985d-01d529365c48"
                         },
                         {
-                            "type": "viewcontrollereventbinding",
+                            "type": "basiceventbinding",
                             "reference": {
                                 "name": "listeners",
                                 "type": "array"
@@ -1800,7 +1797,6 @@
                                                     "record",
                                                     "row"
                                                 ],
-                                                "designer|viewControllerFn": "deleteRecordHandler",
                                                 "fn": "handler",
                                                 "implHandler": [
                                                     "const app = StunningOctoPancake.app;",
@@ -2043,7 +2039,6 @@
                                             "store",
                                             "view"
                                         ],
-                                        "designer|viewControllerFn": "editStateRenderer",
                                         "fn": "renderer",
                                         "implHandler": [
                                             "StunningOctoPancake.app.getOctoPancakeControlController().validateState(value, metaData);",
@@ -2114,7 +2109,6 @@
                                             "store",
                                             "view"
                                         ],
-                                        "designer|viewControllerFn": "editZipRenderer",
                                         "fn": "renderer",
                                         "implHandler": [
                                             "StunningOctoPancake.app.getOctoPancakeControlController().validateZip(value, metaData);",
@@ -2260,7 +2254,6 @@
                                             "store",
                                             "view"
                                         ],
-                                        "designer|viewControllerFn": "editDateRenderer",
                                         "fn": "renderer",
                                         "implHandler": [
                                             "StunningOctoPancake.app.getOctoPancakeControlController().validateDate(value, metaData);",
