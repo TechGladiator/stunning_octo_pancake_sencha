@@ -39,16 +39,15 @@
             "OctoPancakeControl"
         ],
         "models": [
-            "octo.RecordsModel"
+            "ImportRecords"
         ],
         "name": "StunningOctoPancake",
         "stores": [
-            "octo.RecordDS"
+            "RecordDataStore"
         ],
         "title": "Stunning Octo Pancake",
         "views": [
-            "octo.main",
-            "octo.importgrid"
+            "OctoApp"
         ]
     },
     "configAlternates": {

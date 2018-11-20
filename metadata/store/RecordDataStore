@@ -8,9 +8,9 @@
     "userConfig": {
         "autoLoad": true,
         "designer|userAlias": "recorddatastore",
-        "designer|userClassName": "octo.RecordDS",
-        "model": "octo.RecordsModel",
-        "storeId": "octo.RecordDS"
+        "designer|userClassName": "RecordDataStore",
+        "model": "ImportRecords",
+        "storeId": "RecordDataStore"
     },
     "configAlternates": {
         "autoLoad": "boolean",
