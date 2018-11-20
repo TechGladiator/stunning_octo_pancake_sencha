@@ -8,7 +8,6 @@
     "userConfig": {
         "designer|userAlias": "octo.importgrid",
         "designer|userClassName": "octo.importgrid",
-        "hidden": true,
         "id": "importFileName",
         "margin": "48 0 32",
         "title": "title",
