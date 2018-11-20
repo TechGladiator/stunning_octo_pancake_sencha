@@ -6,8 +6,8 @@
             "cmdVersion": "6.5.0.180",
             "frameworkVersion": "6.5.0.775"
         },
-        "urlPrefixTemplate": "http://localhost:3000/{path}",
-        "urlPrefix": "http://localhost:3000/",
+        "urlPrefixTemplate": "http://localhost:8080/{path}",
+        "urlPrefix": "http://localhost:8080/",
         "canvasControls": {
             "viewportSize": {
                 "name": "Auto Expand",
