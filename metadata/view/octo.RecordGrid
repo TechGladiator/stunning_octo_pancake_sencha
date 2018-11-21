@@ -7,12 +7,22 @@
     "codeClass": null,
     "userConfig": {
         "designer|userAlias": "octo.recordgrid",
-        "designer|userClassName": "octo.RecordGrid"
+        "designer|userClassName": "octo.RecordGrid",
+        "id": "importFileName1",
+        "margin": "48 0 32",
+        "title": "title",
+        "titleAlign": "center",
+        "width": 1332
     },
     "configAlternates": {
         "designer|userClassName": "string",
         "extend": "string",
-        "designer|userAlias": "string"
+        "designer|userAlias": "string",
+        "id": "string",
+        "margin": "auto",
+        "title": "string",
+        "titleAlign": "string",
+        "width": "auto"
     },
     "designerId": "905940e6-4055-4f48-b63a-f8ed1d117fdc",
     "viewControllerInstanceId": "bde29fc6-3d20-4462-80ba-c0a03f37dd3a",
