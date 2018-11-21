@@ -7,7 +7,7 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": true,
-        "designer|userAlias": "recorddatastore",
+        "designer|userAlias": "octo.recordds",
         "designer|userClassName": "octo.RecordDS",
         "model": "octo.RecordModel",
         "storeId": "octo.RecordDS"
