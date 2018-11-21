@@ -852,6 +852,25 @@
             ]
         },
         {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "hidden": "boolean",
+                "layout|flex": "number"
+            },
+            "name": "octo.recordgrid",
+            "designerId": "78268580-9fb5-4697-b642-45e228386f78",
+            "masterInstanceId": "905940e6-4055-4f48-b63a-f8ed1d117fdc"
+        },
+        {
             "type": "Ext.panel.Panel",
             "reference": {
                 "name": "items",
