@@ -794,7 +794,7 @@
                                 "implHandler": [
                                     "const app = StunningOctoPancake.app;",
                                     "const importGrid = Ext.getCmp('importFileName');",
-                                    "const importStore = Ext.StoreMgr.get('RecordDataStore');",
+                                    "const importStore = Ext.StoreMgr.get('octo.RecordDS');",
                                     "",
                                     "importStore.clearData();",
                                     "app.ErrorCount = 0;",
