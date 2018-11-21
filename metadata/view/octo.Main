@@ -8,8 +8,8 @@
     "userConfig": {
         "container|align": "center",
         "designer|initialView": true,
-        "designer|userAlias": "octoapp",
-        "designer|userClassName": "OctoApp",
+        "designer|userAlias": "octo.main",
+        "designer|userClassName": "octo.Main",
         "layout": "vbox",
         "style": "background: #fff"
     },
@@ -897,7 +897,7 @@
                         "frame": true,
                         "id": "recordGrid",
                         "sortableColumns": false,
-                        "store": "RecordDataStore",
+                        "store": "octo.RecordDS",
                         "titleAlign": "center",
                         "width": 1332
                     },
@@ -1705,7 +1705,7 @@
                         "frame": true,
                         "id": "editRecordGrid",
                         "sortableColumns": false,
-                        "store": "RecordDataStore",
+                        "store": "octo.RecordDS",
                         "titleAlign": "center",
                         "width": 1332
                     },
