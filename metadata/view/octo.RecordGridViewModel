@@ -1,17 +1,17 @@
 {
-    "type": "Ext.app.ViewController",
+    "type": "Ext.app.ViewModel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "octoapp",
-        "designer|userClassName": "OctoAppViewController"
+        "designer|userAlias": "octo.recordgrid",
+        "designer|userClassName": "octo.RecordGridViewModel"
     },
     "configAlternates": {
         "designer|userAlias": "string",
         "designer|userClassName": "string"
     },
-    "designerId": "d3037051-9908-4de4-850d-a984895c2d73"
+    "designerId": "f45efc5c-20b3-400f-8a21-4088851662d5"
 }
