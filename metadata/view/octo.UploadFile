@@ -1,0 +1,170 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "middle",
+        "designer|userAlias": "octo.uploadfile",
+        "designer|userClassName": "octo.UploadFile",
+        "layout": "hbox",
+        "title": "Upload File"
+    },
+    "configAlternates": {
+        "title": "string",
+        "container|align": "string",
+        "layout": "string",
+        "bodyPadding": "auto",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyPanel1",
+    "designerId": "c4c52f60-3d40-42a9-ab4e-16cd6ec406d5",
+    "viewControllerInstanceId": "132808aa-17e2-45d1-a5ff-3bbb4fb51bcd",
+    "viewModelInstanceId": "419987bc-7277-4c48-892e-6e2bc739b063",
+    "cn": [
+        {
+            "type": "Ext.form.field.File",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Choose CSV File:",
+                "id": "chooseCSVFile",
+                "labelWidth": 110,
+                "layout|flex": null,
+                "maxWidth": 680,
+                "width": "100%"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|flex": "number",
+                "labelWidth": "number",
+                "maxWidth": "number",
+                "width": "auto",
+                "designer|userAlias": "string",
+                "designer|userClassName": "string",
+                "id": "string"
+            },
+            "name": "MyFileUpload",
+            "designerId": "5235c364-e1bd-44f8-8c6d-d2111bd05970",
+            "viewControllerInstanceId": "1999b923-d265-4fbe-929f-da027c46e5e9",
+            "viewModelInstanceId": "175da306-7477-44a7-a8e2-187cf5ca359c",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|commentHeader": [
+                            "remove 'C:\\fakepath\\' and set filename"
+                        ],
+                        "fn": "onChooseCSVFileChange",
+                        "implHandler": [
+                            "let filename = $(\"#chooseCSVFile-inputEl\").val();",
+                            "filename = filename.substring(filename.lastIndexOf(\"\\\\\") + 1);",
+                            "if (filename !== \"\") {",
+                            "    $(\"#chooseCSVFile-inputEl\").val(filename);",
+                            "}",
+                            "StunningOctoPancake.app.Filename = filename;"
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "designer|commentHeader": "comment",
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onChooseCSVFileChange",
+                    "designerId": "894572d4-840c-4e8b-ae51-9179ecb37c68"
+                }
+            ]
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "submitButton",
+                "layout|flex": 1,
+                "margin": "0 0 0 10",
+                "text": "Submit"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "layout|flex": "number",
+                "margin": "auto",
+                "maxWidth": "number",
+                "text": "string",
+                "designer|userAlias": "string",
+                "designer|userClassName": "string",
+                "id": "string"
+            },
+            "name": "MyButton",
+            "designerId": "f1afc6df-5145-4287-b619-8898265559bb",
+            "viewControllerInstanceId": "df782098-3105-485d-ad35-8515a16d73c3",
+            "viewModelInstanceId": "c91f783e-6325-4ccc-b3a7-e36935c341a9",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onSubmitButtonClick",
+                        "implHandler": [
+                            "const controller = StunningOctoPancake.app.getOctoPancakeControlController();",
+                            "",
+                            "if (!$(\"#chooseCSVFile-button-fileInputEl\")[0].files.length) {",
+                            "    Ext.MessageBox.alert(\"No File Chosen\", \"Please choose at least one file to parse.\");",
+                            "    return;",
+                            "}",
+                            "",
+                            "const file = document.getElementById(\"chooseCSVFile-button-fileInputEl\").files[0];",
+                            "",
+                            "Papa.parse(file, {",
+                            "    // base config to use for each file",
+                            "    delimiter: \"\",",
+                            "    header: true,",
+                            "    dynamicTyping: false,",
+                            "    skipEmptyLines: true,",
+                            "    preview: 0,",
+                            "    step: undefined,",
+                            "    encoding: \"\",",
+                            "    worker: false,",
+                            "    comments: false,",
+                            "    complete: controller.completeFn,",
+                            "    error: controller.errorFn",
+                            "});"
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onSubmitButtonClick",
+                    "designerId": "e0deb1ca-e873-473f-b4e6-c3c35dce1cad"
+                }
+            ]
+        }
+    ]
+}
