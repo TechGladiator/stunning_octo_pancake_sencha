@@ -868,22 +868,810 @@
                     ]
                 },
                 {
-                    "type": "linkedinstance",
+                    "type": "Ext.panel.Panel",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "hidden": true
+                        "hidden": true,
+                        "id": "importFileName",
+                        "margin": "48 0 32",
+                        "title": "title",
+                        "titleAlign": "center",
+                        "width": 1332
                     },
                     "configAlternates": {
-                        "hidden": "boolean",
-                        "layout|flex": "number"
+                        "designer|userClassName": "string",
+                        "extend": "string",
+                        "designer|userAlias": "string",
+                        "id": "string",
+                        "margin": "auto",
+                        "title": "string",
+                        "titleAlign": "string",
+                        "width": "auto",
+                        "hidden": "boolean"
                     },
-                    "name": "octo.recordgrid",
-                    "designerId": "78268580-9fb5-4697-b642-45e228386f78",
-                    "masterInstanceId": "905940e6-4055-4f48-b63a-f8ed1d117fdc"
+                    "name": "MyPanel6",
+                    "designerId": "acf390d5-6d93-46e6-ac0a-73b7c2eb6072",
+                    "viewControllerInstanceId": "bde29fc6-3d20-4462-80ba-c0a03f37dd3a",
+                    "viewModelInstanceId": "f45efc5c-20b3-400f-8a21-4088851662d5",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|uiInterfaceName": "default-framed",
+                                "enableColumnHide": false,
+                                "frame": true,
+                                "id": "recordGrid",
+                                "sortableColumns": false,
+                                "store": "octo.RecordDS",
+                                "titleAlign": "center",
+                                "width": 1332
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number",
+                                "title": "string",
+                                "designer|uiInterfaceName": "string",
+                                "frame": "boolean",
+                                "margin": "auto",
+                                "titleAlign": "string",
+                                "width": "auto",
+                                "store": "store",
+                                "designer|userAlias": "string",
+                                "designer|userClassName": "string",
+                                "enableColumnHide": "boolean",
+                                "id": "string",
+                                "sortableColumns": "boolean"
+                            },
+                            "name": "MyGridPanel",
+                            "designerId": "51cf9bf8-b9bd-43bc-b7ee-0cc054f38af0",
+                            "viewControllerInstanceId": "c0c1dd17-d795-46c2-9eb4-0736df13fd9a",
+                            "viewModelInstanceId": "a73ddd39-5556-488d-aab9-92fe3071e149",
+                            "cn": [
+                                {
+                                    "type": "Ext.view.Table",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTable",
+                                    "designerId": "483cd37a-5457-469b-ac0b-9fb93de65601"
+                                },
+                                {
+                                    "type": "Ext.grid.column.RowNumberer",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "RowNumber",
+                                        "id": "id"
+                                    },
+                                    "configAlternates": {
+                                        "text": "string",
+                                        "designer|displayName": "string",
+                                        "width": "number",
+                                        "id": "string"
+                                    },
+                                    "name": "MyRowNumberer",
+                                    "designerId": "48504c1c-4bd0-4315-b6dc-ca20d94e2107",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onRownumbererHeaderClick",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                                ],
+                                                "name": "headerclick",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onRownumbererHeaderClick",
+                                            "designerId": "98aa4149-47e5-4435-9b2e-efa7f457c4a5"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "Name",
+                                        "id": "Name",
+                                        "text": "Name",
+                                        "width": 170
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "text": "string",
+                                        "width": "auto",
+                                        "id": "string"
+                                    },
+                                    "name": "MyColumn1",
+                                    "designerId": "31886a89-2626-4d21-9a8d-16ec422c613d",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onNameHeaderClick",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                                ],
+                                                "name": "headerclick",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onNameHeaderClick",
+                                            "designerId": "f36b7a64-9ae1-4421-9135-8f3ad348fd1e"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "Address",
+                                        "id": "Address",
+                                        "text": "Address",
+                                        "width": 190
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "text": "string",
+                                        "width": "auto",
+                                        "id": "string"
+                                    },
+                                    "name": "MyColumn2",
+                                    "designerId": "8ecb35d3-cc9b-4b62-82ea-4f09eb51208a",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onAddressHeaderClick",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                                ],
+                                                "name": "headerclick",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onAddressHeaderClick",
+                                            "designerId": "dba7856b-147c-451e-bb33-fb833b966924"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "Address 2",
+                                        "id": "Address_2",
+                                        "text": "Address 2"
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "text": "string",
+                                        "id": "string"
+                                    },
+                                    "name": "MyColumn3",
+                                    "designerId": "041a3b99-a6bc-420e-aded-b72d39330ebd",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onAddress2HeaderClick",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                                ],
+                                                "name": "headerclick",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onAddress2HeaderClick",
+                                            "designerId": "d576ecbd-6cbb-4a6c-bded-d97064244b09"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "City",
+                                        "id": "City",
+                                        "text": "City"
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "text": "string",
+                                        "id": "string"
+                                    },
+                                    "name": "MyColumn4",
+                                    "designerId": "ad4ffb16-0177-4268-8171-38577f627d9b",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onCityHeaderClick",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                                ],
+                                                "name": "headerclick",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onCityHeaderClick",
+                                            "designerId": "cf006646-e8a2-4b7f-b3c8-57dd7bf0e97b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "State",
+                                        "id": "State",
+                                        "text": "State",
+                                        "width": 70
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "text": "string",
+                                        "width": "auto",
+                                        "id": "string"
+                                    },
+                                    "name": "MyColumn5",
+                                    "designerId": "3339413d-4473-4267-96d3-2be4ce319aa0",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value",
+                                                    "metaData",
+                                                    "record",
+                                                    "rowIndex",
+                                                    "colIndex",
+                                                    "store",
+                                                    "view"
+                                                ],
+                                                "fn": "renderer",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().validateState(value, metaData);",
+                                                    "return value;"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "designer|viewControllerFn": "string",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "renderer",
+                                            "designerId": "ba0a8054-3fba-4637-aec2-d1ed55d9642d"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onStateHeaderClick",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                                ],
+                                                "name": "headerclick",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onStateHeaderClick",
+                                            "designerId": "f5f2026a-7f68-4b36-b388-e4cd56d8310c"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "Zip",
+                                        "id": "Zip",
+                                        "text": "Zip",
+                                        "width": 65
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "text": "string",
+                                        "width": "auto",
+                                        "id": "string"
+                                    },
+                                    "name": "MyColumn6",
+                                    "designerId": "2426f98e-4d21-43dd-84b6-d2958c66446e",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value",
+                                                    "metaData",
+                                                    "record",
+                                                    "rowIndex",
+                                                    "colIndex",
+                                                    "store",
+                                                    "view"
+                                                ],
+                                                "fn": "renderer",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().validateZip(value, metaData);",
+                                                    "return value;"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "designer|viewControllerFn": "string",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "renderer",
+                                            "designerId": "51d14c04-bc13-46e7-9d89-14363c33ddf1"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onZipHeaderClick",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                                ],
+                                                "name": "headerclick",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onZipHeaderClick",
+                                            "designerId": "4af45025-824f-4071-828c-e1117ba75a44"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "Purpose",
+                                        "id": "Purpose",
+                                        "text": "Purpose"
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "text": "string",
+                                        "id": "string"
+                                    },
+                                    "name": "MyColumn7",
+                                    "designerId": "51796fb6-0c0d-40d3-95f4-c017798e7f73",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onPurposeHeaderClick",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                                ],
+                                                "name": "headerclick",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onPurposeHeaderClick",
+                                            "designerId": "e96b0940-6039-4334-b7b7-a375cc686a89"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "Property Owner",
+                                        "id": "Property_Owner",
+                                        "text": "Property Owner",
+                                        "width": 128
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "text": "string",
+                                        "width": "auto",
+                                        "id": "string"
+                                    },
+                                    "name": "MyColumn8",
+                                    "designerId": "6d9b9f80-f979-4c45-acdd-07b8cd127a48",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onPropertyOwnerHeaderClick",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                                ],
+                                                "name": "headerclick",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onPropertyOwnerHeaderClick",
+                                            "designerId": "c735e0ed-1b7d-40fb-87d2-cd060b95867b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "Creation Date",
+                                        "id": "Creation_Date",
+                                        "text": "Creation Date",
+                                        "width": 118
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "text": "string",
+                                        "width": "auto",
+                                        "formatter": "string",
+                                        "id": "string"
+                                    },
+                                    "name": "MyColumn9",
+                                    "designerId": "c8179654-5a84-44d3-aa5a-0649a581c42d",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value",
+                                                    "metaData",
+                                                    "record",
+                                                    "rowIndex",
+                                                    "colIndex",
+                                                    "store",
+                                                    "view"
+                                                ],
+                                                "fn": "renderer",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().validateDate(value, metaData);",
+                                                    "return value;"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "designer|viewControllerFn": "string",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "renderer",
+                                            "designerId": "dee0513c-13dd-4e19-ad64-edbbda557b17"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onCreationDateHeaderClick",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                                ],
+                                                "name": "headerclick",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onCreationDateHeaderClick",
+                                            "designerId": "46a28ca5-b3c5-4e9c-b603-1ab438d3e09e"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "Lat",
+                                        "hidden": true,
+                                        "id": "Lat",
+                                        "text": "Lat"
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "text": "string",
+                                        "hidden": "boolean",
+                                        "id": "string"
+                                    },
+                                    "name": "MyColumn10",
+                                    "designerId": "dfb08237-59ed-4f3c-920c-2045ba1a8b52",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onLatHeaderClick",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                                ],
+                                                "name": "headerclick",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onLatHeaderClick",
+                                            "designerId": "71a19129-3581-4368-abdb-ac0281c3a80c"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "Long",
+                                        "hidden": true,
+                                        "id": "Long",
+                                        "text": "Long",
+                                        "width": 155
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "text": "string",
+                                        "width": "auto",
+                                        "hidden": "boolean",
+                                        "id": "string"
+                                    },
+                                    "name": "MyColumn11",
+                                    "designerId": "acfc1c90-6e48-40a2-84e3-312a599d4d1b",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onLongHeaderClick",
+                                                "implHandler": [
+                                                    "StunningOctoPancake.app.getOctoPancakeControlController().sortRecords(column.id);"
+                                                ],
+                                                "name": "headerclick",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onLongHeaderClick",
+                                            "designerId": "6f789839-f625-45a3-b9d6-cb3bba0637d9"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "__parsed_extra",
+                                        "hidden": true,
+                                        "id": "extra",
+                                        "text": "__parsed_extra"
+                                    },
+                                    "configAlternates": {
+                                        "text": "string",
+                                        "dataIndex": "datafield",
+                                        "hidden": "boolean",
+                                        "id": "string"
+                                    },
+                                    "name": "MyColumn",
+                                    "designerId": "48170dff-e4dd-438c-a12d-5b52df379351"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRecordGridRowClick",
+                                        "implHandler": [
+                                            "const app = StunningOctoPancake.app;",
+                                            "const controller = app.getOctoPancakeControlController();",
+                                            "const geocoder = new google.maps.Geocoder();",
+                                            "const map = app.Map;",
+                                            "const mapped = app.Mapped;",
+                                            "const markers = app.Markers;",
+                                            "",
+                                            "if (record.data.Lat && record.data.Long && mapped) {",
+                                            "    controller.geocodeLatLng(record.data, geocoder, map, markers, controller, rowIndex);",
+                                            "} else if (mapped) {",
+                                            "    Ext.MessageBox.alert(\"noResults\", `No results found for: \"${record.data.Name}\"`);",
+                                            "}"
+                                        ],
+                                        "name": "rowclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "name": "string",
+                                        "scope": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "onRecordGridRowClick",
+                                    "designerId": "7a373d20-7889-4b87-a102-c197feded2fe"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.panel.Panel",
