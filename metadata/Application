@@ -47,7 +47,8 @@
         ],
         "title": "Stunning Octo Pancake",
         "views": [
-            "octo.Main"
+            "octo.Main",
+            "octo.pancake"
         ]
     },
     "configAlternates": {
