@@ -35,9 +35,6 @@
         ],
         "RowCount": 0,
         "SortASC": true,
-        "controllers": [
-            "OctoPancakeControl"
-        ],
         "models": [
             "octo.RecordModel"
         ],
