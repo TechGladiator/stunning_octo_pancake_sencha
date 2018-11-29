@@ -6,35 +6,6 @@
     },
     "codeClass": null,
     "userConfig": {
-        "ErrorCount": 0,
-        "FieldData": [
-            "`undefined`"
-        ],
-        "FieldErrors": [
-            "`undefined`"
-        ],
-        "FieldNames": [
-            "`undefined`"
-        ],
-        "Filename": "`undefined`",
-        "FirstError": [
-            "`undefined`"
-        ],
-        "FromDB": false,
-        "FullResults": [
-            "`undefined`"
-        ],
-        "InfoWindow": "`undefined`",
-        "Map": "`undefined`",
-        "Mapped": false,
-        "Markers": [
-            "[]"
-        ],
-        "Names": [
-            "[\"Name\",\"Address\",\"Address 2\",\"City\",\"State\",\"Zip\",\"Purpose\",\"Property Owner\",\"Creation Date\"]"
-        ],
-        "RowCount": 0,
-        "SortASC": true,
         "models": [
             "octo.RecordModel"
         ],
@@ -72,82 +43,5 @@
         "SortASC": "boolean"
     },
     "name": "Application",
-    "designerId": "application",
-    "customConfigs": [
-        {
-            "group": "(Custom Properties)",
-            "name": "ErrorCount",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "FieldData",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "FieldErrors",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "FieldNames",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "FirstError",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "FullResults",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "RowCount",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "Filename",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "Names",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "Map",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "InfoWindow",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "Markers",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "Mapped",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "FromDB",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "SortASC",
-            "type": "string"
-        }
-    ]
+    "designerId": "application"
 }

@@ -6,6 +6,37 @@
     },
     "codeClass": null,
     "userConfig": {
+        "ErrorCount": 0,
+        "FieldData": [
+            "`undefined`"
+        ],
+        "FieldErrors": [
+            "`undefined`"
+        ],
+        "FieldNames": [
+            "`undefined`"
+        ],
+        "Filename": "`undefined`",
+        "FirstError": [
+            "`undefined`"
+        ],
+        "FromDB": false,
+        "FullResults": [
+            "`undefined`"
+        ],
+        "InfoWindow": [
+            "`undefined`"
+        ],
+        "Map": "`undefined`",
+        "Mapped": false,
+        "Markers": [
+            "[]"
+        ],
+        "Names": [
+            "[\"Name\",\"Address\",\"Address 2\",\"City\",\"State\",\"Zip\",\"Purpose\",\"Property Owner\",\"Creation Date\"]"
+        ],
+        "RowCount": 0,
+        "SortASC": true,
         "container|align": "center",
         "designer|userAlias": "octo.pancake",
         "designer|userClassName": "octo.Pancake",
@@ -18,10 +49,102 @@
         "layout": "string",
         "scrollable": "auto",
         "designer|userAlias": "string",
-        "designer|userClassName": "string"
+        "designer|userClassName": "string",
+        "ErrorCount": "number",
+        "FieldData": "array",
+        "FieldErrors": "array",
+        "FieldNames": "array",
+        "FirstError": "object",
+        "FullResults": "object",
+        "RowCount": "number",
+        "Names": "array",
+        "InfoWindow": "object",
+        "Markers": "array",
+        "Mapped": "boolean",
+        "FromDB": "boolean",
+        "SortASC": "boolean",
+        "Filename": "string",
+        "Map": "string"
     },
     "name": "MyPanel3",
     "designerId": "16e2c03a-33f6-4a74-8aed-a2feb7f0a956",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "ErrorCount",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "FieldData",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "FieldErrors",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "FieldNames",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "Filename",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "FirstError",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "FullResults",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "RowCount",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "Names",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "Map",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "InfoWindow",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "Markers",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "Mapped",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "FromDB",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "SortASC",
+            "type": "string"
+        }
+    ],
     "viewControllerInstanceId": "9af0c4f0-6842-4f47-a162-04751f8d4c10",
     "viewModelInstanceId": "b8362711-5780-4fc0-a234-5f24162dc571",
     "cn": [
