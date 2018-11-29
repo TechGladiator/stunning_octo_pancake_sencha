@@ -308,7 +308,7 @@
                                             "if (filename !== \"\") {",
                                             "    $(\"#chooseCSVFile-inputEl\").val(filename);",
                                             "}",
-                                            "this.Filename = filename;"
+                                            "Ext.getCmp('octoPancake').Filename = filename;"
                                         ],
                                         "name": "change",
                                         "scope": "me"
@@ -1913,10 +1913,7 @@
                                                 ],
                                                 "fn": "handler",
                                                 "implHandler": [
-                                                    "const app = StunningOctoPancake.app;",
-                                                    "const controller = app.getOctoPancakeControlController();",
-                                                    "",
-                                                    "controller.deleteRecord(app.FieldData, rowIndex, app.ErrorCount, app.FieldErrors, controller, app.FirstError, app.FullResults, app.FromDB, app.Filename);"
+                                                    "this.deleteRecord(rowIndex);"
                                                 ]
                                             },
                                             "configAlternates": {
@@ -3307,7 +3304,7 @@
                     "        Ext.MessageBox.alert('Updated', 'Record Updated');",
                     "    },",
                     "    error: err => {",
-                    "        controller.ErrorResponse(err);",
+                    "        this.ErrorResponse(err);",
                     "    }",
                     "});"
                 ]
@@ -3329,47 +3326,37 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
-                    "fd",
-                    "row",
-                    "ec",
-                    "ferr",
-                    "controller",
-                    "fe",
-                    "fr",
-                    "fromDB",
-                    "file"
+                    "row"
                 ],
                 "fn": "deleteRecord",
                 "implHandler": [
-                    "const errorResponse = this.ErrorResponse;",
-                    "",
-                    "if (ec > 0) {",
-                    "    row = fe.row;",
-                    "    for (let i = 0; i < ferr.length; i++) {",
-                    "        ferr[i].row--;",
+                    "if (this.ErrorCount > 0) {",
+                    "    row = this.FirstError.row;",
+                    "    for (let i = 0; i < this.FieldErrors.length; i++) {",
+                    "        this.FieldErrors[i].row--;",
                     "    }",
-                    "    ferr.splice(0, 1);",
+                    "    this.FieldErrors.splice(0, 1);",
                     "}",
-                    "if (fromDB) {",
-                    "    const recordId = fd[row].id;",
-                    "    const importId = fd[row].import_id;",
+                    "if (this.FromDB) {",
+                    "    const recordId = this.FieldData[row].id;",
+                    "    const importId = this.FieldData[row].import_id;",
                     "    $.ajax({",
                     "        url: `/imports/${importId}/records/${recordId}`,",
                     "        type: \"delete\",",
                     "        success: res => {",
-                    "            fd.splice(row, 1);",
-                    "            controller.setView(fd, file);",
+                    "            this.FieldData.splice(row, 1);",
+                    "            this.setView(this.FieldData, this.Filename);",
                     "            // keep both grids from appearing after deleting a record",
                     "            Ext.getCmp('importFileName').hide();",
                     "            Ext.MessageBox.alert(\"Deleted\", \"Deleted Record.\");",
                     "        },",
                     "        error: err => {",
-                    "            errorResponse(err);",
+                    "            this.ErrorResponse(err);",
                     "        }",
                     "    });",
                     "} else {",
-                    "    fd.splice(row, 1);",
-                    "    controller.completeFn(fr);",
+                    "    this.FieldData.splice(row, 1);",
+                    "    this.completeFn(this.FullResults);",
                     "    // keep both grids from appearing after deleting a record",
                     "    Ext.getCmp('importFileName').hide();",
                     "}",
@@ -3547,25 +3534,19 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|params": [
-                    "fd",
-                    "ec",
-                    "fe",
-                    "file"
-                ],
                 "fn": "validateRowLengths",
                 "implHandler": [
-                    "if (ec > 0) {",
-                    "    const message = fe.message;",
-                    "    const row = fe.row;",
+                    "if (this.ErrorCount > 0) {",
+                    "    const message = this.FirstError.message;",
+                    "    const row = this.FirstError.row;",
                     "    Ext.MessageBox.alert(`Error`, `${message} in Row: ${row + 1}`);",
                     "    Ext.getCmp('mapData').hide();",
                     "    Ext.getCmp('repairNext').show();",
-                    "    this.setView([fd[row]], file);",
+                    "    this.setView([this.FieldData[row]], this.Filename);",
                     "} else {",
                     "    Ext.getCmp('mapData').show();",
                     "    Ext.getCmp('repairNext').hide();",
-                    "    this.setView(fd, file);",
+                    "    this.setView(this.FieldData, this.Filename);",
                     "}"
                 ]
             },
@@ -3587,9 +3568,7 @@
             "userConfig": {
                 "fn": "messageBoxOkButton",
                 "implHandler": [
-                    "const app = StunningOctoPancake.app;",
-                    "",
-                    "this.validateRowLengths(app.FieldData, app.ErrorCount, app.FirstError, app.Filename);"
+                    "this.validateRowLengths(this.FieldData, this.ErrorCount, this.FirstError, this.Filename);"
                 ]
             },
             "configAlternates": {
@@ -3607,26 +3586,18 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|params": [
-                    "fn",
-                    "n",
-                    "fd",
-                    "ec",
-                    "fe",
-                    "file"
-                ],
                 "fn": "validateFieldNames",
                 "implHandler": [
                     "let updated = false;",
                     "",
-                    "for (let i = 0; i < fn.length; i ++) {",
-                    "    const oldKey = fn[i];",
-                    "    fn[i] = n[i];",
-                    "    const newKey = fn[i];",
+                    "for (let i = 0; i < this.FieldNames.length; i ++) {",
+                    "    const oldKey = this.FieldNames[i];",
+                    "    this.FieldNames[i] = this.Names[i];",
+                    "    const newKey = this.FieldNames[i];",
                     "    if (oldKey != newKey) {",
                     "        let j = 0;",
-                    "        while (j < fd.length) {",
-                    "            const e = fd[j];",
+                    "        while (j < this.FieldData.length) {",
+                    "            const e = this.FieldData[j];",
                     "            e[newKey] = e[oldKey];",
                     "            delete e[oldKey];",
                     "            j++;",
@@ -3637,7 +3608,7 @@
                     "if (updated) {",
                     "    Ext.MessageBox.alert(`Update`, `Corrected invalid column names`, this.messageBoxOkButton, this);",
                     "} else {",
-                    "    this.validateRowLengths(fd, ec, fe, file);",
+                    "    this.validateRowLengths();",
                     "}"
                 ]
             },
@@ -3657,27 +3628,19 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|params": [
-                    "fn",
-                    "n",
-                    "fd",
-                    "ec",
-                    "fe",
-                    "file"
-                ],
                 "fn": "validateFieldLength",
                 "implHandler": [
-                    "if (fn.length != n.length) {",
+                    "if (this.FieldNames.length != this.Names.length) {",
                     "    console.log(\"header length is wrong\");",
                     "    let codeWord;",
-                    "    if (fn.length < n.length) {",
+                    "    if (this.FieldNames.length < this.Names.length) {",
                     "        codeWord = \"few\";",
                     "    } else {",
                     "        codeWord = \"many\";",
                     "    }",
-                    "    Ext.MessageBox.alert(`Too ${codeWord} fields`, `Expected ${n.length} fields but parsed ${fn.length} in \"${file}\", Row: 0. Header length errors must be corrected within file before further processing to prevent data loss.`);",
+                    "    Ext.MessageBox.alert(`Too ${codeWord} fields`, `Expected ${this.Names.length} fields but parsed ${this.FieldNames.length} in \"${this.Filename}\", Row: 0. Header length errors must be corrected within file before further processing to prevent data loss.`);",
                     "} else {",
-                    "    this.validateFieldNames(fn, n, fd, ec, fe, file);",
+                    "    this.validateFieldNames();",
                     "}"
                 ]
             },
@@ -3698,16 +3661,15 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
-                    "msg",
-                    "app"
+                    "msg"
                 ],
                 "fn": "printStats",
                 "implHandler": [
                     "console.log(msg);",
-                    "console.log(this.getApplication().FirstError || 'No column length errors');",
-                    "console.log(\"  Row count:\", app.RowCount);",
-                    "console.log(\"     Errors:\", app.ErrorCount);",
-                    "console.log(\"    Results:\", app.FullResults);"
+                    "console.log(this.FirstError || 'No column length errors');",
+                    "console.log(\"  Row count:\", this.RowCount);",
+                    "console.log(\"     Errors:\", this.ErrorCount);",
+                    "console.log(\"    Results:\", this.FullResults);"
                 ]
             },
             "configAlternates": {
@@ -3761,9 +3723,11 @@
                 ],
                 "fn": "completeFn",
                 "implHandler": [
-                    "StunningOctoPancake.view.octo.Pancake.prototype.setResults(results);",
-                    "this.printStats('Parse complete');",
-                    "this.validateFieldLength(this.FieldNames, this.Names, this.FieldData, this.ErrorCount, this.FirstError, this.Filename);"
+                    "const octoPancake = Ext.getCmp('octoPancake');",
+                    "",
+                    "octoPancake.setResults(results);",
+                    "octoPancake.printStats('Parse complete');",
+                    "octoPancake.validateFieldLength();"
                 ]
             },
             "configAlternates": {
