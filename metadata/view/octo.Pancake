@@ -306,7 +306,7 @@
                                             "if (filename !== \"\") {",
                                             "    $(\"#chooseCSVFile-inputEl\").val(filename);",
                                             "}",
-                                            "StunningOctoPancake.app.Filename = filename;"
+                                            "this.Filename = filename;"
                                         ],
                                         "name": "change",
                                         "scope": "me"
@@ -361,8 +361,6 @@
                                     "userConfig": {
                                         "fn": "onSubmitButtonClick",
                                         "implHandler": [
-                                            "const controller = StunningOctoPancake.app.getOctoPancakeControlController();",
-                                            "",
                                             "if (!$(\"#chooseCSVFile-button-fileInputEl\")[0].files.length) {",
                                             "    Ext.MessageBox.alert(\"No File Chosen\", \"Please choose at least one file to parse.\");",
                                             "    return;",
@@ -381,8 +379,8 @@
                                             "    encoding: \"\",",
                                             "    worker: false,",
                                             "    comments: false,",
-                                            "    complete: controller.completeFn,",
-                                            "    error: controller.errorFn",
+                                            "    complete: this.completeFn,",
+                                            "    error: this.errorFn",
                                             "});"
                                         ],
                                         "name": "click",
