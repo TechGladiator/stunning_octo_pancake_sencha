@@ -40,6 +40,7 @@
         "container|align": "center",
         "designer|userAlias": "octo.pancake",
         "designer|userClassName": "octo.Pancake",
+        "id": "octoPancake",
         "layout": "vbox",
         "scrollable": true
     },
@@ -64,7 +65,8 @@
         "FromDB": "boolean",
         "SortASC": "boolean",
         "Filename": "string",
-        "Map": "string"
+        "Map": "string",
+        "id": "string"
     },
     "name": "MyPanel3",
     "designerId": "16e2c03a-33f6-4a74-8aed-a2feb7f0a956",
@@ -3725,18 +3727,17 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
-                    "app",
                     "r"
                 ],
                 "fn": "setResults",
                 "implHandler": [
-                    "app.FullResults = r;",
-                    "app.FieldNames = app.FullResults.meta.fields;",
-                    "app.FieldData = app.FullResults.data;",
-                    "app.FieldErrors = app.FullResults.errors;",
-                    "app.ErrorCount = app.FieldErrors.length;",
-                    "app.FirstError = app.FieldErrors[0];",
-                    "app.RowCount = app.FieldData.length;"
+                    "this.setFullResults(r);",
+                    "this.setFieldNames(this.FullResults.meta.fields);",
+                    "this.setFieldData(this.FullResults.data);",
+                    "this.setFieldErrors(this.FullResults.errors);",
+                    "this.setErrorCount(this.FieldErrors.length);",
+                    "this.setFirstError(this.FieldErrors[0]);",
+                    "this.setRowCount(this.FieldData.length);"
                 ]
             },
             "configAlternates": {
@@ -3760,12 +3761,9 @@
                 ],
                 "fn": "completeFn",
                 "implHandler": [
-                    "const app = StunningOctoPancake.app;",
-                    "const controller = app.getOctoPancakeControlController();",
-                    "",
-                    "controller.setResults(app, results);",
-                    "controller.printStats('Parse complete', app);",
-                    "controller.validateFieldLength(app.FieldNames, app.Names, app.FieldData, app.ErrorCount, app.FirstError, app.Filename);"
+                    "StunningOctoPancake.view.octo.Pancake.prototype.setResults(results);",
+                    "this.printStats('Parse complete');",
+                    "this.validateFieldLength(this.FieldNames, this.Names, this.FieldData, this.ErrorCount, this.FirstError, this.Filename);"
                 ]
             },
             "configAlternates": {
